@@ -1,30 +1,77 @@
-import initSqlJs from "sql.js"
+import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
 
-const data = {
-  2015: require("../data/2015.json"),
+interface Season {
+  year: number
+  bots: Array<{name: string; keyMembers: Array<string>; progress: string}>
 }
 
-// todo add rank/progress to bots
-// luke ewert, reece ewert
+const data = {
+  2015: require("../data/2015.json") as Season,
+}
 
 const allData = Object.values(data)
+
+function insertBot(db: Database, name: string) {
+  const stmt = db.prepare("SELECT * FROM bots WHERE name=:name")
+  const result = stmt.get({":name": name})
+  stmt.free()
+
+  if (result.length === 0) {
+    const id = uuid.v4()
+    db.run("INSERT INTO bots VALUES (?,?)", [id, name])
+    return {id, name}
+  }
+
+  return {id: result[0], name: result[1]} as {id: string; name: string}
+}
+
+function getMatchTypeByName(db: Database, name: string) {
+  const stmt = db.prepare("SELECT * FROM match_types WHERE name=:name")
+  const result = stmt.get({":name": name})
+  stmt.free()
+
+  if (result.length === 0) {
+    return undefined
+  }
+
+  return {id: result[0], name: result[1]} as {id: string; name: string}
+}
+
+function addBotToSeason(
+  db: Database,
+  seasonId: string,
+  botId: string,
+  progress: string,
+) {
+  const matchType = getMatchTypeByName(db, progress)
+
+  if (matchType === undefined) {
+    throw new Error(`Cannot find match_type: ${progress}`)
+  }
+
+  db.run("INSERT INTO season_bots VALUES (?,?,?)", [
+    seasonId,
+    botId,
+    matchType.id,
+  ])
+}
 
 initSqlJs({
   locateFile: (file) => file,
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // seasons, bots, members, matches, match_types
+  // members, member_link, matches
+  // todo add rank/progress to bots
+  // luke ewert, reece ewert
 
   db.run(`
-    CREATE TABLE seasons (id text, season text);
-    CREATE TABLE match_types (id text, name text, rank int);
+    CREATE TABLE seasons (id text UNIQUE, season text UNIQUE, primary key (id));
+    CREATE TABLE match_types (id text UNIQUE, name text UNIQUE, rank int, primary key (id));
+    CREATE TABLE bots (id text UNIQUE, name text UNIQUE, primary key (id));
+    CREATE TABLE season_bots (season_id text, bot_id text, match_type_id text, primary key (season_id, bot_id));
   `)
-
-  allData.forEach((d) => {
-    db.run("INSERT INTO seasons VALUES (?,?)", [uuid.v4(), d.year])
-  })
 
   db.run(`
     INSERT INTO match_types VALUES ('${uuid.v4()}', 'final', 1);
@@ -36,9 +83,25 @@ initSqlJs({
     INSERT INTO match_types VALUES ('${uuid.v4()}', 'season', 6);
   `)
 
-  const seasons = db.exec("SELECT * FROM seasons")
-  console.log("seasons", seasons)
+  allData.forEach((season) => {
+    const seasonId = uuid.v4()
+    db.run("INSERT INTO seasons VALUES (?,?)", [seasonId, season.year])
 
-  const matchTypes = db.exec("SELECT * FROM match_types")
-  console.log("matchTypes", matchTypes)
+    season.bots.forEach((bot) => {
+      const insertedBot = insertBot(db, bot.name)
+      addBotToSeason(db, seasonId, insertedBot.id, bot.progress)
+    })
+  })
+
+  // const seasons = db.exec("SELECT * FROM seasons")
+  // console.log("seasons", seasons)
+
+  // const matchTypes = db.exec("SELECT * FROM match_types")
+  // console.log("matchTypes", matchTypes)
+
+  // const bots = db.exec("SELECT * FROM bots")
+  // console.log("bots", bots)
+
+  const seasonBots = db.exec("SELECT * FROM season_bots")
+  console.log("seasonBots", seasonBots)
 })
