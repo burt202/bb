@@ -1,0 +1,199 @@
+{
+  "year": "2015",
+  "bots": [
+    {
+      "name": "Razorback",
+      "keyMembers": ["Zack Bieber"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Icewave",
+      "keyMembers": ["Mark DeVidts"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Wrecks",
+      "keyMembers": ["Dan Chatterton", "Bunny Sauriol", "Orion Beach"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Plan X",
+      "keyMembers": ["Lisa Winter"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Biteforce",
+      "keyMembers": ["Paul Ventimiglia"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Warhead",
+      "keyMembers": ["Simon Scott", "Ian Lewis", "James Cooper"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Nightmare",
+      "keyMembers": ["Jim Smentowski"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Warrior Clan",
+      "keyMembers": ["Terry Ewert", "Clint Ewert", "Jake Ewert"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Overhaul",
+      "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Lock-Jaw",
+      "keyMembers": ["Donald Hutson"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Bronco",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Witch Doctor",
+      "keyMembers": ["Andrea Gellatly (Suarez)", "Mike Gellatly"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Counter Revolution",
+      "keyMembers": ["Curt Meyers"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Tombstone",
+      "keyMembers": ["Ray Billings"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Complete Control",
+      "keyMembers": ["Derek Young"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Ghost Raptor",
+      "keyMembers": ["Chuck Pitzer"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Stinger",
+      "keyMembers": ["Matt Maxham", "Wendy Maxham"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Captain Shrederator",
+      "keyMembers": ["Brian Nave"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Overdrive",
+      "keyMembers": ["Chrisian Carlberg"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Chomp",
+      "keyMembers": ["Zoe Stephenson"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Radioactive",
+      "keyMembers": ["Kane Aston"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Sweet Revenge",
+      "keyMembers": ["Nola Garcia", "Billy Garcia"],
+      "progress": "qualifier"
+    },
+    {
+      "name": "Hypershock",
+      "keyMembers": ["Will Bales"],
+      "progress": "XXX"
+    },
+    {
+      "name": "Mohawk",
+      "keyMembers": ["Tom Bales"],
+      "progress": "qualifier"
+    }
+  ],
+  "matches": [
+    {
+      "competitors": ["Razorback", "Icewave"],
+      "winner": "Icewave",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Wrecks", "Plan X"],
+      "winner": "Plan X",
+      "type": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Biteforce", "Warhead"],
+      "winner": "Biteforce",
+      "type": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Nightmare", "Warrior Clan"],
+      "winner": "Warrior Clan",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Overhaul", "Lock-Jaw"],
+      "winner": "Lock-Jaw",
+      "type": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Bronco", "Witch Doctor"],
+      "winner": "Bronco",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Counter Revolution", "Tombstone"],
+      "winner": "Tombstone",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Complete Control", "Ghost Raptor"],
+      "winner": "Ghost Raptor",
+      "type": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Stinger", "Captain Shrederator"],
+      "winner": "Stinger",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Overdrive", "Chomp"],
+      "winner": "Overdrive",
+      "type": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Radioactive", "Sweet Revenge"],
+      "winner": "Radioactive",
+      "type": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Hypershock", "Mohawk"],
+      "winner": "Hypershock",
+      "type": "qualifier",
+      "ko": false
+    }
+  ]
+}
