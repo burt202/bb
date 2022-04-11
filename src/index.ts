@@ -57,12 +57,35 @@ function addBotToSeason(
   ])
 }
 
+function insertMember(db: Database, name: string) {
+  const stmt = db.prepare("SELECT * FROM members WHERE name=:name")
+  const result = stmt.get({":name": name})
+  stmt.free()
+
+  if (result.length === 0) {
+    const id = uuid.v4()
+    db.run("INSERT INTO members VALUES (?,?)", [id, name])
+    return {id, name}
+  }
+
+  return {id: result[0], name: result[1]} as {id: string; name: string}
+}
+
+function addMemberToBotForSeason(
+  db: Database,
+  botId: string,
+  memberId: string,
+  seasonId: string,
+) {
+  db.run("INSERT INTO bot_members VALUES (?,?,?)", [botId, memberId, seasonId])
+}
+
 initSqlJs({
   locateFile: (file) => file,
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // members, member_link, matches
+  // matches, matches_link
   // todo add rank/progress to bots
   // luke ewert, reece ewert
 
@@ -70,7 +93,9 @@ initSqlJs({
     CREATE TABLE seasons (id text UNIQUE, season text UNIQUE, primary key (id));
     CREATE TABLE match_types (id text UNIQUE, name text UNIQUE, rank int, primary key (id));
     CREATE TABLE bots (id text UNIQUE, name text UNIQUE, primary key (id));
+    CREATE TABLE members (id text UNIQUE, name text UNIQUE, primary key (id));
     CREATE TABLE season_bots (season_id text, bot_id text, match_type_id text, primary key (season_id, bot_id));
+    CREATE TABLE bot_members (bot_id text, member_id text, season_id text, primary key (member_id, season_id));
   `)
 
   db.run(`
@@ -90,6 +115,11 @@ initSqlJs({
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name)
       addBotToSeason(db, seasonId, insertedBot.id, bot.progress)
+
+      bot.keyMembers.forEach((member) => {
+        const insertedMember = insertMember(db, member)
+        addMemberToBotForSeason(db, insertedBot.id, insertedMember.id, seasonId)
+      })
     })
   })
 
@@ -102,6 +132,6 @@ initSqlJs({
   // const bots = db.exec("SELECT * FROM bots")
   // console.log("bots", bots)
 
-  const seasonBots = db.exec("SELECT * FROM season_bots")
+  const seasonBots = db.exec("SELECT * FROM bot_members")
   console.log("seasonBots", seasonBots)
 })
