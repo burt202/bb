@@ -1,0 +1,91 @@
+{
+  "year": "2015",
+  "bots": [
+    {
+      "name": "Creepy Crawlies",
+      "keyMembers": ["Kelly Smith", "Ian Watts"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Ultraviolet",
+      "keyMembers": ["Andrew Peterson"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Terry Ewert", "Luke Ewert", "Reece Ewert"],
+      "stage": "final"
+    },
+    {
+      "name": "Basilisk",
+      "keyMembers": ["Lucas Sloan"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Blacksmith",
+      "keyMembers": ["Al Kindle"],
+      "stage": "final"
+    },
+    {
+      "name": "Gemini",
+      "keyMembers": ["Ace Shelander"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Lycan",
+      "keyMembers": ["Ravi Baboolal"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Invader",
+      "keyMembers": ["John Mladenik", "Brent Rieker"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Mohawk",
+      "keyMembers": ["Tom Bales", "Korey Cline"],
+      "stage": "final"
+    },
+    {
+      "name": "Black Ice",
+      "keyMembers": ["Dan Barry"],
+      "stage": "final"
+    },
+    {
+      "name": "Bad Kitty",
+      "keyMembers": ["Bradley Hanstad", "Martin Mason"],
+      "stage": "qualifier"
+    },
+    {
+      "name": "Skorpios",
+      "keyMembers": ["Orion Beach", "Zach Lytle"],
+      "stage": "qualifier"
+    }
+  ],
+  "fights": [
+    {
+      "competitors": ["Creepy Crawlies", "Ultra Violet", "Son Of Whyachi"],
+      "winner": "Son Of Whyachi",
+      "stage": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Basilisk", "Blacksmith", "Gemini"],
+      "winner": "Blacksmith",
+      "stage": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Lycan", "Invader", "Mohawk"],
+      "winner": "Mohawk",
+      "stage": "qualifier",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Ice", "Bad Kitty", "Skorpios"],
+      "winner": "Black Ice",
+      "stage": "qualifier",
+      "ko": true
+    }
+  ]
+}

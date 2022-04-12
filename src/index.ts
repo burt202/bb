@@ -147,8 +147,7 @@ initSqlJs({
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // luke ewert, reece ewert
-  // bot type
+  // bot type, nation
 
   db.run(`
     CREATE TABLE seasons (

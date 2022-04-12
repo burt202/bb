@@ -39,7 +39,13 @@
     },
     {
       "name": "Warrior Clan",
-      "keyMembers": ["Terry Ewert", "Clint Ewert", "Jake Ewert"],
+      "keyMembers": [
+        "Terry Ewert",
+        "Clint Ewert",
+        "Jake Ewert",
+        "Luke Ewert",
+        "Reece Ewert"
+      ],
       "stage": "roundof16"
     },
     {
@@ -119,7 +125,7 @@
     },
     {
       "name": "Mohawk",
-      "keyMembers": ["Tom Bales"],
+      "keyMembers": ["Tom Bales", "Korey Cline"],
       "stage": "qualifier"
     }
   ],
