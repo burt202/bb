@@ -1,8 +1,12 @@
-/* eslint-disable */
-
 import * as React from "react"
+import {DbInterface} from "./types"
 
-export default function Main(props: any) {
-  console.log(props.db.getAllSeasons())
+interface Props {
+  db: DbInterface
+}
+
+export default function Main({db}: Props) {
+  console.log("seasons", db.getAllSeasons())
+
   return <div>hello bb world</div>
 }

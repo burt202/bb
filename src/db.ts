@@ -1,12 +1,20 @@
 import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
-import {DbBot, DbMember, DbStage, RawFight, RawSeason} from "./types"
+import {
+  DbBot,
+  DbInterface,
+  DbMember,
+  DbSeason,
+  DbStage,
+  RawFight,
+  RawSeason,
+} from "./types"
 
 function createTables(db: Database) {
   db.run(`
     CREATE TABLE seasons (
       id text UNIQUE NOT NULL,
-      season text UNIQUE NOT NULL,
+      name text UNIQUE NOT NULL,
       primary key (id)
     );
 
@@ -90,6 +98,23 @@ function getOne<T>(db: Database, sql: string, params?: {[key: string]: any}) {
   })
 
   return obj as T
+}
+
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+function getMany<T>(db: Database, sql: string, params?: {[key: string]: any}) {
+  const result = db.exec(sql, params)
+
+  const match = result[0]
+
+  const data = match.values.map((v) => {
+    return v.reduce((acc, val, i) => {
+      acc[match.columns[i]] = val
+      return acc
+      /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+    }, {} as Record<string, any>)
+  })
+
+  return data as Array<T>
 }
 
 function getStageByName(db: Database, name: string) {
@@ -235,7 +260,9 @@ function populateDatabase(db: Database, data: Array<RawSeason>) {
   })
 }
 
-export default async function createDb(data: Array<RawSeason>) {
+export default async function createDb(
+  data: Array<RawSeason>,
+): Promise<DbInterface> {
   const SQL = await initSqlJs({
     locateFile: (file) => file,
   })
@@ -247,7 +274,7 @@ export default async function createDb(data: Array<RawSeason>) {
 
   return {
     getAllSeasons: () => {
-      return db.exec("SELECT * FROM seasons")
+      return getMany<DbSeason>(db, "SELECT * FROM seasons")
     },
   }
 }

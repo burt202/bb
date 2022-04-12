@@ -32,3 +32,12 @@ export interface DbMember {
   id: string
   name: string
 }
+
+export interface DbSeason {
+  id: string
+  name: string
+}
+
+export interface DbInterface {
+  getAllSeasons: () => Array<DbSeason>
+}
