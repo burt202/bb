@@ -224,6 +224,7 @@ initSqlJs({
     INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 5);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 6);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 6);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 7);
   `)
 
   allData.forEach((season) => {
