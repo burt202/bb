@@ -74,7 +74,7 @@
     {
       "name": "Beta",
       "keyMembers": ["John Reid", "Grant Cooper"],
-      "stage": "roundof32"
+      "stage": "quarter"
     },
     {
       "name": "Lucky",
@@ -84,7 +84,7 @@
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "roundof16"
+      "stage": "quarter"
     },
     {
       "name": "Icewave",
@@ -119,13 +119,13 @@
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "roundof16",
+      "stage": "final",
       "winner": true
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
-      "stage": "roundof16"
+      "stage": "semi"
     },
     {
       "name": "Photon Storm",
@@ -135,7 +135,7 @@
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "roundof32"
+      "stage": "quarter"
     },
     {
       "name": "The Disk O'Inferno",
@@ -145,7 +145,7 @@
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "roundof32"
+      "stage": "roundof16"
     },
     {
       "name": "Complete Control",
@@ -155,12 +155,12 @@
     {
       "name": "Bombshell",
       "keyMembers": ["Micheal Jeffries"],
-      "stage": "qualifier"
+      "stage": "final"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "roundof32"
+      "stage": "roundof16"
     },
     {
       "name": "Chrome Fly",
@@ -195,7 +195,7 @@
     {
       "name": "Nightmare",
       "keyMembers": ["Jim Smentowski"],
-      "stage": "qualifier"
+      "stage": "roundof16"
     },
     {
       "name": "Obwaldern Overlord",
@@ -215,7 +215,7 @@
     {
       "name": "Brutus",
       "keyMembers": ["Adam Bercu"],
-      "stage": "roundof32"
+      "stage": "roundof16"
     },
     {
       "name": "Ghost Raptor",
@@ -225,7 +225,7 @@
     {
       "name": "Yeti",
       "keyMembers": ["Greg Gibson"],
-      "stage": "roundof16"
+      "stage": "semi"
     },
     {
       "name": "Lock-Jaw",
@@ -233,14 +233,14 @@
       "stage": "qualifier"
     },
     {
-      "name": "Mego Tento",
+      "name": "Mega Tento",
       "keyMembers": ["Lisa Winter"],
-      "stage": "qualifier"
+      "stage": "roundof16"
     },
     {
       "name": "Poison Arrow",
       "keyMembers": ["Zach Goff"],
-      "stage": "roundof16"
+      "stage": "quarter"
     },
     {
       "name": "Overhaul",
@@ -249,7 +249,7 @@
     },
     {
       "name": "Cobalt",
-      "keyMembers": ["Dave Moulds"],
+      "keyMembers": ["Dave Moulds", "Sam Smith", "James Cooper"],
       "stage": "roundof32"
     },
     {
@@ -498,6 +498,144 @@
       "competitors": ["Son Of Whyachi", "Poison Arrow"],
       "winner": "Poison Arrow",
       "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["Beta", "Overhaul"],
+      "winner": "Beta",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["Hypershock", "Warrior Clan"],
+      "winner": "Hypershock",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["Stinger", "Mega Tento"],
+      "winner": "Mega Tento",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "competitors": ["Brutus", "Lock-Jaw"],
+      "winner": "Brutus",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "competitors": ["Cobalt", "Bombshell"],
+      "winner": "Bombshell",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["The Ringmaster", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "competitors": ["Chomp", "Captain Shrederator"],
+      "winner": "Chomp",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["Icewave", "Nightmare"],
+      "winner": "Nightmare",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "competitors": ["Minotaur", "Warhead"],
+      "winner": "Minotaur",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Poison Arrow", "Hypershock"],
+      "winner": "Poison Arrow",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Red Devil", "Bombshell"],
+      "winner": "Bombshell",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "competitors": ["Bronco", "Razorback"],
+      "winner": "Bronco",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Brutus"],
+      "winner": "Tombstone",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Nightmare", "Beta"],
+      "winner": "Beta",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Yeti", "Mega Tento"],
+      "winner": "Yeti",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Biteforce", "Chomp"],
+      "winner": "Chomp",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "competitors": ["Chomp", "Yeti"],
+      "winner": "Yeti",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Beta", "Tombstone"],
+      "winner": "Tombstone",
+      "stage": "quarter",
+      "ko": false
+    },
+    {
+      "competitors": ["Bombshell", "Poison Arrow"],
+      "winner": "Bombshell",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Bronco", "Minotaur"],
+      "winner": "Minotaur",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Minotaur", "Bombshell"],
+      "winner": "Bombshell",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "competitors": ["Yeti", "Tombstone"],
+      "winner": "Tombstone",
+      "stage": "semi",
+      "ko": false
+    },
+    {
+      "competitors": ["Tombstone", "Bombshell"],
+      "winner": "Tombstone",
+      "stage": "final",
       "ko": true
     }
   ]
