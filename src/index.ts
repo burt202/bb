@@ -147,41 +147,40 @@ initSqlJs({
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // not null columns
   // todo add rank/progress to bots
   // luke ewert, reece ewert
   // winner meta bool
 
   db.run(`
     CREATE TABLE seasons (
-      id text UNIQUE,
-      season text UNIQUE,
+      id text UNIQUE NOT NULL,
+      season text UNIQUE NOT NULL,
       primary key (id)
     );
 
     CREATE TABLE stages (
-      id text UNIQUE,
-      name text UNIQUE,
-      rank int,
+      id text UNIQUE NOT NULL,
+      name text UNIQUE NOT NULL,
+      rank int NOT NULL,
       primary key (id)
     );
 
     CREATE TABLE bots (
-      id text UNIQUE,
-      name text UNIQUE,
+      id text UNIQUE NOT NULL,
+      name text UNIQUE NOT NULL,
       primary key (id)
     );
 
     CREATE TABLE members (
-      id text UNIQUE,
-      name text UNIQUE,
+      id text UNIQUE NOT NULL,
+      name text UNIQUE NOT NULL,
       primary key (id)
     );
 
     CREATE TABLE season_bots (
-      season_id text,
-      bot_id text,
-      stage_id text,
+      season_id text NOT NULL,
+      bot_id text NOT NULL,
+      stage_id text NOT NULL,
       primary key (season_id, bot_id),
       foreign key (season_id) references seasons(id),
       foreign key (bot_id) references bots(id),
@@ -189,9 +188,9 @@ initSqlJs({
     );
 
     CREATE TABLE bot_members (
-      bot_id text,
-      member_id text,
-      season_id text,
+      bot_id text NOT NULL,
+      member_id text NOT NULL,
+      season_id text NOT NULL,
       primary key (member_id, season_id),
       foreign key (bot_id) references bots(id),
       foreign key (member_id) references members(id),
@@ -199,11 +198,11 @@ initSqlJs({
     );
 
     CREATE TABLE fights (
-      id text UNIQUE,
-      ko text,
-      stage_id text,
-      winner_id text,
-      season_id text,
+      id text UNIQUE NOT NULL,
+      ko text NOT NULL,
+      stage_id text NOT NULL,
+      winner_id text NOT NULL,
+      season_id text NOT NULL,
       primary key (id),
       foreign key (winner_id) references bots(id),
       foreign key (season_id) references seasons(id),
@@ -211,8 +210,8 @@ initSqlJs({
     );
 
     CREATE TABLE fight_competitors (
-      fight_id text,
-      bot_id text,
+      fight_id text NOT NULL,
+      bot_id text NOT NULL,
       primary key (fight_id, bot_id),
       foreign key (fight_id) references fights(id),
       foreign key (bot_id) references bots(id)
@@ -251,4 +250,7 @@ initSqlJs({
       })
     })
   })
+
+  const botMembers = db.exec("SELECT * FROM bot_members")
+  console.log("botMembers", botMembers)
 })
