@@ -1,9 +1,23 @@
 import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
 
+interface Bot {
+  name: string
+  keyMembers: Array<string>
+  stage: string
+}
+
+interface Fight {
+  competitors: Array<string>
+  winner: string
+  stage: string
+  ko: boolean
+}
+
 interface Season {
   year: number
-  bots: Array<{name: string; keyMembers: Array<string>; progress: string}>
+  bots: Array<Bot>
+  fights: Array<Fight>
 }
 
 const data = {
@@ -26,8 +40,20 @@ function insertBot(db: Database, name: string) {
   return {id: result[0], name: result[1]} as {id: string; name: string}
 }
 
-function getMatchTypeByName(db: Database, name: string) {
-  const stmt = db.prepare("SELECT * FROM match_types WHERE name=:name")
+function getStageByName(db: Database, name: string) {
+  const stmt = db.prepare("SELECT * FROM stages WHERE name=:name")
+  const result = stmt.get({":name": name})
+  stmt.free()
+
+  if (result.length === 0) {
+    return undefined
+  }
+
+  return {id: result[0], name: result[1]} as {id: string; name: string}
+}
+
+function getBotByName(db: Database, name: string) {
+  const stmt = db.prepare("SELECT * FROM bots WHERE name=:name")
   const result = stmt.get({":name": name})
   stmt.free()
 
@@ -42,19 +68,15 @@ function addBotToSeason(
   db: Database,
   seasonId: string,
   botId: string,
-  progress: string,
+  stageName: string,
 ) {
-  const matchType = getMatchTypeByName(db, progress)
+  const stage = getStageByName(db, stageName)
 
-  if (matchType === undefined) {
-    throw new Error(`Cannot find match_type: ${progress}`)
+  if (stage === undefined) {
+    throw new Error(`Cannot find stage: ${stageName}`)
   }
 
-  db.run("INSERT INTO season_bots VALUES (?,?,?)", [
-    seasonId,
-    botId,
-    matchType.id,
-  ])
+  db.run("INSERT INTO season_bots VALUES (?,?,?)", [seasonId, botId, stage.id])
 }
 
 function insertMember(db: Database, name: string) {
@@ -80,14 +102,55 @@ function addMemberToBotForSeason(
   db.run("INSERT INTO bot_members VALUES (?,?,?)", [botId, memberId, seasonId])
 }
 
+function insertFight(db: Database, seasonId: string, fight: Fight) {
+  const id = uuid.v4()
+
+  if (!fight.competitors.includes(fight.winner)) {
+    throw new Error(`Fight winner not listed in competitors: ${fight.winner}`)
+  }
+
+  const stage = getStageByName(db, fight.stage)
+
+  if (stage === undefined) {
+    throw new Error(`Cannot find stage: ${fight.stage}`)
+  }
+
+  const winningBot = getBotByName(db, fight.winner)
+
+  if (winningBot === undefined) {
+    throw new Error(`Cannot find bot: ${fight.winner}`)
+  }
+
+  db.run("INSERT INTO fights VALUES (?,?,?,?,?)", [
+    id,
+    fight.ko.toString(),
+    stage.id,
+    winningBot.id,
+    seasonId,
+  ])
+
+  return {id}
+}
+
+function addBotToFight(db: Database, fightId: string, botName: string) {
+  const bot = getBotByName(db, botName)
+
+  if (bot === undefined) {
+    throw new Error(`Cannot find bot: ${botName}`)
+  }
+
+  db.run("INSERT INTO fight_competitors VALUES (?,?)", [fightId, bot.id])
+}
+
 initSqlJs({
   locateFile: (file) => file,
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // matches, matches_link
+  // not null columns
   // todo add rank/progress to bots
   // luke ewert, reece ewert
+  // winner meta bool
 
   db.run(`
     CREATE TABLE seasons (
@@ -96,7 +159,7 @@ initSqlJs({
       primary key (id)
     );
 
-    CREATE TABLE match_types (
+    CREATE TABLE stages (
       id text UNIQUE,
       name text UNIQUE,
       rank int,
@@ -118,11 +181,11 @@ initSqlJs({
     CREATE TABLE season_bots (
       season_id text,
       bot_id text,
-      match_type_id text,
+      stage_id text,
       primary key (season_id, bot_id),
       foreign key (season_id) references seasons(id),
       foreign key (bot_id) references bots(id),
-      foreign key (match_type_id) references match_types(id)
+      foreign key (stage_id) references stages(id)
     );
 
     CREATE TABLE bot_members (
@@ -135,33 +198,35 @@ initSqlJs({
       foreign key (season_id) references seasons(id)
     );
 
-    CREATE TABLE matches (
+    CREATE TABLE fights (
       id text UNIQUE,
-      ko bool,
-      match_type_id text,
+      ko text,
+      stage_id text,
       winner_id text,
+      season_id text,
       primary key (id),
       foreign key (winner_id) references bots(id),
-      foreign key (match_type_id) references match_types(id)
+      foreign key (season_id) references seasons(id),
+      foreign key (stage_id) references stages(id)
     );
 
-    CREATE TABLE match_competitors (
-      match_id text,
+    CREATE TABLE fight_competitors (
+      fight_id text,
       bot_id text,
-      primary key (match_id, bot_id),
-      foreign key (match_id) references matches(id),
+      primary key (fight_id, bot_id),
+      foreign key (fight_id) references fights(id),
       foreign key (bot_id) references bots(id)
     );
   `)
 
   db.run(`
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'final', 1);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'semi', 2);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'quarter', 3);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'roundof16', 4);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'roundof32', 5);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'qualifier', 6);
-    INSERT INTO match_types VALUES ('${uuid.v4()}', 'season', 6);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 1);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'semi', 2);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'quarter', 3);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof16', 4);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 5);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 6);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 6);
   `)
 
   allData.forEach((season) => {
@@ -170,11 +235,19 @@ initSqlJs({
 
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name)
-      addBotToSeason(db, seasonId, insertedBot.id, bot.progress)
+      addBotToSeason(db, seasonId, insertedBot.id, bot.stage)
 
       bot.keyMembers.forEach((member) => {
         const insertedMember = insertMember(db, member)
         addMemberToBotForSeason(db, insertedBot.id, insertedMember.id, seasonId)
+      })
+    })
+
+    season.fights.forEach((fight) => {
+      const insertedFight = insertFight(db, seasonId, fight)
+
+      fight.competitors.forEach((competitor) => {
+        addBotToFight(db, insertedFight.id, competitor)
       })
     })
   })

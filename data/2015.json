@@ -4,195 +4,195 @@
     {
       "name": "Razorback",
       "keyMembers": ["Zack Bieber"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Wrecks",
       "keyMembers": ["Dan Chatterton", "Bunny Sauriol", "Orion Beach"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Plan X",
       "keyMembers": ["Lisa Winter"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis", "James Cooper"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Nightmare",
       "keyMembers": ["Jim Smentowski"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Warrior Clan",
       "keyMembers": ["Terry Ewert", "Clint Ewert", "Jake Ewert"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly (Suarez)", "Mike Gellatly"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Counter Revolution",
       "keyMembers": ["Curt Meyers"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Stinger",
       "keyMembers": ["Matt Maxham", "Wendy Maxham"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Overdrive",
       "keyMembers": ["Chrisian Carlberg"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Radioactive",
       "keyMembers": ["Kane Aston"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Sweet Revenge",
       "keyMembers": ["Nola Garcia", "Billy Garcia"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "progress": "final"
+      "stage": "final"
     },
     {
       "name": "Mohawk",
       "keyMembers": ["Tom Bales"],
-      "progress": "qualifier"
+      "stage": "qualifier"
     }
   ],
-  "matches": [
+  "fights": [
     {
       "competitors": ["Razorback", "Icewave"],
       "winner": "Icewave",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Wrecks", "Plan X"],
       "winner": "Plan X",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     },
     {
       "competitors": ["Biteforce", "Warhead"],
       "winner": "Biteforce",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     },
     {
       "competitors": ["Nightmare", "Warrior Clan"],
       "winner": "Warrior Clan",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Overhaul", "Lock-Jaw"],
       "winner": "Lock-Jaw",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     },
     {
       "competitors": ["Bronco", "Witch Doctor"],
       "winner": "Bronco",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Counter Revolution", "Tombstone"],
       "winner": "Tombstone",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Complete Control", "Ghost Raptor"],
       "winner": "Ghost Raptor",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     },
     {
       "competitors": ["Stinger", "Captain Shrederator"],
       "winner": "Stinger",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Overdrive", "Chomp"],
       "winner": "Overdrive",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": true
     },
     {
       "competitors": ["Radioactive", "Sweet Revenge"],
       "winner": "Radioactive",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     },
     {
       "competitors": ["Hypershock", "Mohawk"],
       "winner": "Hypershock",
-      "type": "qualifier",
+      "stage": "qualifier",
       "ko": false
     }
   ]
