@@ -9,7 +9,7 @@
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "final"
+      "stage": "quarter"
     },
     {
       "name": "Wrecks",
@@ -19,17 +19,18 @@
     {
       "name": "Plan X",
       "keyMembers": ["Lisa Winter"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "final"
+      "stage": "final",
+      "winner": true
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis", "James Cooper"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Nightmare",
@@ -39,27 +40,27 @@
     {
       "name": "Warrior Clan",
       "keyMembers": ["Terry Ewert", "Clint Ewert", "Jake Ewert"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
-      "stage": "final"
+      "stage": "quarter"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "final"
+      "stage": "semi"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly (Suarez)", "Mike Gellatly"],
-      "stage": "final"
+      "stage": "quarter"
     },
     {
       "name": "Counter Revolution",
@@ -68,7 +69,7 @@
     },
     {
       "name": "Tombstone",
-      "keyMembers": ["Ray Billings"],
+      "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
       "stage": "final"
     },
     {
@@ -79,12 +80,12 @@
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "stage": "final"
+      "stage": "semi"
     },
     {
       "name": "Stinger",
       "keyMembers": ["Matt Maxham", "Wendy Maxham"],
-      "stage": "final"
+      "stage": "quarter"
     },
     {
       "name": "Captain Shrederator",
@@ -94,17 +95,17 @@
     {
       "name": "Overdrive",
       "keyMembers": ["Chrisian Carlberg"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Radioactive",
-      "keyMembers": ["Kane Aston"],
-      "stage": "final"
+      "keyMembers": ["Kane Aston", "Anthony Pritchard"],
+      "stage": "roundof16"
     },
     {
       "name": "Sweet Revenge",
@@ -114,7 +115,7 @@
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "final"
+      "stage": "roundof16"
     },
     {
       "name": "Mohawk",
@@ -193,6 +194,96 @@
       "competitors": ["Hypershock", "Mohawk"],
       "winner": "Hypershock",
       "stage": "qualifier",
+      "ko": false
+    },
+    {
+      "competitors": ["Icewave", "Chomp"],
+      "winner": "Icewave",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Stinger", "Warhead"],
+      "winner": "Stinger",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "competitors": ["Warrior Clan", "Ghost Raptor"],
+      "winner": "Ghost Raptor",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Bronco", "Plan X"],
+      "winner": "Bronco",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Witch Doctor", "Overdrive"],
+      "winner": "Witch Doctor",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Radioactive"],
+      "winner": "Tombstone",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Lock-Jaw", "Overhaul"],
+      "winner": "Overhaul",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Biteforce", "Hypershock"],
+      "winner": "Biteforce",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "competitors": ["Bronco", "Stinger"],
+      "winner": "Bronco",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Witch Doctor"],
+      "winner": "Tombstone",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Biteforce", "Overhaul"],
+      "winner": "Biteforce",
+      "stage": "quarter",
+      "ko": false
+    },
+    {
+      "competitors": ["Icewave", "Ghost Raptor"],
+      "winner": "Ghost Raptor",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Bronco"],
+      "winner": "Tombstone",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "competitors": ["Ghost Raptor", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "final",
       "ko": false
     }
   ]

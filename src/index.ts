@@ -147,9 +147,8 @@ initSqlJs({
 }).then(function (SQL) {
   const db = new SQL.Database()
 
-  // todo add rank/progress to bots
   // luke ewert, reece ewert
-  // winner meta bool
+  // bot type
 
   db.run(`
     CREATE TABLE seasons (
