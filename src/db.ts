@@ -1,6 +1,6 @@
 import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
-import {Fight, Season} from "./types"
+import {DbBot, DbMember, DbStage, RawFight, RawSeason} from "./types"
 
 function createTables(db: Database) {
   db.run(`
@@ -71,42 +71,55 @@ function createTables(db: Database) {
   `)
 }
 
-function insertBot(db: Database, name: string) {
-  const stmt = db.prepare("SELECT * FROM bots WHERE name=:name")
-  const result = stmt.get({":name": name})
-  stmt.free()
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+function getOne<T>(db: Database, sql: string, params?: {[key: string]: any}) {
+  const result = db.exec(sql, params)
 
   if (result.length === 0) {
-    const id = uuid.v4()
-    db.run("INSERT INTO bots VALUES (?,?)", [id, name])
-    return {id, name}
+    return undefined
   }
 
-  return {id: result[0], name: result[1]} as {id: string; name: string}
+  const match = result[0]
+  const values = match.values[0]
+
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  const obj = {} as Record<string, any>
+
+  match.columns.forEach((col, i) => {
+    obj[col] = values[i]
+  })
+
+  return obj as T
 }
 
 function getStageByName(db: Database, name: string) {
-  const stmt = db.prepare("SELECT * FROM stages WHERE name=:name")
-  const result = stmt.get({":name": name})
-  stmt.free()
-
-  if (result.length === 0) {
-    return undefined
-  }
-
-  return {id: result[0], name: result[1]} as {id: string; name: string}
+  return getOne<DbStage>(db, "SELECT * FROM stages WHERE name=:name", {
+    ":name": name,
+  })
 }
 
 function getBotByName(db: Database, name: string) {
-  const stmt = db.prepare("SELECT * FROM bots WHERE name=:name")
-  const result = stmt.get({":name": name})
-  stmt.free()
+  return getOne<DbBot>(db, "SELECT * FROM bots WHERE name=:name", {
+    ":name": name,
+  })
+}
 
-  if (result.length === 0) {
-    return undefined
+function getMemberByName(db: Database, name: string) {
+  return getOne<DbMember>(db, "SELECT * FROM members WHERE name=:name", {
+    ":name": name,
+  })
+}
+
+function insertBot(db: Database, name: string) {
+  const result = getBotByName(db, name)
+
+  if (result === undefined) {
+    const id = uuid.v4()
+    db.run("INSERT INTO bots VALUES (?,?)", [id, name])
+    return {id, name} as DbBot
   }
 
-  return {id: result[0], name: result[1]} as {id: string; name: string}
+  return result
 }
 
 function addBotToSeason(
@@ -125,17 +138,15 @@ function addBotToSeason(
 }
 
 function insertMember(db: Database, name: string) {
-  const stmt = db.prepare("SELECT * FROM members WHERE name=:name")
-  const result = stmt.get({":name": name})
-  stmt.free()
+  const result = getMemberByName(db, name)
 
-  if (result.length === 0) {
+  if (result === undefined) {
     const id = uuid.v4()
     db.run("INSERT INTO members VALUES (?,?)", [id, name])
-    return {id, name}
+    return {id, name} as DbMember
   }
 
-  return {id: result[0], name: result[1]} as {id: string; name: string}
+  return result
 }
 
 function addMemberToBotForSeason(
@@ -147,7 +158,7 @@ function addMemberToBotForSeason(
   db.run("INSERT INTO bot_members VALUES (?,?,?)", [botId, memberId, seasonId])
 }
 
-function insertFight(db: Database, seasonId: string, fight: Fight) {
+function insertFight(db: Database, seasonId: string, fight: RawFight) {
   const id = uuid.v4()
 
   if (!fight.competitors.includes(fight.winner)) {
@@ -187,7 +198,7 @@ function addBotToFight(db: Database, fightId: string, botName: string) {
   db.run("INSERT INTO fight_competitors VALUES (?,?)", [fightId, bot.id])
 }
 
-function populateDatabase(db: Database, data: Array<Season>) {
+function populateDatabase(db: Database, data: Array<RawSeason>) {
   db.run(`
     INSERT INTO stages VALUES ('${uuid.v4()}', 'winner', 1);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 2);
@@ -224,7 +235,7 @@ function populateDatabase(db: Database, data: Array<Season>) {
   })
 }
 
-export default async function createDb(data: Array<Season>) {
+export default async function createDb(data: Array<RawSeason>) {
   const SQL = await initSqlJs({
     locateFile: (file) => file,
   })

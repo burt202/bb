@@ -4,13 +4,13 @@ import * as React from "react"
 import * as ReactDom from "react-dom"
 import createDb from "./db"
 import Main from "./main"
-import {Season} from "./types"
+import {RawSeason} from "./types"
 
 require("./style.css")
 
 const data = {
-  2015: require("../data/2015.json") as Season,
-  2016: require("../data/2016.json") as Season,
+  2015: require("../data/2015.json") as RawSeason,
+  2016: require("../data/2016.json") as RawSeason,
 }
 
 const DbContext = React.createContext({})
