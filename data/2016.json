@@ -1,5 +1,5 @@
 {
-  "year": "2015",
+  "year": "2016",
   "bots": [
     {
       "name": "Creepy Crawlies",
@@ -119,8 +119,7 @@
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "final",
-      "winner": true
+      "stage": "winner"
     },
     {
       "name": "Minotaur",

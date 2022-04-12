@@ -22,6 +22,7 @@ interface Season {
 
 const data = {
   2015: require("../data/2015.json") as Season,
+  2016: require("../data/2016.json") as Season,
 }
 
 const allData = Object.values(data)
@@ -217,14 +218,15 @@ initSqlJs({
   `)
 
   db.run(`
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 1);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'semi', 2);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'quarter', 3);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof16', 4);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 5);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 6);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 6);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 7);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'winner', 1);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 2);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'semi', 3);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'quarter', 4);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof16', 5);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 6);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 7);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 7);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 8);
   `)
 
   allData.forEach((season) => {
@@ -250,6 +252,6 @@ initSqlJs({
     })
   })
 
-  const botMembers = db.exec("SELECT * FROM bot_members")
+  const botMembers = db.exec("SELECT * FROM members")
   console.log("botMembers", botMembers)
 })

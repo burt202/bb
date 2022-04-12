@@ -24,8 +24,7 @@
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "final",
-      "winner": true
+      "stage": "winner"
     },
     {
       "name": "Warhead",
