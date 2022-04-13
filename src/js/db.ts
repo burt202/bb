@@ -79,6 +79,13 @@ function createTables(db: Database) {
   `)
 }
 
+export function convertNameToId(name: string) {
+  return name
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/[\s_]+/g, "-")
+    .toLowerCase()
+}
+
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 function getOne<T>(db: Database, sql: string, params?: {[key: string]: any}) {
   const result = db.exec(sql, params)
