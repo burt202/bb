@@ -9,8 +9,8 @@ export default function Home() {
   const seasons = db.getAllSeasons()
 
   return (
-    <div>
-      <h1>Battlebots Database</h1>
+    <div style={{marginTop: 16}}>
+      <h1 style={{margin: 0}}>Battlebots Database</h1>
       <p>Select a season:</p>
       <div style={{display: "flex"}}>
         {seasons.map((s, i) => (

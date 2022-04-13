@@ -17,11 +17,28 @@ export default function Season() {
     return <NotFound title="Season Not Found" />
   }
 
+  const seasons = db.getAllSeasons()
+  const isFirstSeason = seasons[0].id === season.id
+  const isLastSeason = seasons[seasons.length - 1].id === season.id
+  const currentSeasonIndex = seasons.findIndex((s) => s.id === season.id)
+  const nextSeason = !isLastSeason
+    ? seasons[currentSeasonIndex + 1].id
+    : undefined
+  const previousSeason = !isFirstSeason
+    ? seasons[currentSeasonIndex - 1].id
+    : undefined
+
   const seasonBots = db.getSeasonBots(seasonId)
 
   return (
-    <div>
-      <h1 style={{marginBottom: 4}}>Season {season.name}</h1>
+    <div style={{marginTop: 16}}>
+      <div style={{display: "flex"}}>
+        <h1 style={{margin: 0}}>Season {season.name}</h1>
+        <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
+          {previousSeason && <Link to={`/season/${previousSeason}`}>Prev</Link>}
+          {nextSeason && <Link to={`/season/${nextSeason}`}>Next</Link>}
+        </div>
+      </div>
       <Link to="/">Back</Link>
       <h3>Competitors</h3>
       <table>
