@@ -146,7 +146,7 @@ function insertBot(db: Database, name: string) {
   const result = getBotByName(db, name)
 
   if (result === undefined) {
-    const id = uuid.v4()
+    const id = convertNameToId(name)
     db.run("INSERT INTO bots VALUES (?,?)", [id, name])
     return {id, name} as DbBot
   }
@@ -173,7 +173,7 @@ function insertMember(db: Database, name: string) {
   const result = getMemberByName(db, name)
 
   if (result === undefined) {
-    const id = uuid.v4()
+    const id = convertNameToId(name)
     db.run("INSERT INTO members VALUES (?,?)", [id, name])
     return {id, name} as DbMember
   }
@@ -244,7 +244,7 @@ function populateDatabase(db: Database, data: Array<RawSeason>) {
   `)
 
   data.forEach((season) => {
-    const seasonId = uuid.v4()
+    const seasonId = convertNameToId(season.year.toString())
     db.run("INSERT INTO seasons VALUES (?,?)", [seasonId, season.year])
 
     season.bots.forEach((bot) => {
