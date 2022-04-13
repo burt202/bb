@@ -10,6 +10,7 @@ import {
   RawFight,
   RawSeason,
 } from "./types"
+import {convertNameToId} from "./utils"
 
 function createTables(db: Database) {
   db.run(`
@@ -78,13 +79,6 @@ function createTables(db: Database) {
       foreign key (bot_id) references bots(id)
     );
   `)
-}
-
-export function convertNameToId(name: string) {
-  return name
-    .replace(/([a-z])([A-Z])/g, "$1-$2")
-    .replace(/[\s_]+/g, "-")
-    .toLowerCase()
 }
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -282,7 +276,7 @@ export default async function createDb(
 
   return {
     getAllSeasons: () => {
-      return getMany<DbSeason>(db, "SELECT * FROM seasons")
+      return getMany<DbSeason>(db, "SELECT * FROM seasons ORDER BY name")
     },
     getSeasonById: (id: string) => {
       return getOne<DbSeason>(db, "SELECT * FROM seasons WHERE id=:id", {

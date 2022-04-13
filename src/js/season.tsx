@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {useParams, Link} from "react-router-dom"
 import NotFound from "./not-found"
 import {DbInterface} from "./types"
+import {stageNameMap} from "./utils"
 import {DbContext} from "."
 
 export default function Season() {
@@ -20,14 +21,14 @@ export default function Season() {
 
   return (
     <div>
-      <h1>Season {season.name}</h1>
+      <h1 style={{marginBottom: 4}}>Season {season.name}</h1>
       <Link to="/">Back</Link>
-      <p>Competitors</p>
+      <h3>Competitors</h3>
       <table>
         <thead>
           <tr>
-            <td>Bot</td>
-            <td>Stage</td>
+            <th>Bot</th>
+            <th>Stage</th>
           </tr>
         </thead>
         <tbody>
@@ -35,7 +36,7 @@ export default function Season() {
             return (
               <tr key={i}>
                 <td>{sb.botName}</td>
-                <td>{sb.stageName}</td>
+                <td>{stageNameMap[sb.stageName]}</td>
               </tr>
             )
           })}

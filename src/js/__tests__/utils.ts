@@ -1,7 +1,7 @@
 import {expect} from "chai"
-import {convertNameToId} from "../db"
+import {convertNameToId} from "../utils"
 
-context("db", () => {
+context("utils", () => {
   context("convertNameToId", () => {
     it("should format strings correctly", () => {
       expect(convertNameToId("2015")).to.eql("2015")
