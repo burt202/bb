@@ -102,7 +102,7 @@ export default function Season() {
           <tr>
             <th style={{width: 400}}>Competitors</th>
             <th>Stage</th>
-            <th>KO</th>
+            <th style={{textAlign: "center"}}>KO</th>
           </tr>
         </thead>
         <tbody>
@@ -128,7 +128,13 @@ export default function Season() {
                   })}
                 </td>
                 <td>{stageNameMap[sf.stageName]}</td>
-                <td>{sf.ko ? "True" : "False"}</td>
+                <td style={{textAlign: "center"}}>
+                  {sf.ko ? (
+                    <img src="tick.svg" style={{height: 24}} />
+                  ) : (
+                    <img src="cross.svg" style={{height: 24}} />
+                  )}
+                </td>
               </tr>
             )
           })}
