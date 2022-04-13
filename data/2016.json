@@ -79,7 +79,7 @@
     {
       "name": "Lucky",
       "keyMembers": ["Gary Gin", "Rob Masek"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Bronco",
@@ -149,7 +149,7 @@
     {
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Bombshell",
@@ -219,7 +219,7 @@
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Yeti",
@@ -229,7 +229,7 @@
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Mega Tento",
@@ -244,7 +244,7 @@
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Cobalt",
@@ -274,7 +274,7 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly (Suarez)", "Mike Gellatly"],
-      "stage": "qualifier"
+      "stage": "roundof32"
     },
     {
       "name": "Rotator",
