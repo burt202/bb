@@ -6,6 +6,7 @@ import {
   DbMember,
   DbSeason,
   DbSeasonBot,
+  DbSeasonFight,
   DbStage,
   RawFight,
   RawSeason,
@@ -288,13 +289,12 @@ export default async function createDb(
         SELECT
           b.id AS bot_id,
           b.name AS bot_name,
-          st.name AS stage_name
-        FROM seasons s
-        INNER JOIN season_bots sb ON s.id = sb.season_id
+          s.name AS stage_name
+        FROM season_bots sb
         INNER JOIN bots b ON sb.bot_id = b.id
-        INNER JOIN stages st ON sb.stage_id = st.id
-        WHERE s.id=:id
-        ORDER BY st.rank, b.name
+        INNER JOIN stages s ON sb.stage_id = s.id
+        WHERE sb.season_id=:id
+        ORDER BY s.rank, b.name
       `
 
       const dbSeasonBots = getMany<DbSeasonBot>(db, sql, {
@@ -306,6 +306,47 @@ export default async function createDb(
           botId: sb.bot_id,
           botName: sb.bot_name,
           stageName: sb.stage_name,
+        }
+      })
+    },
+    getSeasonFights(id: string) {
+      const sql = `
+        SELECT
+          f.id,
+          f.ko,
+          s.name AS stage_name,
+          b.name AS winner_name
+        FROM fights f
+        INNER JOIN stages s ON f.stage_id = s.id
+        INNER JOIN bots b ON f.winner_id = b.id
+        WHERE f.season_id=:id
+        ORDER BY s.rank
+      `
+
+      const dbSeasonFights = getMany<DbSeasonFight>(db, sql, {
+        ":id": id,
+      })
+
+      return dbSeasonFights.map((f) => {
+        const competitors = getMany<{bot_name: string}>(
+          db,
+          `
+            SELECT
+              b.name AS bot_name
+            FROM fight_competitors fc
+            INNER JOIN bots b ON fc.bot_id = b.id
+            WHERE fc.fight_id=:id
+          `,
+          {
+            ":id": f.id,
+          },
+        )
+
+        return {
+          ko: f.ko === "true",
+          stageName: f.stage_name,
+          winnerName: f.winner_name,
+          competitors: competitors.map((c) => c.bot_name),
         }
       })
     },

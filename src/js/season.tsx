@@ -29,6 +29,7 @@ export default function Season() {
     : undefined
 
   const seasonBots = db.getSeasonBots(seasonId)
+  const seasonFights = db.getSeasonFights(seasonId)
 
   return (
     <div style={{marginTop: 16}}>
@@ -41,19 +42,93 @@ export default function Season() {
       </div>
       <Link to="/">Back</Link>
       <h3>Competitors</h3>
-      <table>
+      <div style={{display: "flex"}}>
+        <table>
+          <thead>
+            <tr>
+              <th>Bot</th>
+              <th>Stage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {seasonBots.map((sb, i) => {
+              return (
+                <tr key={i}>
+                  <td>{sb.botName}</td>
+                  <td>{stageNameMap[sb.stageName]}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+        <div style={{marginLeft: 16}}>
+          <div
+            style={{
+              background: "#ccc",
+              padding: 16,
+              width: 380,
+              textAlign: "right",
+              marginBottom: 16,
+            }}
+          >
+            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>
+              Total Competitors
+            </p>
+            <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
+              {seasonBots.length}
+            </p>
+          </div>
+          <div
+            style={{
+              background: "#ccc",
+              padding: 16,
+              width: 380,
+              textAlign: "right",
+            }}
+          >
+            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>
+              Total Fights
+            </p>
+            <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
+              {seasonFights.length}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Fights</h3>
+      <table style={{width: "100%"}}>
         <thead>
           <tr>
-            <th>Bot</th>
+            <th style={{width: 400}}>Competitors</th>
             <th>Stage</th>
+            <th>KO</th>
           </tr>
         </thead>
         <tbody>
-          {seasonBots.map((sb, i) => {
+          {seasonFights.map((sf, i) => {
             return (
               <tr key={i}>
-                <td>{sb.botName}</td>
-                <td>{stageNameMap[sb.stageName]}</td>
+                <td>
+                  {sf.competitors.map((c, i) => {
+                    const isLastCompetitor = i + 1 === sf.competitors.length
+
+                    return (
+                      <React.Fragment key={i}>
+                        <span
+                          style={{
+                            fontWeight: sf.winnerName === c ? "bold" : "normal",
+                          }}
+                        >
+                          {c}
+                        </span>
+                        {isLastCompetitor ? "" : " v "}
+                      </React.Fragment>
+                    )
+                  })}
+                </td>
+                <td>{stageNameMap[sf.stageName]}</td>
+                <td>{sf.ko ? "True" : "False"}</td>
               </tr>
             )
           })}
