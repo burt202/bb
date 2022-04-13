@@ -1,10 +1,14 @@
 import * as React from "react"
 import {Link} from "react-router-dom"
 
-export default function NotFound() {
+interface Props {
+  title: string
+}
+
+export default function NotFound({title}: Props) {
   return (
     <div style={{textAlign: "center"}}>
-      <h1>Page Not Found</h1>
+      <h1>{title}</h1>
       <Link to="/">
         <button
           style={{

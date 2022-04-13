@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/season/:seasonId" element={<Season />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound title="Page Not Found" />} />
       </Routes>
     </HashRouter>
   )
