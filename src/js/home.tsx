@@ -10,13 +10,29 @@ export default function Home() {
 
   return (
     <div>
-      <ul>
+      <h1>Battlebots Database</h1>
+      <p>Select a season:</p>
+      <div style={{display: "flex"}}>
         {seasons.map((s, i) => (
-          <li key={i}>
-            <Link to={`/season/${s.id}`}>{s.name}</Link>
-          </li>
+          <Link
+            key={i}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#ccc",
+              width: 200,
+              height: 200,
+              fontSize: 48,
+              marginRight: 20,
+              color: "#003366",
+            }}
+            to={`/season/${s.id}`}
+          >
+            {s.name}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }

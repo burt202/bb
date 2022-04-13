@@ -1,6 +1,7 @@
 import * as React from "react"
 import {HashRouter, Routes, Route} from "react-router-dom"
 import Home from "./home"
+import NotFound from "./not-found"
 import Season from "./season"
 
 export default function App() {
@@ -9,14 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/season/:seasonId" element={<Season />} />
-        <Route
-          path="*"
-          element={
-            <main style={{padding: "1rem"}}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   )
