@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin")
 const packageJson = require("../package.json")
 
 module.exports = {
-  entry: ["./src/index.tsx"],
+  entry: ["./src/js/index.tsx"],
   output: {
     publicPath: "/",
     path: path.join(__dirname, "../build"),

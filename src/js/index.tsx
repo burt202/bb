@@ -6,11 +6,11 @@ import App from "./app"
 import createDb from "./db"
 import {DbInterface, RawSeason} from "./types"
 
-require("./style.css")
+require("../style.css")
 
 const data = {
-  2015: require("../data/2015.json") as RawSeason,
-  2016: require("../data/2016.json") as RawSeason,
+  2015: require("../../data/2015.json") as RawSeason,
+  2016: require("../../data/2016.json") as RawSeason,
 }
 
 export const DbContext = React.createContext<DbInterface | null>(null)
