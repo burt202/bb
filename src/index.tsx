@@ -2,9 +2,9 @@
 
 import * as React from "react"
 import * as ReactDom from "react-dom"
+import App from "./app"
 import createDb from "./db"
-import Main from "./main"
-import {RawSeason} from "./types"
+import {DbInterface, RawSeason} from "./types"
 
 require("./style.css")
 
@@ -13,13 +13,13 @@ const data = {
   2016: require("../data/2016.json") as RawSeason,
 }
 
-const DbContext = React.createContext({})
+export const DbContext = React.createContext<DbInterface | null>(null)
 
 createDb(Object.values(data))
   .then((db) => {
     ReactDom.render(
       <DbContext.Provider value={db}>
-        <Main db={db} />
+        <App />
       </DbContext.Provider>,
       document.body.querySelector("#container"),
     )

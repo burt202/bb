@@ -40,4 +40,5 @@ export interface DbSeason {
 
 export interface DbInterface {
   getAllSeasons: () => Array<DbSeason>
+  getSeasonById: (id: string) => DbSeason | undefined
 }

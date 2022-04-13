@@ -276,5 +276,10 @@ export default async function createDb(
     getAllSeasons: () => {
       return getMany<DbSeason>(db, "SELECT * FROM seasons")
     },
+    getSeasonById: (id: string) => {
+      return getOne<DbSeason>(db, "SELECT * FROM seasons where id=:id", {
+        ":id": id,
+      })
+    },
   }
 }
