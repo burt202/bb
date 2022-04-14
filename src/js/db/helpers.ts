@@ -1,22 +1,9 @@
-import initSqlJs, {Database} from "sql.js"
+import {Database} from "sql.js"
 import * as uuid from "uuid"
-import {
-  DbBot,
-  DbBotFight,
-  DbBotSeason,
-  DbInterface,
-  DbMember,
-  DbMemberSeason,
-  DbSeason,
-  DbSeasonBot,
-  DbSeasonFight,
-  DbStage,
-  RawFight,
-  RawSeason,
-} from "./types"
-import {convertNameToId} from "./utils"
+import {DbBot, DbMember, DbStage, RawFight, RawSeason} from "../types"
+import {convertNameToId} from "../utils"
 
-function createTables(db: Database) {
+export function createTables(db: Database) {
   db.run(`
     CREATE TABLE seasons (
       id text UNIQUE NOT NULL,
@@ -85,8 +72,12 @@ function createTables(db: Database) {
   `)
 }
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-function getOne<T>(db: Database, sql: string, params?: {[key: string]: any}) {
+export function getOne<T>(
+  db: Database,
+  sql: string,
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  params?: {[key: string]: any},
+) {
   const result = db.exec(sql, params)
 
   if (result.length === 0) {
@@ -106,8 +97,12 @@ function getOne<T>(db: Database, sql: string, params?: {[key: string]: any}) {
   return obj as T
 }
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-function getMany<T>(db: Database, sql: string, params?: {[key: string]: any}) {
+export function getMany<T>(
+  db: Database,
+  sql: string,
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+  params?: {[key: string]: any},
+) {
   const result = db.exec(sql, params)
 
   const match = result[0]
@@ -229,7 +224,7 @@ function addBotToFight(db: Database, fightId: string, botName: string) {
   db.run("INSERT INTO fight_competitors VALUES (?,?)", [fightId, bot.id])
 }
 
-function populateDatabase(db: Database, data: Array<RawSeason>) {
+export function populateDatabase(db: Database, data: Array<RawSeason>) {
   db.run(`
     INSERT INTO stages VALUES ('${uuid.v4()}', 'winner', 1);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 2);
@@ -264,224 +259,4 @@ function populateDatabase(db: Database, data: Array<RawSeason>) {
       })
     })
   })
-}
-
-export default async function createDb(
-  data: Array<RawSeason>,
-): Promise<DbInterface> {
-  const SQL = await initSqlJs({
-    locateFile: (file) => file,
-  })
-
-  const db = new SQL.Database()
-
-  createTables(db)
-  populateDatabase(db, data)
-
-  return {
-    getAllSeasons: () => {
-      return getMany<DbSeason>(db, "SELECT * FROM seasons ORDER BY name")
-    },
-    getSeasonById: (id: string) => {
-      return getOne<DbSeason>(db, "SELECT * FROM seasons WHERE id=:id", {
-        ":id": id,
-      })
-    },
-    getSeasonBots(id: string) {
-      const sql = `
-        SELECT
-          b.id AS bot_id,
-          b.name AS bot_name,
-          s.name AS stage_name
-        FROM season_bots sb
-        INNER JOIN bots b ON sb.bot_id = b.id
-        INNER JOIN stages s ON sb.stage_id = s.id
-        WHERE sb.season_id=:id
-        ORDER BY s.rank, b.name
-      `
-
-      const dbSeasonBots = getMany<DbSeasonBot>(db, sql, {
-        ":id": id,
-      })
-
-      return dbSeasonBots.map((sb) => {
-        return {
-          botId: sb.bot_id,
-          botName: sb.bot_name,
-          stageName: sb.stage_name,
-        }
-      })
-    },
-    getSeasonFights(id: string) {
-      const sql = `
-        SELECT
-          f.id,
-          f.ko,
-          s.name AS stage_name,
-          b.name AS winner_name
-        FROM fights f
-        INNER JOIN stages s ON f.stage_id = s.id
-        INNER JOIN bots b ON f.winner_id = b.id
-        WHERE f.season_id=:id
-        ORDER BY s.rank
-      `
-
-      const dbSeasonFights = getMany<DbSeasonFight>(db, sql, {
-        ":id": id,
-      })
-
-      return dbSeasonFights.map((f) => {
-        const competitors = getMany<{id: string; name: string}>(
-          db,
-          `
-            SELECT
-              b.id,
-              b.name
-            FROM fight_competitors fc
-            INNER JOIN bots b ON fc.bot_id = b.id
-            WHERE fc.fight_id=:id
-          `,
-          {
-            ":id": f.id,
-          },
-        )
-
-        return {
-          ko: f.ko === "true",
-          stageName: f.stage_name,
-          winnerName: f.winner_name,
-          competitors: competitors,
-        }
-      })
-    },
-    getBotById: (id: string) => {
-      return getOne<DbBot>(db, "SELECT * FROM bots WHERE id = :id", {
-        ":id": id,
-      })
-    },
-    getBotSeasons: (id: string) => {
-      const sql = `
-        SELECT
-          s.id AS season_id,
-          s.name AS season_name,
-          st.name AS stage_name
-        FROM season_bots sb
-        INNER JOIN seasons s ON sb.season_id = s.id
-        INNER JOIN stages st ON sb.stage_id = st.id
-        WHERE sb.bot_id = :id
-        ORDER BY s.id DESC
-      `
-
-      const dbBotSeasons = getMany<DbBotSeason>(db, sql, {
-        ":id": id,
-      })
-
-      return dbBotSeasons.map((bs) => {
-        const members = getMany<{id: string; name: string}>(
-          db,
-          `
-            SELECT
-              m.id,
-              m.name
-            FROM bot_members bm
-            INNER JOIN members m ON bm.member_id = m.id
-            WHERE bm.bot_id = :botId
-            AND bm.season_id = :seasonId
-          `,
-          {
-            ":botId": id,
-            ":seasonId": bs.season_id,
-          },
-        )
-
-        return {
-          members,
-          seasonId: bs.season_id,
-          seasonName: bs.season_name,
-          stageName: bs.stage_name,
-        }
-      })
-    },
-    getBotFights(id: string) {
-      const sql = `
-        SELECT
-          f.id,
-          f.ko,
-          f.winner_id,
-          st.name AS stage_name,
-          s.id AS season_id,
-          s.name AS season_name
-        FROM fight_competitors fc
-        INNER JOIN fights f ON fc.fight_id = f.id
-        INNER JOIN stages st ON f.stage_id = st.id
-        INNER JOIN seasons s ON f.season_id = s.id
-        WHERE fc.bot_id = :id
-        ORDER BY f.season_id DESC, st.rank
-      `
-
-      const dbBotFights = getMany<DbBotFight>(db, sql, {
-        ":id": id,
-      })
-
-      return dbBotFights.map((f) => {
-        const against = getMany<{id: string; name: string}>(
-          db,
-          `
-            SELECT
-              b.id,
-              b.name
-            FROM fight_competitors fc
-            INNER JOIN bots b ON fc.bot_id = b.id
-            WHERE fc.fight_id = :fightId
-            AND b.id != :botId
-          `,
-          {
-            ":fightId": f.id,
-            ":botId": id,
-          },
-        )
-
-        return {
-          ko: f.ko === "true",
-          winnerId: f.winner_id,
-          stageName: f.stage_name,
-          seasonId: f.season_id,
-          seasonName: f.season_name,
-          against,
-        }
-      })
-    },
-    getMemberById: (id: string) => {
-      return getOne<DbBot>(db, "SELECT * FROM members WHERE id = :id", {
-        ":id": id,
-      })
-    },
-    getMemberSeasons: (id: string) => {
-      const sql = `
-        SELECT
-          s.id AS season_id,
-          s.name AS season_name,
-          b.name AS bot_name,
-          b.id AS bot_id
-        FROM bot_members bm
-        INNER JOIN bots b ON bm.bot_id = b.id
-        INNER JOIN seasons s ON bm.season_id = s.id
-        WHERE bm.member_id = :id
-        ORDER BY s.id DESC
-      `
-
-      const dbMemberSeasons = getMany<DbMemberSeason>(db, sql, {
-        ":id": id,
-      })
-
-      return dbMemberSeasons.map((ms) => {
-        return {
-          seasonId: ms.season_id,
-          seasonName: ms.season_name,
-          botId: ms.bot_id,
-          botName: ms.bot_name,
-        }
-      })
-    },
-  }
 }
