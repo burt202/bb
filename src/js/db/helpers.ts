@@ -21,6 +21,7 @@ export function createTables(db: Database) {
     CREATE TABLE bots (
       id text UNIQUE NOT NULL,
       name text UNIQUE NOT NULL,
+      country text NOT NULL,
       primary key (id)
     );
 
@@ -136,12 +137,12 @@ function getMemberByName(db: Database, name: string) {
   })
 }
 
-function insertBot(db: Database, name: string) {
+function insertBot(db: Database, name: string, country: string) {
   const result = getBotByName(db, name)
 
   if (result === undefined) {
     const id = convertNameToId(name)
-    db.run("INSERT INTO bots VALUES (?,?)", [id, name])
+    db.run("INSERT INTO bots VALUES (?,?,?)", [id, name, country])
     return {id, name} as DbBot
   }
 
@@ -242,7 +243,7 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     db.run("INSERT INTO seasons VALUES (?,?)", [seasonId, season.year])
 
     season.bots.forEach((bot) => {
-      const insertedBot = insertBot(db, bot.name)
+      const insertedBot = insertBot(db, bot.name, bot.country)
       addBotToSeason(db, seasonId, insertedBot.id, bot.stage)
 
       bot.keyMembers.forEach((member) => {

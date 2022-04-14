@@ -4,37 +4,44 @@
     {
       "name": "Razorback",
       "keyMembers": ["Zack Bieber"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Wrecks",
       "keyMembers": ["Dan Chatterton", "Bunny Sauriol", "Orion Beach"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Plan X",
       "keyMembers": ["Lisa Winter"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "winner"
+      "stage": "winner",
+      "country": "USA"
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis", "James Cooper"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "GBR"
     },
     {
       "name": "Nightmare",
       "keyMembers": ["Jim Smentowski"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Warrior Clan",
@@ -45,87 +52,104 @@
         "Luke Ewert",
         "Reece Ewert"
       ],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "semi"
+      "stage": "semi",
+      "country": "USA"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Counter Revolution",
       "keyMembers": ["Curt Meyers"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "final"
+      "stage": "final",
+      "country": "USA"
     },
     {
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "stage": "semi"
+      "stage": "semi",
+      "country": "USA"
     },
     {
       "name": "Stinger",
       "keyMembers": ["Matt Maxham", "Wendy Maxham"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Overdrive",
       "keyMembers": ["Chrisian Carlberg", "Carissa Carlberg"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Radioactive",
       "keyMembers": ["Kane Aston", "Anthony Pritchard"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "GBR"
     },
     {
       "name": "Sweet Revenge",
       "keyMembers": ["Nola Garcia", "Billy Garcia"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Mohawk",
       "keyMembers": ["Tom Bales", "Korey Cline"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     }
   ],
   "fights": [

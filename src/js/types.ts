@@ -2,6 +2,7 @@ export interface RawBot {
   name: string
   keyMembers: Array<string>
   stage: string
+  country: string
 }
 
 export interface RawFight {

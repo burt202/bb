@@ -4,172 +4,206 @@
     {
       "name": "Creepy Crawlies",
       "keyMembers": ["Kelly Smith", "Ian Watts"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "GBR"
     },
     {
       "name": "Ultraviolet",
       "keyMembers": ["Andrew Peterson"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Son Of Whyachi",
       "keyMembers": ["Terry Ewert", "Luke Ewert", "Reece Ewert"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Basilisk",
       "keyMembers": ["Lucas Sloan"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "CAN"
     },
     {
       "name": "Blacksmith",
       "keyMembers": ["Al Kindle"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Gemini",
       "keyMembers": ["Ace Shelander"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "USA"
     },
     {
       "name": "Lycan",
       "keyMembers": ["Ravi Baboolal"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "CAN"
     },
     {
       "name": "Invader",
       "keyMembers": ["John Mladenik", "Brent Rieker"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "USA"
     },
     {
       "name": "Mohawk",
       "keyMembers": ["Tom Bales", "Korey Cline"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Black Ice",
       "keyMembers": ["Dan Barry"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Bad Kitty",
       "keyMembers": ["Bradley Hanstad", "Martin Mason"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "USA"
     },
     {
       "name": "Skorpios",
       "keyMembers": ["Orion Beach", "Zach Lytle"],
-      "stage": "prequalifier"
+      "stage": "prequalifier",
+      "country": "USA"
     },
     {
       "name": "Death Roll",
       "keyMembers": ["Erica Hediger"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "AUS"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Beta",
       "keyMembers": ["John Reid", "Grant Cooper"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "GBR"
     },
     {
       "name": "Lucky",
       "keyMembers": ["Gary Gin", "Rob Masek"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "CAN"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Subzero",
       "keyMembers": ["Jerry Clarkin", "Logan Davis"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Ultimo Destructo",
       "keyMembers": ["Sean Irvin"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "The Ringmaster",
       "keyMembers": ["Hannah Rucker", "Hal Rucker"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Overdrive",
       "keyMembers": ["Chrisian Carlberg", "Carissa Carlberg"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Escape Velocity",
       "keyMembers": ["Raymond Barsa"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "winner"
+      "stage": "winner",
+      "country": "USA"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
-      "stage": "semi"
+      "stage": "semi",
+      "country": "BRA"
     },
     {
       "name": "Photon Storm",
       "keyMembers": ["Ed Hoppitt"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "GBR"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "The Disk O'Inferno",
       "keyMembers": ["Jason Bardis"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Bombshell",
       "keyMembers": ["Micheal Jeffries"],
-      "stage": "final"
+      "stage": "final",
+      "country": "USA"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Chrome Fly",
       "keyMembers": ["George Matus"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Bucktooth Burl",
       "keyMembers": ["Julia Chernushevich"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "CAN"
     },
     {
       "name": "Splatter",
@@ -179,107 +213,128 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Warrior Clan",
       "keyMembers": ["Clint Ewert", "Jake Ewert"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Stinger",
       "keyMembers": ["Matt Maxham", "Wendy Maxham"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Nightmare",
       "keyMembers": ["Jim Smentowski"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Obwaldern Overlord",
       "keyMembers": ["Rob Knight"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "FRA"
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "GBR"
     },
     {
       "name": "Moebius",
       "keyMembers": ["Micheal Macht"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Brutus",
       "keyMembers": ["Adam Bercu"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Yeti",
       "keyMembers": ["Greg Gibson"],
-      "stage": "semi"
+      "stage": "semi",
+      "country": "USA"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Mega Tento",
       "keyMembers": ["Lisa Winter"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Poison Arrow",
       "keyMembers": ["Zach Goff"],
-      "stage": "quarter"
+      "stage": "quarter",
+      "country": "USA"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Cobalt",
       "keyMembers": ["Dave Moulds", "Sam Smith", "James Cooper"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "GBR"
     },
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Razorback",
       "keyMembers": ["Zack Bieber"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "USA"
     },
     {
       "name": "Red Devil",
       "keyMembers": ["Jerome Miles"],
-      "stage": "roundof16"
+      "stage": "roundof16",
+      "country": "CAN"
     },
     {
       "name": "Wrecks",
       "keyMembers": ["Dan Chatterton", "Bunny Sauriol"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly (Suarez)", "Mike Gellatly"],
-      "stage": "roundof32"
+      "stage": "roundof32",
+      "country": "USA"
     },
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "qualifier"
+      "stage": "qualifier",
+      "country": "USA"
     }
   ],
   "fights": [
