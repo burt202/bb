@@ -66,6 +66,13 @@ export interface DbBotFight {
   winner_id: string
 }
 
+export interface DbMemberSeason {
+  season_id: string
+  season_name: string
+  bot_id: string
+  bot_name: string
+}
+
 export type Season = DbSeason
 export type Bot = DbBot
 export type Member = DbMember
@@ -99,6 +106,13 @@ export interface BotFight {
   ko: boolean
 }
 
+export interface MemberSeason {
+  seasonId: string
+  seasonName: string
+  botId: string
+  botName: string
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -108,4 +122,5 @@ export interface DbInterface {
   getBotSeasons: (id: string) => Array<BotSeason>
   getBotFights: (id: string) => Array<BotFight>
   getMemberById: (id: string) => Member | undefined
+  getMemberSeasons: (id: string) => Array<MemberSeason>
 }

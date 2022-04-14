@@ -6,6 +6,7 @@ import {
   DbBotSeason,
   DbInterface,
   DbMember,
+  DbMemberSeason,
   DbSeason,
   DbSeasonBot,
   DbSeasonFight,
@@ -453,6 +454,33 @@ export default async function createDb(
     getMemberById: (id: string) => {
       return getOne<DbBot>(db, "SELECT * FROM members WHERE id = :id", {
         ":id": id,
+      })
+    },
+    getMemberSeasons: (id: string) => {
+      const sql = `
+        SELECT
+          s.id AS season_id,
+          s.name AS season_name,
+          b.name AS bot_name,
+          b.id AS bot_id
+        FROM bot_members bm
+        INNER JOIN bots b ON bm.bot_id = b.id
+        INNER JOIN seasons s ON bm.season_id = s.id
+        WHERE bm.member_id = :id
+        ORDER BY s.id DESC
+      `
+
+      const dbMemberSeasons = getMany<DbMemberSeason>(db, sql, {
+        ":id": id,
+      })
+
+      return dbMemberSeasons.map((ms) => {
+        return {
+          seasonId: ms.season_id,
+          seasonName: ms.season_name,
+          botId: ms.bot_id,
+          botName: ms.bot_name,
+        }
       })
     },
   }
