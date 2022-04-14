@@ -1,0 +1,163 @@
+{
+  "year": "2018",
+  "bots": [
+    {
+      "name": "Biteforce",
+      "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Blacksmith",
+      "keyMembers": ["Al Kindle"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mecha Rampage",
+      "keyMembers": ["Chrisian Carlberg", "Carissa Carlberg"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Free Shipping",
+      "keyMembers": ["Gary Gin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Duck",
+      "keyMembers": ["Hal Rucker"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Huge",
+      "keyMembers": ["Jonathan Schultz"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Subzero",
+      "keyMembers": ["Jerry Clarkin", "Logan Davis"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bombshell",
+      "keyMembers": ["Micheal Jeffries"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Lock-Jaw",
+      "keyMembers": ["Donald Hutson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Kraken",
+      "keyMembers": ["Matt Spurk"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Sharkoprion",
+      "keyMembers": ["Edward Robinson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Deviled Egg",
+      "keyMembers": ["Zak Hassanein"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tombstone",
+      "keyMembers": ["Ray Billings", "Rick Russ"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Minotaur",
+      "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
+      "stage": "season",
+      "country": "BRA"
+    },
+    {
+      "name": "Icewave",
+      "keyMembers": ["Mark DeVidts"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Vanquish",
+      "keyMembers": ["Jack Tweedy"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Rotator",
+      "keyMembers": ["Victor Soto"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Petunia",
+      "keyMembers": ["Mischa de Graaf"],
+      "stage": "season",
+      "country": "NLD"
+    }
+  ],
+  "fights": [
+    {
+      "competitors": ["Biteforce", "Blacksmith"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Mecha Rampage", "Free Shipping", "Duck"],
+      "winner": "Duck",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Subzero", "Huge"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Bombshell", "Lock-Jaw"],
+      "winner": "Lock-Jaw",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Kraken", "Sharkoprion", "Deviled Egg"],
+      "winner": "Sharkoprion",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Minotaur"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Icewave", "Vanquish"],
+      "winner": "Icewave",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Rotator", "Petunia"],
+      "winner": "Petunia",
+      "stage": "season",
+      "ko": false
+    }
+  ]
+}
