@@ -79,12 +79,13 @@ export default async function createDb(
       })
 
       return dbSeasonFights.map((f) => {
-        const competitors = getMany<{id: string; name: string}>(
+        const competitors = getMany<DbBot>(
           db,
           `
             SELECT
               b.id,
-              b.name
+              b.name,
+              b.country
             FROM fight_competitors fc
             INNER JOIN bots b ON fc.bot_id = b.id
             WHERE fc.fight_id=:id
@@ -172,12 +173,13 @@ export default async function createDb(
       })
 
       return dbBotFights.map((f) => {
-        const against = getMany<{id: string; name: string}>(
+        const against = getMany<DbBot>(
           db,
           `
             SELECT
               b.id,
-              b.name
+              b.name,
+              b.country
             FROM fight_competitors fc
             INNER JOIN bots b ON fc.bot_id = b.id
             WHERE fc.fight_id = :fightId

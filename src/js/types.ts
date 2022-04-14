@@ -21,6 +21,7 @@ export interface RawSeason {
 export interface DbBot {
   id: string
   name: string
+  country: string
 }
 
 export interface DbStage {

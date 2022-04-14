@@ -25,7 +25,16 @@ export default function Bot() {
 
   return (
     <div style={{marginTop: 16}}>
-      <h1 style={{margin: 0}}>{bot.name}</h1>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1 style={{margin: 0}}>{bot.name}</h1>
+        <img src={`${bot.country.toLowerCase()}.svg`} style={{height: 48}} />
+      </div>
       <h3>Seasons</h3>
       <table style={{width: "100%"}}>
         <thead>
