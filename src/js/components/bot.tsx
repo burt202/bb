@@ -1,10 +1,10 @@
 import * as React from "react"
 import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
+import {DbContext} from ".."
+import {DbInterface} from "../types"
+import {stageNameMap} from "../utils"
 import NotFound from "./not-found"
-import {DbInterface} from "./types"
-import {stageNameMap} from "./utils"
-import {DbContext} from "."
 
 export default function Bot() {
   const params = useParams()

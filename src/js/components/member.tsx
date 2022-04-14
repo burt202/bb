@@ -1,9 +1,9 @@
 import * as React from "react"
 import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
+import {DbContext} from ".."
+import {DbInterface} from "../types"
 import NotFound from "./not-found"
-import {DbInterface} from "./types"
-import {DbContext} from "."
 
 export default function Member() {
   const params = useParams()

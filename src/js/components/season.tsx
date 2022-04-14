@@ -2,10 +2,10 @@ import * as React from "react"
 import {useContext} from "react"
 import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
+import {DbContext} from ".."
+import {DbInterface} from "../types"
+import {round, stageNameMap} from "../utils"
 import NotFound from "./not-found"
-import {DbInterface} from "./types"
-import {round, stageNameMap} from "./utils"
-import {DbContext} from "."
 
 function getPercentage(rawDataLength: number, portionLength: number) {
   return `${round(0, (portionLength / rawDataLength) * 100)}%`
