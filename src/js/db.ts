@@ -368,7 +368,7 @@ export default async function createDb(
         INNER JOIN seasons s ON sb.season_id = s.id
         INNER JOIN stages st ON sb.stage_id = st.id
         WHERE sb.bot_id = :id
-        ORDER BY s.id
+        ORDER BY s.id DESC
       `
 
       const dbBotSeasons = getMany<DbBotSeason>(db, sql, {
@@ -448,6 +448,11 @@ export default async function createDb(
           seasonName: f.season_name,
           against,
         }
+      })
+    },
+    getMemberById: (id: string) => {
+      return getOne<DbBot>(db, "SELECT * FROM members WHERE id = :id", {
+        ":id": id,
       })
     },
   }

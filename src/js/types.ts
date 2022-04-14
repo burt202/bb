@@ -107,4 +107,5 @@ export interface DbInterface {
   getBotById: (id: string) => Bot | undefined
   getBotSeasons: (id: string) => Array<BotSeason>
   getBotFights: (id: string) => Array<BotFight>
+  getMemberById: (id: string) => Member | undefined
 }
