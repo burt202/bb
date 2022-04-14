@@ -5,6 +5,10 @@ export function convertNameToId(name: string) {
     .toLowerCase()
 }
 
+export function round(decimals: number, num: number) {
+  return Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals)
+}
+
 export const stageNameMap = {
   winner: "Winner",
   final: "Final",

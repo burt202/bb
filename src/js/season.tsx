@@ -1,10 +1,15 @@
 import * as React from "react"
 import {useContext} from "react"
+import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import NotFound from "./not-found"
 import {DbInterface} from "./types"
-import {stageNameMap} from "./utils"
+import {round, stageNameMap} from "./utils"
 import {DbContext} from "."
+
+function getPercentage(rawDataLength: number, portionLength: number) {
+  return `${round(0, (portionLength / rawDataLength) * 100)}%`
+}
 
 export default function Season() {
   const params = useParams()
@@ -31,16 +36,28 @@ export default function Season() {
   const seasonBots = db.getSeasonBots(seasonId)
   const seasonFights = db.getSeasonFights(seasonId)
 
+  const koFights = seasonFights.filter((f) => f.ko)
+
   return (
     <div style={{marginTop: 16}}>
       <div style={{display: "flex"}}>
         <h1 style={{margin: 0}}>Season {season.name}</h1>
         <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
-          {previousSeason && <Link to={`/season/${previousSeason}`}>Prev</Link>}
-          {nextSeason && <Link to={`/season/${nextSeason}`}>Next</Link>}
+          {previousSeason && (
+            <Link style={{color: "#003366"}} to={`/season/${previousSeason}`}>
+              Previous
+            </Link>
+          )}
+          {nextSeason && (
+            <Link style={{color: "#003366"}} to={`/season/${nextSeason}`}>
+              Next
+            </Link>
+          )}
         </div>
       </div>
-      <Link to="/">Back</Link>
+      <Link style={{color: "#003366"}} to="/">
+        Back
+      </Link>
       <h3>Competitors</h3>
       <div style={{display: "flex"}}>
         <table>
@@ -92,6 +109,41 @@ export default function Season() {
             <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
               {seasonFights.length}
             </p>
+          </div>
+          <div style={{width: 380, marginTop: 32}}>
+            <PieChart
+              style={{
+                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                fontSize: "8px",
+              }}
+              data={[
+                {
+                  title: getPercentage(seasonFights.length, koFights.length),
+                  value: koFights.length,
+                  label: "KO",
+                  color: "#003366",
+                },
+                {
+                  title: getPercentage(
+                    seasonFights.length,
+                    seasonFights.length - koFights.length,
+                  ),
+                  value: seasonFights.length - koFights.length,
+                  label: "Judges",
+                  color: "#C13C37",
+                },
+              ]}
+              animate
+              label={({dataEntry}) => {
+                return dataEntry.label as string
+              }}
+              labelStyle={{
+                fill: "#fff",
+                opacity: 0.75,
+                pointerEvents: "none",
+              }}
+            />
+            ;
           </div>
         </div>
       </div>
