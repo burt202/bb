@@ -2,6 +2,7 @@ import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
 import {
   DbBot,
+  DbBotSeason,
   DbInterface,
   DbMember,
   DbSeason,
@@ -354,6 +355,31 @@ export default async function createDb(
     getBotById: (id: string) => {
       return getOne<DbBot>(db, "SELECT * FROM bots WHERE id=:id", {
         ":id": id,
+      })
+    },
+    getBotSeasons: (id: string) => {
+      const sql = `
+        SELECT
+          s.id AS season_id,
+          s.name AS season_name,
+          st.name AS stage_name
+        FROM season_bots sb
+        INNER JOIN seasons s ON sb.season_id = s.id
+        INNER JOIN stages st ON sb.stage_id = st.id
+        WHERE sb.bot_id=:id
+        ORDER BY s.id
+      `
+
+      const dbBotSeasons = getMany<DbBotSeason>(db, sql, {
+        ":id": id,
+      })
+
+      return dbBotSeasons.map((bs) => {
+        return {
+          seasonId: bs.season_id,
+          seasonName: bs.season_name,
+          stageName: bs.stage_name,
+        }
       })
     },
   }

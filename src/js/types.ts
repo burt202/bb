@@ -51,6 +51,12 @@ export interface DbSeasonFight {
   winner_name: string
 }
 
+export interface DbBotSeason {
+  season_id: string
+  season_name: string
+  stage_name: string
+}
+
 export type Season = DbSeason
 
 export interface SeasonBot {
@@ -68,10 +74,17 @@ export interface SeasonFight {
 
 export type Bot = DbBot
 
+export interface BotSeason {
+  seasonId: string
+  seasonName: string
+  stageName: string
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
   getSeasonBots: (id: string) => Array<SeasonBot>
   getSeasonFights: (id: string) => Array<SeasonFight>
   getBotById: (id: string) => Bot | undefined
+  getBotSeasons: (id: string) => Array<BotSeason>
 }
