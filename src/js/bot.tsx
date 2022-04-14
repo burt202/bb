@@ -32,7 +32,7 @@ export default function Bot() {
           <tr>
             <th>Season</th>
             <th>Stage</th>
-            <th style={{width: 400}}>Members</th>
+            <th style={{width: 400}}>Key Members</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +48,20 @@ export default function Bot() {
                   </Link>
                 </td>
                 <td>{stageNameMap[bs.stageName]}</td>
-                <td>members-go-here</td>
+                <td>
+                  {bs.members.map((m, i) => {
+                    const isLastMember = i + 1 === bs.members.length
+
+                    return (
+                      <React.Fragment key={i}>
+                        <Link style={{color: "#003366"}} to={`/member/${m.id}`}>
+                          {m.name}
+                        </Link>
+                        {isLastMember ? "" : ", "}
+                      </React.Fragment>
+                    )
+                  })}
+                </td>
               </tr>
             )
           })}

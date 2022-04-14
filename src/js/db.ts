@@ -354,7 +354,7 @@ export default async function createDb(
       })
     },
     getBotById: (id: string) => {
-      return getOne<DbBot>(db, "SELECT * FROM bots WHERE id=:id", {
+      return getOne<DbBot>(db, "SELECT * FROM bots WHERE id = :id", {
         ":id": id,
       })
     },
@@ -367,7 +367,7 @@ export default async function createDb(
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
         INNER JOIN stages st ON sb.stage_id = st.id
-        WHERE sb.bot_id=:id
+        WHERE sb.bot_id = :id
         ORDER BY s.id
       `
 
@@ -376,7 +376,25 @@ export default async function createDb(
       })
 
       return dbBotSeasons.map((bs) => {
+        const members = getMany<{id: string; name: string}>(
+          db,
+          `
+            SELECT
+              m.id,
+              m.name
+            FROM bot_members bm
+            INNER JOIN members m ON bm.member_id = m.id
+            WHERE bm.bot_id = :botId
+            AND bm.season_id = :seasonId
+          `,
+          {
+            ":botId": id,
+            ":seasonId": bs.season_id,
+          },
+        )
+
         return {
+          members,
           seasonId: bs.season_id,
           seasonName: bs.season_name,
           stageName: bs.stage_name,
@@ -396,7 +414,7 @@ export default async function createDb(
         INNER JOIN fights f ON fc.fight_id = f.id
         INNER JOIN stages st ON f.stage_id = st.id
         INNER JOIN seasons s ON f.season_id = s.id
-        WHERE fc.bot_id=:id
+        WHERE fc.bot_id = :id
         ORDER BY f.season_id DESC, st.rank
       `
 

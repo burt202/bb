@@ -67,6 +67,8 @@ export interface DbBotFight {
 }
 
 export type Season = DbSeason
+export type Bot = DbBot
+export type Member = DbMember
 
 export interface SeasonBot {
   botId: string
@@ -75,18 +77,17 @@ export interface SeasonBot {
 }
 
 export interface SeasonFight {
-  competitors: Array<DbBot>
+  competitors: Array<Bot>
   ko: boolean
   stageName: string
   winnerName: string
 }
 
-export type Bot = DbBot
-
 export interface BotSeason {
   seasonId: string
   seasonName: string
   stageName: string
+  members: Array<Member>
 }
 
 export interface BotFight {
@@ -94,7 +95,7 @@ export interface BotFight {
   seasonName: string
   stageName: string
   winnerId: string
-  against: Array<DbBot>
+  against: Array<Bot>
   ko: boolean
 }
 
