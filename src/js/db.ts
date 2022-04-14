@@ -2,6 +2,7 @@ import initSqlJs, {Database} from "sql.js"
 import * as uuid from "uuid"
 import {
   DbBot,
+  DbBotFight,
   DbBotSeason,
   DbInterface,
   DbMember,
@@ -379,6 +380,55 @@ export default async function createDb(
           seasonId: bs.season_id,
           seasonName: bs.season_name,
           stageName: bs.stage_name,
+        }
+      })
+    },
+    getBotFights(id: string) {
+      const sql = `
+        SELECT
+          f.id,
+          f.ko,
+          f.winner_id,
+          st.name AS stage_name,
+          s.id AS season_id,
+          s.name AS season_name
+        FROM fight_competitors fc
+        INNER JOIN fights f ON fc.fight_id = f.id
+        INNER JOIN stages st ON f.stage_id = st.id
+        INNER JOIN seasons s ON f.season_id = s.id
+        WHERE fc.bot_id=:id
+        ORDER BY f.season_id DESC, st.rank
+      `
+
+      const dbBotFights = getMany<DbBotFight>(db, sql, {
+        ":id": id,
+      })
+
+      return dbBotFights.map((f) => {
+        const against = getMany<{id: string; name: string}>(
+          db,
+          `
+            SELECT
+              b.id,
+              b.name
+            FROM fight_competitors fc
+            INNER JOIN bots b ON fc.bot_id = b.id
+            WHERE fc.fight_id = :fightId
+            AND b.id != :botId
+          `,
+          {
+            ":fightId": f.id,
+            ":botId": id,
+          },
+        )
+
+        return {
+          ko: f.ko === "true",
+          winnerId: f.winner_id,
+          stageName: f.stage_name,
+          seasonId: f.season_id,
+          seasonName: f.season_name,
+          against,
         }
       })
     },

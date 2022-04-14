@@ -18,6 +18,10 @@ export default function Bot() {
   }
 
   const botSeasons = db.getBotSeasons(botId)
+  const botFights = db.getBotFights(botId)
+
+  const botFightWins = botFights.filter((bf) => bf.winnerId === botId)
+  const koWins = botFightWins.filter((bf) => bf.ko)
 
   return (
     <div style={{marginTop: 16}}>
@@ -50,7 +54,73 @@ export default function Bot() {
           })}
         </tbody>
       </table>
-      fight total ko pie chart list of fights
+      <div style={{display: "flex", justifyContent: "space-between"}}>
+        <h3>Fights</h3>
+        <div style={{display: "flex", alignItems: "center"}}>
+          <div style={{marginRight: 32}}>Total: {botFights.length}</div>
+          <div style={{marginRight: 32}}>Wins: {botFightWins.length}</div>
+          <div>KO's: {koWins.length}</div>
+        </div>
+      </div>
+      <table style={{width: "100%"}}>
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th style={{width: 400}}>Against</th>
+            <th style={{textAlign: "center"}}>Win</th>
+            <th>Stage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {botFights.map((bf, i) => {
+            return (
+              <tr key={i}>
+                <td>
+                  <Link
+                    style={{color: "#003366"}}
+                    to={`/season/${bf.seasonId}`}
+                  >
+                    {bf.seasonName}
+                  </Link>
+                </td>
+                <td>
+                  {bf.against.map((c, i) => {
+                    const isLastCompetitor = i + 1 === bf.against.length
+
+                    return (
+                      <React.Fragment key={i}>
+                        <Link style={{color: "#003366"}} to={`/bot/${c.id}`}>
+                          {c.name}
+                        </Link>
+                        {isLastCompetitor ? "" : ", "}
+                      </React.Fragment>
+                    )
+                  })}
+                </td>
+                <td style={{textAlign: "center"}}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {bf.winnerId === botId ? (
+                      <>
+                        <img src="tick.svg" style={{height: 24}} />
+                        {bf.ko && <span>KO</span>}
+                      </>
+                    ) : (
+                      <img src="cross.svg" style={{height: 24}} />
+                    )}
+                  </div>
+                </td>
+                <td>{stageNameMap[bf.stageName]}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }
