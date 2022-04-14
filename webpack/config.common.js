@@ -34,8 +34,14 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {from: "./node_modules/sql.js/dist/sql-wasm.wasm", to: "sql-wasm.wasm"},
-        {from: "src/tick.svg", to: "tick.svg"},
-        {from: "src/cross.svg", to: "cross.svg"},
+        {from: "src/images/tick.svg", to: "tick.svg"},
+        {from: "src/images/cross.svg", to: "cross.svg"},
+        {from: "src/images/flags/aus.svg", to: "aus.svg"},
+        {from: "src/images/flags/bra.svg", to: "bra.svg"},
+        {from: "src/images/flags/can.svg", to: "can.svg"},
+        {from: "src/images/flags/fra.svg", to: "fra.svg"},
+        {from: "src/images/flags/usa.svg", to: "usa.svg"},
+        {from: "src/images/flags/gbr.svg", to: "gbr.svg"},
       ],
     }),
     new webpack.DefinePlugin({

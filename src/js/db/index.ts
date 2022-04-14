@@ -38,6 +38,7 @@ export default async function createDb(
         SELECT
           b.id AS bot_id,
           b.name AS bot_name,
+          b.country AS bot_country,
           s.name AS stage_name
         FROM season_bots sb
         INNER JOIN bots b ON sb.bot_id = b.id
@@ -54,6 +55,7 @@ export default async function createDb(
         return {
           botId: sb.bot_id,
           botName: sb.bot_name,
+          botCountry: sb.bot_country,
           stageName: sb.stage_name,
         }
       })

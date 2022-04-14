@@ -42,6 +42,7 @@ export interface DbSeason {
 export interface DbSeasonBot {
   bot_id: string
   bot_name: string
+  bot_country: string
   stage_name: string
 }
 
@@ -81,6 +82,7 @@ export type Member = DbMember
 export interface SeasonBot {
   botId: string
   botName: string
+  botCountry: string
   stageName: string
 }
 

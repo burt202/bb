@@ -63,6 +63,7 @@ export default function Season() {
         <table>
           <thead>
             <tr>
+              <th style={{width: 50}}></th>
               <th>Bot</th>
               <th>Stage</th>
             </tr>
@@ -71,6 +72,12 @@ export default function Season() {
             {seasonBots.map((sb, i) => {
               return (
                 <tr key={i}>
+                  <td style={{width: 50, textAlign: "center"}}>
+                    <img
+                      src={`${sb.botCountry.toLowerCase()}.svg`}
+                      style={{height: 24}}
+                    />
+                  </td>
                   <td>
                     <Link style={{color: "#003366"}} to={`/bot/${sb.botId}`}>
                       {sb.botName}
