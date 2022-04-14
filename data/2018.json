@@ -251,6 +251,60 @@
       "keyMembers": ["Brent Rieker"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Luke Ewert", "Reece Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Reality",
+      "keyMembers": ["Tim Bouwens"],
+      "stage": "season",
+      "country": "NLD"
+    },
+    {
+      "name": "Predator",
+      "keyMembers": ["Craig Danby"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Valkyrie",
+      "keyMembers": ["Leanne Cushing", "Frederick Moore"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bale Spear",
+      "keyMembers": ["Earl Pancoast III"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Chomp",
+      "keyMembers": ["Zoe Stephenson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Warrior Dragon",
+      "keyMembers": ["Clint Ewert", "Jake Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bronco",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Ultimo Destructo",
+      "keyMembers": ["Sean Irvin"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -383,6 +437,84 @@
     {
       "competitors": ["Tombstone", "Gigabyte"],
       "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Huge", "Free Shipping"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Minotaur", "Hypothermia"],
+      "winner": "Minotaur",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Blacksmith", "The Four Horsemen"],
+      "winner": "Blacksmith",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Son Of Whyachi", "Brutus"],
+      "winner": "Brutus",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Icewave", "Yeti"],
+      "winner": "Icewave",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Reality", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Petunia", "Monsoon"],
+      "winner": "Monsoon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Subzero", "Captain Shrederator"],
+      "winner": "Subzero",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Bale Spear", "Valkyrie", "Predator"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Chomp", "Warrior Dragon"],
+      "winner": "Warrior Dragon",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Bronco", "Bombshell"],
+      "winner": "Bronco",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Valkyrie", "Ultimo Destructo"],
+      "winner": "Ultimo Destructo",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Predator", "Rotator"],
+      "winner": "Rotator",
       "stage": "season",
       "ko": true
     }

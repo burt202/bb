@@ -44,7 +44,10 @@ export default function Season() {
         <h1 style={{margin: 0}}>Season {season.name}</h1>
         <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
           {previousSeason && (
-            <Link style={{color: "#003366"}} to={`/season/${previousSeason}`}>
+            <Link
+              style={{color: "#003366", marginRight: nextSeason ? 16 : 0}}
+              to={`/season/${previousSeason}`}
+            >
               Previous
             </Link>
           )}
