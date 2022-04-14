@@ -71,7 +71,11 @@ export default function Season() {
             {seasonBots.map((sb, i) => {
               return (
                 <tr key={i}>
-                  <td>{sb.botName}</td>
+                  <td>
+                    <Link style={{color: "#003366"}} to={`/bot/${sb.botId}`}>
+                      {sb.botName}
+                    </Link>
+                  </td>
                   <td>{stageNameMap[sb.stageName]}</td>
                 </tr>
               )
@@ -169,10 +173,13 @@ export default function Season() {
                       <React.Fragment key={i}>
                         <span
                           style={{
-                            fontWeight: sf.winnerName === c ? "bold" : "normal",
+                            fontWeight:
+                              sf.winnerName === c.name ? "bold" : "normal",
                           }}
                         >
-                          {c}
+                          <Link style={{color: "#003366"}} to={`/bot/${c.id}`}>
+                            {c.name}
+                          </Link>
                         </span>
                         {isLastCompetitor ? "" : " v "}
                       </React.Fragment>

@@ -328,11 +328,12 @@ export default async function createDb(
       })
 
       return dbSeasonFights.map((f) => {
-        const competitors = getMany<{bot_name: string}>(
+        const competitors = getMany<{id: string; name: string}>(
           db,
           `
             SELECT
-              b.name AS bot_name
+              b.id,
+              b.name
             FROM fight_competitors fc
             INNER JOIN bots b ON fc.bot_id = b.id
             WHERE fc.fight_id=:id
@@ -346,8 +347,13 @@ export default async function createDb(
           ko: f.ko === "true",
           stageName: f.stage_name,
           winnerName: f.winner_name,
-          competitors: competitors.map((c) => c.bot_name),
+          competitors: competitors,
         }
+      })
+    },
+    getBotById: (id: string) => {
+      return getOne<DbBot>(db, "SELECT * FROM bots WHERE id=:id", {
+        ":id": id,
       })
     },
   }
