@@ -108,6 +108,149 @@
       "keyMembers": ["Mischa de Graaf"],
       "stage": "season",
       "country": "NLD"
+    },
+    {
+      "name": "Brutus",
+      "keyMembers": ["Adam Bercu"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Red Devil",
+      "keyMembers": ["Ravi Baboolal", "Julia Chernushevich"],
+      "stage": "season",
+      "country": "CAN"
+    },
+    {
+      "name": "Captain Shrederator",
+      "keyMembers": ["Nick Nave"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "End Game",
+      "keyMembers": ["Jack Barker", "Nick Mabey"],
+      "stage": "season",
+      "country": "NZL"
+    },
+    {
+      "name": "Witch Doctor",
+      "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Yeti",
+      "keyMembers": ["Greg Gibson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Overhaul",
+      "keyMembers": ["Charles Guan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Sawblaze",
+      "keyMembers": ["Jamison Go", "Alex Hattori", "Mason Massie"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Whiplash",
+      "keyMembers": [
+        "Matt Vazquez",
+        "Jason Vazquez",
+        "Jeff Vazquez",
+        "Debbie Vazquez"
+      ],
+      "stage": "qualifier",
+      "country": "USA"
+    },
+    {
+      "name": "Hypothermia",
+      "keyMembers": ["Michael Mauldin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "The Four Horsemen",
+      "keyMembers": ["Ian Watts", "Sam Watts"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Double Jeopardy",
+      "keyMembers": ["Evan Woolley", "Bryce Woolley", "Bill Woolley"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gamma 9",
+      "keyMembers": ["Curtis Nemeth"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "War Hawk",
+      "keyMembers": ["Rob Farrow", "Kevin Milczewski"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Axe Backwards",
+      "keyMembers": ["Kurt Durjan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Hypershock",
+      "keyMembers": ["Will Bales"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Monsoon",
+      "keyMembers": ["Tom Brewster"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Lucky",
+      "keyMembers": ["Mark Demers"],
+      "stage": "season",
+      "country": "CAN"
+    },
+    {
+      "name": "Skorpios",
+      "keyMembers": ["Orion Beach", "Diana Tarlson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Battle Royale With Cheese",
+      "keyMembers": ["Miles Pekala", "Jen Herchenroeder"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tantrum",
+      "keyMembers": ["Aren Hill"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gemini",
+      "keyMembers": ["Ace Shelander"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gigabyte",
+      "keyMembers": ["Brent Rieker"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -158,6 +301,90 @@
       "winner": "Petunia",
       "stage": "season",
       "ko": false
+    },
+    {
+      "competitors": ["Brutus", "Red Devil"],
+      "winner": "Red Devil",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Captain Shrederator", "End Game"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Witch Doctor", "Yeti"],
+      "winner": "Yeti",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Overhaul", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Whiplash", "Hypothermia"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["The Four Horsemen", "Gamma 9", "Double Jeopardy"],
+      "winner": "The Four Horsemen",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["War Hawk", "Axe Backwards"],
+      "winner": "War Hawk",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Biteforce", "Hypershock"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Red Devil", "Monsoon"],
+      "winner": "Monsoon",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Lucky", "Skorpios"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Tantrum", "Battle Royale With Cheese"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Kraken", "Mohawk", "Gemini"],
+      "winner": "Gemini",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Lock-Jaw", "End Game"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Gigabyte"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
     }
   ]
 }

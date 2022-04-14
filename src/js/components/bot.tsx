@@ -33,7 +33,11 @@ export default function Bot() {
         }}
       >
         <h1 style={{margin: 0}}>{bot.name}</h1>
-        <img src={`${bot.country.toLowerCase()}.svg`} style={{height: 48}} />
+        <img
+          src={`${bot.country.toLowerCase()}.svg`}
+          style={{height: 48}}
+          title={bot.country}
+        />
       </div>
       <h3>Seasons</h3>
       <table style={{width: "100%"}}>

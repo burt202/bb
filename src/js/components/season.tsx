@@ -75,6 +75,7 @@ export default function Season() {
                   <td style={{width: 50, textAlign: "center"}}>
                     <img
                       src={`${sb.botCountry.toLowerCase()}.svg`}
+                      title={sb.botCountry}
                       style={{height: 24}}
                     />
                   </td>
