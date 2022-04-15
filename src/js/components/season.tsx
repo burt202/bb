@@ -4,12 +4,8 @@ import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
-import {round, stageNameMap} from "../utils"
+import {getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
-
-function getPercentage(rawDataLength: number, portionLength: number) {
-  return `${round(0, (portionLength / rawDataLength) * 100)}%`
-}
 
 export default function Season() {
   const params = useParams()

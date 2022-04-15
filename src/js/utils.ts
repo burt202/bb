@@ -9,6 +9,10 @@ export function round(decimals: number, num: number) {
   return Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals)
 }
 
+export function getPercentage(rawDataLength: number, portionLength: number) {
+  return `${round(0, (portionLength / rawDataLength) * 100)}%`
+}
+
 export const stageNameMap = {
   winner: "Winner",
   final: "Final",

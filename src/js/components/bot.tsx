@@ -3,7 +3,7 @@ import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
-import {stageNameMap} from "../utils"
+import {getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 
 export default function Bot() {
@@ -85,7 +85,11 @@ export default function Bot() {
         <div style={{display: "flex", alignItems: "center"}}>
           <div style={{marginRight: 32}}>Total: {botFights.length}</div>
           <div style={{marginRight: 32}}>Wins: {botFightWins.length}</div>
-          <div>KO's: {koWins.length}</div>
+          <div style={{marginRight: 32}}>KO's: {koWins.length}</div>
+          <div style={{marginRight: 32}}>
+            Win %: {getPercentage(botFights.length, botFightWins.length)}
+          </div>
+          <div>KO %: {getPercentage(botFightWins.length, koWins.length)}</div>
         </div>
       </div>
       <table style={{width: "100%"}}>
