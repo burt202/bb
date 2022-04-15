@@ -58,8 +58,16 @@ export default function Season() {
           )}
         </div>
       </div>
-      <Link style={{color: "#003366"}} to="/">
-        Back
+      <Link
+        style={{
+          marginTop: 8,
+          marginBottom: 24,
+          display: "block",
+          color: "#003366",
+        }}
+        to="/"
+      >
+        Back to home
       </Link>
       <h3>Competitors</h3>
       <div style={{display: "flex"}}>
