@@ -99,8 +99,18 @@ export default function Bot() {
         </thead>
         <tbody>
           {botFights.map((bf, i) => {
+            const shouldShowDivider =
+              botFights[i + 1] === undefined
+                ? false
+                : bf.seasonId !== botFights[i + 1].seasonId
+
             return (
-              <tr key={i}>
+              <tr
+                key={i}
+                style={{
+                  borderBottom: shouldShowDivider ? "3px solid" : 1,
+                }}
+              >
                 <td>
                   <Link
                     style={{color: "#003366"}}
