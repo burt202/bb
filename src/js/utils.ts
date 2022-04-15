@@ -10,6 +10,7 @@ export function round(decimals: number, num: number) {
 }
 
 export function getPercentage(rawDataLength: number, portionLength: number) {
+  if (rawDataLength === 0) return "0%"
   return `${round(0, (portionLength / rawDataLength) * 100)}%`
 }
 
