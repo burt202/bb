@@ -76,6 +76,12 @@ export interface DbMemberSeason {
   bot_name: string
 }
 
+export interface DbTop10Result {
+  bot_id: string
+  bot_name: string
+  count: number
+}
+
 export type Season = DbSeason
 export type Bot = DbBot
 export type Member = DbMember
@@ -117,6 +123,12 @@ export interface MemberSeason {
   botName: string
 }
 
+export interface Top10Result {
+  botId: string
+  botName: string
+  count: number
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -127,4 +139,5 @@ export interface DbInterface {
   getBotFights: (id: string) => Array<BotFight>
   getMemberById: (id: string) => Member | undefined
   getMemberSeasons: (id: string) => Array<MemberSeason>
+  getTop10MostWins: () => Array<Top10Result>
 }
