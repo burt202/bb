@@ -1,0 +1,223 @@
+{
+  "year": "2019",
+  "bots": [
+    {
+      "name": "Sawblaze",
+      "keyMembers": ["Jamison Go"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rotator",
+      "keyMembers": ["Victor Soto"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Cobalt",
+      "keyMembers": ["Dave Moulds", "Sam Smith"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Subzero",
+      "keyMembers": ["Jerry Clarkin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Kraken",
+      "keyMembers": ["Matt Spurk"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Ribbot",
+      "keyMembers": ["David Jin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "End Game",
+      "keyMembers": ["Jack Barker", "Nick Mabey"],
+      "stage": "season",
+      "country": "NZL"
+    },
+    {
+      "name": "Death Roll",
+      "keyMembers": ["Erica Hediger", "Steven Martin"],
+      "stage": "qualifier",
+      "country": "AUS"
+    },
+    {
+      "name": "Hypershock",
+      "keyMembers": ["Will Bales"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Valkyrie",
+      "keyMembers": ["Leanne Cushing", "Frederick Moore"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Blacksmith",
+      "keyMembers": ["Al Kindle"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Quantum",
+      "keyMembers": ["James Cooper", "Grant Cooper"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Tombstone",
+      "keyMembers": ["Ray Billings"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Lock-Jaw",
+      "keyMembers": ["Donald Hutson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Luke Ewert", "Reece Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Huge",
+      "keyMembers": ["Jonathan Schultz"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Black Dragon",
+      "keyMembers": ["Joao Marcos"],
+      "stage": "season",
+      "country": "BRA"
+    },
+    {
+      "name": "Texas Twister",
+      "keyMembers": ["Michael Mauldin", "Kay Lane"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Duck",
+      "keyMembers": ["Hal Rucker", "Gabriel Stroud"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bombshell",
+      "keyMembers": ["Dan Hammer", "Matthew Carroll"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Shatter",
+      "keyMembers": ["Adam Wrigley", "Mary Chimenti", "Bunny Sauriol"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Witch Doctor",
+      "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Axe Backwards",
+      "keyMembers": ["Kurt Durjan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mammoth",
+      "keyMembers": ["Ricky Willems"],
+      "stage": "season",
+      "country": "USA"
+    }
+  ],
+  "fights": [
+    {
+      "competitors": ["Sawblaze", "Rotator"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Cobalt", "Subzero"],
+      "winner": "Cobalt",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Kraken", "Ribbot"],
+      "winner": "Kraken",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["End Game", "Death Roll"],
+      "winner": "Death Roll",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Hypershock", "Valkyrie"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Blacksmith", "Quantum"],
+      "winner": "Quantum",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Lock-Jaw", "Tombstone"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Son Of Whyachi", "Huge"],
+      "winner": "Son Of Whyachi",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "Texas Twister"],
+      "winner": "Texas Twister",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Duck", "Bombshell"],
+      "winner": "Duck",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Witch Doctor", "Shatter"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Axe Backwards", "Mammoth"],
+      "winner": "Mammoth",
+      "stage": "season",
+      "ko": true
+    }
+  ]
+}
