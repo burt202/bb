@@ -305,6 +305,18 @@
       "keyMembers": ["Sean Irvin"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Mohawk",
+      "keyMembers": ["Tom Bales", "Korey Cline", "Max Bales"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Basilisk",
+      "keyMembers": ["Lucas Sloan"],
+      "stage": "season",
+      "country": "CAN"
     }
   ],
   "fights": [
@@ -517,6 +529,72 @@
       "winner": "Rotator",
       "stage": "season",
       "ko": true
+    },
+    {
+      "competitors": ["Lucky", "Son Of Whyachi"],
+      "winner": "Son Of Whyachi",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Sawblaze", "Mohawk"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Whiplash", "Mecha Rampage"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Overhaul", "Chomp"],
+      "winner": "Overhaul",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Basilisk", "Deviled Egg", "Axe Backwards"],
+      "winner": "Deviled Egg",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Biteforce", "End Game"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Warrior Dragon", "Rotator"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Reality", "Duck"],
+      "winner": "Duck",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Hypershock", "Battle Royale With Cheese"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Witch Doctor", "Blacksmith"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Bronco", "Lock-Jaw"],
+      "winner": "Bronco",
+      "stage": "season",
+      "ko": false
     }
   ]
 }
