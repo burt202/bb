@@ -144,6 +144,35 @@
       "keyMembers": ["Ricky Willems"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Captain Shrederator",
+      "keyMembers": ["Brian Nave", "Nick Nave"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Wan Hoo",
+      "keyMembers": ["Weidong Qi"],
+      "stage": "season",
+      "country": "CHN"
+    },
+    {
+      "name": "Whiplash",
+      "keyMembers": [
+        "Matt Vazquez",
+        "Jason Vazquez",
+        "Jeff Vazquez",
+        "Debbie Vazquez"
+      ],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Minotaur",
+      "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
+      "stage": "season",
+      "country": "BRA"
     }
   ],
   "fights": [
@@ -218,6 +247,18 @@
       "winner": "Mammoth",
       "stage": "season",
       "ko": true
+    },
+    {
+      "competitors": ["Captain Shrederator", "Wan Hoo"],
+      "winner": "Wan Hoo",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Whiplash", "Minotaur"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": false
     }
   ]
 }
