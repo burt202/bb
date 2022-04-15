@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {Link} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
+import {round} from "../utils"
 
 export default function Home() {
   const db = useContext(DbContext) as DbInterface
@@ -10,8 +11,7 @@ export default function Home() {
 
   const top10MostWins = db.getTop10MostWins()
   const top10MostKOs = db.getTop10MostKOs()
-
-  // TODO most losses, win%, ko%
+  const top10BestWinPercentages = db.getTop10BestWinPercentages()
 
   return (
     <div style={{marginTop: 16}}>
@@ -83,6 +83,33 @@ export default function Home() {
                       </Link>
                     </td>
                     <td>{tt.count}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div style={{display: "flex"}}>
+        <div style={{marginRight: 32}}>
+          <h3>Top 10 Best Win % (at least 3 matches)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Bot</th>
+                <th>Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              {top10BestWinPercentages.map((tt, i) => {
+                return (
+                  <tr key={i}>
+                    <td>
+                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
+                        {tt.botName}
+                      </Link>
+                    </td>
+                    <td>{`${round(0, tt.count * 100)}%`}</td>
                   </tr>
                 )
               })}

@@ -246,7 +246,7 @@ export default async function createDb(
             f.winner_id AS bot_id,
             COUNT(f.winner_id) AS count
           FROM fights f
-          GROUP BY winner_id
+          GROUP BY f.winner_id
           ORDER BY count DESC
           LIMIT 10
         ) AS sq ON b.id = sq.bot_id
@@ -274,7 +274,7 @@ export default async function createDb(
             COUNT(f.winner_id) AS count
           FROM fights f
           WHERE f.ko = 'true'
-          GROUP BY winner_id
+          GROUP BY f.winner_id
           ORDER BY count DESC
           LIMIT 10
         ) AS sq ON b.id = sq.bot_id
@@ -282,6 +282,41 @@ export default async function createDb(
       const top10MostWins = getMany<DbTop10Result>(db, sql)
 
       return top10MostWins.map((tt) => {
+        return {
+          count: tt.count,
+          botId: tt.bot_id,
+          botName: tt.bot_name,
+        }
+      })
+    },
+    getTop10BestWinPercentages: () => {
+      const sql = `
+        SELECT
+          b.name AS bot_name,
+          wins.bot_id,
+          1.0 * wins.count / total.count AS count
+        FROM bots b
+        INNER JOIN (
+          SELECT
+            f.winner_id AS bot_id,
+            COUNT(f.winner_id) AS count
+          FROM fights f
+          GROUP BY winner_id
+        ) AS wins ON b.id = wins.bot_id
+        INNER JOIN (
+          SELECT
+            fc.bot_id AS bot_id,
+            COUNT(fc.bot_id) AS count
+          FROM fight_competitors fc
+          GROUP BY fc.bot_id
+        ) AS total ON b.id = total.bot_id
+        WHERE total.count >= 3
+        ORDER BY count DESC
+        LIMIT 10
+      `
+      const getTop10BestWinPercentages = getMany<DbTop10Result>(db, sql)
+
+      return getTop10BestWinPercentages.map((tt) => {
         return {
           count: tt.count,
           botId: tt.bot_id,

@@ -141,4 +141,5 @@ export interface DbInterface {
   getMemberSeasons: (id: string) => Array<MemberSeason>
   getTop10MostWins: () => Array<Top10Result>
   getTop10MostKOs: () => Array<Top10Result>
+  getTop10BestWinPercentages: () => Array<Top10Result>
 }
