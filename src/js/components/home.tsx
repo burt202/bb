@@ -9,6 +9,9 @@ export default function Home() {
   const seasons = db.getAllSeasons()
 
   const top10MostWins = db.getTop10MostWins()
+  const top10MostKOs = db.getTop10MostKOs()
+
+  // TODO most losses, win%, ko%
 
   return (
     <div style={{marginTop: 16}}>
@@ -62,7 +65,7 @@ export default function Home() {
           </table>
         </div>
         <div>
-          <h3>Top 10 ??</h3>
+          <h3>Top 10 Most KOs</h3>
           <table>
             <thead>
               <tr>
@@ -70,7 +73,20 @@ export default function Home() {
                 <th>Count</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+              {top10MostKOs.map((tt, i) => {
+                return (
+                  <tr key={i}>
+                    <td>
+                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
+                        {tt.botName}
+                      </Link>
+                    </td>
+                    <td>{tt.count}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
           </table>
         </div>
       </div>

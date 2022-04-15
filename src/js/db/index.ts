@@ -261,5 +261,33 @@ export default async function createDb(
         }
       })
     },
+    getTop10MostKOs: () => {
+      const sql = `
+        SELECT
+          b.name AS bot_name,
+          sq.bot_id,
+          sq.count
+        FROM bots b
+        INNER JOIN (
+          SELECT
+            f.winner_id AS bot_id,
+            COUNT(f.winner_id) AS count
+          FROM fights f
+          WHERE f.ko = 'true'
+          GROUP BY winner_id
+          ORDER BY count DESC
+          LIMIT 10
+        ) AS sq ON b.id = sq.bot_id
+      `
+      const top10MostWins = getMany<DbTop10Result>(db, sql)
+
+      return top10MostWins.map((tt) => {
+        return {
+          count: tt.count,
+          botId: tt.bot_id,
+          botName: tt.bot_name,
+        }
+      })
+    },
   }
 }
