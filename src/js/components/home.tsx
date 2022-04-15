@@ -12,6 +12,7 @@ export default function Home() {
   const top10MostWins = db.getTop10MostWins()
   const top10MostKOs = db.getTop10MostKOs()
   const top10BestWinPercentages = db.getTop10BestWinPercentages()
+  const top10BestKOPercentages = db.getTop10BestKOPercentages()
 
   return (
     <div style={{marginTop: 16}}>
@@ -97,11 +98,36 @@ export default function Home() {
             <thead>
               <tr>
                 <th>Bot</th>
-                <th>Count</th>
+                <th>%</th>
               </tr>
             </thead>
             <tbody>
               {top10BestWinPercentages.map((tt, i) => {
+                return (
+                  <tr key={i}>
+                    <td>
+                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
+                        {tt.botName}
+                      </Link>
+                    </td>
+                    <td>{`${round(0, tt.count * 100)}%`}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Top 10 Best KO % (at least 3 matches)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Bot</th>
+                <th>%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {top10BestKOPercentages.map((tt, i) => {
                 return (
                   <tr key={i}>
                     <td>

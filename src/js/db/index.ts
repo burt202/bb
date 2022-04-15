@@ -324,5 +324,41 @@ export default async function createDb(
         }
       })
     },
+    getTop10BestKOPercentages: () => {
+      const sql = `
+        SELECT
+          b.name AS bot_name,
+          kos.bot_id,
+          1.0 * kos.count / total.count AS count
+        FROM bots b
+        INNER JOIN (
+          SELECT
+            f.winner_id AS bot_id,
+            COUNT(f.winner_id) AS count
+          FROM fights f
+          WHERE f.ko = 'true'
+          GROUP BY winner_id
+        ) AS kos ON b.id = kos.bot_id
+        INNER JOIN (
+          SELECT
+            fc.bot_id AS bot_id,
+            COUNT(fc.bot_id) AS count
+          FROM fight_competitors fc
+          GROUP BY fc.bot_id
+        ) AS total ON b.id = total.bot_id
+        WHERE total.count >= 3
+        ORDER BY count DESC
+        LIMIT 10
+      `
+      const getTop10BestKOPercentages = getMany<DbTop10Result>(db, sql)
+
+      return getTop10BestKOPercentages.map((tt) => {
+        return {
+          count: tt.count,
+          botId: tt.bot_id,
+          botName: tt.bot_name,
+        }
+      })
+    },
   }
 }

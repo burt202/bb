@@ -142,4 +142,5 @@ export interface DbInterface {
   getTop10MostWins: () => Array<Top10Result>
   getTop10MostKOs: () => Array<Top10Result>
   getTop10BestWinPercentages: () => Array<Top10Result>
+  getTop10BestKOPercentages: () => Array<Top10Result>
 }
