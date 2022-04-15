@@ -6,7 +6,9 @@
     "test": "mocha --config .mocharc.json",
     "start": "webpack serve --progress --config ./webpack/config.dev.js",
     "build": "rm -rf build; webpack --progress --config ./webpack/config.prod.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "deploy": "gh-pages -d build",
+    "prepush": "npm run test; npm run build; npm run deploy"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",
@@ -26,6 +28,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "fit-commit-js": "^0.3.2",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.2.0",
     "mocha": "^9.1.3",
