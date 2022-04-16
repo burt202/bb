@@ -75,7 +75,7 @@
     },
     {
       "name": "Tombstone",
-      "keyMembers": ["Ray Billings"],
+      "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
       "stage": "season",
       "country": "USA"
     },
@@ -345,343 +345,343 @@
   ],
   "fights": [
     {
-      "competitors": ["Sawblaze", "Rotator"],
+      "bots": ["Sawblaze", "Rotator"],
       "winner": "Sawblaze",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Cobalt", "Subzero"],
+      "bots": ["Cobalt", "Subzero"],
       "winner": "Cobalt",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Kraken", "Ribbot"],
+      "bots": ["Kraken", "Ribbot"],
       "winner": "Kraken",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["End Game", "Death Roll"],
+      "bots": ["End Game", "Death Roll"],
       "winner": "Death Roll",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Hypershock", "Valkyrie"],
+      "bots": ["Hypershock", "Valkyrie"],
       "winner": "Hypershock",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Blacksmith", "Quantum"],
+      "bots": ["Blacksmith", "Quantum"],
       "winner": "Quantum",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Lock-Jaw", "Tombstone"],
+      "bots": ["Lock-Jaw", "Tombstone"],
       "winner": "Tombstone",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Son Of Whyachi", "Huge"],
+      "bots": ["Son Of Whyachi", "Huge"],
       "winner": "Son Of Whyachi",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "Texas Twister"],
+      "bots": ["Black Dragon", "Texas Twister"],
       "winner": "Texas Twister",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Duck", "Bombshell"],
+      "bots": ["Duck", "Bombshell"],
       "winner": "Duck",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Shatter"],
+      "bots": ["Witch Doctor", "Shatter"],
       "winner": "Witch Doctor",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Axe Backwards", "Mammoth"],
+      "bots": ["Axe Backwards", "Mammoth"],
       "winner": "Mammoth",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Captain Shrederator", "Wan Hoo"],
+      "bots": ["Captain Shrederator", "Wan Hoo"],
       "winner": "Wan Hoo",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Whiplash", "Minotaur"],
+      "bots": ["Whiplash", "Minotaur"],
       "winner": "Whiplash",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Skorpios", "Copperhead"],
+      "bots": ["Skorpios", "Copperhead"],
       "winner": "Skorpios",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Lucky", "Bloodsport"],
+      "bots": ["Lucky", "Bloodsport"],
       "winner": "Bloodsport",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Free Shipping", "Hydra"],
+      "bots": ["Free Shipping", "Hydra"],
       "winner": "Hydra",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Monsoon", "Ragnarok"],
+      "bots": ["Monsoon", "Ragnarok"],
       "winner": "Monsoon",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Railgun MAX", "Mad Catter"],
+      "bots": ["Railgun MAX", "Mad Catter"],
       "winner": "Railgun MAX",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Breaker Box", "Falcon"],
+      "bots": ["Breaker Box", "Falcon"],
       "winner": "Breaker Box",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Biteforce", "Yeti"],
+      "bots": ["Biteforce", "Yeti"],
       "winner": "Biteforce",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Duck", "Cobalt"],
+      "bots": ["Duck", "Cobalt"],
       "winner": "Duck",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Bombshell", "Rotator"],
+      "bots": ["Bombshell", "Rotator"],
       "winner": "Rotator",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Rainbow", "Nelly The Ellybot"],
+      "bots": ["Rainbow", "Nelly The Ellybot"],
       "winner": "Rainbow",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Lock-Jaw", "Quantum"],
+      "bots": ["Lock-Jaw", "Quantum"],
       "winner": "Lock-Jaw",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Kraken", "Blacksmith"],
+      "bots": ["Kraken", "Blacksmith"],
       "winner": "Blacksmith",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["End Game", "Ribbot"],
+      "bots": ["End Game", "Ribbot"],
       "winner": "Ribbot",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Sawblaze"],
+      "bots": ["Tombstone", "Sawblaze"],
       "winner": "Tombstone",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "Bloodsport"],
+      "bots": ["Black Dragon", "Bloodsport"],
       "winner": "Black Dragon",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Captain Shrederator"],
+      "bots": ["Witch Doctor", "Captain Shrederator"],
       "winner": "Witch Doctor",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Huge", "Jasper"],
+      "bots": ["Huge", "Jasper"],
       "winner": "Huge",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Gigabyte"],
+      "bots": ["Minotaur", "Gigabyte"],
       "winner": "Gigabyte",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Uppercut", "Mammoth"],
+      "bots": ["Uppercut", "Mammoth"],
       "winner": "Uppercut",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Wan Hoo", "Shatter"],
+      "bots": ["Wan Hoo", "Shatter"],
       "winner": "Shatter",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Whiplash", "Son Of Whyachi"],
+      "bots": ["Whiplash", "Son Of Whyachi"],
       "winner": "Whiplash",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Hydra", "War Hawk"],
+      "bots": ["Hydra", "War Hawk"],
       "winner": "Hydra",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Sidewinder", "Skorpios"],
+      "bots": ["Sidewinder", "Skorpios"],
       "winner": "Skorpios",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Valkyrie", "Ragnarok"],
+      "bots": ["Valkyrie", "Ragnarok"],
       "winner": "Valkyrie",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Yeti", "Free Shipping"],
+      "bots": ["Yeti", "Free Shipping"],
       "winner": "Yeti",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Gruff", "Copperhead"],
+      "bots": ["Gruff", "Copperhead"],
       "winner": "Copperhead",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Monsoon", "Hypershock"],
+      "bots": ["Monsoon", "Hypershock"],
       "winner": "Hypershock",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Bronco", "Biteforce"],
+      "bots": ["Bronco", "Biteforce"],
       "winner": "Biteforce",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Quantum", "Death Roll"],
+      "bots": ["Quantum", "Death Roll"],
       "winner": "Death Roll",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Bombshell", "Cobalt"],
+      "bots": ["Bombshell", "Cobalt"],
       "winner": "Cobalt",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Tantrum", "Gemini"],
+      "bots": ["Tantrum", "Gemini"],
       "winner": "Tantrum",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Duck", "Lock-Jaw"],
+      "bots": ["Duck", "Lock-Jaw"],
       "winner": "Lock-Jaw",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Sawblaze", "Blacksmith"],
+      "bots": ["Sawblaze", "Blacksmith"],
       "winner": "Sawblaze",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Railgun MAX", "Shellshock"],
+      "bots": ["Railgun MAX", "Shellshock"],
       "winner": "Railgun MAX",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Rotator"],
+      "bots": ["Tombstone", "Rotator"],
       "winner": "Rotator",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Lucky"],
+      "bots": ["Minotaur", "Lucky"],
       "winner": "Minotaur",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "Captain Shrederator"],
+      "bots": ["Black Dragon", "Captain Shrederator"],
       "winner": "Black Dragon",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["End Game", "Gruff"],
+      "bots": ["End Game", "Gruff"],
       "winner": "End Game",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["War Hawk", "Ragnarok"],
+      "bots": ["War Hawk", "Ragnarok"],
       "winner": "War Hawk",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "End Game"],
+      "bots": ["Minotaur", "End Game"],
       "winner": "Minotaur",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "War Hawk"],
+      "bots": ["Black Dragon", "War Hawk"],
       "winner": "Black Dragon",
       "stage": "desperado",
       "ko": true
     },
     {
-      "competitors": ["Deep Six", "Axe Backwards"],
+      "bots": ["Deep Six", "Axe Backwards"],
       "winner": "Deep Six",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "Minotaur"],
+      "bots": ["Black Dragon", "Minotaur"],
       "winner": "Black Dragon",
       "stage": "desperado",
       "ko": false

@@ -65,7 +65,7 @@ export default function Season() {
       >
         Back to home
       </Link>
-      <h3>Competitors</h3>
+      <h3>Bots</h3>
       <div style={{display: "flex"}}>
         <table>
           <thead>
@@ -107,9 +107,7 @@ export default function Season() {
               marginBottom: 16,
             }}
           >
-            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>
-              Total Competitors
-            </p>
+            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>Total Bots</p>
             <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
               {seasonBots.length}
             </p>
@@ -171,7 +169,7 @@ export default function Season() {
       <table style={{width: "100%"}}>
         <thead>
           <tr>
-            <th style={{width: 400}}>Competitors</th>
+            <th style={{width: 400}}>Bots</th>
             <th>Stage</th>
             <th style={{textAlign: "center"}}>KO</th>
           </tr>
@@ -181,8 +179,8 @@ export default function Season() {
             return (
               <tr key={i}>
                 <td>
-                  {sf.competitors.map((c, i) => {
-                    const isLastCompetitor = i + 1 === sf.competitors.length
+                  {sf.bots.map((c, i) => {
+                    const isLastBot = i + 1 === sf.bots.length
 
                     return (
                       <React.Fragment key={i}>
@@ -196,7 +194,7 @@ export default function Season() {
                             {c.name}
                           </Link>
                         </span>
-                        {isLastCompetitor ? "" : " v "}
+                        {isLastBot ? "" : " v "}
                       </React.Fragment>
                     )
                   })}

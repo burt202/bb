@@ -80,16 +80,16 @@ export default async function createDb(
       })
 
       return dbSeasonFights.map((f) => {
-        const competitors = getMany<DbBot>(
+        const bots = getMany<DbBot>(
           db,
           `
             SELECT
               b.id,
               b.name,
               b.country
-            FROM fight_competitors fc
-            INNER JOIN bots b ON fc.bot_id = b.id
-            WHERE fc.fight_id=:id
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id=:id
           `,
           {
             ":id": f.id,
@@ -100,7 +100,7 @@ export default async function createDb(
           ko: f.ko === "true",
           stageName: f.stage_name,
           winnerName: f.winner_name,
-          competitors: competitors,
+          bots,
         }
       })
     },
@@ -161,11 +161,11 @@ export default async function createDb(
           st.name AS stage_name,
           s.id AS season_id,
           s.name AS season_name
-        FROM fight_competitors fc
-        INNER JOIN fights f ON fc.fight_id = f.id
+        FROM fight_bots fb
+        INNER JOIN fights f ON fb.fight_id = f.id
         INNER JOIN stages st ON f.stage_id = st.id
         INNER JOIN seasons s ON f.season_id = s.id
-        WHERE fc.bot_id = :id
+        WHERE fb.bot_id = :id
         ORDER BY f.season_id DESC, st.rank
       `
 
@@ -181,9 +181,9 @@ export default async function createDb(
               b.id,
               b.name,
               b.country
-            FROM fight_competitors fc
-            INNER JOIN bots b ON fc.bot_id = b.id
-            WHERE fc.fight_id = :fightId
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id = :fightId
             AND b.id != :botId
           `,
           {
@@ -307,10 +307,10 @@ export default async function createDb(
         ) AS wins ON b.id = wins.bot_id
         INNER JOIN (
           SELECT
-            fc.bot_id AS bot_id,
-            COUNT(fc.bot_id) AS count
-          FROM fight_competitors fc
-          GROUP BY fc.bot_id
+            fb.bot_id AS bot_id,
+            COUNT(fb.bot_id) AS count
+          FROM fight_bots fb
+          GROUP BY fb.bot_id
         ) AS total ON b.id = total.bot_id
         WHERE total.count >= 3
         ORDER BY count DESC
@@ -374,10 +374,10 @@ export default async function createDb(
         FROM bots b
         INNER JOIN (
           SELECT
-            fc.bot_id AS bot_id,
-            COUNT(fc.bot_id) AS count
-          FROM fight_competitors fc
-          GROUP BY fc.bot_id
+            fb.bot_id AS bot_id,
+            COUNT(fb.bot_id) AS count
+          FROM fight_bots fb
+          GROUP BY fb.bot_id
           ) AS total ON b.id = total.bot_id
           ORDER BY count DESC
           LIMIT 1
@@ -395,6 +395,14 @@ export default async function createDb(
       const res = getOne<{count: number}>(
         db,
         "SELECT COUNT(*) AS count FROM bots",
+      ) as {count: number}
+
+      return res.count
+    },
+    getTotalFights: () => {
+      const res = getOne<{count: number}>(
+        db,
+        "SELECT COUNT(*) AS count FROM fights",
       ) as {count: number}
 
       return res.count

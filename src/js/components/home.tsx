@@ -15,6 +15,7 @@ export default function Home() {
   const top10BestKOPercentages = db.getTop10BestKOPercentages()
   const mostMatchesPlayed = db.getMostMatchesPlayed()
   const totalBots = db.getTotalBots()
+  const totalFights = db.getTotalFights()
 
   return (
     <div style={{marginTop: 16}}>
@@ -152,6 +153,7 @@ export default function Home() {
         </Link>
       </p>
       <p>Total bots: {totalBots}</p>
+      <p>Total fights: {totalFights}</p>
     </div>
   )
 }

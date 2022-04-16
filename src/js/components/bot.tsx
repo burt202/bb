@@ -137,14 +137,14 @@ export default function Bot() {
                 </td>
                 <td>
                   {bf.against.map((c, i) => {
-                    const isLastCompetitor = i + 1 === bf.against.length
+                    const isLastBot = i + 1 === bf.against.length
 
                     return (
                       <React.Fragment key={i}>
                         <Link style={{color: "#003366"}} to={`/bot/${c.id}`}>
                           {c.name}
                         </Link>
-                        {isLastCompetitor ? "" : ", "}
+                        {isLastBot ? "" : ", "}
                       </React.Fragment>
                     )
                   })}

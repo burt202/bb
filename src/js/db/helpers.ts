@@ -63,7 +63,7 @@ export function createTables(db: Database) {
       foreign key (stage_id) references stages(id)
     );
 
-    CREATE TABLE fight_competitors (
+    CREATE TABLE fight_bots (
       fight_id text NOT NULL,
       bot_id text NOT NULL,
       primary key (fight_id, bot_id),
@@ -188,8 +188,8 @@ function addMemberToBotForSeason(
 function insertFight(db: Database, seasonId: string, fight: RawFight) {
   const id = uuid.v4()
 
-  if (!fight.competitors.includes(fight.winner)) {
-    throw new Error(`Fight winner not listed in competitors: ${fight.winner}`)
+  if (!fight.bots.includes(fight.winner)) {
+    throw new Error(`Fight winner not listed in bots: ${fight.winner}`)
   }
 
   const stage = getStageByName(db, fight.stage)
@@ -222,7 +222,7 @@ function addBotToFight(db: Database, fightId: string, botName: string) {
     throw new Error(`Cannot find bot: ${botName}`)
   }
 
-  db.run("INSERT INTO fight_competitors VALUES (?,?)", [fightId, bot.id])
+  db.run("INSERT INTO fight_bots VALUES (?,?)", [fightId, bot.id])
 }
 
 export function populateDatabase(db: Database, data: Array<RawSeason>) {
@@ -256,8 +256,8 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     season.fights.forEach((fight) => {
       const insertedFight = insertFight(db, seasonId, fight)
 
-      fight.competitors.forEach((competitor) => {
-        addBotToFight(db, insertedFight.id, competitor)
+      fight.bots.forEach((bot) => {
+        addBotToFight(db, insertedFight.id, bot)
       })
     })
   })

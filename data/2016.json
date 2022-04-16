@@ -339,355 +339,355 @@
   ],
   "fights": [
     {
-      "competitors": ["Creepy Crawlies", "Ultraviolet", "Son Of Whyachi"],
+      "bots": ["Creepy Crawlies", "Ultraviolet", "Son Of Whyachi"],
       "winner": "Son Of Whyachi",
       "stage": "prequalifier",
       "ko": true
     },
     {
-      "competitors": ["Basilisk", "Blacksmith", "Gemini"],
+      "bots": ["Basilisk", "Blacksmith", "Gemini"],
       "winner": "Blacksmith",
       "stage": "prequalifier",
       "ko": false
     },
     {
-      "competitors": ["Lycan", "Invader", "Mohawk"],
+      "bots": ["Lycan", "Invader", "Mohawk"],
       "winner": "Mohawk",
       "stage": "prequalifier",
       "ko": true
     },
     {
-      "competitors": ["Black Ice", "Bad Kitty", "Skorpios"],
+      "bots": ["Black Ice", "Bad Kitty", "Skorpios"],
       "winner": "Black Ice",
       "stage": "prequalifier",
       "ko": true
     },
     {
-      "competitors": ["Death Roll", "Captain Shrederator"],
+      "bots": ["Death Roll", "Captain Shrederator"],
       "winner": "Captain Shrederator",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Beta", "Lucky"],
+      "bots": ["Beta", "Lucky"],
       "winner": "Beta",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Bronco", "Blacksmith"],
+      "bots": ["Bronco", "Blacksmith"],
       "winner": "Bronco",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Icewave", "Subzero"],
+      "bots": ["Icewave", "Subzero"],
       "winner": "Icewave",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Ultimo Destructo", "The Ringmaster"],
+      "bots": ["Ultimo Destructo", "The Ringmaster"],
       "winner": "The Ringmaster",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Overdrive", "Escape Velocity"],
+      "bots": ["Overdrive", "Escape Velocity"],
       "winner": "Escape Velocity",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Black Ice", "Tombstone"],
+      "bots": ["Black Ice", "Tombstone"],
       "winner": "Tombstone",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Photon Storm"],
+      "bots": ["Minotaur", "Photon Storm"],
       "winner": "Minotaur",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Chomp", "The Disk O'Inferno"],
+      "bots": ["Chomp", "The Disk O'Inferno"],
       "winner": "Chomp",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Hypershock", "Ultraviolet"],
+      "bots": ["Hypershock", "Ultraviolet"],
       "winner": "Hypershock",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Complete Control", "Bombshell"],
+      "bots": ["Complete Control", "Bombshell"],
       "winner": "Complete Control",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Biteforce", "Mohawk"],
+      "bots": ["Biteforce", "Mohawk"],
       "winner": "Biteforce",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Chrome Fly", "Bucktooth Burl"],
+      "bots": ["Chrome Fly", "Bucktooth Burl"],
       "winner": "Chrome Fly",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Splatter", "Warrior Clan"],
+      "bots": ["Splatter", "Warrior Clan"],
       "winner": "Warrior Clan",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Stinger", "Nightmare"],
+      "bots": ["Stinger", "Nightmare"],
       "winner": "Stinger",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Obwaldern Overlord", "Warhead"],
+      "bots": ["Obwaldern Overlord", "Warhead"],
       "winner": "Warhead",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Brutus", "Moebius"],
+      "bots": ["Brutus", "Moebius"],
       "winner": "Brutus",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Son Of Whyachi", "Ghost Raptor"],
+      "bots": ["Son Of Whyachi", "Ghost Raptor"],
       "winner": "Son Of Whyachi",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Yeti", "Lock-Jaw"],
+      "bots": ["Yeti", "Lock-Jaw"],
       "winner": "Yeti",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Mega Tento", "Poison Arrow"],
+      "bots": ["Mega Tento", "Poison Arrow"],
       "winner": "Poison Arrow",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Overhaul", "Cobalt"],
+      "bots": ["Overhaul", "Cobalt"],
       "winner": "Cobalt",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Sawblaze", "Razorback"],
+      "bots": ["Sawblaze", "Razorback"],
       "winner": "Razorback",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Red Devil", "Wrecks"],
+      "bots": ["Red Devil", "Wrecks"],
       "winner": "Red Devil",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Rotator"],
+      "bots": ["Witch Doctor", "Rotator"],
       "winner": "Witch Doctor",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Yeti", "Lucky"],
+      "bots": ["Yeti", "Lucky"],
       "winner": "Yeti",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Blacksmith"],
+      "bots": ["Minotaur", "Blacksmith"],
       "winner": "Minotaur",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Bronco", "Chrome Fly"],
+      "bots": ["Bronco", "Chrome Fly"],
       "winner": "Bronco",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Red Devil"],
+      "bots": ["Witch Doctor", "Red Devil"],
       "winner": "Red Devil",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Complete Control", "Warhead"],
+      "bots": ["Complete Control", "Warhead"],
       "winner": "Warhead",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Razorback", "Ghost Raptor"],
+      "bots": ["Razorback", "Ghost Raptor"],
       "winner": "Razorback",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Escape Velocity"],
+      "bots": ["Tombstone", "Escape Velocity"],
       "winner": "Tombstone",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Son Of Whyachi", "Poison Arrow"],
+      "bots": ["Son Of Whyachi", "Poison Arrow"],
       "winner": "Poison Arrow",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Beta", "Overhaul"],
+      "bots": ["Beta", "Overhaul"],
       "winner": "Beta",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Hypershock", "Warrior Clan"],
+      "bots": ["Hypershock", "Warrior Clan"],
       "winner": "Hypershock",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Stinger", "Mega Tento"],
+      "bots": ["Stinger", "Mega Tento"],
       "winner": "Mega Tento",
       "stage": "roundof32",
       "ko": false
     },
     {
-      "competitors": ["Brutus", "Lock-Jaw"],
+      "bots": ["Brutus", "Lock-Jaw"],
       "winner": "Brutus",
       "stage": "roundof32",
       "ko": false
     },
     {
-      "competitors": ["Cobalt", "Bombshell"],
+      "bots": ["Cobalt", "Bombshell"],
       "winner": "Bombshell",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["The Ringmaster", "Biteforce"],
+      "bots": ["The Ringmaster", "Biteforce"],
       "winner": "Biteforce",
       "stage": "roundof32",
       "ko": false
     },
     {
-      "competitors": ["Chomp", "Captain Shrederator"],
+      "bots": ["Chomp", "Captain Shrederator"],
       "winner": "Chomp",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Icewave", "Nightmare"],
+      "bots": ["Icewave", "Nightmare"],
       "winner": "Nightmare",
       "stage": "roundof32",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Warhead"],
+      "bots": ["Minotaur", "Warhead"],
       "winner": "Minotaur",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Poison Arrow", "Hypershock"],
+      "bots": ["Poison Arrow", "Hypershock"],
       "winner": "Poison Arrow",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Red Devil", "Bombshell"],
+      "bots": ["Red Devil", "Bombshell"],
       "winner": "Bombshell",
       "stage": "roundof16",
       "ko": false
     },
     {
-      "competitors": ["Bronco", "Razorback"],
+      "bots": ["Bronco", "Razorback"],
       "winner": "Bronco",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Brutus"],
+      "bots": ["Tombstone", "Brutus"],
       "winner": "Tombstone",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Nightmare", "Beta"],
+      "bots": ["Nightmare", "Beta"],
       "winner": "Beta",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Yeti", "Mega Tento"],
+      "bots": ["Yeti", "Mega Tento"],
       "winner": "Yeti",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Biteforce", "Chomp"],
+      "bots": ["Biteforce", "Chomp"],
       "winner": "Chomp",
       "stage": "roundof16",
       "ko": false
     },
     {
-      "competitors": ["Chomp", "Yeti"],
+      "bots": ["Chomp", "Yeti"],
       "winner": "Yeti",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Beta", "Tombstone"],
+      "bots": ["Beta", "Tombstone"],
       "winner": "Tombstone",
       "stage": "quarter",
       "ko": false
     },
     {
-      "competitors": ["Bombshell", "Poison Arrow"],
+      "bots": ["Bombshell", "Poison Arrow"],
       "winner": "Bombshell",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Bronco", "Minotaur"],
+      "bots": ["Bronco", "Minotaur"],
       "winner": "Minotaur",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Minotaur", "Bombshell"],
+      "bots": ["Minotaur", "Bombshell"],
       "winner": "Bombshell",
       "stage": "semi",
       "ko": true
     },
     {
-      "competitors": ["Yeti", "Tombstone"],
+      "bots": ["Yeti", "Tombstone"],
       "winner": "Tombstone",
       "stage": "semi",
       "ko": false
     },
     {
-      "competitors": ["Tombstone", "Bombshell"],
+      "bots": ["Tombstone", "Bombshell"],
       "winner": "Tombstone",
       "stage": "final",
       "ko": true

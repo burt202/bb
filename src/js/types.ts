@@ -6,7 +6,7 @@ export interface RawBot {
 }
 
 export interface RawFight {
-  competitors: Array<string>
+  bots: Array<string>
   winner: string
   stage: string
   ko: boolean
@@ -94,7 +94,7 @@ export interface SeasonBot {
 }
 
 export interface SeasonFight {
-  competitors: Array<Bot>
+  bots: Array<Bot>
   ko: boolean
   stageName: string
   winnerName: string
@@ -145,4 +145,5 @@ export interface DbInterface {
   getTop10BestKOPercentages: () => Array<Top10Result>
   getMostMatchesPlayed: () => Bot
   getTotalBots: () => number
+  getTotalFights: () => number
 }

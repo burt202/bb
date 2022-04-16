@@ -321,277 +321,277 @@
   ],
   "fights": [
     {
-      "competitors": ["Biteforce", "Blacksmith"],
+      "bots": ["Biteforce", "Blacksmith"],
       "winner": "Biteforce",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Mecha Rampage", "Free Shipping", "Duck"],
+      "bots": ["Mecha Rampage", "Free Shipping", "Duck"],
       "winner": "Duck",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Subzero", "Huge"],
+      "bots": ["Subzero", "Huge"],
       "winner": "Huge",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Bombshell", "Lock-Jaw"],
+      "bots": ["Bombshell", "Lock-Jaw"],
       "winner": "Lock-Jaw",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Kraken", "Sharkoprion", "Deviled Egg"],
+      "bots": ["Kraken", "Sharkoprion", "Deviled Egg"],
       "winner": "Sharkoprion",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Minotaur"],
+      "bots": ["Tombstone", "Minotaur"],
       "winner": "Tombstone",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Icewave", "Vanquish"],
+      "bots": ["Icewave", "Vanquish"],
       "winner": "Icewave",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Rotator", "Petunia"],
+      "bots": ["Rotator", "Petunia"],
       "winner": "Petunia",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Brutus", "Red Devil"],
+      "bots": ["Brutus", "Red Devil"],
       "winner": "Red Devil",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Captain Shrederator", "End Game"],
+      "bots": ["Captain Shrederator", "End Game"],
       "winner": "End Game",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Yeti"],
+      "bots": ["Witch Doctor", "Yeti"],
       "winner": "Yeti",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Overhaul", "Sawblaze"],
+      "bots": ["Overhaul", "Sawblaze"],
       "winner": "Sawblaze",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Whiplash", "Hypothermia"],
+      "bots": ["Whiplash", "Hypothermia"],
       "winner": "Whiplash",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["The Four Horsemen", "Gamma 9", "Double Jeopardy"],
+      "bots": ["The Four Horsemen", "Gamma 9", "Double Jeopardy"],
       "winner": "The Four Horsemen",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["War Hawk", "Axe Backwards"],
+      "bots": ["War Hawk", "Axe Backwards"],
       "winner": "War Hawk",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Biteforce", "Hypershock"],
+      "bots": ["Biteforce", "Hypershock"],
       "winner": "Biteforce",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Red Devil", "Monsoon"],
+      "bots": ["Red Devil", "Monsoon"],
       "winner": "Monsoon",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Lucky", "Skorpios"],
+      "bots": ["Lucky", "Skorpios"],
       "winner": "Skorpios",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Tantrum", "Battle Royale With Cheese"],
+      "bots": ["Tantrum", "Battle Royale With Cheese"],
       "winner": "Tantrum",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Kraken", "Mohawk", "Gemini"],
+      "bots": ["Kraken", "Mohawk", "Gemini"],
       "winner": "Gemini",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Lock-Jaw", "End Game"],
+      "bots": ["Lock-Jaw", "End Game"],
       "winner": "End Game",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Gigabyte"],
+      "bots": ["Tombstone", "Gigabyte"],
       "winner": "Tombstone",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Huge", "Free Shipping"],
+      "bots": ["Huge", "Free Shipping"],
       "winner": "Huge",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Minotaur", "Hypothermia"],
+      "bots": ["Minotaur", "Hypothermia"],
       "winner": "Minotaur",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Blacksmith", "The Four Horsemen"],
+      "bots": ["Blacksmith", "The Four Horsemen"],
       "winner": "Blacksmith",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Son Of Whyachi", "Brutus"],
+      "bots": ["Son Of Whyachi", "Brutus"],
       "winner": "Brutus",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Icewave", "Yeti"],
+      "bots": ["Icewave", "Yeti"],
       "winner": "Icewave",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Reality", "Sawblaze"],
+      "bots": ["Reality", "Sawblaze"],
       "winner": "Sawblaze",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Petunia", "Monsoon"],
+      "bots": ["Petunia", "Monsoon"],
       "winner": "Monsoon",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Subzero", "Captain Shrederator"],
+      "bots": ["Subzero", "Captain Shrederator"],
       "winner": "Subzero",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Bale Spear", "Valkyrie", "Predator"],
+      "bots": ["Bale Spear", "Valkyrie", "Predator"],
       "winner": "Valkyrie",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Chomp", "Warrior Dragon"],
+      "bots": ["Chomp", "Warrior Dragon"],
       "winner": "Warrior Dragon",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Bronco", "Bombshell"],
+      "bots": ["Bronco", "Bombshell"],
       "winner": "Bronco",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Valkyrie", "Ultimo Destructo"],
+      "bots": ["Valkyrie", "Ultimo Destructo"],
       "winner": "Ultimo Destructo",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Predator", "Rotator"],
+      "bots": ["Predator", "Rotator"],
       "winner": "Rotator",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Lucky", "Son Of Whyachi"],
+      "bots": ["Lucky", "Son Of Whyachi"],
       "winner": "Son Of Whyachi",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Sawblaze", "Mohawk"],
+      "bots": ["Sawblaze", "Mohawk"],
       "winner": "Sawblaze",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Whiplash", "Mecha Rampage"],
+      "bots": ["Whiplash", "Mecha Rampage"],
       "winner": "Whiplash",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Overhaul", "Chomp"],
+      "bots": ["Overhaul", "Chomp"],
       "winner": "Overhaul",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Basilisk", "Deviled Egg", "Axe Backwards"],
+      "bots": ["Basilisk", "Deviled Egg", "Axe Backwards"],
       "winner": "Deviled Egg",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Biteforce", "End Game"],
+      "bots": ["Biteforce", "End Game"],
       "winner": "Biteforce",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Warrior Dragon", "Rotator"],
+      "bots": ["Warrior Dragon", "Rotator"],
       "winner": "Rotator",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Reality", "Duck"],
+      "bots": ["Reality", "Duck"],
       "winner": "Duck",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Hypershock", "Battle Royale With Cheese"],
+      "bots": ["Hypershock", "Battle Royale With Cheese"],
       "winner": "Hypershock",
       "stage": "season",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Blacksmith"],
+      "bots": ["Witch Doctor", "Blacksmith"],
       "winner": "Witch Doctor",
       "stage": "season",
       "ko": false
     },
     {
-      "competitors": ["Bronco", "Lock-Jaw"],
+      "bots": ["Bronco", "Lock-Jaw"],
       "winner": "Bronco",
       "stage": "season",
       "ko": false

@@ -154,163 +154,163 @@
   ],
   "fights": [
     {
-      "competitors": ["Razorback", "Icewave"],
+      "bots": ["Razorback", "Icewave"],
       "winner": "Icewave",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Wrecks", "Plan X"],
+      "bots": ["Wrecks", "Plan X"],
       "winner": "Plan X",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Biteforce", "Warhead"],
+      "bots": ["Biteforce", "Warhead"],
       "winner": "Biteforce",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Nightmare", "Warrior Clan"],
+      "bots": ["Nightmare", "Warrior Clan"],
       "winner": "Warrior Clan",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Overhaul", "Lock-Jaw"],
+      "bots": ["Overhaul", "Lock-Jaw"],
       "winner": "Lock-Jaw",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Bronco", "Witch Doctor"],
+      "bots": ["Bronco", "Witch Doctor"],
       "winner": "Bronco",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Counter Revolution", "Tombstone"],
+      "bots": ["Counter Revolution", "Tombstone"],
       "winner": "Tombstone",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Complete Control", "Ghost Raptor"],
+      "bots": ["Complete Control", "Ghost Raptor"],
       "winner": "Ghost Raptor",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Stinger", "Captain Shrederator"],
+      "bots": ["Stinger", "Captain Shrederator"],
       "winner": "Stinger",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Overdrive", "Chomp"],
+      "bots": ["Overdrive", "Chomp"],
       "winner": "Overdrive",
       "stage": "qualifier",
       "ko": true
     },
     {
-      "competitors": ["Radioactive", "Sweet Revenge"],
+      "bots": ["Radioactive", "Sweet Revenge"],
       "winner": "Radioactive",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Hypershock", "Mohawk"],
+      "bots": ["Hypershock", "Mohawk"],
       "winner": "Hypershock",
       "stage": "qualifier",
       "ko": false
     },
     {
-      "competitors": ["Icewave", "Chomp"],
+      "bots": ["Icewave", "Chomp"],
       "winner": "Icewave",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Stinger", "Warhead"],
+      "bots": ["Stinger", "Warhead"],
       "winner": "Stinger",
       "stage": "roundof16",
       "ko": false
     },
     {
-      "competitors": ["Warrior Clan", "Ghost Raptor"],
+      "bots": ["Warrior Clan", "Ghost Raptor"],
       "winner": "Ghost Raptor",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Bronco", "Plan X"],
+      "bots": ["Bronco", "Plan X"],
       "winner": "Bronco",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Witch Doctor", "Overdrive"],
+      "bots": ["Witch Doctor", "Overdrive"],
       "winner": "Witch Doctor",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Radioactive"],
+      "bots": ["Tombstone", "Radioactive"],
       "winner": "Tombstone",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Lock-Jaw", "Overhaul"],
+      "bots": ["Lock-Jaw", "Overhaul"],
       "winner": "Overhaul",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Biteforce", "Hypershock"],
+      "bots": ["Biteforce", "Hypershock"],
       "winner": "Biteforce",
       "stage": "roundof16",
       "ko": true
     },
     {
-      "competitors": ["Bronco", "Stinger"],
+      "bots": ["Bronco", "Stinger"],
       "winner": "Bronco",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Witch Doctor"],
+      "bots": ["Tombstone", "Witch Doctor"],
       "winner": "Tombstone",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Biteforce", "Overhaul"],
+      "bots": ["Biteforce", "Overhaul"],
       "winner": "Biteforce",
       "stage": "quarter",
       "ko": false
     },
     {
-      "competitors": ["Icewave", "Ghost Raptor"],
+      "bots": ["Icewave", "Ghost Raptor"],
       "winner": "Ghost Raptor",
       "stage": "quarter",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Bronco"],
+      "bots": ["Tombstone", "Bronco"],
       "winner": "Tombstone",
       "stage": "semi",
       "ko": true
     },
     {
-      "competitors": ["Ghost Raptor", "Biteforce"],
+      "bots": ["Ghost Raptor", "Biteforce"],
       "winner": "Biteforce",
       "stage": "semi",
       "ko": true
     },
     {
-      "competitors": ["Tombstone", "Biteforce"],
+      "bots": ["Tombstone", "Biteforce"],
       "winner": "Biteforce",
       "stage": "final",
       "ko": false

@@ -9,6 +9,7 @@ context("utils", () => {
       expect(convertNameToId("Zack Bieber")).to.eql("zack-bieber")
       expect(convertNameToId("Plan X")).to.eql("plan-x")
       expect(convertNameToId("Lock-Jaw")).to.eql("lock-jaw")
+      expect(convertNameToId("Earl Pancoast III")).to.eql("earl-pancoast-iii")
     })
   })
 
