@@ -14,6 +14,7 @@ export default function Home() {
   const top10BestWinPercentages = db.getTop10BestWinPercentages()
   const top10BestKOPercentages = db.getTop10BestKOPercentages()
   const mostMatchesPlayed = db.getMostMatchesPlayed()
+  const totalBots = db.getTotalBots()
 
   return (
     <div style={{marginTop: 16}}>
@@ -150,6 +151,7 @@ export default function Home() {
           {mostMatchesPlayed.name}
         </Link>
       </p>
+      <p>Total bots: {totalBots}</p>
     </div>
   )
 }

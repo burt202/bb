@@ -251,6 +251,7 @@ export default async function createDb(
           LIMIT 10
         ) AS sq ON b.id = sq.bot_id
       `
+
       const top10MostWins = getMany<DbTop10Result>(db, sql)
 
       return top10MostWins.map((tt) => {
@@ -279,6 +280,7 @@ export default async function createDb(
           LIMIT 10
         ) AS sq ON b.id = sq.bot_id
       `
+
       const top10MostWins = getMany<DbTop10Result>(db, sql)
 
       return top10MostWins.map((tt) => {
@@ -314,6 +316,7 @@ export default async function createDb(
         ORDER BY count DESC
         LIMIT 10
       `
+
       const getTop10BestWinPercentages = getMany<DbTop10Result>(db, sql)
 
       return getTop10BestWinPercentages.map((tt) => {
@@ -350,6 +353,7 @@ export default async function createDb(
         ORDER BY count DESC
         LIMIT 10
       `
+
       const getTop10BestKOPercentages = getMany<DbTop10Result>(db, sql)
 
       return getTop10BestKOPercentages.map((tt) => {
@@ -378,6 +382,7 @@ export default async function createDb(
           ORDER BY count DESC
           LIMIT 1
       `
+
       const getMostMatchesPlayed = getOne<DbBot>(db, sql) as DbBot
 
       return {
@@ -385,6 +390,14 @@ export default async function createDb(
         name: getMostMatchesPlayed.name,
         country: getMostMatchesPlayed.country,
       }
+    },
+    getTotalBots: () => {
+      const res = getOne<{count: number}>(
+        db,
+        "SELECT COUNT(*) AS count FROM bots",
+      ) as {count: number}
+
+      return res.count
     },
   }
 }
