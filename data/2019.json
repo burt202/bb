@@ -40,13 +40,13 @@
     {
       "name": "End Game",
       "keyMembers": ["Jack Barker", "Nick Mabey"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "NZL"
     },
     {
       "name": "Death Roll",
       "keyMembers": ["Erica Hediger", "Steven Martin"],
-      "stage": "qualifier",
+      "stage": "season",
       "country": "AUS"
     },
     {
@@ -100,7 +100,7 @@
     {
       "name": "Black Dragon",
       "keyMembers": ["Joao Marcos"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "BRA"
     },
     {
@@ -148,7 +148,7 @@
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave", "Nick Nave"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "USA"
     },
     {
@@ -171,7 +171,7 @@
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "BRA"
     },
     {
@@ -195,7 +195,7 @@
     {
       "name": "Lucky",
       "keyMembers": ["Mark Demers"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "CAN"
     },
     {
@@ -219,7 +219,7 @@
     {
       "name": "Ragnarok",
       "keyMembers": ["Jack Tweedy", "Tim Rackley"],
-      "stage": "season",
+      "stage": "desperado",
       "country": "GBR"
     },
     {
@@ -291,6 +291,54 @@
     {
       "name": "Uppercut",
       "keyMembers": ["Alex Hattori", "Mason Massie"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "War Hawk",
+      "keyMembers": ["Rob Farrow", "Kevin Milczewski"],
+      "stage": "desperado",
+      "country": "USA"
+    },
+    {
+      "name": "Sidewinder",
+      "keyMembers": ["Josh Coates"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gruff",
+      "keyMembers": ["Sam McAmis"],
+      "stage": "desperado",
+      "country": "USA"
+    },
+    {
+      "name": "Bronco",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gemini",
+      "keyMembers": ["Ace Shelander"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tantrum",
+      "keyMembers": ["Aren Hill", "Alex Grant"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Shellshock",
+      "keyMembers": ["Steven Davis"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Deep Six",
+      "keyMembers": ["Dustin Esswein"],
       "stage": "season",
       "country": "USA"
     }
@@ -471,12 +519,6 @@
       "ko": true
     },
     {
-      "competitors": ["Black Dragon", "Bloodsport"],
-      "winner": "Black Dragon",
-      "stage": "season",
-      "ko": true
-    },
-    {
       "competitors": ["Witch Doctor", "Captain Shrederator"],
       "winner": "Witch Doctor",
       "stage": "season",
@@ -511,6 +553,138 @@
       "winner": "Whiplash",
       "stage": "season",
       "ko": true
+    },
+    {
+      "competitors": ["Hydra", "War Hawk"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Sidewinder", "Skorpios"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Valkyrie", "Ragnarok"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Yeti", "Free Shipping"],
+      "winner": "Yeti",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Gruff", "Copperhead"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Monsoon", "Hypershock"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Bronco", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Quantum", "Death Roll"],
+      "winner": "Death Roll",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Bombshell", "Cobalt"],
+      "winner": "Cobalt",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Tantrum", "Gemini"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Duck", "Lock-Jaw"],
+      "winner": "Lock-Jaw",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Sawblaze", "Blacksmith"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Railgun MAX", "Shellshock"],
+      "winner": "Railgun MAX",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Rotator"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Minotaur", "Lucky"],
+      "winner": "Minotaur",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "Captain Shrederator"],
+      "winner": "Black Dragon",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["End Game", "Gruff"],
+      "winner": "End Game",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["War Hawk", "Ragnarok"],
+      "winner": "War Hawk",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["Minotaur", "End Game"],
+      "winner": "Minotaur",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "War Hawk"],
+      "winner": "Black Dragon",
+      "stage": "desperado",
+      "ko": true
+    },
+    {
+      "competitors": ["Deep Six", "Axe Backwards"],
+      "winner": "Deep Six",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "Minotaur"],
+      "winner": "Black Dragon",
+      "stage": "desperado",
+      "ko": false
     }
   ]
 }
