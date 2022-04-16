@@ -173,6 +173,126 @@
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
       "stage": "season",
       "country": "BRA"
+    },
+    {
+      "name": "Skorpios",
+      "keyMembers": [
+        "Zach Lytle",
+        "Orion Beach",
+        "Diana Tarlson",
+        "Dan Chatterton",
+        "Jen Herchenroeder"
+      ],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Copperhead",
+      "keyMembers": ["Zach Goff", "Robert Cowan", "Kimberley Cowan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Lucky",
+      "keyMembers": ["Mark Demers"],
+      "stage": "season",
+      "country": "CAN"
+    },
+    {
+      "name": "Bloodsport",
+      "keyMembers": ["Justin Marple"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Hydra",
+      "keyMembers": ["Jake Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Free Shipping",
+      "keyMembers": ["Gary Gin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Ragnarok",
+      "keyMembers": ["Jack Tweedy", "Tim Rackley"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Monsoon",
+      "keyMembers": ["Tom Brewster"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Railgun MAX",
+      "keyMembers": ["Elaine Wu"],
+      "stage": "season",
+      "country": "CHN"
+    },
+    {
+      "name": "Mad Catter",
+      "keyMembers": ["Martin Mason", "Emmanuel Carrillo"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Breaker Box",
+      "keyMembers": ["Jim Smentowski"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Falcon",
+      "keyMembers": ["Clint Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Biteforce",
+      "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Yeti",
+      "keyMembers": ["Greg Gibson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Nelly The Ellybot",
+      "keyMembers": ["Sarah Malyan"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Rainbow",
+      "keyMembers": ["Petr Kravchenko"],
+      "stage": "season",
+      "country": "RUS"
+    },
+    {
+      "name": "Jasper",
+      "keyMembers": ["Tom Lloyd"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Gigabyte",
+      "keyMembers": ["Brent Rieker", "John Mladenik"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Uppercut",
+      "keyMembers": ["Alex Hattori", "Mason Massie"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -259,6 +379,138 @@
       "winner": "Whiplash",
       "stage": "season",
       "ko": false
+    },
+    {
+      "competitors": ["Skorpios", "Copperhead"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Lucky", "Bloodsport"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Free Shipping", "Hydra"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Monsoon", "Ragnarok"],
+      "winner": "Monsoon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Railgun MAX", "Mad Catter"],
+      "winner": "Railgun MAX",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Breaker Box", "Falcon"],
+      "winner": "Breaker Box",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Biteforce", "Yeti"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Duck", "Cobalt"],
+      "winner": "Duck",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Bombshell", "Rotator"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Rainbow", "Nelly The Ellybot"],
+      "winner": "Rainbow",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Lock-Jaw", "Quantum"],
+      "winner": "Lock-Jaw",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Kraken", "Blacksmith"],
+      "winner": "Blacksmith",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["End Game", "Ribbot"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Tombstone", "Sawblaze"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "Bloodsport"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Black Dragon", "Bloodsport"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Witch Doctor", "Captain Shrederator"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Huge", "Jasper"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Minotaur", "Gigabyte"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Uppercut", "Mammoth"],
+      "winner": "Uppercut",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "competitors": ["Wan Hoo", "Shatter"],
+      "winner": "Shatter",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "competitors": ["Whiplash", "Son Of Whyachi"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": true
     }
   ]
 }

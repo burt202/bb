@@ -43,6 +43,7 @@ module.exports = {
         {from: "src/images/flags/fra.svg", to: "fra.svg"},
         {from: "src/images/flags/nld.svg", to: "nld.svg"},
         {from: "src/images/flags/nzl.svg", to: "nzl.svg"},
+        {from: "src/images/flags/rus.svg", to: "rus.svg"},
         {from: "src/images/flags/usa.svg", to: "usa.svg"},
         {from: "src/images/flags/gbr.svg", to: "gbr.svg"},
       ],

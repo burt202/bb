@@ -212,7 +212,7 @@
     },
     {
       "name": "Monsoon",
-      "keyMembers": ["Tom Brewster"],
+      "keyMembers": ["Tom Brewster", "Tim Rackley"],
       "stage": "season",
       "country": "GBR"
     },
@@ -224,7 +224,7 @@
     },
     {
       "name": "Skorpios",
-      "keyMembers": ["Orion Beach", "Diana Tarlson"],
+      "keyMembers": ["Orion Beach", "Diana Tarlson", "Dan Chatterton"],
       "stage": "season",
       "country": "USA"
     },
