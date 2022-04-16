@@ -360,5 +360,31 @@ export default async function createDb(
         }
       })
     },
+    getMostMatchesPlayed: () => {
+      const sql = `
+        SELECT
+          b.id,
+          b.name,
+          b.country,
+          count
+        FROM bots b
+        INNER JOIN (
+          SELECT
+            fc.bot_id AS bot_id,
+            COUNT(fc.bot_id) AS count
+          FROM fight_competitors fc
+          GROUP BY fc.bot_id
+          ) AS total ON b.id = total.bot_id
+          ORDER BY count DESC
+          LIMIT 1
+      `
+      const getMostMatchesPlayed = getOne<DbBot>(db, sql) as DbBot
+
+      return {
+        id: getMostMatchesPlayed.id,
+        name: getMostMatchesPlayed.name,
+        country: getMostMatchesPlayed.country,
+      }
+    },
   }
 }

@@ -13,6 +13,7 @@ export default function Home() {
   const top10MostKOs = db.getTop10MostKOs()
   const top10BestWinPercentages = db.getTop10BestWinPercentages()
   const top10BestKOPercentages = db.getTop10BestKOPercentages()
+  const mostMatchesPlayed = db.getMostMatchesPlayed()
 
   return (
     <div style={{marginTop: 16}}>
@@ -143,6 +144,12 @@ export default function Home() {
           </table>
         </div>
       </div>
+      <p>
+        Most matches played:{" "}
+        <Link style={{color: "#003366"}} to={`/bot/${mostMatchesPlayed.id}`}>
+          {mostMatchesPlayed.name}
+        </Link>
+      </p>
     </div>
   )
 }
