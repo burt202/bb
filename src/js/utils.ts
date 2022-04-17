@@ -22,7 +22,7 @@ export const stageNameMap = {
   roundof16: "Round Of 16",
   roundof32: "Round Of 32",
   qualifier: "Qualifier",
-  desperado: "Desperado",
+  playoff: "Playoff",
   season: "Season",
   prequalifier: "Pre-Qualifier",
 } as Record<string, string>

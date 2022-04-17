@@ -24,7 +24,7 @@ export default function Home() {
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <div>
           <h1 style={{margin: 0}}>Battlebots Database</h1>
-          <h3>Seasons</h3>
+          <h3>{searchTerm.length > 0 ? "Search" : "Seasons"}</h3>
         </div>
         <div className="search-container">
           <input

@@ -233,7 +233,7 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     INSERT INTO stages VALUES ('${uuid.v4()}', 'quarter', 4);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof16', 5);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 6);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'desperado', 6);
+    INSERT INTO stages VALUES ('${uuid.v4()}', 'playoff', 6);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 8);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 8);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 9);
