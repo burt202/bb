@@ -22,8 +22,9 @@ export default function Page({children, headerComponent, showShowHome}: Props) {
               className="search-input"
               id="searchright"
               type="search"
-              placeholder="Search"
+              placeholder="Search bots/members"
               onChange={(e) => setSearchTerm(e.target.value)}
+              value={searchTerm}
             />
             <label className="search-button" htmlFor="searchright">
               <span>&#9906;</span>
