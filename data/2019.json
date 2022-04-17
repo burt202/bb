@@ -4,7 +4,7 @@
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
@@ -45,8 +45,8 @@
     },
     {
       "name": "Death Roll",
-      "keyMembers": ["Erica Hediger", "Steven Martin"],
-      "stage": "roundof16",
+      "keyMembers": ["Steven Martin"],
+      "stage": "semi",
       "country": "AUS"
     },
     {
@@ -76,13 +76,13 @@
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "USA"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
@@ -130,7 +130,7 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "roundof16",
+      "stage": "final",
       "country": "USA"
     },
     {
@@ -165,13 +165,13 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "BRA"
     },
     {
@@ -255,7 +255,7 @@
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
-      "stage": "roundof16",
+      "stage": "winner",
       "country": "USA"
     },
     {
@@ -1165,6 +1165,96 @@
       "winner": "Minotaur",
       "stage": "playoff",
       "ko": false
+    },
+    {
+      "bots": ["Son Of Whyachi", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Biteforce", "Uppercut"],
+      "winner": "Biteforce",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Yeti", "Death Roll"],
+      "winner": "Death Roll",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Tombstone", "Quantum"],
+      "winner": "Tombstone",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Huge", "Whiplash"],
+      "winner": "Whiplash",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Witch Doctor", "Blacksmith"],
+      "winner": "Witch Doctor",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Black Dragon"],
+      "winner": "Lock-Jaw",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Hydra", "Minotaur"],
+      "winner": "Minotaur",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Death Roll", "Minotaur"],
+      "winner": "Death Roll",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Tombstone", "Whiplash"],
+      "winner": "Tombstone",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Sawblaze", "Witch Doctor"],
+      "winner": "Witch Doctor",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Biteforce", "Lock-Jaw"],
+      "winner": "Biteforce",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Witch Doctor", "Death Roll"],
+      "winner": "Witch Doctor",
+      "stage": "semi",
+      "ko": false
+    },
+    {
+      "bots": ["Tombstone", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "bots": ["Witch Doctor", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "final",
+      "ko": true
     }
   ]
 }
