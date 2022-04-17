@@ -129,6 +129,12 @@ export interface Top10Result {
   count: number
 }
 
+export interface SearchResult {
+  id: string
+  name: string
+  type: string
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -146,4 +152,5 @@ export interface DbInterface {
   getMostMatchesPlayed: () => Bot
   getTotalBots: () => number
   getTotalFights: () => number
+  search: (term: string) => Array<SearchResult>
 }

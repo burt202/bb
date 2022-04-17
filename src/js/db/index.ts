@@ -10,6 +10,7 @@ import {
   DbSeasonFight,
   DbTop10Result,
   RawSeason,
+  SearchResult,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -406,6 +407,27 @@ export default async function createDb(
       ) as {count: number}
 
       return res.count
+    },
+    search: (term: string) => {
+      const sql = `
+        SELECT
+          b.id AS id,
+          b.name AS name,
+          'bot' AS type
+        FROM bots b
+        WHERE b.name LIKE :term
+        UNION
+        SELECT
+          m.id AS id,
+          m.name AS name,
+          'member' AS type
+        FROM members m
+        WHERE m.name LIKE :term
+      `
+
+      return getMany<SearchResult>(db, sql, {
+        ":term": `%${term}%`,
+      })
     },
   }
 }

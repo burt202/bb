@@ -44,7 +44,13 @@ export default function Page({children, headerComponent, showShowHome}: Props) {
         </div>
       </div>
       {searchTerm.length > 0 ? (
-        <Search searchTerm={searchTerm} />
+        <Search
+          searchTerm={searchTerm}
+          onSearchResultClick={(link) => {
+            setSearchTerm("")
+            window.location.hash = link
+          }}
+        />
       ) : (
         React.Children.map(children, (c) => c)
       )}

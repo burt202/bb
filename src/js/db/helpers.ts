@@ -106,6 +106,10 @@ export function getMany<T>(
 ) {
   const result = db.exec(sql, params)
 
+  if (result.length === 0) {
+    return []
+  }
+
   const match = result[0]
 
   const data = match.values.map((v) => {
