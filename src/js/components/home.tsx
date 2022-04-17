@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       }
     >
-      <div style={{display: "flex"}}>
+      <div style={{display: "flex", columnGap: 16}}>
         {seasons.map((s, i) => (
           <Link
             key={i}
@@ -39,7 +39,6 @@ export default function Home() {
               width: 200,
               height: 200,
               fontSize: 48,
-              marginRight: 20,
               color: "#003366",
             }}
             to={`/season/${s.id}`}
