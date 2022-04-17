@@ -30,7 +30,7 @@ export default function Search({searchTerm, onSearchResultClick}: Props) {
               dangerouslySetInnerHTML={{
                 __html: sr.name.replace(
                   regEx,
-                  `<strong>${searchTerm}</strong>`,
+                  (match) => `<strong>${match}</strong>`,
                 ),
               }}
             />
