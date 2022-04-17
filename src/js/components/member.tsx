@@ -4,6 +4,7 @@ import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
 import NotFound from "./not-found"
+import Page from "./page"
 
 export default function Member() {
   const params = useParams()
@@ -19,8 +20,14 @@ export default function Member() {
   const memberSeasons = db.getMemberSeasons(memberId)
 
   return (
-    <div style={{marginTop: 16}}>
-      <h1 style={{margin: 0}}>{member.name}</h1>
+    <Page
+      headerComponent={
+        <div>
+          <h1 style={{margin: 0}}>{member.name}</h1>
+        </div>
+      }
+      showShowHome={true}
+    >
       <h3>Seasons</h3>
       <table>
         <thead>
@@ -51,6 +58,6 @@ export default function Member() {
           })}
         </tbody>
       </table>
-    </div>
+    </Page>
   )
 }

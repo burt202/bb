@@ -6,6 +6,7 @@ import {DbContext} from ".."
 import {DbInterface} from "../types"
 import {getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
+import Page from "./page"
 
 export default function Season() {
   const params = useParams()
@@ -35,44 +36,49 @@ export default function Season() {
   const koFights = seasonFights.filter((f) => f.ko)
 
   return (
-    <div style={{marginTop: 16}}>
-      <div style={{display: "flex"}}>
-        <h1 style={{margin: 0}}>Season {season.name}</h1>
-        <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
-          {previousSeason ? (
-            <Link
-              style={{color: "#003366", marginRight: 16}}
-              to={`/season/${previousSeason}`}
-            >
-              Previous
-            </Link>
-          ) : (
-            <a style={{cursor: "not-allowed", marginRight: 16, color: "#ccc"}}>
-              Previous
-            </a>
-          )}
-          {nextSeason ? (
-            <Link style={{color: "#003366"}} to={`/season/${nextSeason}`}>
-              Next
-            </Link>
-          ) : (
-            <a style={{cursor: "not-allowed", marginRight: 16, color: "#ccc"}}>
-              Next
-            </a>
-          )}
+    <Page
+      headerComponent={
+        <div style={{display: "flex"}}>
+          <h1 style={{margin: 0}}>Season {season.name}</h1>
+          <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
+            {previousSeason ? (
+              <Link
+                style={{color: "#003366", marginRight: 16}}
+                to={`/season/${previousSeason}`}
+              >
+                Previous
+              </Link>
+            ) : (
+              <a
+                style={{
+                  cursor: "not-allowed",
+                  marginRight: 16,
+                  color: "#ccc",
+                }}
+              >
+                Previous
+              </a>
+            )}
+            {nextSeason ? (
+              <Link style={{color: "#003366"}} to={`/season/${nextSeason}`}>
+                Next
+              </Link>
+            ) : (
+              <a
+                style={{
+                  cursor: "not-allowed",
+                  marginRight: 16,
+                  color: "#ccc",
+                }}
+              >
+                Next
+              </a>
+            )}
+          </div>
         </div>
-      </div>
-      <Link
-        style={{
-          marginTop: 8,
-          marginBottom: 24,
-          display: "block",
-          color: "#003366",
-        }}
-        to="/"
-      >
-        Back to home
-      </Link>
+      }
+      showShowHome={true}
+    >
       <h3>Bots</h3>
       <div style={{display: "flex"}}>
         <table>
@@ -220,6 +226,6 @@ export default function Season() {
           })}
         </tbody>
       </table>
-    </div>
+    </Page>
   )
 }

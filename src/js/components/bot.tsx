@@ -5,6 +5,7 @@ import {DbContext} from ".."
 import {DbInterface} from "../types"
 import {getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
+import Page from "./page"
 
 export default function Bot() {
   const params = useParams()
@@ -24,21 +25,27 @@ export default function Bot() {
   const koWins = botFightWins.filter((bf) => bf.ko)
 
   return (
-    <div style={{marginTop: 16}}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <h1 style={{margin: 0}}>{bot.name}</h1>
-        <img
-          src={`${bot.country.toLowerCase()}.svg`}
-          style={{height: 48}}
-          title={bot.country}
-        />
-      </div>
+    <Page
+      headerComponent={
+        <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <img
+              src={`${bot.country.toLowerCase()}.svg`}
+              style={{height: 48, marginRight: 16}}
+              title={bot.country}
+            />
+            <h1 style={{margin: 0}}>{bot.name}</h1>
+          </div>
+        </>
+      }
+      showShowHome={true}
+    >
       <h3>Seasons</h3>
       <table style={{width: "100%"}}>
         <thead>
@@ -173,6 +180,6 @@ export default function Bot() {
           })}
         </tbody>
       </table>
-    </div>
+    </Page>
   )
 }
