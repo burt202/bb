@@ -236,7 +236,7 @@
     },
     {
       "name": "Mad Catter",
-      "keyMembers": ["Martin Mason", "Emmanuel Carrillo"],
+      "keyMembers": ["Martin Mason", "Emmanuel Carrillo", "Calvin Iba"],
       "stage": "season",
       "country": "USA"
     },
@@ -356,7 +356,7 @@
     },
     {
       "name": "Marvin",
-      "keyMembers": ["Hannah Rucker"],
+      "keyMembers": ["Hannah Rucker", "Julia Chernushevich"],
       "stage": "season",
       "country": "USA"
     },
@@ -401,6 +401,12 @@
       "keyMembers": ["Bob Girardi"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Petunia",
+      "keyMembers": ["Mischa de Graaf"],
+      "stage": "season",
+      "country": "NLD"
     }
   ],
   "fights": [
@@ -1013,6 +1019,102 @@
     {
       "bots": ["Hydra", "Bronco"],
       "winner": "Hydra",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Texas Twister", "Axe Backwards"],
+      "winner": "Texas Twister",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Petunia", "Valkyrie"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bloodsport", "The Four Horsemen"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Chronos", "Gigabyte"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Double Jeopardy", "Daisy Cutter", "Foxtrot"],
+      "winner": "Double Jeopardy",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Death Roll", "Foxtrot"],
+      "winner": "Death Roll",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Double Jeopardy", "Extinguisher", "Rainbow"],
+      "winner": "Rainbow",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Extinguisher", "The Four Horsemen"],
+      "winner": "The Four Horsemen",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Falcon", "Ribbot"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gemini", "Gruff", "Marvin"],
+      "winner": "Gruff",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Shatter", "Kingpin"],
+      "winner": "Shatter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Mad Catter", "Ragnarok"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Marvin", "Petunia"],
+      "winner": "Petunia",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Nelly The Ellybot", "Shellshock"],
+      "winner": "Nelly The Ellybot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["P1", "Sidewinder"],
+      "winner": "Sidewinder",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Petunia", "War Hawk"],
+      "winner": "War Hawk",
       "stage": "season",
       "ko": true
     },
