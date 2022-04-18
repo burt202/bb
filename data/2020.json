@@ -57,7 +57,7 @@
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "quarter",
+      "stage": "season",
       "country": "USA"
     },
     {
@@ -183,7 +183,91 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "final",
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Copperhead",
+      "keyMembers": ["Zach Goff", "Robert Cowan", "Kimberley Cowan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gigabyte",
+      "keyMembers": ["John Mladenik", "Matt Maxham"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Jackpot",
+      "keyMembers": ["Jeff Waters"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Subzero",
+      "keyMembers": ["Logan Davis"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Uppercut",
+      "keyMembers": ["Alex Hattori", "Mason Massie"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gemini",
+      "keyMembers": ["Ace Shelander"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Beta",
+      "keyMembers": ["John Reid", "Gabriel Stroud"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Rotator",
+      "keyMembers": ["Victor Soto"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Valkyrie",
+      "keyMembers": ["Leanne Cushing", "Frederick Moore"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tantrum",
+      "keyMembers": ["Aren Hill", "Alex Grant"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Atom #94",
+      "keyMembers": ["Yash Deshmukh"],
+      "stage": "season",
+      "country": "IND"
+    },
+    {
+      "name": "Big Dill",
+      "keyMembers": ["Emmanuel Carrillo"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gruff",
+      "keyMembers": ["Sam McAmis"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Hypershock",
+      "keyMembers": ["Will Bales"],
+      "stage": "playoff",
       "country": "USA"
     }
   ],
@@ -277,6 +361,48 @@
       "winner": "Hydra",
       "stage": "season",
       "ko": false
+    },
+    {
+      "bots": ["Gigabyte", "Copperhead"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Jackpot", "Subzero"],
+      "winner": "Jackpot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Uppercut", "Gemini"],
+      "winner": "Uppercut",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Beta", "Rotator"],
+      "winner": "Beta",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Valkyrie", "Tantrum"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Atom #94", "Big Dill"],
+      "winner": "Big Dill",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Hypershock", "Gruff"],
+      "winner": "Gruff",
+      "stage": "season",
+      "ko": true
     }
   ]
 }
