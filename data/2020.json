@@ -1,0 +1,156 @@
+{
+  "year": "2020",
+  "bots": [
+    {
+      "name": "Sawblaze",
+      "keyMembers": ["Jamison Go"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Whiplash",
+      "keyMembers": [
+        "Matt Vazquez",
+        "Jason Vazquez",
+        "Jeff Vazquez",
+        "Debbie Vazquez"
+      ],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Fusion",
+      "keyMembers": ["Reece Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mad Catter",
+      "keyMembers": ["Martin Mason", "Calvin Iba"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Malice",
+      "keyMembers": ["Bunny Sauriol"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Axe Backwards",
+      "keyMembers": ["Kurt Durjan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bloodsport",
+      "keyMembers": ["Justin Marple"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Skorpios",
+      "keyMembers": ["Zach Lytle", "Diana Tarlson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Lock-Jaw",
+      "keyMembers": ["Donald Hutson"],
+      "stage": "quarter",
+      "country": "USA"
+    },
+    {
+      "name": "Captain Shrederator",
+      "keyMembers": ["Brian Nave"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Sporkinok",
+      "keyMembers": ["Lilith Specht"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rusty",
+      "keyMembers": ["Dave Eaton"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Sharkoprion",
+      "keyMembers": ["Edward Robinson", "Zach Hassanein"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "SMEEEEEEEEEEEEEEEEEE",
+      "keyMembers": ["Joseph Fabiani"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "End Game",
+      "keyMembers": ["Jack Barker", "Nick Mabey"],
+      "stage": "season",
+      "country": "NZL"
+    },
+    {
+      "name": "Tombstone",
+      "keyMembers": ["Ray Billings", "Rick Russ"],
+      "stage": "season",
+      "country": "USA"
+    }
+  ],
+  "fights": [
+    {
+      "bots": ["Sawblaze", "Whiplash"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Fusion", "Mad Catter"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Malice", "Axe Backwards"],
+      "winner": "Malice",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bloodsport", "Skorpios"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Captain Shrederator"],
+      "winner": "Lock-Jaw",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Rusty", "Sporkinok"],
+      "winner": "Rusty",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEEEE"],
+      "winner": "SMEEEEEEEEEEEEEEEEEE",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Tombstone", "End Game"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    }
+  ]
+}

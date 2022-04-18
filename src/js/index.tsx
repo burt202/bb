@@ -13,6 +13,7 @@ const data = {
   2016: require("../../data/2016.json") as RawSeason,
   2018: require("../../data/2018.json") as RawSeason,
   2019: require("../../data/2019.json") as RawSeason,
+  2020: require("../../data/2020.json") as RawSeason,
 }
 
 export const DbContext = React.createContext<DbInterface | null>(null)
