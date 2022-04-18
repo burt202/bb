@@ -101,6 +101,90 @@
       "keyMembers": ["Ray Billings", "Rick Russ"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Ghost Raptor",
+      "keyMembers": ["Chuck Pitzer"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Shatter",
+      "keyMembers": ["Adam Wrigley", "Mary Chimenti"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tracer",
+      "keyMembers": ["Jason Woods"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Ribbot",
+      "keyMembers": ["David Jin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Black Dragon",
+      "keyMembers": ["Gabriel Silveira Teles"],
+      "stage": "season",
+      "country": "BRA"
+    },
+    {
+      "name": "Kraken",
+      "keyMembers": ["Matt Spurk"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Huge",
+      "keyMembers": ["Jonathan Schultz"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mammoth",
+      "keyMembers": ["Ricky Willems"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Claw Viper",
+      "keyMembers": ["Kevin Milczewski"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "HiJinx",
+      "keyMembers": ["Jen Herchenroeder", "Orion Beach"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Perfect Phoenix",
+      "keyMembers": ["Tyler Nguyen"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Extinguisher",
+      "keyMembers": ["John Flaacke IV", "John Flaacke III"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Hydra",
+      "keyMembers": ["Jake Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Witch Doctor",
+      "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
+      "stage": "final",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -151,6 +235,48 @@
       "winner": "End Game",
       "stage": "season",
       "ko": true
+    },
+    {
+      "bots": ["Ghost Raptor", "Shatter"],
+      "winner": "Shatter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Tracer", "Ribbot"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Black Dragon", "Kraken"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Huge", "Mammoth"],
+      "winner": "Mammoth",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Claw Viper", "HiJinx"],
+      "winner": "Claw Viper",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Perfect Phoenix", "Extinguisher"],
+      "winner": "Perfect Phoenix",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Witch Doctor"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": false
     }
   ]
 }

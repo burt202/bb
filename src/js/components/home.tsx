@@ -23,10 +23,10 @@ export default function Home() {
       headerComponent={
         <div>
           <h1 style={{margin: 0}}>Battlebots Database</h1>
-          <h3>Seasons</h3>
         </div>
       }
     >
+      <h3>Seasons</h3>
       <div style={{display: "flex", columnGap: 16}}>
         {seasons.map((s, i) => (
           <Link
