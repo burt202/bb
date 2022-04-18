@@ -126,7 +126,7 @@ export default function Home() {
           </table>
         </div>
         <div>
-          <h3>Top 10 Best KO % (more than 3 wins)</h3>
+          <h3>Top 10 Best KO % (more than 3 fights)</h3>
           <table>
             <thead>
               <tr>

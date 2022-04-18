@@ -107,7 +107,7 @@ export default function Bot() {
           </div>
           <div>
             KO %:{" "}
-            <strong>{getPercentage(botFightWins.length, koWins.length)}</strong>
+            <strong>{getPercentage(botFights.length, koWins.length)}</strong>
           </div>
         </div>
       </div>

@@ -333,7 +333,7 @@ export default async function createDb(
         SELECT
           b.name AS bot_name,
           kos.bot_id,
-          1.0 * kos.count / wins.count AS count
+          1.0 * kos.count / total.count AS count
         FROM bots b
         INNER JOIN (
           SELECT
@@ -345,12 +345,12 @@ export default async function createDb(
         ) AS kos ON b.id = kos.bot_id
         INNER JOIN (
           SELECT
-            f.winner_id AS bot_id,
-            COUNT(f.winner_id) AS count
-          FROM fights f
-          GROUP BY winner_id
-        ) AS wins ON b.id = wins.bot_id
-        WHERE wins.count > 3
+            fb.bot_id AS bot_id,
+            COUNT(fb.bot_id) AS count
+          FROM fight_bots fb
+          GROUP BY fb.bot_id
+        ) AS total ON b.id = total.bot_id
+        WHERE total.count > 3
         ORDER BY count DESC
         LIMIT 10
       `
