@@ -242,7 +242,7 @@
     },
     {
       "name": "Tantrum",
-      "keyMembers": ["Aren Hill", "Alex Grant"],
+      "keyMembers": ["Aren Hill", "Alex Grant", "Ginger Schmidt"],
       "stage": "season",
       "country": "USA"
     },
@@ -267,7 +267,85 @@
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "playoff",
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Slap Box",
+      "keyMembers": ["Bryce Yankauskas"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Pain Train",
+      "keyMembers": ["Evan Arias"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Slammow",
+      "keyMembers": ["Craig Danby"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Chomp",
+      "keyMembers": ["Zoe Stephenson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gamma 9",
+      "keyMembers": ["Curtis Nemeth"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Grabot",
+      "keyMembers": ["Ben Davidson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Aegis",
+      "keyMembers": ["Chris Sparzo"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Chronos",
+      "keyMembers": ["Jerry Serafin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "P1",
+      "keyMembers": ["Brandon Zalinsky"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bale Spear",
+      "keyMembers": ["Earl Pancoast III"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Deadlift",
+      "keyMembers": ["Ryan Shulski"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Axolotl",
+      "keyMembers": ["Alon Belkin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "War EZ",
+      "keyMembers": ["Jonathan Juarez"],
+      "stage": "season",
       "country": "USA"
     }
   ],
@@ -401,6 +479,234 @@
     {
       "bots": ["Hypershock", "Gruff"],
       "winner": "Gruff",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Tombstone", "Slap Box"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Slammow", "Pain Train"],
+      "winner": "Slammow",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Perfect Phoenix", "Skorpios"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Ribbot", "Mad Catter"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Chomp", "Gamma 9"],
+      "winner": "Chomp",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Malice", "Shatter"],
+      "winner": "Malice",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["End Game", "Bloodsport"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Claw Viper", "Black Dragon"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Jackpot", "Ghost Raptor"],
+      "winner": "Jackpot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Subzero", "Grabot"],
+      "winner": "Subzero",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Huge", "Hydra"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Fusion", "Aegis"],
+      "winner": "Fusion",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Big Dill"],
+      "winner": "Lock-Jaw",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Kraken", "Witch Doctor"],
+      "winner": "Kraken",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Valkyrie", "Rotator"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Gigabyte", "Extinguisher"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Sharkoprion", "Slap Box"],
+      "winner": "Slap Box",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Malice", "Mad Catter"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Atom #94", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["SMEEEEEEEEEEEEEEEEEE", "Pain Train"],
+      "winner": "Pain Train",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Sawblaze", "Uppercut"],
+      "winner": "Uppercut",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Axe Backwards", "Captain Shrederator"],
+      "winner": "Captain Shrederator",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Chronos", "P1"],
+      "winner": "P1",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Copperhead", "P1"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Rusty", "Beta"],
+      "winner": "Beta",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Mammoth", "Hypershock"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Subzero", "Sporkinok"],
+      "winner": "Subzero",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bale Spear", "Deadlift"],
+      "winner": "Deadlift",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bale Spear", "Tracer"],
+      "winner": "Tracer",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gruff", "Whiplash"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Huge", "Kraken"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Axolotl", "War EZ"],
+      "winner": "War EZ",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Ribbot", "Axolotl"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Big Dill", "Rotator"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Jackpot"],
+      "winner": "Jackpot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Chronos", "Bloodsport"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Fusion", "War EZ"],
+      "winner": "Fusion",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Skorpios", "Tombstone"],
+      "winner": "Skorpios",
       "stage": "season",
       "ko": true
     }
