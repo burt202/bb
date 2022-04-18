@@ -4,7 +4,7 @@
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -15,25 +15,25 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Fusion",
       "keyMembers": ["Reece Ewert"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Mad Catter",
       "keyMembers": ["Martin Mason", "Calvin Iba"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Malice",
       "keyMembers": ["Bunny Sauriol"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -45,19 +45,19 @@
     {
       "name": "Bloodsport",
       "keyMembers": ["Justin Marple"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Skorpios",
       "keyMembers": ["Zach Lytle", "Diana Tarlson"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -93,13 +93,13 @@
     {
       "name": "End Game",
       "keyMembers": ["Jack Barker", "Nick Mabey"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "NZL"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -111,7 +111,7 @@
     {
       "name": "Shatter",
       "keyMembers": ["Adam Wrigley", "Mary Chimenti"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -123,31 +123,31 @@
     {
       "name": "Ribbot",
       "keyMembers": ["David Jin"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Black Dragon",
       "keyMembers": ["Gabriel Silveira Teles"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "BRA"
     },
     {
       "name": "Kraken",
       "keyMembers": ["Matt Spurk"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Huge",
       "keyMembers": ["Jonathan Schultz"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Mammoth",
       "keyMembers": ["Ricky Willems"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -159,13 +159,13 @@
     {
       "name": "HiJinx",
       "keyMembers": ["Jen Herchenroeder", "Orion Beach"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Perfect Phoenix",
       "keyMembers": ["Tyler Nguyen"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -177,43 +177,43 @@
     {
       "name": "Hydra",
       "keyMembers": ["Jake Ewert"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Copperhead",
       "keyMembers": ["Zach Goff", "Robert Cowan", "Kimberley Cowan"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Gigabyte",
       "keyMembers": ["John Mladenik", "Matt Maxham"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Jackpot",
       "keyMembers": ["Jeff Waters"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Subzero",
       "keyMembers": ["Logan Davis"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Uppercut",
       "keyMembers": ["Alex Hattori", "Mason Massie"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -225,29 +225,29 @@
     {
       "name": "Beta",
       "keyMembers": ["John Reid", "Gabriel Stroud"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "GBR"
     },
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Valkyrie",
       "keyMembers": ["Leanne Cushing", "Frederick Moore"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Tantrum",
       "keyMembers": ["Aren Hill", "Alex Grant", "Ginger Schmidt"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
-      "name": "Atom #94",
+      "name": "Atom 94",
       "keyMembers": ["Yash Deshmukh"],
       "stage": "season",
       "country": "IND"
@@ -261,13 +261,13 @@
     {
       "name": "Gruff",
       "keyMembers": ["Sam McAmis"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -285,7 +285,7 @@
     {
       "name": "Slammow",
       "keyMembers": ["Craig Danby"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -345,6 +345,18 @@
     {
       "name": "War EZ",
       "keyMembers": ["Jonathan Juarez"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Black Widow",
+      "keyMembers": ["Herrick Henzel"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rampage",
+      "keyMembers": ["Melaina Knox"],
       "stage": "season",
       "country": "USA"
     }
@@ -471,7 +483,7 @@
       "ko": true
     },
     {
-      "bots": ["Atom #94", "Big Dill"],
+      "bots": ["Atom 94", "Big Dill"],
       "winner": "Big Dill",
       "stage": "season",
       "ko": false
@@ -591,7 +603,7 @@
       "ko": true
     },
     {
-      "bots": ["Atom #94", "Tantrum"],
+      "bots": ["Atom 94", "Tantrum"],
       "winner": "Tantrum",
       "stage": "season",
       "ko": true
@@ -709,6 +721,216 @@
       "winner": "Skorpios",
       "stage": "season",
       "ko": true
+    },
+    {
+      "bots": ["Captain Shrederator", "Shatter"],
+      "winner": "Shatter",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Gigabyte", "Claw Viper"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Chomp", "HiJinx"],
+      "winner": "HiJinx",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Witch Doctor", "Slammow"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gruff", "Extinguisher"],
+      "winner": "Extinguisher",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Perfect Phoenix", "Atom 94"],
+      "winner": "Perfect Phoenix",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Copperhead", "Black Dragon"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Hydra", "Uppercut"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Rusty", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Gamma 9", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["End Game", "Hypershock"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["SMEEEEEEEEEEEEEEEEEE", "P1"],
+      "winner": "P1",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Beta", "Grabot"],
+      "winner": "Beta",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Whiplash", "Valkyrie"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Black Widow", "Rampage"],
+      "winner": "Black Widow",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Chomp", "Ghost Raptor"],
+      "winner": "Ghost Raptor",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Deadlift", "Mammoth"],
+      "winner": "Mammoth",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["HiJinx", "Tracer"],
+      "winner": "HiJinx",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Slammow", "War EZ"],
+      "winner": "Slammow",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Mad Catter", "Tombstone"],
+      "winner": "Tombstone",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Uppercut", "HiJinx"],
+      "winner": "Uppercut",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Slammow", "Black Dragon"],
+      "winner": "Black Dragon",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Beta", "Ribbot"],
+      "winner": "Ribbot",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Whiplash", "Huge"],
+      "winner": "Whiplash",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "bots": ["Valkyrie", "Subzero"],
+      "winner": "Valkyrie",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "bots": ["Malice", "Gigabyte"],
+      "winner": "Gigabyte",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Hypershock"],
+      "winner": "Hydra",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Shatter"],
+      "winner": "Shatter",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Jackpot", "Rotator"],
+      "winner": "Rotator",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Perfect Phoenix", "End Game"],
+      "winner": "End Game",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Copperhead", "Mammoth"],
+      "winner": "Mammoth",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "bots": ["Kraken", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "bots": ["Gruff", "Bloodsport"],
+      "winner": "Bloodsport",
+      "stage": "roundof32",
+      "ko": false
+    },
+    {
+      "bots": ["Fusion", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Witch Doctor", "Skorpios"],
+      "winner": "Witch Doctor",
+      "stage": "roundof32",
+      "ko": false
     }
   ]
 }
