@@ -1,6 +1,7 @@
 import * as React from "react"
 import {HashRouter, Routes, Route} from "react-router-dom"
 import Bot from "./components/bot"
+import Country from "./components/country"
 import Home from "./components/home"
 import Member from "./components/member"
 import NotFound from "./components/not-found"
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/season/:seasonId" element={<Season />} />
         <Route path="/bot/:botId" element={<Bot />} />
         <Route path="/member/:memberId" element={<Member />} />
+        <Route path="/country/:countryId" element={<Country />} />
         <Route path="*" element={<NotFound title="Page Not Found" />} />
       </Routes>
     </HashRouter>

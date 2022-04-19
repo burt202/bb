@@ -37,3 +37,19 @@ export const stageNameMap = {
   season: "Season",
   prequalifier: "Pre-Qualifier",
 } as Record<string, string>
+
+export const countryNameMap = {
+  aus: "Australia",
+  bra: "Brazil",
+  can: "Canada",
+  chn: "China",
+  deu: "Germany",
+  fra: "France",
+  gbr: "Great Britain",
+  ind: "India",
+  kor: "South Korea",
+  nld: "Holland",
+  nzl: "New Zealand",
+  rus: "Russia",
+  usa: "USA",
+} as Record<string, string>

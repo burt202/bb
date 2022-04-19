@@ -430,5 +430,15 @@ export default async function createDb(
         ":term": `%${term}%`,
       })
     },
+    getBotsForCountry: (id: string) => {
+      const sql = `
+        SELECT * FROM bots b
+        WHERE b.country = :id
+      `
+
+      return getMany<DbBot>(db, sql, {
+        ":id": id.toUpperCase(),
+      })
+    },
   }
 }

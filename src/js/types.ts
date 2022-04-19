@@ -153,4 +153,5 @@ export interface DbInterface {
   getTotalBots: () => number
   getTotalFights: () => number
   search: (term: string) => Array<SearchResult>
+  getBotsForCountry: (id: string) => Array<Bot>
 }

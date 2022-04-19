@@ -4,7 +4,7 @@ import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
-import {getPercentage, stageNameMap} from "../utils"
+import {countryNameMap, getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 import Page from "./page"
 
@@ -94,11 +94,13 @@ export default function Season() {
               return (
                 <tr key={i}>
                   <td style={{width: 50, textAlign: "center"}}>
-                    <img
-                      src={`${sb.botCountry.toLowerCase()}.svg`}
-                      title={sb.botCountry}
-                      style={{height: 24}}
-                    />
+                    <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
+                      <img
+                        src={`${sb.botCountry.toLowerCase()}.svg`}
+                        title={countryNameMap[sb.botCountry.toLowerCase()]}
+                        style={{height: 24}}
+                      />
+                    </Link>
                   </td>
                   <td>
                     <Link style={{color: "#003366"}} to={`/bot/${sb.botId}`}>

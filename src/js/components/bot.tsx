@@ -3,7 +3,7 @@ import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
 import {DbInterface} from "../types"
-import {getPercentage, stageNameMap} from "../utils"
+import {countryNameMap, getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 import Page from "./page"
 
@@ -35,11 +35,13 @@ export default function Bot() {
               justifyContent: "space-between",
             }}
           >
-            <img
-              src={`${bot.country.toLowerCase()}.svg`}
-              style={{height: 48, marginRight: 16}}
-              title={bot.country}
-            />
+            <Link to={`/country/${bot.country.toLowerCase()}`}>
+              <img
+                src={`${bot.country.toLowerCase()}.svg`}
+                style={{height: 48, marginRight: 16}}
+                title={countryNameMap[bot.country.toLowerCase()]}
+              />
+            </Link>
             <h1 style={{margin: 0}}>{bot.name}</h1>
           </div>
         </>
