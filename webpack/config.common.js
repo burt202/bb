@@ -42,6 +42,7 @@ module.exports = {
         {from: "src/images/flags/bra.svg", to: "bra.svg"},
         {from: "src/images/flags/can.svg", to: "can.svg"},
         {from: "src/images/flags/chn.svg", to: "chn.svg"},
+        {from: "src/images/flags/deu.svg", to: "deu.svg"},
         {from: "src/images/flags/fra.svg", to: "fra.svg"},
         {from: "src/images/flags/ind.svg", to: "ind.svg"},
         {from: "src/images/flags/kor.svg", to: "kor.svg"},

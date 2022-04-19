@@ -278,7 +278,7 @@
     },
     {
       "name": "Skorpios",
-      "keyMembers": ["Zach Lytle", "Diana Tarlson"],
+      "keyMembers": ["Zach Lytle", "Diana Tarlson", "Dan Chatterton"],
       "stage": "season",
       "country": "USA"
     },
@@ -287,6 +287,36 @@
       "keyMembers": ["Cheog Gyu Hwang"],
       "stage": "season",
       "country": "KOR"
+    },
+    {
+      "name": "Lucky",
+      "keyMembers": ["Mark Demers", "Matt Olson"],
+      "stage": "season",
+      "country": "CAN"
+    },
+    {
+      "name": "Ghost Raptor",
+      "keyMembers": ["Chuck Pitzer"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Glitch",
+      "keyMembers": ["Kyle Miller"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Jager",
+      "keyMembers": ["Ralf Schneider", "Emmanuel Carrillo"],
+      "stage": "season",
+      "country": "DEU"
+    },
+    {
+      "name": "Dragon Slayer",
+      "keyMembers": ["Jordan Neal"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -439,6 +469,72 @@
       "winner": "Skorpios",
       "stage": "season",
       "ko": false
+    },
+    {
+      "bots": ["Tombstone", "Mammoth"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Lucky", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Ghost Raptor", "Glitch"],
+      "winner": "Glitch",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Sawblaze", "Mad Catter"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Free Shipping", "Uppercut"],
+      "winner": "Uppercut",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Blacksmith", "Shatter"],
+      "winner": "Shatter",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Jager", "P1"],
+      "winner": "P1",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Gruff"],
+      "winner": "Hydra",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gigabyte", "Captain Shrederator"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Duck", "Dragon Slayer"],
+      "winner": "Dragon Slayer",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["End Game", "Witch Doctor"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
     }
   ]
 }
