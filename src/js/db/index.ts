@@ -138,6 +138,7 @@ export default async function createDb(
             INNER JOIN members m ON bm.member_id = m.id
             WHERE bm.bot_id = :botId
             AND bm.season_id = :seasonId
+            ORDER BY bm.ordinal
           `,
           {
             ":botId": id,

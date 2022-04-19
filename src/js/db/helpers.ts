@@ -45,6 +45,7 @@ export function createTables(db: Database) {
       bot_id text NOT NULL,
       member_id text NOT NULL,
       season_id text NOT NULL,
+      ordinal integer NOT NULL,
       primary key (bot_id, member_id, season_id),
       foreign key (bot_id) references bots(id),
       foreign key (member_id) references members(id),
@@ -185,8 +186,14 @@ function addMemberToBotForSeason(
   botId: string,
   memberId: string,
   seasonId: string,
+  ordinal: number,
 ) {
-  db.run("INSERT INTO bot_members VALUES (?,?,?)", [botId, memberId, seasonId])
+  db.run("INSERT INTO bot_members VALUES (?,?,?,?)", [
+    botId,
+    memberId,
+    seasonId,
+    ordinal,
+  ])
 }
 
 function insertFight(db: Database, seasonId: string, fight: RawFight) {
@@ -251,9 +258,15 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
       const insertedBot = insertBot(db, bot.name, bot.country)
       addBotToSeason(db, seasonId, insertedBot.id, bot.stage)
 
-      bot.keyMembers.forEach((member) => {
+      bot.keyMembers.forEach((member, i) => {
         const insertedMember = insertMember(db, member)
-        addMemberToBotForSeason(db, insertedBot.id, insertedMember.id, seasonId)
+        addMemberToBotForSeason(
+          db,
+          insertedBot.id,
+          insertedMember.id,
+          seasonId,
+          i,
+        )
       })
     })
 
