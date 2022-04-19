@@ -317,6 +317,12 @@
       "keyMembers": ["Jordan Neal"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Retrograde",
+      "keyMembers": ["Aaron Lucas"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -535,6 +541,96 @@
       "winner": "End Game",
       "stage": "season",
       "ko": true
+    },
+    {
+      "bots": ["Rotator", "Black Dragon"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Lucky", "Blade"],
+      "winner": "Lucky",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "Dragon Slayer"],
+      "winner": "Minotaur",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Yeti", "Pain Train"],
+      "winner": "Yeti",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Kraken", "HiJinx"],
+      "winner": "HiJinx",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Defender", "Riptide"],
+      "winner": "Defender",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Lock-Jaw", "Hypershock"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bloodsport", "Subzero"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Cobalt", "Ghost Raptor"],
+      "winner": "Cobalt",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Icewave", "Deadlift"],
+      "winner": "Icewave",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Blip", "Overhaul"],
+      "winner": "Blip",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Rampage", "Retrograde"],
+      "winner": "Retrograde",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Huge", "Retrograde"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Copperhead", "Fusion"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Whiplash", "Skorpios"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": false
     }
   ]
 }
