@@ -2,7 +2,7 @@ import * as React from "react"
 import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
-import {DbInterface} from "../types"
+import {DbInterface, MemberSeason} from "../types"
 import NotFound from "./not-found"
 import Page from "./page"
 
@@ -18,6 +18,14 @@ export default function Member() {
   }
 
   const memberSeasons = db.getMemberSeasons(memberId)
+
+  const grouped = memberSeasons.reduce((acc, val) => {
+    if (acc[val.seasonId]) {
+      return {...acc, [val.seasonId]: [...acc[val.seasonId], val]}
+    }
+
+    return {...acc, [val.seasonId]: [val]}
+  }, {} as Record<string, Array<MemberSeason>>)
 
   return (
     <Page
@@ -37,25 +45,40 @@ export default function Member() {
           </tr>
         </thead>
         <tbody>
-          {memberSeasons.map((ms, i) => {
-            return (
-              <tr key={i}>
-                <td>
-                  <Link
-                    style={{color: "#003366"}}
-                    to={`/season/${ms.seasonId}`}
-                  >
-                    {ms.seasonName}
-                  </Link>
-                </td>
-                <td>
-                  <Link style={{color: "#003366"}} to={`/bot/${ms.botId}`}>
-                    {ms.botName}
-                  </Link>
-                </td>
-              </tr>
-            )
-          })}
+          {Object.entries(grouped)
+            .sort((a, b) => {
+              return a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0
+            })
+            .map((pair, i) => {
+              const {seasonId, seasonName} = pair[1][0]
+
+              return (
+                <tr key={i}>
+                  <td>
+                    <Link style={{color: "#003366"}} to={`/season/${seasonId}`}>
+                      {seasonName}
+                    </Link>
+                  </td>
+                  <td>
+                    {pair[1].map((b, i) => {
+                      const isLastBot = i + 1 === pair[1].length
+
+                      return (
+                        <React.Fragment key={i}>
+                          <Link
+                            style={{color: "#003366"}}
+                            to={`/bot/${b.botId}`}
+                          >
+                            {b.botName}
+                          </Link>
+                          {isLastBot ? "" : ", "}
+                        </React.Fragment>
+                      )
+                    })}
+                  </td>
+                </tr>
+              )
+            })}
         </tbody>
       </table>
     </Page>

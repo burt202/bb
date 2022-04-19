@@ -84,6 +84,90 @@
       "keyMembers": ["Jake Ewert"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Yeti",
+      "keyMembers": ["Greg Gibson", "Chrisian Carlberg"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mad Catter",
+      "keyMembers": ["Martin Mason", "Calvin Iba"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Defender",
+      "keyMembers": ["Jason Vazquez", "Jeff Vazquez", "Debbie Vazquez"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Ribbot",
+      "keyMembers": ["David Jin", "Rob Masek"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "HiJinx",
+      "keyMembers": ["Jen Herchenroeder", "Orion Beach"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Mammoth",
+      "keyMembers": ["Ricky Willems"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rotator",
+      "keyMembers": ["Victor Soto"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Kraken",
+      "keyMembers": ["Matt Spurk"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rusty",
+      "keyMembers": ["Dave Eaton"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Blip",
+      "keyMembers": ["Aren Hill"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tantrum",
+      "keyMembers": ["Alex Grant", "Ginger Schmidt"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Malice",
+      "keyMembers": ["Bunny Sauriol"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Bloodsport",
+      "keyMembers": ["Justin Marple"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Whiplash",
+      "keyMembers": ["Matt Vazquez", "Jeff Vazquez", "Debbie Vazquez"],
+      "stage": "final",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -126,6 +210,48 @@
     {
       "bots": ["Hydra", "End Game"],
       "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Yeti", "Mad Catter"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Defender", "Ribbot"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["HiJinx", "Mammoth"],
+      "winner": "Mammoth",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Kraken", "Rotator"],
+      "winner": "Rotator",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Rusty", "Blip"],
+      "winner": "Blip",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Tantrum", "Malice"],
+      "winner": "Tantrum",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Whiplash", "Bloodsport"],
+      "winner": "Whiplash",
       "stage": "season",
       "ko": true
     }

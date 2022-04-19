@@ -45,7 +45,7 @@ export function createTables(db: Database) {
       bot_id text NOT NULL,
       member_id text NOT NULL,
       season_id text NOT NULL,
-      primary key (member_id, season_id),
+      primary key (bot_id, member_id, season_id),
       foreign key (bot_id) references bots(id),
       foreign key (member_id) references members(id),
       foreign key (season_id) references seasons(id)
