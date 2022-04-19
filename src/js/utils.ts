@@ -14,6 +14,17 @@ export function getPercentage(rawDataLength: number, portionLength: number) {
   return `${round(0, (portionLength / rawDataLength) * 100)}%`
 }
 
+export function groupBy<T>(grouper: (d: T) => string, data: Array<T>) {
+  return data.reduce((acc, val) => {
+    const key = grouper(val)
+    if (acc[key]) {
+      return {...acc, [key]: [...acc[key], val]}
+    }
+
+    return {...acc, [key]: [val]}
+  }, {} as Record<string, Array<T>>)
+}
+
 export const stageNameMap = {
   winner: "Winner",
   final: "Final",
