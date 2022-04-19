@@ -35,28 +35,46 @@ export default function Country() {
       showShowHome={true}
     >
       <h3>Bots</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Bot</th>
-            <th>Wins</th>
-          </tr>
-        </thead>
-        <tbody>
-          {countryBots.map((cd, i) => {
-            return (
-              <tr key={i}>
-                <td>
-                  <Link style={{color: "#003366"}} to={`/bot/${cd.id}`}>
-                    {cd.name}
-                  </Link>
-                </td>
-                <td>???</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+      <div style={{display: "flex"}}>
+        <table>
+          <thead>
+            <tr>
+              <th style={{width: 250}}>Bot</th>
+              <th>Wins</th>
+            </tr>
+          </thead>
+          <tbody>
+            {countryBots.map((cb, i) => {
+              return (
+                <tr key={i}>
+                  <td>
+                    <Link style={{color: "#003366"}} to={`/bot/${cb.id}`}>
+                      {cb.name}
+                    </Link>
+                  </td>
+                  <td>{cb.wins}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+        <div style={{marginLeft: 16}}>
+          <div
+            style={{
+              background: "#ccc",
+              padding: 16,
+              width: 380,
+              textAlign: "right",
+              marginBottom: 16,
+            }}
+          >
+            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>Total Bots</p>
+            <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
+              {countryBots.length}
+            </p>
+          </div>
+        </div>
+      </div>
     </Page>
   )
 }

@@ -3,6 +3,7 @@ import {
   DbBot,
   DbBotFight,
   DbBotSeason,
+  DbCountryBot,
   DbInterface,
   DbMemberSeason,
   DbSeason,
@@ -432,12 +433,41 @@ export default async function createDb(
     },
     getBotsForCountry: (id: string) => {
       const sql = `
-        SELECT * FROM bots b
+        SELECT
+          b.id AS id,
+          b.name AS name,
+          wins.count AS wins,
+          total.count AS total_fights
+        FROM bots b
+        LEFT JOIN (
+          SELECT
+            f.winner_id AS bot_id,
+            COUNT(f.winner_id) AS count
+          FROM fights f
+          GROUP BY winner_id
+        ) AS wins ON b.id = wins.bot_id
+        INNER JOIN (
+          SELECT
+            fb.bot_id AS bot_id,
+            COUNT(fb.bot_id) AS count
+          FROM fight_bots fb
+          GROUP BY fb.bot_id
+        ) AS total ON b.id = total.bot_id
         WHERE b.country = :id
+        ORDER BY wins DESC
       `
 
-      return getMany<DbBot>(db, sql, {
+      const dbCountryBots = getMany<DbCountryBot>(db, sql, {
         ":id": id.toUpperCase(),
+      })
+
+      return dbCountryBots.map((cb) => {
+        return {
+          id: cb.id,
+          name: cb.name,
+          wins: cb.wins ?? 0,
+          totalFights: cb.total_fights,
+        }
       })
     },
   }

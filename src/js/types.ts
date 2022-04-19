@@ -82,6 +82,13 @@ export interface DbTop10Result {
   count: number
 }
 
+export interface DbCountryBot {
+  id: string
+  name: string
+  wins: number | null
+  total_fights: number
+}
+
 export type Season = DbSeason
 export type Bot = DbBot
 export type Member = DbMember
@@ -135,6 +142,13 @@ export interface SearchResult {
   type: string
 }
 
+export interface CountryBot {
+  id: string
+  name: string
+  wins: number
+  totalFights: number
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -153,5 +167,5 @@ export interface DbInterface {
   getTotalBots: () => number
   getTotalFights: () => number
   search: (term: string) => Array<SearchResult>
-  getBotsForCountry: (id: string) => Array<Bot>
+  getBotsForCountry: (id: string) => Array<CountryBot>
 }
