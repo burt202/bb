@@ -99,13 +99,18 @@
     },
     {
       "name": "Defender",
-      "keyMembers": ["Jason Vazquez", "Jeff Vazquez", "Debbie Vazquez"],
+      "keyMembers": [
+        "Jason Vazquez",
+        "Jeff Vazquez",
+        "Debbie Vazquez",
+        "Rob Masek"
+      ],
       "stage": "season",
       "country": "USA"
     },
     {
       "name": "Ribbot",
-      "keyMembers": ["David Jin", "Rob Masek"],
+      "keyMembers": ["David Jin"],
       "stage": "season",
       "country": "USA"
     },
@@ -166,8 +171,122 @@
     {
       "name": "Whiplash",
       "keyMembers": ["Matt Vazquez", "Jeff Vazquez", "Debbie Vazquez"],
-      "stage": "final",
+      "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Hypershock",
+      "keyMembers": ["Will Bales"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Slammow",
+      "keyMembers": ["Craig Danby"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Valkyrie",
+      "keyMembers": ["Leanne Cushing", "Frederick Moore"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "P1",
+      "keyMembers": ["Brandon Zalinsky", "Luke Bittenbinder"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Huge",
+      "keyMembers": ["Jonathan Schultz"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Riptide",
+      "keyMembers": ["Ethan Kurtz", "Stan Kurtz"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Fusion",
+      "keyMembers": ["Reece Ewert"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Cobalt",
+      "keyMembers": ["Brent Rieker", "Matt Maxham", "Wendy Maxham"],
+      "stage": "season",
+      "country": "GBR"
+    },
+    {
+      "name": "Icewave",
+      "keyMembers": ["Mark DeVidts"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Black Dragon",
+      "keyMembers": ["Gabriel Silveira Teles"],
+      "stage": "season",
+      "country": "BRA"
+    },
+    {
+      "name": "Duck",
+      "keyMembers": ["Hal Rucker", "Hannah Rucker", "Julia Chernushevich"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Witch Doctor",
+      "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Copperhead",
+      "keyMembers": ["Robert Cowan", "Kimberley Cowan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Lock-Jaw",
+      "keyMembers": ["Donald Hutson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Jackpot",
+      "keyMembers": ["Jeff Waters", "Robert Stehn"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Deadlift",
+      "keyMembers": ["Ryan Shulski"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Overhaul",
+      "keyMembers": ["Charles Guan"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Skorpios",
+      "keyMembers": ["Zach Lytle", "Diana Tarlson"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Blade",
+      "keyMembers": ["Cheog Gyu Hwang"],
+      "stage": "season",
+      "country": "KOR"
     }
   ],
   "fights": [
@@ -254,6 +373,72 @@
       "winner": "Whiplash",
       "stage": "season",
       "ko": true
+    },
+    {
+      "bots": ["Hypershock", "Slammow"],
+      "winner": "Hypershock",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["P1", "Valkyrie"],
+      "winner": "P1",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Huge", "Riptide"],
+      "winner": "Riptide",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Fusion", "Cobalt"],
+      "winner": "Fusion",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Icewave", "Black Dragon"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Witch Doctor", "Duck"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Copperhead", "Lock-Jaw"],
+      "winner": "Copperhead",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Deadlift", "Jackpot"],
+      "winner": "Jackpot",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Malice", "Jackpot"],
+      "winner": "Jackpot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Ribbot", "Overhaul"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Blade", "Skorpios"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": false
     }
   ]
 }
