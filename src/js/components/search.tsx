@@ -20,52 +20,70 @@ export default function Search({searchTerm, onSearchResultClick}: Props) {
   return (
     <>
       <h3>Search Results</h3>
-      <div style={{display: "flex"}}>
-        <div style={{width: 300}}>
-          {grouped.bot.map((sr, i) => {
-            return (
-              <p key={i}>
-                <a
-                  style={{
-                    color: "#003366",
-                    cursor: "pointer",
-                    textDecoration: "underline",
-                  }}
-                  onClick={() => onSearchResultClick(`/${sr.type}/${sr.id}`)}
-                  dangerouslySetInnerHTML={{
-                    __html: sr.name.replace(
-                      regEx,
-                      (match) => `<strong>${match}</strong>`,
-                    ),
-                  }}
-                />
-              </p>
-            )
-          })}
+      {searchResults.length === 0 ? (
+        <div style={{display: "flex"}}>
+          <p style={{margin: 0}}>No results</p>
         </div>
-        <div style={{width: 300}}>
-          {grouped.member.map((sr, i) => {
-            return (
-              <p key={i}>
-                <a
-                  style={{
-                    color: "#003366",
-                    cursor: "pointer",
-                    textDecoration: "underline",
-                  }}
-                  onClick={() => onSearchResultClick(`/${sr.type}/${sr.id}`)}
-                  dangerouslySetInnerHTML={{
-                    __html: sr.name.replace(
-                      regEx,
-                      (match) => `<strong>${match}</strong>`,
-                    ),
-                  }}
-                />
-              </p>
-            )
-          })}
+      ) : (
+        <div style={{display: "flex"}}>
+          <div style={{width: 300}}>
+            {(grouped.bot || []).length === 0 ? (
+              <p style={{margin: 0}}>No bot results</p>
+            ) : (
+              (grouped.bot || []).map((sr, i) => {
+                return (
+                  <p key={i} style={{marginTop: 0}}>
+                    <a
+                      style={{
+                        color: "#003366",
+                        cursor: "pointer",
+                        textDecoration: "underline",
+                      }}
+                      onClick={() =>
+                        onSearchResultClick(`/${sr.type}/${sr.id}`)
+                      }
+                      dangerouslySetInnerHTML={{
+                        __html: sr.name.replace(
+                          regEx,
+                          (match) => `<strong>${match}</strong>`,
+                        ),
+                      }}
+                    />
+                  </p>
+                )
+              })
+            )}
+          </div>
+          <div style={{width: 300}}>
+            {(grouped.member || []).length === 0 ? (
+              <p style={{margin: 0}}>No member results</p>
+            ) : (
+              (grouped.member || []).map((sr, i) => {
+                return (
+                  <p key={i} style={{marginTop: 0}}>
+                    <a
+                      style={{
+                        color: "#003366",
+                        cursor: "pointer",
+                        textDecoration: "underline",
+                      }}
+                      onClick={() =>
+                        onSearchResultClick(`/${sr.type}/${sr.id}`)
+                      }
+                      dangerouslySetInnerHTML={{
+                        __html: sr.name.replace(
+                          regEx,
+                          (match) => `<strong>${match}</strong>`,
+                        ),
+                      }}
+                    />
+                  </p>
+                )
+              })
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
