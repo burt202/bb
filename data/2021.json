@@ -1,0 +1,133 @@
+{
+  "year": "2021",
+  "bots": [
+    {
+      "name": "Sawblaze",
+      "keyMembers": ["Jamison Go"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Minotaur",
+      "keyMembers": ["Carlos Junior", "Daniel Freitas"],
+      "stage": "season",
+      "country": "BRA"
+    },
+    {
+      "name": "Uppercut",
+      "keyMembers": ["Alex Hattori", "Mason Massie"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gigabyte",
+      "keyMembers": ["John Mladenik", "Jerry Serafin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Switchback",
+      "keyMembers": ["Greg Needel"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Gruff",
+      "keyMembers": ["Sam McAmis"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Tombstone",
+      "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Captain Shrederator",
+      "keyMembers": ["Brian Nave", "Nick Nave"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Free Shipping",
+      "keyMembers": ["Gary Gin"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Blacksmith",
+      "keyMembers": ["Al Kindle"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Pain Train",
+      "keyMembers": ["Evan Arias"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Deep Six",
+      "keyMembers": ["Dustin Esswein"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "End Game",
+      "keyMembers": ["Jack Barker", "Nick Mabey"],
+      "stage": "season",
+      "country": "NZL"
+    },
+    {
+      "name": "Hydra",
+      "keyMembers": ["Jake Ewert"],
+      "stage": "season",
+      "country": "USA"
+    }
+  ],
+  "fights": [
+    {
+      "bots": ["Sawblaze", "Minotaur"],
+      "winner": "Sawblaze",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Uppercut", "Gigabyte"],
+      "winner": "Uppercut",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Switchback", "Gruff"],
+      "winner": "Gruff",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Tombstone", "Captain Shrederator"],
+      "winner": "Captain Shrederator",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Free Shipping", "Blacksmith"],
+      "winner": "Blacksmith",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Pain Train", "Deep Six"],
+      "winner": "Deep Six",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "End Game"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    }
+  ]
+}
