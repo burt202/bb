@@ -36,7 +36,7 @@ export default function Country() {
     >
       <h3>Bots</h3>
       <div style={{display: "flex"}}>
-        <table>
+        <table style={{height: "min-content"}}>
           <thead>
             <tr>
               <th style={{width: 250}}>Bot</th>
@@ -46,7 +46,7 @@ export default function Country() {
           <tbody>
             {countryBots.map((cb, i) => {
               return (
-                <tr key={i}>
+                <tr key={i} style={{height: 40}}>
                   <td>
                     <Link style={{color: "#003366"}} to={`/bot/${cb.id}`}>
                       {cb.name}
