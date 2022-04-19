@@ -27,24 +27,28 @@ export default function Home() {
       }
     >
       <h3>Seasons</h3>
-      <div style={{display: "flex", columnGap: 16}}>
+      <div
+        style={{display: "flex", flexWrap: "wrap", rowGap: 16, columnGap: 16}}
+      >
         {seasons.map((s, i) => (
-          <Link
-            key={i}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#ccc",
-              width: 200,
-              height: 200,
-              fontSize: 48,
-              color: "#003366",
-            }}
-            to={`/season/${s.id}`}
-          >
-            {s.name}
-          </Link>
+          <div>
+            <Link
+              key={i}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#ccc",
+                width: 272,
+                height: 150,
+                fontSize: 48,
+                color: "#003366",
+              }}
+              to={`/season/${s.id}`}
+            >
+              {s.name}
+            </Link>
+          </div>
         ))}
       </div>
       <div style={{display: "flex"}}>
