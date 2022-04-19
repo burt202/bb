@@ -31,9 +31,8 @@ export default function Home() {
         style={{display: "flex", flexWrap: "wrap", rowGap: 16, columnGap: 16}}
       >
         {seasons.map((s, i) => (
-          <div>
+          <div key={i}>
             <Link
-              key={i}
               style={{
                 display: "flex",
                 alignItems: "center",
