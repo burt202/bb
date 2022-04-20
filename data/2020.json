@@ -242,7 +242,12 @@
     },
     {
       "name": "Tantrum",
-      "keyMembers": ["Aren Hill", "Alex Grant", "Ginger Schmidt"],
+      "keyMembers": [
+        "Aren Hill",
+        "Alex Grant",
+        "Ginger Schmidt",
+        "Dillon Carey"
+      ],
       "stage": "semi",
       "country": "USA"
     },

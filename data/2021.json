@@ -4,13 +4,13 @@
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "USA"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Carlos Junior", "Daniel Freitas"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "BRA"
     },
     {
@@ -82,7 +82,7 @@
     {
       "name": "Hydra",
       "keyMembers": ["Jake Ewert"],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "USA"
     },
     {
@@ -147,13 +147,13 @@
     {
       "name": "Blip",
       "keyMembers": ["Aren Hill"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
       "name": "Tantrum",
-      "keyMembers": ["Alex Grant", "Ginger Schmidt"],
-      "stage": "roundof16",
+      "keyMembers": ["Alex Grant", "Ginger Schmidt", "Dillon Carey"],
+      "stage": "winner",
       "country": "USA"
     },
     {
@@ -207,7 +207,7 @@
     {
       "name": "Riptide",
       "keyMembers": ["Ethan Kurtz", "Stan Kurtz"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
@@ -219,7 +219,7 @@
     {
       "name": "Cobalt",
       "keyMembers": ["Brent Rieker", "Matt Maxham", "Wendy Maxham"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "GBR"
     },
     {
@@ -243,7 +243,7 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "roundof16",
+      "stage": "final",
       "country": "USA"
     },
     {
@@ -948,6 +948,96 @@
       "bots": ["Hydra", "Ribbot"],
       "winner": "Hydra",
       "stage": "roundof32",
+      "ko": true
+    },
+    {
+      "bots": ["Riptide", "Uppercut"],
+      "winner": "Riptide",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Tantrum", "Rotator"],
+      "winner": "Tantrum",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Jackpot", "Blip"],
+      "winner": "Blip",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Black Dragon"],
+      "winner": "Hydra",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Witch Doctor", "Copperhead"],
+      "winner": "Witch Doctor",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["P1", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Whiplash", "Cobalt"],
+      "winner": "Cobalt",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "End Game"],
+      "winner": "Minotaur",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Riptide", "Sawblaze"],
+      "winner": "Sawblaze",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Cobalt", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Blip"],
+      "winner": "Hydra",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "Witch Doctor"],
+      "winner": "Witch Doctor",
+      "stage": "quarter",
+      "ko": false
+    },
+    {
+      "bots": ["Hydra", "Tantrum"],
+      "winner": "Tantrum",
+      "stage": "semi",
+      "ko": false
+    },
+    {
+      "bots": ["Sawblaze", "Witch Doctor"],
+      "winner": "Witch Doctor",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "bots": ["Tantrum", "Witch Doctor"],
+      "winner": "Tantrum",
+      "stage": "final",
       "ko": true
     }
   ]
