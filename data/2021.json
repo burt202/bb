@@ -323,6 +323,30 @@
       "keyMembers": ["Aaron Lucas"],
       "stage": "season",
       "country": "USA"
+    },
+    {
+      "name": "Claw Viper",
+      "keyMembers": ["Kevin Milczewski", "Rob Farrow"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "SMEEEEEEEEEEEEEEEEEE",
+      "keyMembers": ["Joseph Fabiani"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Pardon My French",
+      "keyMembers": ["Philippe Voyer"],
+      "stage": "season",
+      "country": "CAN"
+    },
+    {
+      "name": "Triple Crown",
+      "keyMembers": ["Todd Mendenhall"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
@@ -629,6 +653,102 @@
     {
       "bots": ["Whiplash", "Skorpios"],
       "winner": "Whiplash",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Blacksmith", "Malice"],
+      "winner": "Malice",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Black Dragon", "Claw Viper"],
+      "winner": "Black Dragon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["SMEEEEEEEEEEEEEEEEEE", "Gigabyte"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Hydra", "Glitch"],
+      "winner": "Glitch",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Free Shipping", "Tombstone"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Ribbot", "P1"],
+      "winner": "Ribbot",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Sawblaze", "End Game"],
+      "winner": "End Game",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gruff", "Cobalt"],
+      "winner": "Cobalt",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Duck", "Riptide"],
+      "winner": "Riptide",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Valkyrie", "Triple Crown"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Claw Viper", "Pardon My French"],
+      "winner": "Claw Viper",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Valkyrie", "Pardon My French"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Lock-Jaw", "Blip"],
+      "winner": "Blip",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Minotaur", "Deep Six"],
+      "winner": "Minotaur",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Subzero", "HiJinx"],
+      "winner": "HiJinx",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Yeti", "Skorpios"],
+      "winner": "Yeti",
       "stage": "season",
       "ko": false
     }
