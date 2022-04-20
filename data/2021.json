@@ -4,25 +4,25 @@
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Carlos Junior", "Daniel Freitas"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "BRA"
     },
     {
       "name": "Uppercut",
       "keyMembers": ["Alex Hattori", "Mason Massie"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Gigabyte",
       "keyMembers": ["John Mladenik", "Jerry Serafin"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -40,13 +40,13 @@
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave", "Nick Nave"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -76,25 +76,25 @@
     {
       "name": "End Game",
       "keyMembers": ["Jack Barker", "Nick Mabey"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "NZL"
     },
     {
       "name": "Hydra",
       "keyMembers": ["Jake Ewert"],
-      "stage": "season",
+      "stage": "playoff",
       "country": "USA"
     },
     {
       "name": "Yeti",
       "keyMembers": ["Greg Gibson", "Chrisian Carlberg"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Mad Catter",
       "keyMembers": ["Martin Mason", "Calvin Iba"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -105,19 +105,19 @@
         "Debbie Vazquez",
         "Rob Masek"
       ],
-      "stage": "season",
+      "stage": "playoff",
       "country": "USA"
     },
     {
       "name": "Ribbot",
       "keyMembers": ["David Jin"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "HiJinx",
       "keyMembers": ["Jen Herchenroeder", "Orion Beach"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -129,7 +129,7 @@
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -147,37 +147,37 @@
     {
       "name": "Blip",
       "keyMembers": ["Aren Hill"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Tantrum",
       "keyMembers": ["Alex Grant", "Ginger Schmidt"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Malice",
       "keyMembers": ["Bunny Sauriol"],
-      "stage": "season",
+      "stage": "playoff",
       "country": "USA"
     },
     {
       "name": "Bloodsport",
       "keyMembers": ["Justin Marple"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Whiplash",
       "keyMembers": ["Matt Vazquez", "Jeff Vazquez", "Debbie Vazquez"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -189,25 +189,25 @@
     {
       "name": "Valkyrie",
       "keyMembers": ["Leanne Cushing", "Frederick Moore"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "P1",
       "keyMembers": ["Brandon Zalinsky", "Luke Bittenbinder"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Huge",
       "keyMembers": ["Jonathan Schultz"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Riptide",
       "keyMembers": ["Ethan Kurtz", "Stan Kurtz"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -219,19 +219,19 @@
     {
       "name": "Cobalt",
       "keyMembers": ["Brent Rieker", "Matt Maxham", "Wendy Maxham"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "GBR"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Black Dragon",
       "keyMembers": ["Gabriel Silveira Teles"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "BRA"
     },
     {
@@ -243,13 +243,13 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
       "name": "Copperhead",
       "keyMembers": ["Robert Cowan", "Kimberley Cowan"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -261,7 +261,7 @@
     {
       "name": "Jackpot",
       "keyMembers": ["Jeff Waters", "Robert Stehn"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -279,7 +279,7 @@
     {
       "name": "Skorpios",
       "keyMembers": ["Zach Lytle", "Diana Tarlson", "Dan Chatterton"],
-      "stage": "season",
+      "stage": "playoff",
       "country": "USA"
     },
     {
@@ -291,7 +291,7 @@
     {
       "name": "Lucky",
       "keyMembers": ["Mark Demers", "Matt Olson"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "CAN"
     },
     {
@@ -303,7 +303,7 @@
     {
       "name": "Glitch",
       "keyMembers": ["Kyle Miller"],
-      "stage": "season",
+      "stage": "roundof32",
       "country": "USA"
     },
     {
@@ -346,6 +346,18 @@
       "name": "Triple Crown",
       "keyMembers": ["Todd Mendenhall"],
       "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Rampage",
+      "keyMembers": ["Melaina Knox", "Daniel Knox"],
+      "stage": "season",
+      "country": "USA"
+    },
+    {
+      "name": "Shatter",
+      "keyMembers": ["Adam Wrigley", "Mary Chimenti"],
+      "stage": "roundof32",
       "country": "USA"
     }
   ],
@@ -751,6 +763,54 @@
       "winner": "Yeti",
       "stage": "season",
       "ko": false
+    },
+    {
+      "bots": ["Bloodsport", "Claw Viper"],
+      "winner": "Bloodsport",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Mad Catter", "Rampage"],
+      "winner": "Mad Catter",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Slammow", "Switchback"],
+      "winner": "Switchback",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Huge", "Switchback"],
+      "winner": "Huge",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Kraken", "Glitch"],
+      "winner": "Glitch",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Mammoth", "Lucky"],
+      "winner": "Lucky",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Rusty", "Witch Doctor"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Fusion", "Icewave"],
+      "winner": "Icewave",
+      "stage": "season",
+      "ko": true
     }
   ]
 }
