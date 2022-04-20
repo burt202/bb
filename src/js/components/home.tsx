@@ -104,7 +104,7 @@ export default function Home() {
       </div>
       <div style={{display: "flex"}}>
         <div style={{marginRight: 32}}>
-          <h3>Top 10 Best Win % (more than 3 fights)</h3>
+          <h3>Top 10 Best Win % (more than 5 fights)</h3>
           <table>
             <thead>
               <tr>
@@ -129,7 +129,7 @@ export default function Home() {
           </table>
         </div>
         <div>
-          <h3>Top 10 Best KO % (more than 3 fights)</h3>
+          <h3>Top 10 Best KO % (more than 5 fights)</h3>
           <table>
             <thead>
               <tr>

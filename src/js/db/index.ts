@@ -315,7 +315,7 @@ export default async function createDb(
           FROM fight_bots fb
           GROUP BY fb.bot_id
         ) AS total ON b.id = total.bot_id
-        WHERE total.count > 3
+        WHERE total.count > 5
         ORDER BY count DESC
         LIMIT 10
       `
@@ -352,7 +352,7 @@ export default async function createDb(
           FROM fight_bots fb
           GROUP BY fb.bot_id
         ) AS total ON b.id = total.bot_id
-        WHERE total.count > 3
+        WHERE total.count > 5
         ORDER BY count DESC
         LIMIT 10
       `
