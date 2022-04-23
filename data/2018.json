@@ -769,6 +769,42 @@
       "winner": "Tombstone",
       "stage": "season",
       "ko": true
+    },
+    {
+      "bots": ["Red Devil", "Valkyrie"],
+      "winner": "Valkyrie",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Brutus", "Gigabyte"],
+      "winner": "Gigabyte",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bombshell", "Biteforce"],
+      "winner": "Biteforce",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Lucky", "Reality"],
+      "winner": "Reality",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Son Of Whyachi", "End Game"],
+      "winner": "Son Of Whyachi",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "Blacksmith"],
+      "winner": "Minotaur",
+      "stage": "season",
+      "ko": false
     }
   ]
 }
