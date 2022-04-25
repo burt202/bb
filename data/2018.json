@@ -236,7 +236,7 @@
     },
     {
       "name": "Tantrum",
-      "keyMembers": ["Aren Hill"],
+      "keyMembers": ["Aren Hill", "Alex Grant"],
       "stage": "season",
       "country": "USA"
     },
@@ -803,6 +803,42 @@
     {
       "bots": ["Minotaur", "Blacksmith"],
       "winner": "Minotaur",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Tombstone", "Duck"],
+      "winner": "Tombstone",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Petunia", "Yeti"],
+      "winner": "Yeti",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Monsoon", "Axe Backwards"],
+      "winner": "Monsoon",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Warhead", "Warrior Dragon"],
+      "winner": "Warhead",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Tantrum", "Mecha Rampage"],
+      "winner": "Mecha Rampage",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Bronco", "Sawblaze"],
+      "winner": "Bronco",
       "stage": "season",
       "ko": false
     }
