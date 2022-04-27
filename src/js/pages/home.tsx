@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {round} from "../utils"
 
@@ -65,9 +66,7 @@ export default function Home() {
                 return (
                   <tr key={i}>
                     <td>
-                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
-                        {tt.botName}
-                      </Link>
+                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                     </td>
                     <td>{tt.count}</td>
                   </tr>
@@ -90,9 +89,7 @@ export default function Home() {
                 return (
                   <tr key={i}>
                     <td>
-                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
-                        {tt.botName}
-                      </Link>
+                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                     </td>
                     <td>{tt.count}</td>
                   </tr>
@@ -117,9 +114,7 @@ export default function Home() {
                 return (
                   <tr key={i}>
                     <td>
-                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
-                        {tt.botName}
-                      </Link>
+                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                     </td>
                     <td>{`${round(0, tt.count * 100)}%`}</td>
                   </tr>
@@ -142,9 +137,7 @@ export default function Home() {
                 return (
                   <tr key={i}>
                     <td>
-                      <Link style={{color: "#003366"}} to={`/bot/${tt.botId}`}>
-                        {tt.botName}
-                      </Link>
+                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                     </td>
                     <td>{`${round(0, tt.count * 100)}%`}</td>
                   </tr>
@@ -156,9 +149,10 @@ export default function Home() {
       </div>
       <p>
         Most matches played:{" "}
-        <Link style={{color: "#003366"}} to={`/bot/${mostMatchesPlayed.id}`}>
-          {mostMatchesPlayed.name}
-        </Link>
+        <TextLink
+          to={`/bot/${mostMatchesPlayed.id}`}
+          text={mostMatchesPlayed.name}
+        />
       </p>
       <p>Total bots: {totalBots}</p>
       <p>Total fights: {totalFights}</p>

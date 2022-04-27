@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Link} from "react-router-dom"
+import TextLink from "../components/text-link"
 
 interface Props {
   title: string
@@ -18,9 +18,7 @@ export default function NotFound({title}: Props) {
         }}
       >
         <h1 style={{marginTop: 0}}>{title}</h1>
-        <Link style={{color: "#003366"}} to="/">
-          Back to home
-        </Link>
+        <TextLink to="/" text="Back to home" />
       </div>
     </div>
   )

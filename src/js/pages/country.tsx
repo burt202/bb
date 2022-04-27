@@ -1,8 +1,9 @@
 import * as React from "react"
 import {useContext} from "react"
-import {Link, useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap} from "../utils"
 
@@ -48,9 +49,7 @@ export default function Country() {
               return (
                 <tr key={i} style={{height: 40}}>
                   <td>
-                    <Link style={{color: "#003366"}} to={`/bot/${cb.id}`}>
-                      {cb.name}
-                    </Link>
+                    <TextLink to={`/bot/${cb.id}`} text={cb.name} />
                   </td>
                   <td>{cb.wins}</td>
                 </tr>

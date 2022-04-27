@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
@@ -62,12 +63,10 @@ export default function Bot() {
             return (
               <tr key={i}>
                 <td>
-                  <Link
-                    style={{color: "#003366"}}
+                  <TextLink
                     to={`/season/${bs.seasonId}`}
-                  >
-                    {bs.seasonName}
-                  </Link>
+                    text={bs.seasonName}
+                  />
                 </td>
                 <td>{stageNameMap[bs.stageName]}</td>
                 <td>
@@ -76,9 +75,7 @@ export default function Bot() {
 
                     return (
                       <React.Fragment key={i}>
-                        <Link style={{color: "#003366"}} to={`/member/${m.id}`}>
-                          {m.name}
-                        </Link>
+                        <TextLink to={`/member/${m.id}`} text={m.name} />
                         {isLastMember ? "" : ", "}
                       </React.Fragment>
                     )
@@ -137,12 +134,10 @@ export default function Bot() {
                 }}
               >
                 <td>
-                  <Link
-                    style={{color: "#003366"}}
+                  <TextLink
                     to={`/season/${bf.seasonId}`}
-                  >
-                    {bf.seasonName}
-                  </Link>
+                    text={bf.seasonName}
+                  />
                 </td>
                 <td>
                   {bf.against.map((c, i) => {
@@ -150,9 +145,7 @@ export default function Bot() {
 
                     return (
                       <React.Fragment key={i}>
-                        <Link style={{color: "#003366"}} to={`/bot/${c.id}`}>
-                          {c.name}
-                        </Link>
+                        <TextLink to={`/bot/${c.id}`} text={c.name} />
                         {isLastBot ? "" : ", "}
                       </React.Fragment>
                     )

@@ -1,7 +1,7 @@
 import * as React from "react"
 import {useState} from "react"
-import {Link} from "react-router-dom"
 import Search from "./search"
+import TextLink from "./text-link"
 
 interface Props {
   headerComponent: JSX.Element
@@ -32,14 +32,7 @@ export default function Page({children, headerComponent, showShowHome}: Props) {
           </div>
           {showShowHome && (
             <div style={{marginLeft: 16, height: 40, lineHeight: "40px"}}>
-              <Link
-                style={{
-                  color: "#003366",
-                }}
-                to="/"
-              >
-                Home
-              </Link>
+              <TextLink to="/" text="Home" />
             </div>
           )}
         </div>

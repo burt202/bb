@@ -1,8 +1,9 @@
 import * as React from "react"
 import {useContext} from "react"
-import {Link, useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import TextLink from "../components/text-link"
 import {DbInterface, MemberSeason} from "../types"
 import {groupBy} from "../utils"
 import NotFound from "./not-found"
@@ -49,9 +50,7 @@ export default function Member() {
               return (
                 <tr key={i}>
                   <td>
-                    <Link style={{color: "#003366"}} to={`/season/${seasonId}`}>
-                      {seasonName}
-                    </Link>
+                    <TextLink to={`/season/${seasonId}`} text={seasonName} />
                   </td>
                   <td>
                     {pair[1].map((b, i) => {
@@ -59,12 +58,7 @@ export default function Member() {
 
                       return (
                         <React.Fragment key={i}>
-                          <Link
-                            style={{color: "#003366"}}
-                            to={`/bot/${b.botId}`}
-                          >
-                            {b.botName}
-                          </Link>
+                          <TextLink to={`/bot/${b.botId}`} text={b.botName} />
                           {isLastBot ? "" : ", "}
                         </React.Fragment>
                       )

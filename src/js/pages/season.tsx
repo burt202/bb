@@ -4,6 +4,7 @@ import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
@@ -42,12 +43,9 @@ export default function Season() {
           <h1 style={{margin: 0}}>Season {season.name}</h1>
           <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
             {previousSeason ? (
-              <Link
-                style={{color: "#003366", marginRight: 16}}
-                to={`/season/${previousSeason}`}
-              >
-                Previous
-              </Link>
+              <span style={{marginRight: 16}}>
+                <TextLink to={`/season/${previousSeason}`} text="Previous" />
+              </span>
             ) : (
               <a
                 style={{
@@ -60,9 +58,7 @@ export default function Season() {
               </a>
             )}
             {nextSeason ? (
-              <Link style={{color: "#003366"}} to={`/season/${nextSeason}`}>
-                Next
-              </Link>
+              <TextLink to={`/season/${nextSeason}`} text="Next" />
             ) : (
               <a
                 style={{
@@ -103,9 +99,7 @@ export default function Season() {
                     </Link>
                   </td>
                   <td>
-                    <Link style={{color: "#003366"}} to={`/bot/${sb.botId}`}>
-                      {sb.botName}
-                    </Link>
+                    <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
                   </td>
                   <td>{stageNameMap[sb.stageName]}</td>
                 </tr>
@@ -206,9 +200,7 @@ export default function Season() {
                               sf.winnerName === c.name ? "bold" : "normal",
                           }}
                         >
-                          <Link style={{color: "#003366"}} to={`/bot/${c.id}`}>
-                            {c.name}
-                          </Link>
+                          <TextLink to={`/bot/${c.id}`} text={c.name} />
                         </span>
                         {isLastBot ? "" : " v "}
                       </React.Fragment>
