@@ -1,11 +1,11 @@
 import * as React from "react"
 import {HashRouter, Routes, Route} from "react-router-dom"
-import Bot from "./components/bot"
-import Country from "./components/country"
-import Home from "./components/home"
-import Member from "./components/member"
-import NotFound from "./components/not-found"
-import Season from "./components/season"
+import Bot from "./pages/bot"
+import Country from "./pages/country"
+import Home from "./pages/home"
+import Member from "./pages/member"
+import NotFound from "./pages/not-found"
+import Season from "./pages/season"
 
 export default function App() {
   return (

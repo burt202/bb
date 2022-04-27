@@ -2,9 +2,9 @@ import * as React from "react"
 import {useContext} from "react"
 import {Link} from "react-router-dom"
 import {DbContext} from ".."
+import Page from "../components/page"
 import {DbInterface} from "../types"
 import {round} from "../utils"
-import Page from "./page"
 
 export default function Home() {
   const db = useContext(DbContext) as DbInterface

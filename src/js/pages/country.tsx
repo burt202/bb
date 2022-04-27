@@ -2,9 +2,9 @@ import * as React from "react"
 import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
+import Page from "../components/page"
 import {DbInterface} from "../types"
 import {countryNameMap} from "../utils"
-import Page from "./page"
 
 export default function Country() {
   const params = useParams()

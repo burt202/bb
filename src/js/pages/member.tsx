@@ -2,10 +2,10 @@ import * as React from "react"
 import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
+import Page from "../components/page"
 import {DbInterface, MemberSeason} from "../types"
 import {groupBy} from "../utils"
 import NotFound from "./not-found"
-import Page from "./page"
 
 export default function Member() {
   const params = useParams()

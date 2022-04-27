@@ -3,10 +3,10 @@ import {useContext} from "react"
 import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
+import Page from "../components/page"
 import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, stageNameMap} from "../utils"
 import NotFound from "./not-found"
-import Page from "./page"
 
 export default function Season() {
   const params = useParams()
