@@ -359,6 +359,12 @@
       "keyMembers": ["Adam Wrigley", "Mary Chimenti"],
       "stage": "roundof32",
       "country": "USA"
+    },
+    {
+      "name": "Subzero",
+      "keyMembers": ["Logan Davis"],
+      "stage": "season",
+      "country": "USA"
     }
   ],
   "fights": [
