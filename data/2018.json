@@ -194,7 +194,7 @@
     },
     {
       "name": "War Hawk",
-      "keyMembers": ["Rob Farrow", "Kevin Milczewski"],
+      "keyMembers": ["Rob Farrow", "Kevin Milczewski", "Martin Mason"],
       "stage": "season",
       "country": "USA"
     },
@@ -841,6 +841,36 @@
       "winner": "Bronco",
       "stage": "season",
       "ko": false
+    },
+    {
+      "bots": ["Warhead", "Whiplash"],
+      "winner": "Whiplash",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Mohawk", "Reality"],
+      "winner": "Reality",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Free Shipping", "War Hawk"],
+      "winner": "War Hawk",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Overhaul", "Witch Doctor"],
+      "winner": "Witch Doctor",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Subzero", "Minotaur"],
+      "winner": "Minotaur",
+      "stage": "season",
+      "ko": true
     }
   ]
 }
