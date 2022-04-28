@@ -1,7 +1,6 @@
-const webpack = require("webpack")
 const {merge} = require("webpack-merge")
 const common = require("./config.common.js")
-const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = merge(common, {
   mode: "development",
@@ -15,17 +14,12 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new NunjucksWebpackPlugin({
-      templates: [
-        {
-          from: "./src/index.html",
-          to: "index.html",
-          context: {
-            production: false,
-            lastModified: Date.now(),
-          },
-        },
-      ],
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      templateParameters: {
+        production: false,
+        lastModified: Date.now(),
+      },
     }),
   ],
 })

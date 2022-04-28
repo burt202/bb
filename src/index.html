@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <meta http-equiv="last-modified" content="{{ lastModified }}" />
+    <meta http-equiv="last-modified" content="<%= lastModified %>" />
     <meta property="og:title" content="Battlebots DB" />
     <meta
       property="og:description"
@@ -18,9 +18,9 @@
       content="https://burt202.github.io/bb/thumb.png"
     />
     <link rel="icon" href="favicon.ico" />
-    {% if production %}
+    <% if (production) { %>
     <link rel="stylesheet" href="bundle.css" />
-    {% endif %}
+    <% } %>
   </head>
   <body>
     <div id="container"></div>

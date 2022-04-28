@@ -3,7 +3,7 @@ const {merge} = require("webpack-merge")
 const common = require("./config.common.js")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const NunjucksWebpackPlugin = require("nunjucks-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = merge(common, {
   mode: "production",
@@ -27,17 +27,12 @@ module.exports = merge(common, {
         NODE_ENV: JSON.stringify("production"),
       },
     }),
-    new NunjucksWebpackPlugin({
-      templates: [
-        {
-          from: "./src/index.html",
-          to: "index.html",
-          context: {
-            production: true,
-            lastModified: Date.now(),
-          },
-        },
-      ],
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      templateParameters: {
+        production: true,
+        lastModified: Date.now(),
+      },
     }),
   ],
 })

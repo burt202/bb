@@ -6,7 +6,7 @@ import App from "./app"
 import createDb from "./db"
 import {DbInterface, RawSeason} from "./types"
 
-require("../style.css")
+import "../style.css"
 
 const data = {
   2015: require("../../data/2015.json") as RawSeason,
