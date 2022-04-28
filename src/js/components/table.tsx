@@ -34,8 +34,39 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
     return acc + val.width
   }, 0)
 
+  if (tableWidth * BASE_UNIT > PAGE_WIDTH / 2 && windowWidth <= PAGE_WIDTH) {
+    return (
+      <table style={{width: "100%", height: "min-content"}}>
+        <tbody>
+          {data.map((row, i) => {
+            const isLastRow = i + 1 === data.length
+
+            return columns.map((col, j) => {
+              const shouldShowDivider = isLastRow
+                ? false
+                : j + 1 === columns.length
+
+              return (
+                <tr
+                  key={j}
+                  style={{
+                    height: 35,
+                    borderBottom: shouldShowDivider ? "3px solid" : 1,
+                  }}
+                >
+                  <th style={{width: "33%"}}>{col.title}</th>
+                  <td style={{width: "67%"}}>{col.getValue(row)}</td>
+                </tr>
+              )
+            })
+          })}
+        </tbody>
+      </table>
+    )
+  }
+
   const usePercentages =
-    tableWidth <= PAGE_WIDTH / 2 && windowWidth <= PAGE_WIDTH
+    tableWidth * BASE_UNIT <= PAGE_WIDTH / 2 && windowWidth <= PAGE_WIDTH
 
   return (
     <table
@@ -43,7 +74,7 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
     >
       <thead>
         <tr>
-          {columns.map((c, i) => {
+          {columns.map((col, i) => {
             return (
               <th
                 key={i}
@@ -51,12 +82,12 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
                   width: calculateColumnWidth(
                     usePercentages,
                     tableWidth,
-                    c.width,
+                    col.width,
                   ),
-                  textAlign: c.alignCenter ? "center" : "left",
+                  textAlign: col.alignCenter ? "center" : "left",
                 }}
               >
-                {c.title}
+                {col.title}
               </th>
             )
           })}
@@ -76,7 +107,7 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
                 borderBottom: thickBottomBorder ? "3px solid" : 1,
               }}
             >
-              {columns.map((c, j) => {
+              {columns.map((col, j) => {
                 return (
                   <td
                     key={j}
@@ -84,12 +115,12 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
                       width: calculateColumnWidth(
                         usePercentages,
                         tableWidth,
-                        c.width,
+                        col.width,
                       ),
-                      textAlign: c.alignCenter ? "center" : "left",
+                      textAlign: col.alignCenter ? "center" : "left",
                     }}
                   >
-                    {c.getValue(row)}
+                    {col.getValue(row)}
                   </td>
                 )
               })}

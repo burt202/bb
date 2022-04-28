@@ -71,7 +71,7 @@ export default function Bot() {
             width: 4,
           },
           {
-            title: "Stage",
+            title: "Key Members",
             getValue: (bs) => {
               return bs.members.map((m, i) => {
                 const isLastMember = i + 1 === bs.members.length

@@ -37,28 +37,30 @@ export default function Country() {
       }
       showShowHome={true}
     >
-      <h3>Bots</h3>
       <div className="side-by-side">
-        <Table
-          data={countryBots}
-          columns={[
-            {
-              title: "Bot",
-              getValue: (cb) => {
-                return <TextLink to={`/bot/${cb.id}`} text={cb.name} />
-              },
-              width: 5,
-            },
-            {
-              title: "Wins",
-              getValue: (cb) => {
-                return cb.wins
-              },
-              width: 4,
-            },
-          ]}
-        />
         <div>
+          <h3>Bots</h3>
+          <Table
+            data={countryBots}
+            columns={[
+              {
+                title: "Bot",
+                getValue: (cb) => {
+                  return <TextLink to={`/bot/${cb.id}`} text={cb.name} />
+                },
+                width: 5,
+              },
+              {
+                title: "Wins",
+                getValue: (cb) => {
+                  return cb.wins
+                },
+                width: 4,
+              },
+            ]}
+          />
+        </div>
+        <div className="right-side-title-margin">
           <StatBox title="Total Bots" value={countryBots.length.toString()} />
         </div>
       </div>

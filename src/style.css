@@ -86,12 +86,22 @@ th {
   column-gap: 16px;
 }
 
+.side-by-side .right-side-title-margin {
+  margin-top: 51px;
+}
+
 .stats-box {
   background: #ccc;
   padding: 16px;
   width: 400px;
   text-align: right;
-  margin-bottom: 16px;
+}
+
+.chart-container {
+  width: 400px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -113,7 +123,12 @@ th {
     flex-direction: column-reverse;
   }
 
-  .stats-box {
+  .side-by-side .right-side-title-margin {
+    margin-top: 16px;
+  }
+
+  .stats-box,
+  .chart-container {
     width: 100%;
   }
 }

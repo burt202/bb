@@ -77,82 +77,87 @@ export default function Season() {
       }
       showShowHome={true}
     >
-      <h3>Bots</h3>
-      <div style={{display: "flex"}}>
-        <Table
-          data={seasonBots}
-          columns={[
-            {
-              title: "",
-              getValue: (sb) => {
-                return (
-                  <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
-                    <img
-                      src={`${sb.botCountry.toLowerCase()}.svg`}
-                      title={countryNameMap[sb.botCountry.toLowerCase()]}
-                      style={{height: 24}}
-                    />
-                  </Link>
-                )
+      <div className="side-by-side">
+        <div>
+          <h3>Bots</h3>
+          <Table
+            data={seasonBots}
+            columns={[
+              {
+                title: "",
+                getValue: (sb) => {
+                  return (
+                    <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
+                      <img
+                        src={`${sb.botCountry.toLowerCase()}.svg`}
+                        title={countryNameMap[sb.botCountry.toLowerCase()]}
+                        style={{height: 24}}
+                      />
+                    </Link>
+                  )
+                },
+                width: 1,
+                alignCenter: true,
               },
-              width: 1,
-              alignCenter: true,
-            },
-            {
-              title: "Bot",
-              getValue: (sb) => {
-                return <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
+              {
+                title: "Bot",
+                getValue: (sb) => {
+                  return <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
+                },
+                width: 4,
               },
-              width: 4,
-            },
-            {
-              title: "Stage",
-              getValue: (sb) => {
-                return stageNameMap[sb.stageName]
+              {
+                title: "Stage",
+                getValue: (sb) => {
+                  return stageNameMap[sb.stageName]
+                },
+                width: 4,
               },
-              width: 4,
-            },
-          ]}
-        />
-        <div style={{marginLeft: 16}}>
-          <StatBox title="Total Bots" value={seasonBots.length.toString()} />
-          <StatBox
-            title="Total Fights"
-            value={seasonFights.length.toString()}
+            ]}
           />
-          <div style={{width: 400, marginTop: 32}}>
-            <PieChart
-              style={{
-                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                fontSize: "8px",
-              }}
-              data={[
-                {
-                  title: getPercentage(seasonFights.length, koFights.length),
-                  value: koFights.length,
-                  label: "KO",
-                  color: "#003366",
-                },
-                {
-                  title: getPercentage(
-                    seasonFights.length,
-                    seasonFights.length - koFights.length,
-                  ),
-                  value: seasonFights.length - koFights.length,
-                  label: "Judges",
-                  color: "#C13C37",
-                },
-              ]}
-              animate
-              label={({dataEntry}) => {
-                return dataEntry.label as string
-              }}
-              labelStyle={{
-                fill: "#fff",
-                opacity: 0.75,
-                pointerEvents: "none",
-              }}
+        </div>
+        <div className="right-side-title-margin">
+          <StatBox title="Total Bots" value={seasonBots.length.toString()} />
+          <div style={{marginTop: 16}}>
+            <StatBox
+              title="Total Fights"
+              value={seasonFights.length.toString()}
             />
+            <div className="chart-container">
+              <PieChart
+                style={{
+                  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                  fontSize: "8px",
+                  width: 400,
+                }}
+                data={[
+                  {
+                    title: getPercentage(seasonFights.length, koFights.length),
+                    value: koFights.length,
+                    label: "KO",
+                    color: "#003366",
+                  },
+                  {
+                    title: getPercentage(
+                      seasonFights.length,
+                      seasonFights.length - koFights.length,
+                    ),
+                    value: seasonFights.length - koFights.length,
+                    label: "Judges",
+                    color: "#C13C37",
+                  },
+                ]}
+                animate
+                label={({dataEntry}) => {
+                  return dataEntry.label as string
+                }}
+                labelStyle={{
+                  fill: "#fff",
+                  opacity: 0.75,
+                  pointerEvents: "none",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

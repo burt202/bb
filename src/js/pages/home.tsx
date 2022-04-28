@@ -31,13 +31,13 @@ export default function Home() {
       <h3>Seasons</h3>
       <div className="seasons-grid">
         {seasons.map((s, i) => (
-          <div style={{background: "#ccc", width: "100%", height: 150}} key={i}>
+          <div style={{background: "#ccc", width: "100%", height: 135}} key={i}>
             <Link
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: 150,
+                height: 135,
                 fontSize: 48,
                 color: "#003366",
               }}
