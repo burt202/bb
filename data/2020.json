@@ -85,7 +85,7 @@
       "country": "USA"
     },
     {
-      "name": "SMEEEEEEEEEEEEEEEEEE",
+      "name": "SMEEEEEEEEEEEEEEEE",
       "keyMembers": ["Joseph Fabiani"],
       "stage": "season",
       "country": "USA"
@@ -404,8 +404,8 @@
       "ko": true
     },
     {
-      "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEEEE"],
-      "winner": "SMEEEEEEEEEEEEEEEEEE",
+      "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEE"],
+      "winner": "SMEEEEEEEEEEEEEEEE",
       "stage": "season",
       "ko": false
     },
@@ -614,7 +614,7 @@
       "ko": true
     },
     {
-      "bots": ["SMEEEEEEEEEEEEEEEEEE", "Pain Train"],
+      "bots": ["SMEEEEEEEEEEEEEEEE", "Pain Train"],
       "winner": "Pain Train",
       "stage": "season",
       "ko": false
@@ -794,7 +794,7 @@
       "ko": true
     },
     {
-      "bots": ["SMEEEEEEEEEEEEEEEEEE", "P1"],
+      "bots": ["SMEEEEEEEEEEEEEEEE", "P1"],
       "winner": "P1",
       "stage": "season",
       "ko": true

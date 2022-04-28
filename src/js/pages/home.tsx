@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {round} from "../utils"
@@ -54,97 +55,97 @@ export default function Home() {
       <div style={{display: "flex"}}>
         <div style={{marginRight: 32}}>
           <h3>Top 10 Most Wins</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Bot</th>
-                <th>Count</th>
-              </tr>
-            </thead>
-            <tbody>
-              {top10MostWins.map((tt, i) => {
-                return (
-                  <tr key={i}>
-                    <td>
-                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
-                    </td>
-                    <td>{tt.count}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <Table
+            data={top10MostWins}
+            columns={[
+              {
+                title: "Bot",
+                getValue: (tt) => {
+                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                },
+                width: 4,
+              },
+              {
+                title: "Count",
+                getValue: (tt) => {
+                  return tt.count
+                },
+                width: 4,
+              },
+            ]}
+            width={400}
+          />
         </div>
         <div>
           <h3>Top 10 Most KOs</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Bot</th>
-                <th>Count</th>
-              </tr>
-            </thead>
-            <tbody>
-              {top10MostKOs.map((tt, i) => {
-                return (
-                  <tr key={i}>
-                    <td>
-                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
-                    </td>
-                    <td>{tt.count}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <Table
+            data={top10MostKOs}
+            columns={[
+              {
+                title: "Bot",
+                getValue: (tt) => {
+                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                },
+                width: 4,
+              },
+              {
+                title: "Count",
+                getValue: (tt) => {
+                  return tt.count
+                },
+                width: 4,
+              },
+            ]}
+            width={400}
+          />
         </div>
       </div>
       <div style={{display: "flex"}}>
         <div style={{marginRight: 32}}>
           <h3>Top 10 Best Win % (more than 5 fights)</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Bot</th>
-                <th>%</th>
-              </tr>
-            </thead>
-            <tbody>
-              {top10BestWinPercentages.map((tt, i) => {
-                return (
-                  <tr key={i}>
-                    <td>
-                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
-                    </td>
-                    <td>{`${round(0, tt.count * 100)}%`}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <Table
+            data={top10BestWinPercentages}
+            columns={[
+              {
+                title: "Bot",
+                getValue: (tt) => {
+                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                },
+                width: 4,
+              },
+              {
+                title: "%",
+                getValue: (tt) => {
+                  return `${round(0, tt.count * 100)}%`
+                },
+                width: 4,
+              },
+            ]}
+            width={400}
+          />
         </div>
         <div>
           <h3>Top 10 Best KO % (more than 5 fights)</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Bot</th>
-                <th>%</th>
-              </tr>
-            </thead>
-            <tbody>
-              {top10BestKOPercentages.map((tt, i) => {
-                return (
-                  <tr key={i}>
-                    <td>
-                      <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
-                    </td>
-                    <td>{`${round(0, tt.count * 100)}%`}</td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
+          <Table
+            data={top10BestKOPercentages}
+            columns={[
+              {
+                title: "Bot",
+                getValue: (tt) => {
+                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                },
+                width: 4,
+              },
+              {
+                title: "%",
+                getValue: (tt) => {
+                  return `${round(0, tt.count * 100)}%`
+                },
+                width: 4,
+              },
+            ]}
+            width={400}
+          />
         </div>
       </div>
       <p>

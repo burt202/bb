@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {Link, useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, stageNameMap} from "../utils"
@@ -50,42 +51,44 @@ export default function Bot() {
       showShowHome={true}
     >
       <h3>Seasons</h3>
-      <table style={{width: "100%"}}>
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>Stage</th>
-            <th style={{width: 400}}>Key Members</th>
-          </tr>
-        </thead>
-        <tbody>
-          {botSeasons.map((bs, i) => {
-            return (
-              <tr key={i}>
-                <td>
-                  <TextLink
-                    to={`/season/${bs.seasonId}`}
-                    text={bs.seasonName}
-                  />
-                </td>
-                <td>{stageNameMap[bs.stageName]}</td>
-                <td>
-                  {bs.members.map((m, i) => {
-                    const isLastMember = i + 1 === bs.members.length
+      <Table
+        data={botSeasons}
+        columns={[
+          {
+            title: "Season",
+            getValue: (bs) => {
+              return (
+                <TextLink to={`/season/${bs.seasonId}`} text={bs.seasonName} />
+              )
+            },
+            width: 4,
+          },
+          {
+            title: "Stage",
+            getValue: (bs) => {
+              return stageNameMap[bs.stageName]
+            },
+            width: 4,
+          },
+          {
+            title: "Stage",
+            getValue: (bs) => {
+              return bs.members.map((m, i) => {
+                const isLastMember = i + 1 === bs.members.length
 
-                    return (
-                      <React.Fragment key={i}>
-                        <TextLink to={`/member/${m.id}`} text={m.name} />
-                        {isLastMember ? "" : ", "}
-                      </React.Fragment>
-                    )
-                  })}
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+                return (
+                  <React.Fragment key={i}>
+                    <TextLink to={`/member/${m.id}`} text={m.name} />
+                    {isLastMember ? "" : ", "}
+                  </React.Fragment>
+                )
+              })
+            },
+            width: 9,
+          },
+        ]}
+        width={850}
+      />
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <h3>Fights</h3>
         <div style={{display: "flex", alignItems: "center"}}>
@@ -110,71 +113,74 @@ export default function Bot() {
           </div>
         </div>
       </div>
-      <table style={{width: "100%"}}>
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th style={{width: 400}}>Against</th>
-            <th style={{textAlign: "center"}}>Win</th>
-            <th>Stage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {botFights.map((bf, i) => {
-            const shouldShowDivider =
-              botFights[i + 1] === undefined
-                ? false
-                : bf.seasonId !== botFights[i + 1].seasonId
+      <Table
+        data={botFights}
+        shouldShowDivider={(data, row, i) => {
+          return data[i + 1] === undefined
+            ? false
+            : row.seasonId !== data[i + 1].seasonId
+        }}
+        columns={[
+          {
+            title: "Season",
+            getValue: (bf) => {
+              return (
+                <TextLink to={`/season/${bf.seasonId}`} text={bf.seasonName} />
+              )
+            },
+            width: 3,
+          },
+          {
+            title: "Against",
+            getValue: (bf) => {
+              return bf.against.map((c, i) => {
+                const isLastBot = i + 1 === bf.against.length
 
-            return (
-              <tr
-                key={i}
-                style={{
-                  borderBottom: shouldShowDivider ? "3px solid" : 1,
-                }}
-              >
-                <td>
-                  <TextLink
-                    to={`/season/${bf.seasonId}`}
-                    text={bf.seasonName}
-                  />
-                </td>
-                <td>
-                  {bf.against.map((c, i) => {
-                    const isLastBot = i + 1 === bf.against.length
-
-                    return (
-                      <React.Fragment key={i}>
-                        <TextLink to={`/bot/${c.id}`} text={c.name} />
-                        {isLastBot ? "" : ", "}
-                      </React.Fragment>
-                    )
-                  })}
-                </td>
-                <td style={{textAlign: "center"}}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {bf.winnerId === botId ? (
-                      <>
-                        <img src="tick.svg" style={{height: 24}} />
-                        {bf.ko && <span>KO</span>}
-                      </>
-                    ) : (
-                      <img src="cross.svg" style={{height: 24}} />
-                    )}
-                  </div>
-                </td>
-                <td>{stageNameMap[bf.stageName]}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+                return (
+                  <React.Fragment key={i}>
+                    <TextLink to={`/bot/${c.id}`} text={c.name} />
+                    {isLastBot ? "" : ", "}
+                  </React.Fragment>
+                )
+              })
+            },
+            width: 8,
+          },
+          {
+            title: "Win",
+            alignCenter: true,
+            getValue: (bf) => {
+              return (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {bf.winnerId === botId ? (
+                    <>
+                      <img src="tick.svg" style={{height: 24}} />
+                      {bf.ko && <span>KO</span>}
+                    </>
+                  ) : (
+                    <img src="cross.svg" style={{height: 24}} />
+                  )}
+                </div>
+              )
+            },
+            width: 3,
+          },
+          {
+            title: "Stage",
+            getValue: (bf) => {
+              return stageNameMap[bf.stageName]
+            },
+            width: 3,
+          },
+        ]}
+        width={850}
+      />
     </Page>
   )
 }

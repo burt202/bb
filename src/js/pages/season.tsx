@@ -4,6 +4,7 @@ import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, stageNameMap} from "../utils"
@@ -77,36 +78,42 @@ export default function Season() {
     >
       <h3>Bots</h3>
       <div style={{display: "flex"}}>
-        <table>
-          <thead>
-            <tr>
-              <th style={{width: 50}}></th>
-              <th>Bot</th>
-              <th>Stage</th>
-            </tr>
-          </thead>
-          <tbody>
-            {seasonBots.map((sb, i) => {
-              return (
-                <tr key={i}>
-                  <td style={{width: 50, textAlign: "center"}}>
-                    <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
-                      <img
-                        src={`${sb.botCountry.toLowerCase()}.svg`}
-                        title={countryNameMap[sb.botCountry.toLowerCase()]}
-                        style={{height: 24}}
-                      />
-                    </Link>
-                  </td>
-                  <td>
-                    <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
-                  </td>
-                  <td>{stageNameMap[sb.stageName]}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <Table
+          data={seasonBots}
+          columns={[
+            {
+              title: "",
+              getValue: (sb) => {
+                return (
+                  <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
+                    <img
+                      src={`${sb.botCountry.toLowerCase()}.svg`}
+                      title={countryNameMap[sb.botCountry.toLowerCase()]}
+                      style={{height: 24}}
+                    />
+                  </Link>
+                )
+              },
+              width: 1,
+              alignCenter: true,
+            },
+            {
+              title: "Bot",
+              getValue: (sb) => {
+                return <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
+              },
+              width: 4,
+            },
+            {
+              title: "Stage",
+              getValue: (sb) => {
+                return stageNameMap[sb.stageName]
+              },
+              width: 4,
+            },
+          ]}
+          width={450}
+        />
         <div style={{marginLeft: 16}}>
           <div
             style={{
@@ -170,56 +177,59 @@ export default function Season() {
                 pointerEvents: "none",
               }}
             />
-            ;
           </div>
         </div>
       </div>
 
       <h3>Fights</h3>
-      <table style={{width: "100%"}}>
-        <thead>
-          <tr>
-            <th style={{width: 400}}>Bots</th>
-            <th>Stage</th>
-            <th style={{textAlign: "center"}}>KO</th>
-          </tr>
-        </thead>
-        <tbody>
-          {seasonFights.map((sf, i) => {
-            return (
-              <tr key={i}>
-                <td>
-                  {sf.bots.map((c, i) => {
-                    const isLastBot = i + 1 === sf.bots.length
+      <Table
+        data={seasonFights}
+        columns={[
+          {
+            title: "Bots",
+            getValue: (sf) => {
+              return sf.bots.map((c, i) => {
+                const isLastBot = i + 1 === sf.bots.length
 
-                    return (
-                      <React.Fragment key={i}>
-                        <span
-                          style={{
-                            fontWeight:
-                              sf.winnerName === c.name ? "bold" : "normal",
-                          }}
-                        >
-                          <TextLink to={`/bot/${c.id}`} text={c.name} />
-                        </span>
-                        {isLastBot ? "" : " v "}
-                      </React.Fragment>
-                    )
-                  })}
-                </td>
-                <td>{stageNameMap[sf.stageName]}</td>
-                <td style={{textAlign: "center"}}>
-                  {sf.ko ? (
-                    <img src="tick.svg" style={{height: 24}} />
-                  ) : (
-                    <img src="cross.svg" style={{height: 24}} />
-                  )}
-                </td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+                return (
+                  <React.Fragment key={i}>
+                    <span
+                      style={{
+                        fontWeight:
+                          sf.winnerName === c.name ? "bold" : "normal",
+                      }}
+                    >
+                      <TextLink to={`/bot/${c.id}`} text={c.name} />
+                    </span>
+                    {isLastBot ? "" : " v "}
+                  </React.Fragment>
+                )
+              })
+            },
+            width: 9,
+          },
+          {
+            title: "Stage",
+            getValue: (sf) => {
+              return stageNameMap[sf.stageName]
+            },
+            width: 4,
+          },
+          {
+            title: "KO",
+            getValue: (sf) => {
+              return sf.ko ? (
+                <img src="tick.svg" style={{height: 24}} />
+              ) : (
+                <img src="cross.svg" style={{height: 24}} />
+              )
+            },
+            width: 4,
+            alignCenter: true,
+          },
+        ]}
+        width={850}
+      />
     </Page>
   )
 }

@@ -331,7 +331,7 @@
       "country": "USA"
     },
     {
-      "name": "SMEEEEEEEEEEEEEEEEEE",
+      "name": "SMEEEEEEEEEEEEEEEE",
       "keyMembers": ["Joseph Fabiani"],
       "stage": "season",
       "country": "USA"
@@ -687,7 +687,7 @@
       "ko": true
     },
     {
-      "bots": ["SMEEEEEEEEEEEEEEEEEE", "Gigabyte"],
+      "bots": ["SMEEEEEEEEEEEEEEEE", "Gigabyte"],
       "winner": "Gigabyte",
       "stage": "season",
       "ko": true
@@ -831,8 +831,8 @@
       "ko": true
     },
     {
-      "bots": ["SMEEEEEEEEEEEEEEEEEE", "Deep Six"],
-      "winner": "SMEEEEEEEEEEEEEEEEEE",
+      "bots": ["SMEEEEEEEEEEEEEEEE", "Deep Six"],
+      "winner": "SMEEEEEEEEEEEEEEEE",
       "stage": "season",
       "ko": true
     },

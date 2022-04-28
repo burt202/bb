@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {countryNameMap} from "../utils"
@@ -37,26 +38,26 @@ export default function Country() {
     >
       <h3>Bots</h3>
       <div style={{display: "flex"}}>
-        <table style={{height: "min-content"}}>
-          <thead>
-            <tr>
-              <th style={{width: 250}}>Bot</th>
-              <th>Wins</th>
-            </tr>
-          </thead>
-          <tbody>
-            {countryBots.map((cb, i) => {
-              return (
-                <tr key={i} style={{height: 40}}>
-                  <td>
-                    <TextLink to={`/bot/${cb.id}`} text={cb.name} />
-                  </td>
-                  <td>{cb.wins}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+        <Table
+          data={countryBots}
+          columns={[
+            {
+              title: "Bot",
+              getValue: (cb) => {
+                return <TextLink to={`/bot/${cb.id}`} text={cb.name} />
+              },
+              width: 5,
+            },
+            {
+              title: "Wins",
+              getValue: (cb) => {
+                return cb.wins
+              },
+              width: 4,
+            },
+          ]}
+          width={450}
+        />
         <div style={{marginLeft: 16}}>
           <div
             style={{

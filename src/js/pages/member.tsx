@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface, MemberSeason} from "../types"
 import {groupBy} from "../utils"
@@ -22,6 +23,10 @@ export default function Member() {
   const memberSeasons = db.getMemberSeasons(memberId)
   const grouped = groupBy<MemberSeason>((ms) => ms.seasonId, memberSeasons)
 
+  const data = Object.entries(grouped).sort((a, b) => {
+    return a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0
+  })
+
   return (
     <Page
       headerComponent={
@@ -32,43 +37,36 @@ export default function Member() {
       showShowHome={true}
     >
       <h3>Seasons</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Season</th>
-            <th>Bot</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(grouped)
-            .sort((a, b) => {
-              return a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0
-            })
-            .map((pair, i) => {
+      <Table
+        data={data}
+        columns={[
+          {
+            title: "Season",
+            getValue: (pair) => {
               const {seasonId, seasonName} = pair[1][0]
+              return <TextLink to={`/season/${seasonId}`} text={seasonName} />
+            },
+            width: 4,
+          },
+          {
+            title: "Bot",
+            getValue: (pair) => {
+              return pair[1].map((b, i) => {
+                const isLastBot = i + 1 === pair[1].length
 
-              return (
-                <tr key={i}>
-                  <td>
-                    <TextLink to={`/season/${seasonId}`} text={seasonName} />
-                  </td>
-                  <td>
-                    {pair[1].map((b, i) => {
-                      const isLastBot = i + 1 === pair[1].length
-
-                      return (
-                        <React.Fragment key={i}>
-                          <TextLink to={`/bot/${b.botId}`} text={b.botName} />
-                          {isLastBot ? "" : ", "}
-                        </React.Fragment>
-                      )
-                    })}
-                  </td>
-                </tr>
-              )
-            })}
-        </tbody>
-      </table>
+                return (
+                  <React.Fragment key={i}>
+                    <TextLink to={`/bot/${b.botId}`} text={b.botName} />
+                    {isLastBot ? "" : ", "}
+                  </React.Fragment>
+                )
+              })
+            },
+            width: 4,
+          },
+        ]}
+        width={400}
+      />
     </Page>
   )
 }
