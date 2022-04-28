@@ -3,6 +3,7 @@ import {useContext} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import StatBox from "../components/stat-box"
 import Table from "../components/table"
 import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
@@ -59,20 +60,7 @@ export default function Country() {
           width={450}
         />
         <div style={{marginLeft: 16}}>
-          <div
-            style={{
-              background: "#ccc",
-              padding: 16,
-              width: 380,
-              textAlign: "right",
-              marginBottom: 16,
-            }}
-          >
-            <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>Total Bots</p>
-            <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>
-              {countryBots.length}
-            </p>
-          </div>
+          <StatBox title="Total Bots" value={countryBots.length.toString()} />
         </div>
       </div>
     </Page>
