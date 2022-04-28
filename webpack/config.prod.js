@@ -29,6 +29,7 @@ module.exports = merge(common, {
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+      inject: false,
       templateParameters: {
         production: true,
         lastModified: Date.now(),
