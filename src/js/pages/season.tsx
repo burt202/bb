@@ -113,7 +113,6 @@ export default function Season() {
               width: 4,
             },
           ]}
-          width={450}
         />
         <div style={{marginLeft: 16}}>
           <StatBox title="Total Bots" value={seasonBots.length.toString()} />
@@ -121,7 +120,7 @@ export default function Season() {
             title="Total Fights"
             value={seasonFights.length.toString()}
           />
-          <div style={{width: 380, marginTop: 32}}>
+          <div style={{width: 400, marginTop: 32}}>
             <PieChart
               style={{
                 fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -183,7 +182,7 @@ export default function Season() {
                 )
               })
             },
-            width: 9,
+            width: 10,
           },
           {
             title: "Stage",
@@ -205,7 +204,6 @@ export default function Season() {
             alignCenter: true,
           },
         ]}
-        width={850}
       />
     </Page>
   )

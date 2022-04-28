@@ -62,10 +62,9 @@ export default function Member() {
                 )
               })
             },
-            width: 4,
+            width: 5,
           },
         ]}
-        width={400}
       />
     </Page>
   )

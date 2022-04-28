@@ -38,7 +38,7 @@ export default function Country() {
       showShowHome={true}
     >
       <h3>Bots</h3>
-      <div style={{display: "flex"}}>
+      <div className="side-by-side">
         <Table
           data={countryBots}
           columns={[
@@ -57,9 +57,8 @@ export default function Country() {
               width: 4,
             },
           ]}
-          width={450}
         />
-        <div style={{marginLeft: 16}}>
+        <div>
           <StatBox title="Total Bots" value={countryBots.length.toString()} />
         </div>
       </div>

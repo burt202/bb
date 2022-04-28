@@ -1,6 +1,8 @@
 import * as React from "react"
+import {useWindowWidth} from "../hooks"
 
 const BASE_UNIT = 50
+const PAGE_WIDTH = 900
 
 export interface Column<T> {
   title: string
@@ -10,20 +12,35 @@ export interface Column<T> {
 }
 
 interface Props<T> {
-  width: number
   data: Array<T>
   columns: Array<Column<T>>
   shouldShowDivider?: (data: Array<T>, row: T, index: number) => boolean
 }
 
-export default function Table<T>({
-  width,
-  data,
-  columns,
-  shouldShowDivider,
-}: Props<T>) {
+function calculateColumnWidth(
+  usePercentages: boolean,
+  tableWidth: number,
+  columnWidth: number,
+) {
+  if (usePercentages) {
+    return `${(columnWidth / tableWidth) * 100}%`
+  }
+  return `${columnWidth * BASE_UNIT}px`
+}
+
+export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
+  const windowWidth = useWindowWidth()
+  const tableWidth = columns.reduce((acc, val) => {
+    return acc + val.width
+  }, 0)
+
+  const usePercentages =
+    tableWidth <= PAGE_WIDTH / 2 && windowWidth <= PAGE_WIDTH
+
   return (
-    <table style={{width, height: "min-content"}}>
+    <table
+      style={{width: usePercentages ? "100%" : "auto", height: "min-content"}}
+    >
       <thead>
         <tr>
           {columns.map((c, i) => {
@@ -31,7 +48,11 @@ export default function Table<T>({
               <th
                 key={i}
                 style={{
-                  width: c.width * BASE_UNIT,
+                  width: calculateColumnWidth(
+                    usePercentages,
+                    tableWidth,
+                    c.width,
+                  ),
                   textAlign: c.alignCenter ? "center" : "left",
                 }}
               >
@@ -60,7 +81,11 @@ export default function Table<T>({
                   <td
                     key={j}
                     style={{
-                      width: c.width * BASE_UNIT,
+                      width: calculateColumnWidth(
+                        usePercentages,
+                        tableWidth,
+                        c.width,
+                      ),
                       textAlign: c.alignCenter ? "center" : "left",
                     }}
                   >

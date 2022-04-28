@@ -29,18 +29,14 @@ export default function Home() {
       }
     >
       <h3>Seasons</h3>
-      <div
-        style={{display: "flex", flexWrap: "wrap", rowGap: 16, columnGap: 16}}
-      >
+      <div className="seasons-grid">
         {seasons.map((s, i) => (
-          <div key={i}>
+          <div style={{background: "#ccc", width: "100%", height: 150}} key={i}>
             <Link
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                background: "#ccc",
-                width: 272,
                 height: 150,
                 fontSize: 48,
                 color: "#003366",
@@ -52,8 +48,8 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div style={{display: "flex"}}>
-        <div style={{marginRight: 32}}>
+      <div className="stats-grid">
+        <div>
           <h3>Top 10 Most Wins</h3>
           <Table
             data={top10MostWins}
@@ -63,7 +59,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                 },
-                width: 4,
+                width: 5,
               },
               {
                 title: "Count",
@@ -73,7 +69,6 @@ export default function Home() {
                 width: 4,
               },
             ]}
-            width={400}
           />
         </div>
         <div>
@@ -86,7 +81,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                 },
-                width: 4,
+                width: 5,
               },
               {
                 title: "Count",
@@ -96,12 +91,9 @@ export default function Home() {
                 width: 4,
               },
             ]}
-            width={400}
           />
         </div>
-      </div>
-      <div style={{display: "flex"}}>
-        <div style={{marginRight: 32}}>
+        <div>
           <h3>Top 10 Best Win % (more than 5 fights)</h3>
           <Table
             data={top10BestWinPercentages}
@@ -111,7 +103,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                 },
-                width: 4,
+                width: 5,
               },
               {
                 title: "%",
@@ -121,7 +113,6 @@ export default function Home() {
                 width: 4,
               },
             ]}
-            width={400}
           />
         </div>
         <div>
@@ -134,7 +125,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
                 },
-                width: 4,
+                width: 5,
               },
               {
                 title: "%",
@@ -144,7 +135,6 @@ export default function Home() {
                 width: 4,
               },
             ]}
-            width={400}
           />
         </div>
       </div>

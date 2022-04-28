@@ -15,7 +15,7 @@ body {
 }
 
 #container {
-  width: 850px;
+  width: 900px;
   margin: 0 auto 32px auto;
 }
 
@@ -28,7 +28,6 @@ th {
   border: 1px solid #999;
   padding: 8px;
   text-align: left;
-  width: 200px;
 }
 
 .search-container {
@@ -68,4 +67,58 @@ th {
 .search-button span {
   display: inline-block;
   transform: rotate(-45deg);
+}
+
+.seasons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.side-by-side {
+  display: flex;
+  column-gap: 16px;
+}
+
+.stats-box {
+  background: #ccc;
+  padding: 16px;
+  width: 400px;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  #container {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .seasons-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-by-side {
+    flex-direction: column-reverse;
+  }
+
+  .stats-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .seasons-grid {
+    grid-template-columns: 1fr;
+  }
 }

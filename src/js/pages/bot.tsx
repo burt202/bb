@@ -84,10 +84,9 @@ export default function Bot() {
                 )
               })
             },
-            width: 9,
+            width: 10,
           },
         ]}
-        width={850}
       />
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <h3>Fights</h3>
@@ -144,7 +143,7 @@ export default function Bot() {
                 )
               })
             },
-            width: 8,
+            width: 9,
           },
           {
             title: "Win",
@@ -179,7 +178,6 @@ export default function Bot() {
             width: 3,
           },
         ]}
-        width={850}
       />
     </Page>
   )
