@@ -4,7 +4,7 @@
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -34,7 +34,7 @@
     {
       "name": "Huge",
       "keyMembers": ["Jonathan Schultz"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -46,7 +46,7 @@
     {
       "name": "Bombshell",
       "keyMembers": ["Micheal Jeffries", "Dan Hammer", "Matthew Carroll"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -76,19 +76,19 @@
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas", "Carlos Junior"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "BRA"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -100,7 +100,7 @@
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -136,13 +136,13 @@
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
       "name": "Yeti",
       "keyMembers": ["Greg Gibson"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -154,7 +154,7 @@
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go", "Alex Hattori", "Mason Massie"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -165,7 +165,7 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -195,7 +195,7 @@
     {
       "name": "War Hawk",
       "keyMembers": ["Rob Farrow", "Kevin Milczewski", "Martin Mason"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -213,7 +213,7 @@
     {
       "name": "Monsoon",
       "keyMembers": ["Tom Brewster", "Tim Rackley"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "GBR"
     },
     {
@@ -255,7 +255,7 @@
     {
       "name": "Son Of Whyachi",
       "keyMembers": ["Luke Ewert", "Reece Ewert"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -297,7 +297,7 @@
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "season",
+      "stage": "roundof16",
       "country": "USA"
     },
     {
@@ -869,6 +869,49 @@
     {
       "bots": ["Subzero", "Minotaur"],
       "winner": "Minotaur",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Icewave", "Huge"],
+      "winner": "Icewave",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Gemini", "The Four Horsemen"],
+      "winner": "Gemini",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Skorpios", "Hypershock"],
+      "winner": "Skorpios",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Brutus", "War Hawk", "End Game"],
+      "winner": "War Hawk",
+      "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": [
+        "Lucky",
+        "Bombshell",
+        "Valkyrie",
+        "Duck",
+        "Red Devil",
+        "Gigabyte"
+      ],
+      "winner": "Bombshell",
+      "stage": "season",
+      "ko": false
+    },
+    {
+      "bots": ["Double Dutch", "Gamma 9"],
+      "winner": "Double Dutch",
       "stage": "season",
       "ko": true
     }

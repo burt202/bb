@@ -89,8 +89,11 @@ export default function Bot() {
         ]}
       />
       <div className="bot-stats">
-        <h3>Fights ({botFights.length})</h3>
+        <h3>Fights</h3>
         <div style={{display: "flex", alignItems: "center"}}>
+          <div style={{marginRight: 32}}>
+            Total: <strong>{botFights.length}</strong>
+          </div>
           <div style={{marginRight: 32}}>
             Wins:{" "}
             <strong>
