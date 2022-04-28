@@ -97,11 +97,9 @@ th {
   text-align: right;
 }
 
-.chart-container {
-  width: 400px;
-  margin-top: 16px;
+.bot-stats {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {
@@ -127,13 +125,18 @@ th {
     margin-top: 16px;
   }
 
-  .stats-box,
-  .chart-container {
+  .stats-box {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .seasons-grid {
     grid-template-columns: 1fr;
+  }
+
+  .bot-stats {
+    flex-direction: column;
+    margin-bottom: 16px;
   }
 }

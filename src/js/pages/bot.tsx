@@ -88,27 +88,21 @@ export default function Bot() {
           },
         ]}
       />
-      <div style={{display: "flex", justifyContent: "space-between"}}>
-        <h3>Fights</h3>
+      <div className="bot-stats">
+        <h3>Fights ({botFights.length})</h3>
         <div style={{display: "flex", alignItems: "center"}}>
           <div style={{marginRight: 32}}>
-            Total: <strong>{botFights.length}</strong>
-          </div>
-          <div style={{marginRight: 32}}>
-            Wins: <strong>{botFightWins.length}</strong>
-          </div>
-          <div style={{marginRight: 32}}>
-            KO's: <strong>{koWins.length}</strong>
-          </div>
-          <div style={{marginRight: 32}}>
-            Win %:{" "}
+            Wins:{" "}
             <strong>
-              {getPercentage(botFights.length, botFightWins.length)}
+              {botFightWins.length} (
+              {getPercentage(botFights.length, botFightWins.length)})
             </strong>
           </div>
           <div>
-            KO %:{" "}
-            <strong>{getPercentage(botFights.length, koWins.length)}</strong>
+            KO's:{" "}
+            <strong>
+              {koWins.length} ({getPercentage(botFights.length, koWins.length)})
+            </strong>
           </div>
         </div>
       </div>
