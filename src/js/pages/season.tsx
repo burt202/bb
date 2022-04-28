@@ -1,6 +1,5 @@
 import * as React from "react"
 import {useContext} from "react"
-import {PieChart} from "react-minimal-pie-chart"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
@@ -123,41 +122,12 @@ export default function Season() {
               title="Total Fights"
               value={seasonFights.length.toString()}
             />
-            <div className="chart-container">
-              <PieChart
-                style={{
-                  fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-                  fontSize: "8px",
-                  width: 400,
-                }}
-                data={[
-                  {
-                    title: getPercentage(seasonFights.length, koFights.length),
-                    value: koFights.length,
-                    label: "KO",
-                    color: "#003366",
-                  },
-                  {
-                    title: getPercentage(
-                      seasonFights.length,
-                      seasonFights.length - koFights.length,
-                    ),
-                    value: seasonFights.length - koFights.length,
-                    label: "Judges",
-                    color: "#C13C37",
-                  },
-                ]}
-                animate
-                label={({dataEntry}) => {
-                  return dataEntry.label as string
-                }}
-                labelStyle={{
-                  fill: "#fff",
-                  opacity: 0.75,
-                  pointerEvents: "none",
-                }}
-              />
-            </div>
+          </div>
+          <div style={{marginTop: 16}}>
+            <StatBox
+              title="Knockout Percentage"
+              value={getPercentage(seasonFights.length, koFights.length)}
+            />
           </div>
         </div>
       </div>
