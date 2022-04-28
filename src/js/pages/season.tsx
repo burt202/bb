@@ -125,7 +125,7 @@ export default function Season() {
           </div>
           <div style={{marginTop: 16}}>
             <StatBox
-              title="Knockout Percentage"
+              title="KO Percentage"
               value={getPercentage(seasonFights.length, koFights.length)}
             />
           </div>
