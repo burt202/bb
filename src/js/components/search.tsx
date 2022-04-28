@@ -25,8 +25,10 @@ export default function Search({searchTerm, onSearchResultClick}: Props) {
           <p style={{margin: 0}}>No results</p>
         </div>
       ) : (
-        <div style={{display: "flex"}}>
-          <div style={{width: 300}}>
+        <div
+          style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: 16}}
+        >
+          <div>
             {(grouped.bot || []).length === 0 ? (
               <p style={{margin: 0}}>No bot results</p>
             ) : (
@@ -54,7 +56,7 @@ export default function Search({searchTerm, onSearchResultClick}: Props) {
               })
             )}
           </div>
-          <div style={{width: 300}}>
+          <div>
             {(grouped.member || []).length === 0 ? (
               <p style={{margin: 0}}>No member results</p>
             ) : (
