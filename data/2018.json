@@ -46,13 +46,13 @@
     {
       "name": "Bombshell",
       "keyMembers": ["Micheal Jeffries", "Dan Hammer", "Matthew Carroll"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "USA"
     },
     {
@@ -82,7 +82,7 @@
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas", "Carlos Junior"],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "BRA"
     },
     {
@@ -213,7 +213,7 @@
     {
       "name": "Monsoon",
       "keyMembers": ["Tom Brewster", "Tim Rackley"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "GBR"
     },
     {
@@ -913,6 +913,42 @@
       "bots": ["Double Dutch", "Gamma 9"],
       "winner": "Double Dutch",
       "stage": "season",
+      "ko": true
+    },
+    {
+      "bots": ["Sawblaze", "Monsoon"],
+      "winner": "Monsoon",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Tombstone", "Bombshell"],
+      "winner": "Bombshell",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Son Of Whyachi", "Lock-Jaw"],
+      "winner": "Lock-Jaw",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Minotaur", "Witch Doctor"],
+      "winner": "Minotaur",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Bombshell", "Lock-Jaw"],
+      "winner": "Lock-Jaw",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "Monsoon"],
+      "winner": "Minotaur",
+      "stage": "quarter",
       "ko": true
     }
   ]
