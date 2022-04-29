@@ -42,40 +42,40 @@ export default function Season() {
       headerComponent={
         <div style={{display: "flex"}}>
           <h1 style={{margin: 0}}>Season {season.name}</h1>
-          <div style={{display: "flex", alignItems: "center", marginLeft: 16}}>
-            {previousSeason ? (
-              <span style={{marginRight: 16}}>
-                <TextLink to={`/season/${previousSeason}`} text="Previous" />
-              </span>
-            ) : (
-              <a
-                style={{
-                  cursor: "not-allowed",
-                  marginRight: 16,
-                  color: "#ccc",
-                }}
-              >
-                Previous
-              </a>
-            )}
-            {nextSeason ? (
-              <TextLink to={`/season/${nextSeason}`} text="Next" />
-            ) : (
-              <a
-                style={{
-                  cursor: "not-allowed",
-                  marginRight: 16,
-                  color: "#ccc",
-                }}
-              >
-                Next
-              </a>
-            )}
-          </div>
         </div>
       }
       showShowHome={true}
     >
+      <div style={{display: "flex", alignItems: "center"}}>
+        {previousSeason ? (
+          <span style={{marginRight: 16}}>
+            <TextLink to={`/season/${previousSeason}`} text="Previous" />
+          </span>
+        ) : (
+          <a
+            style={{
+              cursor: "not-allowed",
+              marginRight: 16,
+              color: "#ccc",
+            }}
+          >
+            Previous
+          </a>
+        )}
+        {nextSeason ? (
+          <TextLink to={`/season/${nextSeason}`} text="Next" />
+        ) : (
+          <a
+            style={{
+              cursor: "not-allowed",
+              marginRight: 16,
+              color: "#ccc",
+            }}
+          >
+            Next
+          </a>
+        )}
+      </div>
       <div className="side-by-side">
         <div>
           <h3>Bots</h3>
