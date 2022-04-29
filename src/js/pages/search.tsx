@@ -34,6 +34,7 @@ export default function Search() {
             border: "1px solid grey",
             borderRadius: 5,
           }}
+          autoFocus
         />
       </div>
 
