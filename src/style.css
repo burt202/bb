@@ -30,45 +30,6 @@ th {
   text-align: left;
 }
 
-.search-container {
-  position: relative;
-  height: 40px;
-  width: 40px;
-}
-
-.search-input {
-  position: absolute;
-  left: auto;
-  right: 40px;
-  outline: none;
-  border: none;
-  padding: 0;
-  width: 0;
-  height: 40px;
-  transition-duration: 0.4s;
-  border-bottom: 1px solid #000;
-}
-
-.search-input:focus {
-  width: 250px;
-}
-
-.search-button {
-  position: absolute;
-  font-size: 22px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-
-.search-button span {
-  display: inline-block;
-  transform: rotate(-45deg);
-}
-
 .seasons-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
