@@ -1,25 +1,42 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import {DbContext} from ".."
+import Page from "../components/page"
 import {DbInterface, SearchResult} from "../types"
 import {groupBy} from "../utils"
 
-interface Props {
-  searchTerm: string
-  onSearchResultClick: (link: string) => void
-}
-
-export default function Search({searchTerm, onSearchResultClick}: Props) {
+export default function Search() {
+  const [searchTerm, setSearchTerm] = useState("")
   const db = useContext(DbContext) as DbInterface
-  const searchResults = db.search(searchTerm)
+  const searchResults = searchTerm.length > 1 ? db.search(searchTerm) : []
+
+  const onSearchResultClick = (link: string) => {
+    setSearchTerm("")
+    window.location.hash = link
+  }
 
   const regEx = new RegExp(searchTerm, "i")
 
   const grouped = groupBy<SearchResult>((sr) => sr.type, searchResults)
 
   return (
-    <>
-      <h3>Search Results</h3>
+    <Page headerComponent={<h1 style={{margin: 0}}>Search</h1>}>
+      <div style={{margin: "16px 0"}}>
+        <input
+          type="search"
+          placeholder="Search bots/members"
+          onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchTerm}
+          style={{
+            padding: 8,
+            width: "100%",
+            backgroundColor: "#f5f5f5",
+            border: "1px solid grey",
+            borderRadius: 5,
+          }}
+        />
+      </div>
+
       {searchResults.length === 0 ? (
         <div style={{display: "flex"}}>
           <p style={{margin: 0}}>No results</p>
@@ -86,6 +103,6 @@ export default function Search({searchTerm, onSearchResultClick}: Props) {
           </div>
         </div>
       )}
-    </>
+    </Page>
   )
 }

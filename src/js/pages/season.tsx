@@ -38,14 +38,7 @@ export default function Season() {
   const koFights = seasonFights.filter((f) => f.ko)
 
   return (
-    <Page
-      headerComponent={
-        <div style={{display: "flex"}}>
-          <h1 style={{margin: 0}}>Season {season.name}</h1>
-        </div>
-      }
-      showShowHome={true}
-    >
+    <Page headerComponent={<h1 style={{margin: 0}}>Season {season.name}</h1>}>
       <div style={{display: "flex", alignItems: "center"}}>
         {previousSeason ? (
           <span style={{marginRight: 16}}>

@@ -48,7 +48,6 @@ export default function Bot() {
           </div>
         </>
       }
-      showShowHome={true}
     >
       <h3>Seasons</h3>
       <Table

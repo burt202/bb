@@ -6,6 +6,7 @@ import Country from "./pages/country"
 import Home from "./pages/home"
 import Member from "./pages/member"
 import NotFound from "./pages/not-found"
+import Search from "./pages/search"
 import Season from "./pages/season"
 
 interface Props {
@@ -28,6 +29,7 @@ export default function App() {
       <Wrapper>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/season/:seasonId" element={<Season />} />
           <Route path="/bot/:botId" element={<Bot />} />
           <Route path="/member/:memberId" element={<Member />} />

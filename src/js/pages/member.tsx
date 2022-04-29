@@ -28,14 +28,7 @@ export default function Member() {
   })
 
   return (
-    <Page
-      headerComponent={
-        <div>
-          <h1 style={{margin: 0}}>{member.name}</h1>
-        </div>
-      }
-      showShowHome={true}
-    >
+    <Page headerComponent={<h1 style={{margin: 0}}>{member.name}</h1>}>
       <h3>Seasons</h3>
       <Table
         data={data}

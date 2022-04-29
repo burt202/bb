@@ -35,7 +35,6 @@ export default function Country() {
           </div>
         </>
       }
-      showShowHome={true}
     >
       <div className="side-by-side">
         <div>

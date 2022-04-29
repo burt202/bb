@@ -1,53 +1,36 @@
 import * as React from "react"
-import {useState} from "react"
-import Search from "./search"
-import TextLink from "./text-link"
+import {Link} from "react-router-dom"
 
 interface Props {
   headerComponent: JSX.Element
   children: React.ReactNode
-  showShowHome?: boolean
 }
 
-export default function Page({children, headerComponent, showShowHome}: Props) {
-  const [searchTerm, setSearchTerm] = useState("")
-
+export default function Page({children, headerComponent}: Props) {
   return (
     <div style={{marginTop: 16}}>
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <div>{headerComponent}</div>
         <div style={{display: "flex"}}>
-          <div className="search-container">
-            <input
-              className="search-input"
-              id="searchright"
-              type="search"
-              placeholder="Search bots/members"
-              onChange={(e) => setSearchTerm(e.target.value)}
-              value={searchTerm}
+          <Link to="/search">
+            <img
+              src="search.svg"
+              style={{height: 24, cursor: "pointer"}}
+              title="Search"
             />
-            <label className="search-button" htmlFor="searchright">
-              <span>&#9906;</span>
-            </label>
+          </Link>
+          <div style={{marginLeft: 16}}>
+            <Link to="/">
+              <img
+                src="home.svg"
+                style={{height: 24, cursor: "pointer"}}
+                title="Home"
+              />
+            </Link>
           </div>
-          {showShowHome && (
-            <div style={{marginLeft: 16, height: 40, lineHeight: "40px"}}>
-              <TextLink to="/" text="Home" />
-            </div>
-          )}
         </div>
       </div>
-      {searchTerm.length > 0 ? (
-        <Search
-          searchTerm={searchTerm}
-          onSearchResultClick={(link) => {
-            setSearchTerm("")
-            window.location.hash = link
-          }}
-        />
-      ) : (
-        React.Children.map(children, (c) => c)
-      )}
+      {React.Children.map(children, (c) => c)}
     </div>
   )
 }

@@ -21,13 +21,7 @@ export default function Home() {
   const totalFights = db.getTotalFights()
 
   return (
-    <Page
-      headerComponent={
-        <div>
-          <h1 style={{margin: 0}}>Battlebots Database</h1>
-        </div>
-      }
-    >
+    <Page headerComponent={<h1 style={{margin: 0}}>Battlebots Database</h1>}>
       <h3>Seasons</h3>
       <div className="seasons-grid">
         {seasons.map((s, i) => (
