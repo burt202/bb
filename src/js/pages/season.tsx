@@ -39,7 +39,7 @@ export default function Season() {
 
   return (
     <Page headerComponent={<h1 style={{margin: 0}}>Season {season.name}</h1>}>
-      <div style={{display: "flex", alignItems: "center"}}>
+      <div style={{marginTop: 8}}>
         {previousSeason ? (
           <span style={{marginRight: 16}}>
             <TextLink to={`/season/${previousSeason}`} text="Previous" />
