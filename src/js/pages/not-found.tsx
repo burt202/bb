@@ -1,6 +1,7 @@
 import * as React from "react"
 import {useEffect} from "react"
-import TextLink from "../components/text-link"
+import SiteLink from "../components/site-link"
+import {setTitleAndTrack} from "../utils"
 
 interface Props {
   title: string
@@ -8,7 +9,7 @@ interface Props {
 
 export default function NotFound({title}: Props) {
   useEffect(() => {
-    document.title = `Battlebots DB - ${title}`
+    setTitleAndTrack(title)
   }, [])
 
   return (
@@ -23,7 +24,9 @@ export default function NotFound({title}: Props) {
         }}
       >
         <h1 style={{marginTop: 0}}>{title}</h1>
-        <TextLink to="/" text="Back to home" />
+        <SiteLink textLink={true} to="/" pageTitle="Home">
+          Back to home
+        </SiteLink>
       </div>
     </div>
   )

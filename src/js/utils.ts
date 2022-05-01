@@ -1,3 +1,5 @@
+const SITE_NAME = "Battlebots DB"
+
 export function convertNameToId(name: string) {
   return name
     .replace(/([a-z])([A-Z])/g, "$1-$2")
@@ -23,6 +25,11 @@ export function groupBy<T>(grouper: (d: T) => string, data: Array<T>) {
 
     return {...acc, [key]: [val]}
   }, {} as Record<string, Array<T>>)
+}
+
+export function setTitleAndTrack(title: string) {
+  document.title = `${SITE_NAME} - ${title}`
+  // TODO track
 }
 
 export const stageNameMap = {

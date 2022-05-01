@@ -2,8 +2,9 @@ import * as React from "react"
 import {useContext, useState, useEffect} from "react"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import {DbInterface, SearchResult} from "../types"
-import {groupBy} from "../utils"
+import {groupBy, setTitleAndTrack} from "../utils"
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -11,13 +12,8 @@ export default function Search() {
   const searchResults = searchTerm.length > 1 ? db.search(searchTerm) : []
 
   useEffect(() => {
-    document.title = "Battlebots DB - Search"
+    setTitleAndTrack("Search")
   }, [])
-
-  const onSearchResultClick = (link: string) => {
-    setSearchTerm("")
-    window.location.hash = link
-  }
 
   const regEx = new RegExp(searchTerm, "i")
 
@@ -57,22 +53,20 @@ export default function Search() {
               (grouped.bot || []).map((sr, i) => {
                 return (
                   <p key={i} style={{marginTop: 0}}>
-                    <a
-                      style={{
-                        color: "#003366",
-                        cursor: "pointer",
-                        textDecoration: "underline",
-                      }}
-                      onClick={() =>
-                        onSearchResultClick(`/${sr.type}/${sr.id}`)
-                      }
-                      dangerouslySetInnerHTML={{
-                        __html: sr.name.replace(
-                          regEx,
-                          (match) => `<strong>${match}</strong>`,
-                        ),
-                      }}
-                    />
+                    <SiteLink
+                      to={`/bot/${sr.id}`}
+                      pageTitle={`Bot - ${sr.name}`}
+                      textLink={true}
+                    >
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: sr.name.replace(
+                            regEx,
+                            (match) => `<strong>${match}</strong>`,
+                          ),
+                        }}
+                      />
+                    </SiteLink>
                   </p>
                 )
               })
@@ -85,22 +79,20 @@ export default function Search() {
               (grouped.member || []).map((sr, i) => {
                 return (
                   <p key={i} style={{marginTop: 0}}>
-                    <a
-                      style={{
-                        color: "#003366",
-                        cursor: "pointer",
-                        textDecoration: "underline",
-                      }}
-                      onClick={() =>
-                        onSearchResultClick(`/${sr.type}/${sr.id}`)
-                      }
-                      dangerouslySetInnerHTML={{
-                        __html: sr.name.replace(
-                          regEx,
-                          (match) => `<strong>${match}</strong>`,
-                        ),
-                      }}
-                    />
+                    <SiteLink
+                      to={`/member/${sr.id}`}
+                      pageTitle={`Member - ${sr.name}`}
+                      textLink={true}
+                    >
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: sr.name.replace(
+                            regEx,
+                            (match) => `<strong>${match}</strong>`,
+                          ),
+                        }}
+                      />
+                    </SiteLink>
                   </p>
                 )
               })

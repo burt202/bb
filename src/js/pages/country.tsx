@@ -3,11 +3,11 @@ import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
-import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
-import {countryNameMap} from "../utils"
+import {countryNameMap, setTitleAndTrack} from "../utils"
 
 export default function Country() {
   const params = useParams()
@@ -16,7 +16,7 @@ export default function Country() {
 
   useEffect(() => {
     if (countryNameMap[countryId]) {
-      document.title = `Battlebots DB - Country - ${countryNameMap[countryId]}`
+      setTitleAndTrack(`Country - ${countryNameMap[countryId]}`)
     }
   }, [])
 
@@ -51,7 +51,15 @@ export default function Country() {
               {
                 title: "Bot",
                 getValue: (cb) => {
-                  return <TextLink to={`/bot/${cb.id}`} text={cb.name} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${cb.id}`}
+                      pageTitle={`Bot - ${cb.name}`}
+                      textLink={true}
+                    >
+                      {cb.name}
+                    </SiteLink>
+                  )
                 },
                 width: 5,
               },

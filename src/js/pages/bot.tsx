@@ -1,12 +1,17 @@
 import * as React from "react"
 import {useContext, useEffect} from "react"
-import {Link, useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import Table from "../components/table"
-import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
-import {countryNameMap, getPercentage, stageNameMap} from "../utils"
+import {
+  countryNameMap,
+  getPercentage,
+  stageNameMap,
+  setTitleAndTrack,
+} from "../utils"
 import NotFound from "./not-found"
 
 export default function Bot() {
@@ -18,7 +23,7 @@ export default function Bot() {
 
   useEffect(() => {
     if (bot) {
-      document.title = `Battlebots DB - Bot - ${bot.name}`
+      setTitleAndTrack(`Bot - ${bot.name}`)
     }
   }, [])
 
@@ -43,13 +48,18 @@ export default function Bot() {
               justifyContent: "space-between",
             }}
           >
-            <Link to={`/country/${bot.country.toLowerCase()}`}>
+            <SiteLink
+              to={`/country/${bot.country.toLowerCase()}`}
+              pageTitle={`Country - ${
+                countryNameMap[bot.country.toLowerCase()]
+              }`}
+            >
               <img
                 src={`${bot.country.toLowerCase()}.svg`}
                 style={{height: 48, marginRight: 16}}
                 title={countryNameMap[bot.country.toLowerCase()]}
               />
-            </Link>
+            </SiteLink>
             <h1 style={{margin: 0}}>{bot.name}</h1>
           </div>
         </>
@@ -63,7 +73,13 @@ export default function Bot() {
             title: "Season",
             getValue: (bs) => {
               return (
-                <TextLink to={`/season/${bs.seasonId}`} text={bs.seasonName} />
+                <SiteLink
+                  to={`/season/${bs.seasonId}`}
+                  textLink={true}
+                  pageTitle={`Season - ${bs.seasonName}`}
+                >
+                  {bs.seasonName}
+                </SiteLink>
               )
             },
             width: 4,
@@ -83,7 +99,13 @@ export default function Bot() {
 
                 return (
                   <React.Fragment key={i}>
-                    <TextLink to={`/member/${m.id}`} text={m.name} />
+                    <SiteLink
+                      to={`/member/${m.id}`}
+                      textLink={true}
+                      pageTitle={`Member - ${m.name}`}
+                    >
+                      {m.name}
+                    </SiteLink>
                     {isLastMember ? "" : ", "}
                   </React.Fragment>
                 )
@@ -126,7 +148,13 @@ export default function Bot() {
             title: "Season",
             getValue: (bf) => {
               return (
-                <TextLink to={`/season/${bf.seasonId}`} text={bf.seasonName} />
+                <SiteLink
+                  to={`/season/${bf.seasonId}`}
+                  pageTitle={`Season - ${bf.seasonName}`}
+                  textLink={true}
+                >
+                  {bf.seasonName}
+                </SiteLink>
               )
             },
             width: 3,
@@ -139,7 +167,13 @@ export default function Bot() {
 
                 return (
                   <React.Fragment key={i}>
-                    <TextLink to={`/bot/${c.id}`} text={c.name} />
+                    <SiteLink
+                      to={`/bot/${c.id}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${c.name}`}
+                    >
+                      {c.name}
+                    </SiteLink>
                     {isLastBot ? "" : ", "}
                   </React.Fragment>
                 )

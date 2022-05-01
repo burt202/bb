@@ -1,13 +1,18 @@
 import * as React from "react"
 import {useContext, useEffect} from "react"
-import {useParams, Link} from "react-router-dom"
+import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
-import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
-import {countryNameMap, getPercentage, stageNameMap} from "../utils"
+import {
+  countryNameMap,
+  getPercentage,
+  setTitleAndTrack,
+  stageNameMap,
+} from "../utils"
 import NotFound from "./not-found"
 
 export default function Season() {
@@ -19,7 +24,7 @@ export default function Season() {
 
   useEffect(() => {
     if (season) {
-      document.title = `Battlebots DB - Season - ${season.name}`
+      setTitleAndTrack(`Season - ${season.name}`)
     }
   }, [])
 
@@ -48,13 +53,13 @@ export default function Season() {
       <div style={{marginTop: 8}}>
         {previousSeason ? (
           <span style={{marginRight: 16}}>
-            <TextLink
+            <SiteLink
               to={`/season/${previousSeason}`}
-              text="Previous"
-              onClick={() => {
-                document.title = `Battlebots DB - Season - ${previousSeason}`
-              }}
-            />
+              textLink={true}
+              pageTitle={`Season - ${previousSeason}`}
+            >
+              Previous
+            </SiteLink>
           </span>
         ) : (
           <a
@@ -68,13 +73,13 @@ export default function Season() {
           </a>
         )}
         {nextSeason ? (
-          <TextLink
+          <SiteLink
             to={`/season/${nextSeason}`}
-            text="Next"
-            onClick={() => {
-              document.title = `Battlebots DB - Season - ${nextSeason}`
-            }}
-          />
+            textLink={true}
+            pageTitle={`Season - ${nextSeason}`}
+          >
+            Next
+          </SiteLink>
         ) : (
           <a
             style={{
@@ -97,13 +102,18 @@ export default function Season() {
                 title: "",
                 getValue: (sb) => {
                   return (
-                    <Link to={`/country/${sb.botCountry.toLowerCase()}`}>
+                    <SiteLink
+                      to={`/country/${sb.botCountry.toLowerCase()}`}
+                      pageTitle={`Country - ${
+                        countryNameMap[sb.botCountry.toLowerCase()]
+                      }`}
+                    >
                       <img
                         src={`${sb.botCountry.toLowerCase()}.svg`}
                         title={countryNameMap[sb.botCountry.toLowerCase()]}
                         style={{height: 24}}
                       />
-                    </Link>
+                    </SiteLink>
                   )
                 },
                 width: 1,
@@ -112,7 +122,15 @@ export default function Season() {
               {
                 title: "Bot",
                 getValue: (sb) => {
-                  return <TextLink to={`/bot/${sb.botId}`} text={sb.botName} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${sb.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${sb.botName}`}
+                    >
+                      {sb.botName}
+                    </SiteLink>
+                  )
                 },
                 width: 4,
               },
@@ -161,7 +179,13 @@ export default function Season() {
                           sf.winnerName === c.name ? "bold" : "normal",
                       }}
                     >
-                      <TextLink to={`/bot/${c.id}`} text={c.name} />
+                      <SiteLink
+                        to={`/bot/${c.id}`}
+                        textLink={true}
+                        pageTitle={`Bot - ${c.name}`}
+                      >
+                        {c.name}
+                      </SiteLink>
                     </span>
                     {isLastBot ? "" : " v "}
                   </React.Fragment>

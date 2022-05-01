@@ -3,10 +3,10 @@ import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import Table from "../components/table"
-import TextLink from "../components/text-link"
 import {DbInterface, MemberSeason} from "../types"
-import {groupBy} from "../utils"
+import {groupBy, setTitleAndTrack} from "../utils"
 import NotFound from "./not-found"
 
 export default function Member() {
@@ -18,7 +18,7 @@ export default function Member() {
 
   useEffect(() => {
     if (member) {
-      document.title = `Battlebots DB - Member - ${member.name}`
+      setTitleAndTrack(`Member - ${member.name}`)
     }
   }, [])
 
@@ -43,7 +43,15 @@ export default function Member() {
             title: "Season",
             getValue: (pair) => {
               const {seasonId, seasonName} = pair[1][0]
-              return <TextLink to={`/season/${seasonId}`} text={seasonName} />
+              return (
+                <SiteLink
+                  to={`/season/${seasonId}`}
+                  textLink={true}
+                  pageTitle={`Season - ${seasonId}`}
+                >
+                  {seasonName}
+                </SiteLink>
+              )
             },
             width: 4,
           },
@@ -55,7 +63,13 @@ export default function Member() {
 
                 return (
                   <React.Fragment key={i}>
-                    <TextLink to={`/bot/${b.botId}`} text={b.botName} />
+                    <SiteLink
+                      to={`/bot/${b.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${b.botName}`}
+                    >
+                      {b.botName}
+                    </SiteLink>
                     {isLastBot ? "" : ", "}
                   </React.Fragment>
                 )

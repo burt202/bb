@@ -1,20 +1,15 @@
 import * as React from "react"
-import {useContext, useEffect} from "react"
-import {Link} from "react-router-dom"
+import {useContext} from "react"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import Table from "../components/table"
-import TextLink from "../components/text-link"
 import {DbInterface} from "../types"
 import {round} from "../utils"
 
 export default function Home() {
   const db = useContext(DbContext) as DbInterface
   const seasons = db.getAllSeasons()
-
-  useEffect(() => {
-    document.title = "Battlebots DB - Home"
-  }, [])
 
   const top10MostWins = db.getTop10MostWins()
   const top10MostKOs = db.getTop10MostKOs()
@@ -30,19 +25,20 @@ export default function Home() {
       <div className="seasons-grid">
         {seasons.map((s, i) => (
           <div style={{background: "#ccc", width: "100%", height: 135}} key={i}>
-            <Link
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: 135,
-                fontSize: 48,
-                color: "#003366",
-              }}
-              to={`/season/${s.id}`}
-            >
-              {s.name}
-            </Link>
+            <SiteLink to={`/season/${s.id}`} pageTitle={`Season - ${s.name}`}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: 135,
+                  fontSize: 48,
+                  color: "#003366",
+                }}
+              >
+                {s.name}
+              </div>
+            </SiteLink>
           </div>
         ))}
       </div>
@@ -55,7 +51,15 @@ export default function Home() {
               {
                 title: "Bot",
                 getValue: (tt) => {
-                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${tt.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${tt.botName}`}
+                    >
+                      {tt.botName}
+                    </SiteLink>
+                  )
                 },
                 width: 5,
               },
@@ -77,7 +81,15 @@ export default function Home() {
               {
                 title: "Bot",
                 getValue: (tt) => {
-                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${tt.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${tt.botName}`}
+                    >
+                      {tt.botName}
+                    </SiteLink>
+                  )
                 },
                 width: 5,
               },
@@ -99,7 +111,15 @@ export default function Home() {
               {
                 title: "Bot",
                 getValue: (tt) => {
-                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${tt.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${tt.botName}`}
+                    >
+                      {tt.botName}
+                    </SiteLink>
+                  )
                 },
                 width: 5,
               },
@@ -121,7 +141,15 @@ export default function Home() {
               {
                 title: "Bot",
                 getValue: (tt) => {
-                  return <TextLink to={`/bot/${tt.botId}`} text={tt.botName} />
+                  return (
+                    <SiteLink
+                      to={`/bot/${tt.botId}`}
+                      textLink={true}
+                      pageTitle={`Bot - ${tt.botName}`}
+                    >
+                      {tt.botName}
+                    </SiteLink>
+                  )
                 },
                 width: 5,
               },
@@ -138,10 +166,13 @@ export default function Home() {
       </div>
       <p>
         Most matches played:{" "}
-        <TextLink
+        <SiteLink
           to={`/bot/${mostMatchesPlayed.id}`}
-          text={mostMatchesPlayed.name}
-        />
+          textLink={true}
+          pageTitle={`Bot - ${mostMatchesPlayed.name}`}
+        >
+          {mostMatchesPlayed.name}
+        </SiteLink>
       </p>
       <p>Total bots: {totalBots}</p>
       <p>Total fights: {totalFights}</p>

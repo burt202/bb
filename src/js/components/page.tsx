@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Link} from "react-router-dom"
+import SiteLink from "./site-link"
 
 interface Props {
   headerComponent: JSX.Element
@@ -12,21 +12,21 @@ export default function Page({children, headerComponent}: Props) {
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <div>{headerComponent}</div>
         <div style={{display: "flex"}}>
-          <Link to="/search">
+          <SiteLink to="/search" pageTitle="Search">
             <img
               src="search.svg"
               style={{height: 24, cursor: "pointer"}}
               title="Search"
             />
-          </Link>
+          </SiteLink>
           <div style={{marginLeft: 16}}>
-            <Link to="/">
+            <SiteLink to="/" pageTitle="Home">
               <img
                 src="home.svg"
                 style={{height: 24, cursor: "pointer"}}
                 title="Home"
               />
-            </Link>
+            </SiteLink>
           </div>
         </div>
       </div>
