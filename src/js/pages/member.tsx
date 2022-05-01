@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
@@ -15,6 +15,12 @@ export default function Member() {
   const db = useContext(DbContext) as DbInterface
 
   const member = db.getMemberById(memberId)
+
+  useEffect(() => {
+    if (member) {
+      document.title = `Battlebots DB - Member - ${member.name}`
+    }
+  }, [])
 
   if (!member) {
     return <NotFound title="Member Not Found" />

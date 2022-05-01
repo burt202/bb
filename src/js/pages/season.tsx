@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useEffect} from "react"
 import {useParams, Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
@@ -16,6 +16,12 @@ export default function Season() {
   const db = useContext(DbContext) as DbInterface
 
   const season = db.getSeasonById(seasonId)
+
+  useEffect(() => {
+    if (season) {
+      document.title = `Battlebots DB - Season - ${season.name}`
+    }
+  }, [])
 
   if (!season) {
     return <NotFound title="Season Not Found" />
@@ -42,7 +48,13 @@ export default function Season() {
       <div style={{marginTop: 8}}>
         {previousSeason ? (
           <span style={{marginRight: 16}}>
-            <TextLink to={`/season/${previousSeason}`} text="Previous" />
+            <TextLink
+              to={`/season/${previousSeason}`}
+              text="Previous"
+              onClick={() => {
+                document.title = `Battlebots DB - Season - ${previousSeason}`
+              }}
+            />
           </span>
         ) : (
           <a
@@ -56,7 +68,13 @@ export default function Season() {
           </a>
         )}
         {nextSeason ? (
-          <TextLink to={`/season/${nextSeason}`} text="Next" />
+          <TextLink
+            to={`/season/${nextSeason}`}
+            text="Next"
+            onClick={() => {
+              document.title = `Battlebots DB - Season - ${nextSeason}`
+            }}
+          />
         ) : (
           <a
             style={{

@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useEffect} from "react"
 import {Link} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
@@ -11,6 +11,10 @@ import {round} from "../utils"
 export default function Home() {
   const db = useContext(DbContext) as DbInterface
   const seasons = db.getAllSeasons()
+
+  useEffect(() => {
+    document.title = "Battlebots DB - Home"
+  }, [])
 
   const top10MostWins = db.getTop10MostWins()
   const top10MostKOs = db.getTop10MostKOs()

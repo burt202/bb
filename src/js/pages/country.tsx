@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
 import {DbContext} from ".."
 import Page from "../components/page"
@@ -13,6 +13,12 @@ export default function Country() {
   const params = useParams()
   const countryId = params.countryId as string
   const db = useContext(DbContext) as DbInterface
+
+  useEffect(() => {
+    if (countryNameMap[countryId]) {
+      document.title = `Battlebots DB - Country - ${countryNameMap[countryId]}`
+    }
+  }, [])
 
   const countryBots = db.getBotsForCountry(countryId)
 

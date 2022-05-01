@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext, useState} from "react"
+import {useContext, useState, useEffect} from "react"
 import {DbContext} from ".."
 import Page from "../components/page"
 import {DbInterface, SearchResult} from "../types"
@@ -9,6 +9,10 @@ export default function Search() {
   const [searchTerm, setSearchTerm] = useState("")
   const db = useContext(DbContext) as DbInterface
   const searchResults = searchTerm.length > 1 ? db.search(searchTerm) : []
+
+  useEffect(() => {
+    document.title = "Battlebots DB - Search"
+  }, [])
 
   const onSearchResultClick = (link: string) => {
     setSearchTerm("")

@@ -1,4 +1,5 @@
 import * as React from "react"
+import {useEffect} from "react"
 import TextLink from "../components/text-link"
 
 interface Props {
@@ -6,6 +7,10 @@ interface Props {
 }
 
 export default function NotFound({title}: Props) {
+  useEffect(() => {
+    document.title = `Battlebots DB - ${title}`
+  }, [])
+
   return (
     <div style={{display: "flex", justifyContent: "center"}}>
       <div
