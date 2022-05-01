@@ -8,6 +8,7 @@ import StatBox from "../components/stat-box"
 import Table from "../components/table"
 import {DbInterface} from "../types"
 import {countryNameMap, setTitleAndTrack} from "../utils"
+import NotFound from "./not-found"
 
 export default function Country() {
   const params = useParams()
@@ -19,6 +20,10 @@ export default function Country() {
       setTitleAndTrack(`Country - ${countryNameMap[countryId]}`)
     }
   }, [])
+
+  if (!countryNameMap[countryId]) {
+    return <NotFound title="Country Not Found" />
+  }
 
   const countryBots = db.getBotsForCountry(countryId)
 
