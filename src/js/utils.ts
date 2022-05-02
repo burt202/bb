@@ -27,9 +27,8 @@ export function groupBy<T>(grouper: (d: T) => string, data: Array<T>) {
   }, {} as Record<string, Array<T>>)
 }
 
-export function setTitleAndTrack(title: string) {
+export function setTitle(title: string) {
   document.title = `${SITE_NAME} - ${title}`
-  // TODO track
 }
 
 export const stageNameMap = {

@@ -7,7 +7,7 @@ import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {countryNameMap, setTitleAndTrack} from "../utils"
+import {countryNameMap, setTitle} from "../utils"
 import NotFound from "./not-found"
 
 export default function Country() {
@@ -17,7 +17,7 @@ export default function Country() {
 
   useEffect(() => {
     if (countryNameMap[countryId]) {
-      setTitleAndTrack(`Country - ${countryNameMap[countryId]}`)
+      setTitle(`Country - ${countryNameMap[countryId]}`)
     }
   }, [])
 

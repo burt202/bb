@@ -1,6 +1,6 @@
 import * as React from "react"
 import {Link} from "react-router-dom"
-import {setTitleAndTrack} from "../utils"
+import {setTitle} from "../utils"
 
 interface Props {
   to: string
@@ -17,7 +17,7 @@ export default function SiteLink({to, children, textLink, pageTitle}: Props) {
       style={style}
       to={to}
       onClick={() => {
-        setTitleAndTrack(pageTitle)
+        setTitle(pageTitle)
       }}
     >
       {children}

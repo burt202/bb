@@ -1,7 +1,7 @@
 import * as React from "react"
 import {useEffect} from "react"
 import SiteLink from "../components/site-link"
-import {setTitleAndTrack} from "../utils"
+import {setTitle} from "../utils"
 
 interface Props {
   title: string
@@ -9,7 +9,7 @@ interface Props {
 
 export default function NotFound({title}: Props) {
   useEffect(() => {
-    setTitleAndTrack(title)
+    setTitle(title)
   }, [])
 
   return (

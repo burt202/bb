@@ -6,7 +6,7 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface, MemberSeason} from "../types"
-import {groupBy, setTitleAndTrack} from "../utils"
+import {groupBy, setTitle} from "../utils"
 import NotFound from "./not-found"
 
 export default function Member() {
@@ -18,7 +18,7 @@ export default function Member() {
 
   useEffect(() => {
     if (member) {
-      setTitleAndTrack(`Member - ${member.name}`)
+      setTitle(`Member - ${member.name}`)
     }
   }, [])
 

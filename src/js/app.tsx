@@ -18,6 +18,12 @@ const Wrapper = ({children}: Props) => {
 
   useLayoutEffect(() => {
     document.documentElement.scrollTo(0, 0)
+
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "page_view", {
+        page_path: location.pathname,
+      })
+    }
   }, [location.pathname])
 
   return children

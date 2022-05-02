@@ -7,12 +7,7 @@ import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {
-  countryNameMap,
-  getPercentage,
-  setTitleAndTrack,
-  stageNameMap,
-} from "../utils"
+import {countryNameMap, getPercentage, setTitle, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 
 export default function Season() {
@@ -24,7 +19,7 @@ export default function Season() {
 
   useEffect(() => {
     if (season) {
-      setTitleAndTrack(`Season - ${season.name}`)
+      setTitle(`Season - ${season.name}`)
     }
   }, [])
 

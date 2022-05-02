@@ -6,12 +6,7 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {
-  countryNameMap,
-  getPercentage,
-  stageNameMap,
-  setTitleAndTrack,
-} from "../utils"
+import {countryNameMap, getPercentage, stageNameMap, setTitle} from "../utils"
 import NotFound from "./not-found"
 
 export default function Bot() {
@@ -23,7 +18,7 @@ export default function Bot() {
 
   useEffect(() => {
     if (bot) {
-      setTitleAndTrack(`Bot - ${bot.name}`)
+      setTitle(`Bot - ${bot.name}`)
     }
   }, [])
 

@@ -4,7 +4,7 @@ import {DbContext} from ".."
 import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import {DbInterface, SearchResult} from "../types"
-import {groupBy, setTitleAndTrack} from "../utils"
+import {groupBy, setTitle} from "../utils"
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -12,7 +12,7 @@ export default function Search() {
   const searchResults = searchTerm.length > 1 ? db.search(searchTerm) : []
 
   useEffect(() => {
-    setTitleAndTrack("Search")
+    setTitle("Search")
   }, [])
 
   const regEx = new RegExp(searchTerm, "i")
