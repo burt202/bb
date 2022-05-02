@@ -37,7 +37,6 @@ export default function Home() {
                   justifyContent: "center",
                   height: 135,
                   fontSize: 48,
-                  color: "#003366",
                 }}
               >
                 {s.name}
