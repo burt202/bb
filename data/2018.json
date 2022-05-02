@@ -4,7 +4,7 @@
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
-      "stage": "roundof16",
+      "stage": "winner",
       "country": "USA"
     },
     {
@@ -82,7 +82,7 @@
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas", "Carlos Junior"],
-      "stage": "semi",
+      "stage": "final",
       "country": "BRA"
     },
     {
@@ -100,7 +100,7 @@
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
@@ -165,7 +165,7 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "roundof16",
+      "stage": "semi",
       "country": "USA"
     },
     {
@@ -297,7 +297,7 @@
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "roundof16",
+      "stage": "quarter",
       "country": "USA"
     },
     {
@@ -949,6 +949,60 @@
       "bots": ["Minotaur", "Monsoon"],
       "winner": "Minotaur",
       "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Biteforce", "Huge"],
+      "winner": "Biteforce",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Icewave", "Rotator"],
+      "winner": "Rotator",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Bronco", "War Hawk"],
+      "winner": "Bronco",
+      "stage": "roundof16",
+      "ko": true
+    },
+    {
+      "bots": ["Yeti", "Whiplash"],
+      "winner": "Whiplash",
+      "stage": "roundof16",
+      "ko": false
+    },
+    {
+      "bots": ["Biteforce", "Rotator"],
+      "winner": "Biteforce",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Bronco", "Whiplash"],
+      "winner": "Whiplash",
+      "stage": "quarter",
+      "ko": true
+    },
+    {
+      "bots": ["Minotaur", "Lock-Jaw"],
+      "winner": "Minotaur",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "bots": ["Biteforce", "Whiplash"],
+      "winner": "Biteforce",
+      "stage": "semi",
+      "ko": true
+    },
+    {
+      "bots": ["Biteforce", "Minotaur"],
+      "winner": "Biteforce",
+      "stage": "final",
       "ko": true
     }
   ]
