@@ -5,7 +5,7 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {round} from "../utils"
+import {round, SITE_NAME} from "../utils"
 
 export default function Home() {
   const db = useContext(DbContext) as DbInterface
@@ -20,7 +20,7 @@ export default function Home() {
   const totalFights = db.getTotalFights()
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>Battlebots Database</h1>}>
+    <Page headerComponent={<h1 style={{margin: 0}}>{SITE_NAME}</h1>}>
       <h3>Seasons</h3>
       <div className="seasons-grid">
         {seasons.map((s, i) => (

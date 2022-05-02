@@ -1,4 +1,4 @@
-const SITE_NAME = "Battlebots DB"
+export const SITE_NAME = "Battlebots DB"
 
 export function convertNameToId(name: string) {
   return name
