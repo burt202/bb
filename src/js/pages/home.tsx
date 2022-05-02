@@ -25,7 +25,11 @@ export default function Home() {
       <div className="seasons-grid">
         {seasons.map((s, i) => (
           <div style={{background: "#ccc", width: "100%", height: 135}} key={i}>
-            <SiteLink to={`/season/${s.id}`} pageTitle={`Season - ${s.name}`}>
+            <SiteLink
+              to={`/season/${s.id}`}
+              pageTitle={`Season - ${s.name}`}
+              textLink={true}
+            >
               <div
                 style={{
                   display: "flex",
