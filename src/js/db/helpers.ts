@@ -18,6 +18,12 @@ export function createTables(db: Database) {
       primary key (id)
     );
 
+    CREATE TABLE primary_weapon_types (
+      id text UNIQUE NOT NULL,
+      name text UNIQUE NOT NULL,
+      primary key (id)
+    );
+
     CREATE TABLE bots (
       id text UNIQUE NOT NULL,
       name text UNIQUE NOT NULL,
@@ -249,6 +255,24 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 8);
     INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 9);
   `)
+
+  const primaryWeaponTypes = [
+    "crusher",
+    "vertical",
+    "horizontal",
+    "hammer",
+    "lifter",
+    "fullbody",
+    "grappler",
+    "flipper",
+    "saw",
+    "multi",
+    "other",
+  ]
+
+  primaryWeaponTypes.forEach((w) => {
+    db.run(`INSERT INTO primary_weapon_types VALUES ('${uuid.v4()}', '${w}');`)
+  })
 
   data.forEach((season) => {
     const seasonId = convertNameToId(season.year.toString())
