@@ -41,6 +41,11 @@ export interface DbSeason {
   name: string
 }
 
+export interface DbPrimaryWeaponType {
+  id: string
+  name: string
+}
+
 export interface DbSeasonBot {
   bot_id: string
   bot_name: string

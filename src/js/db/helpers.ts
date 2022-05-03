@@ -1,6 +1,13 @@
 import {Database} from "sql.js"
 import * as uuid from "uuid"
-import {DbBot, DbMember, DbStage, RawFight, RawSeason} from "../types"
+import {
+  DbBot,
+  DbMember,
+  DbPrimaryWeaponType,
+  DbStage,
+  RawFight,
+  RawSeason,
+} from "../types"
 import {convertNameToId} from "../utils"
 
 export function createTables(db: Database) {
@@ -45,6 +52,13 @@ export function createTables(db: Database) {
       foreign key (season_id) references seasons(id),
       foreign key (bot_id) references bots(id),
       foreign key (stage_id) references stages(id)
+    );
+
+    CREATE TABLE season_bot_primary_weapon_types (
+      bot_id text NOT NULL,
+      season_id text NOT NULL,
+      primary_weapon_type text NOT NULL,
+      primary key (bot_id, season_id)
     );
 
     CREATE TABLE bot_members (
@@ -142,6 +156,16 @@ function getBotByName(db: Database, name: string) {
   })
 }
 
+function getPrimaryWeaponTypeByName(db: Database, name: string) {
+  return getOne<DbPrimaryWeaponType>(
+    db,
+    "SELECT * FROM primary_weapon_types WHERE name=:name",
+    {
+      ":name": name,
+    },
+  )
+}
+
 function getMemberByName(db: Database, name: string) {
   return getOne<DbMember>(db, "SELECT * FROM members WHERE name=:name", {
     ":name": name,
@@ -173,6 +197,24 @@ function addBotToSeason(
   }
 
   db.run("INSERT INTO season_bots VALUES (?,?,?)", [seasonId, botId, stage.id])
+}
+
+function addPrimaryWeaponForBotForSeason(
+  db: Database,
+  botId: string,
+  seasonId: string,
+  primaryWeaponType: string,
+) {
+  const found = getPrimaryWeaponTypeByName(db, primaryWeaponType)
+
+  if (found === undefined) {
+    throw new Error(`Cannot find primary weapon type: ${primaryWeaponType}`)
+  }
+  db.run("INSERT INTO season_bot_primary_weapon_types VALUES (?,?,?)", [
+    botId,
+    seasonId,
+    primaryWeaponType,
+  ])
 }
 
 function insertMember(db: Database, name: string) {
@@ -281,6 +323,13 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name, bot.country)
       addBotToSeason(db, seasonId, insertedBot.id, bot.stage)
+
+      addPrimaryWeaponForBotForSeason(
+        db,
+        insertedBot.id,
+        seasonId,
+        bot.primaryWeaponType,
+      )
 
       bot.keyMembers.forEach((member, i) => {
         const insertedMember = insertMember(db, member)
