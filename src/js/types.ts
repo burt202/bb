@@ -159,10 +159,10 @@ export interface DbInterface {
   getBotFights: (id: string) => Array<BotFight>
   getMemberById: (id: string) => Member | undefined
   getMemberSeasons: (id: string) => Array<MemberSeason>
-  getTop10MostWins: () => Array<Top10Result>
-  getTop10MostKOs: () => Array<Top10Result>
-  getTop10BestWinPercentages: () => Array<Top10Result>
-  getTop10BestKOPercentages: () => Array<Top10Result>
+  getTop10MostWins: (allTime: boolean) => Array<Top10Result>
+  getTop10MostKOs: (allTime: boolean) => Array<Top10Result>
+  getTop10BestWinPercentages: (allTime: boolean) => Array<Top10Result>
+  getTop10BestKOPercentages: (allTime: boolean) => Array<Top10Result>
   getMostMatchesPlayed: () => Bot
   getTotalBots: () => number
   getTotalFights: () => number

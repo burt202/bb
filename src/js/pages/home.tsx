@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useContext} from "react"
+import {useContext, useState} from "react"
 import {DbContext} from ".."
 import Page from "../components/page"
 import SiteLink from "../components/site-link"
@@ -7,14 +7,21 @@ import Table from "../components/table"
 import {DbInterface} from "../types"
 import {round, SITE_NAME} from "../utils"
 
+const STORAGE_KEY = "battlebots_db_stats_time_span"
+
 export default function Home() {
+  const [statsTimeSpan, setStatsTimeSpan] = useState(
+    localStorage.getItem(STORAGE_KEY) ?? "allTime",
+  )
   const db = useContext(DbContext) as DbInterface
   const seasons = db.getAllSeasons()
 
-  const top10MostWins = db.getTop10MostWins()
-  const top10MostKOs = db.getTop10MostKOs()
-  const top10BestWinPercentages = db.getTop10BestWinPercentages()
-  const top10BestKOPercentages = db.getTop10BestKOPercentages()
+  const allTime = statsTimeSpan === "allTime"
+
+  const top10MostWins = db.getTop10MostWins(allTime)
+  const top10MostKOs = db.getTop10MostKOs(allTime)
+  const top10BestWinPercentages = db.getTop10BestWinPercentages(allTime)
+  const top10BestKOPercentages = db.getTop10BestKOPercentages(allTime)
   const mostMatchesPlayed = db.getMostMatchesPlayed()
   const totalBots = db.getTotalBots()
   const totalFights = db.getTotalFights()
@@ -45,6 +52,23 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <select
+        value={statsTimeSpan}
+        onChange={(e) => {
+          setStatsTimeSpan(e.target.value)
+          localStorage.setItem(STORAGE_KEY, e.target.value)
+        }}
+        style={{
+          marginTop: 16,
+          padding: 8,
+          backgroundColor: "#f5f5f5",
+          border: "1px solid grey",
+          borderRadius: 5,
+        }}
+      >
+        <option value="allTime">All time</option>
+        <option value="last3Seasons">Last 3 seasons</option>
+      </select>
       <div className="stats-grid">
         <div>
           <h3>Top 10 Most Wins</h3>

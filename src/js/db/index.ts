@@ -237,7 +237,13 @@ export default async function createDb(
         }
       })
     },
-    getTop10MostWins: () => {
+    getTop10MostWins: (allTime) => {
+      const lastThreeSeasonsWhere = allTime
+        ? ""
+        : `WHERE f.season_id IN (
+        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+      )`
+
       const sql = `
         SELECT
           b.name AS bot_name,
@@ -249,6 +255,7 @@ export default async function createDb(
             f.winner_id AS bot_id,
             COUNT(f.winner_id) AS count
           FROM fights f
+          ${lastThreeSeasonsWhere}
           GROUP BY f.winner_id
           ORDER BY count DESC
           LIMIT 10
@@ -265,7 +272,13 @@ export default async function createDb(
         }
       })
     },
-    getTop10MostKOs: () => {
+    getTop10MostKOs: (allTime) => {
+      const lastThreeSeasonsWhere = allTime
+        ? ""
+        : `AND f.season_id IN (
+        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+      )`
+
       const sql = `
         SELECT
           b.name AS bot_name,
@@ -278,6 +291,7 @@ export default async function createDb(
             COUNT(f.winner_id) AS count
           FROM fights f
           WHERE f.ko = 'true'
+          ${lastThreeSeasonsWhere}
           GROUP BY f.winner_id
           ORDER BY count DESC
           LIMIT 10
@@ -294,7 +308,13 @@ export default async function createDb(
         }
       })
     },
-    getTop10BestWinPercentages: () => {
+    getTop10BestWinPercentages: (allTime) => {
+      const lastThreeSeasonsWhere = allTime
+        ? ""
+        : `WHERE f.season_id IN (
+        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+      )`
+
       const sql = `
         SELECT
           b.name AS bot_name,
@@ -306,6 +326,7 @@ export default async function createDb(
             f.winner_id AS bot_id,
             COUNT(f.winner_id) AS count
           FROM fights f
+          ${lastThreeSeasonsWhere}
           GROUP BY winner_id
         ) AS wins ON b.id = wins.bot_id
         INNER JOIN (
@@ -313,6 +334,9 @@ export default async function createDb(
             fb.bot_id AS bot_id,
             COUNT(fb.bot_id) AS count
           FROM fight_bots fb
+          INNER JOIN fights f
+          ON fb.fight_id = f.id
+          ${lastThreeSeasonsWhere}
           GROUP BY fb.bot_id
         ) AS total ON b.id = total.bot_id
         WHERE total.count > 5
@@ -330,7 +354,13 @@ export default async function createDb(
         }
       })
     },
-    getTop10BestKOPercentages: () => {
+    getTop10BestKOPercentages: (allTime) => {
+      const lastThreeSeasonsWhere = allTime
+        ? ""
+        : `f.season_id IN (
+        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+      )`
+
       const sql = `
         SELECT
           b.name AS bot_name,
@@ -343,6 +373,11 @@ export default async function createDb(
             COUNT(f.winner_id) AS count
           FROM fights f
           WHERE f.ko = 'true'
+          ${
+            lastThreeSeasonsWhere.length > 0
+              ? `AND ${lastThreeSeasonsWhere}`
+              : ""
+          }
           GROUP BY winner_id
         ) AS kos ON b.id = kos.bot_id
         INNER JOIN (
@@ -350,6 +385,13 @@ export default async function createDb(
             fb.bot_id AS bot_id,
             COUNT(fb.bot_id) AS count
           FROM fight_bots fb
+          INNER JOIN fights f
+          ON fb.fight_id = f.id
+          ${
+            lastThreeSeasonsWhere.length > 0
+              ? `WHERE ${lastThreeSeasonsWhere}`
+              : ""
+          }
           GROUP BY fb.bot_id
         ) AS total ON b.id = total.bot_id
         WHERE total.count > 5
