@@ -116,10 +116,14 @@ export default async function createDb(
         SELECT
           s.id AS season_id,
           s.name AS season_name,
-          st.name AS stage_name
+          st.name AS stage_name,
+          sbpwt.primary_weapon_type AS primary_weapon_type
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
         INNER JOIN stages st ON sb.stage_id = st.id
+        INNER JOIN season_bot_primary_weapon_types sbpwt
+          ON sb.bot_id = sbpwt.bot_id
+          AND sb.season_id = sbpwt.season_id
         WHERE sb.bot_id = :id
         ORDER BY s.id DESC
       `
@@ -152,6 +156,7 @@ export default async function createDb(
           seasonId: bs.season_id,
           seasonName: bs.season_name,
           stageName: bs.stage_name,
+          primaryWeaponType: bs.primary_weapon_type,
         }
       })
     },

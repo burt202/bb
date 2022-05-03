@@ -59,3 +59,17 @@ export const countryNameMap = {
   rus: "Russia",
   usa: "USA",
 } as Record<string, string>
+
+export const primaryWeaponTypeNameMap = {
+  crusher: "Crusher",
+  vertical: "Vertical Spinner",
+  horizontal: "Horizontal Spinner",
+  hammer: "Hammer/Axe",
+  lifter: "Lifter",
+  fullbody: "Full Body Spinner",
+  grappler: "Grappler",
+  flipper: "Flipper",
+  saw: "Saw",
+  multi: "Multi",
+  other: "Other",
+} as Record<string, string>

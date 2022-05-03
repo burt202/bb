@@ -64,6 +64,7 @@ export interface DbBotSeason {
   season_id: string
   season_name: string
   stage_name: string
+  primary_weapon_type: string
 }
 
 export interface DbBotFight {
@@ -117,6 +118,7 @@ export interface BotSeason {
   seasonId: string
   seasonName: string
   stageName: string
+  primaryWeaponType: string
   members: Array<Member>
 }
 

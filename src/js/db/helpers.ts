@@ -8,7 +8,7 @@ import {
   RawFight,
   RawSeason,
 } from "../types"
-import {convertNameToId} from "../utils"
+import {convertNameToId, primaryWeaponTypeNameMap} from "../utils"
 
 export function createTables(db: Database) {
   db.run(`
@@ -298,21 +298,7 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
     INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 9);
   `)
 
-  const primaryWeaponTypes = [
-    "crusher",
-    "vertical",
-    "horizontal",
-    "hammer",
-    "lifter",
-    "fullbody",
-    "grappler",
-    "flipper",
-    "saw",
-    "multi",
-    "other",
-  ]
-
-  primaryWeaponTypes.forEach((w) => {
+  Object.keys(primaryWeaponTypeNameMap).forEach((w) => {
     db.run(`INSERT INTO primary_weapon_types VALUES ('${uuid.v4()}', '${w}');`)
   })
 

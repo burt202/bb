@@ -6,7 +6,13 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {countryNameMap, getPercentage, stageNameMap, setTitle} from "../utils"
+import {
+  countryNameMap,
+  getPercentage,
+  stageNameMap,
+  setTitle,
+  primaryWeaponTypeNameMap,
+} from "../utils"
 import NotFound from "./not-found"
 
 export default function Bot() {
@@ -77,14 +83,14 @@ export default function Bot() {
                 </SiteLink>
               )
             },
-            width: 4,
+            width: 3,
           },
           {
             title: "Stage",
             getValue: (bs) => {
               return stageNameMap[bs.stageName]
             },
-            width: 4,
+            width: 3,
           },
           {
             title: "Key Members",
@@ -106,7 +112,14 @@ export default function Bot() {
                 )
               })
             },
-            width: 10,
+            width: 8,
+          },
+          {
+            title: "Primary Weapon Type",
+            getValue: (bs) => {
+              return primaryWeaponTypeNameMap[bs.primaryWeaponType]
+            },
+            width: 4,
           },
         ]}
       />
