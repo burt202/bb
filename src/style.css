@@ -42,6 +42,11 @@ th {
   grid-gap: 16px;
 }
 
+.bottom-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
 .side-by-side {
   display: flex;
   column-gap: 16px;
@@ -61,6 +66,10 @@ th {
 .bot-stats {
   display: flex;
   justify-content: space-between;
+}
+
+.season-pwt-link {
+  text-align: right;
 }
 
 @media screen and (max-width: 900px) {
@@ -89,6 +98,10 @@ th {
   .stats-box {
     width: 100%;
   }
+
+  .season-pwt-link {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -99,5 +112,10 @@ th {
   .bot-stats {
     flex-direction: column;
     margin-bottom: 16px;
+  }
+
+  .bottom-stats {
+    flex-direction: column-reverse;
+    justify-content: normal;
   }
 }

@@ -191,18 +191,33 @@ export default function Home() {
           />
         </div>
       </div>
-      <p>
-        Most matches played:{" "}
-        <SiteLink
-          to={`/bot/${mostMatchesPlayed.id}`}
-          textLink={true}
-          pageTitle={`Bot - ${mostMatchesPlayed.name}`}
-        >
-          {mostMatchesPlayed.name}
-        </SiteLink>
-      </p>
-      <p>Total bots: {totalBots}</p>
-      <p>Total fights: {totalFights}</p>
+      <div className="bottom-stats">
+        <div>
+          <p>
+            Most matches played:{" "}
+            <SiteLink
+              to={`/bot/${mostMatchesPlayed.id}`}
+              textLink={true}
+              pageTitle={`Bot - ${mostMatchesPlayed.name}`}
+            >
+              {mostMatchesPlayed.name}
+            </SiteLink>
+          </p>
+          <p>Total bots: {totalBots}</p>
+          <p>Total fights: {totalFights}</p>
+        </div>
+        <div>
+          <p>
+            <SiteLink
+              to="/primary-weapon-types"
+              textLink={true}
+              pageTitle="Primary Weapon Types"
+            >
+              Primary Weapon Stats
+            </SiteLink>
+          </p>
+        </div>
+      </div>
     </Page>
   )
 }

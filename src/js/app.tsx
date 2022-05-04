@@ -6,6 +6,7 @@ import Country from "./pages/country"
 import Home from "./pages/home"
 import Member from "./pages/member"
 import NotFound from "./pages/not-found"
+import PrimaryWeaponTypes from "./pages/primary-weapon-types"
 import Search from "./pages/search"
 import Season from "./pages/season"
 
@@ -40,6 +41,10 @@ export default function App() {
           <Route path="/bot/:botId" element={<Bot />} />
           <Route path="/member/:memberId" element={<Member />} />
           <Route path="/country/:countryId" element={<Country />} />
+          <Route
+            path="/primary-weapon-types"
+            element={<PrimaryWeaponTypes />}
+          />
           <Route path="*" element={<NotFound title="Page Not Found" />} />
         </Routes>
       </Wrapper>

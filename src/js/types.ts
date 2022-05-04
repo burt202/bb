@@ -46,6 +46,11 @@ export interface DbPrimaryWeaponType {
   name: string
 }
 
+export interface DbPrimaryWeaponTypeWinCountBreakdown {
+  primary_weapon_type: string
+  count: number
+}
+
 export interface DbSeasonBot {
   bot_id: string
   bot_name: string
@@ -157,6 +162,11 @@ export interface CountryBot {
   totalFights: number
 }
 
+export interface PrimaryWeaponTypeWinCountBreakdown {
+  primaryWeaponType: string
+  count: number
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -176,4 +186,7 @@ export interface DbInterface {
   getTotalFights: () => number
   search: (term: string) => Array<SearchResult>
   getBotsForCountry: (id: string) => Array<CountryBot>
+  getPrimaryWeaponTypeWinCountBreakdown: (
+    season?: string,
+  ) => Array<PrimaryWeaponTypeWinCountBreakdown>
 }

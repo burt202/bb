@@ -6,6 +6,7 @@ import {
   DbCountryBot,
   DbInterface,
   DbMemberSeason,
+  DbPrimaryWeaponTypeWinCountBreakdown,
   DbSeason,
   DbSeasonBot,
   DbSeasonFight,
@@ -516,6 +517,31 @@ export default async function createDb(
           totalFights: cb.total_fights,
         }
       })
+    },
+    getPrimaryWeaponTypeWinCountBreakdown: (season) => {
+      const seasonWhere = season ? `WHERE f.season_id = ${season}` : ""
+
+      const sql = `
+        SELECT
+          sbpwt.primary_weapon_type,
+          COUNT(*) AS count
+        FROM fights f
+        INNER JOIN season_bot_primary_weapon_types sbpwt
+          ON f.winner_id = sbpwt.bot_id
+          AND f.season_id = sbpwt.season_id
+        ${seasonWhere}
+        GROUP BY sbpwt.primary_weapon_type
+        ORDER BY COUNT(*) DESC
+      `
+
+      return getMany<DbPrimaryWeaponTypeWinCountBreakdown>(db, sql).map(
+        (pwt) => {
+          return {
+            primaryWeaponType: pwt.primary_weapon_type,
+            count: pwt.count,
+          }
+        },
+      )
     },
   }
 }

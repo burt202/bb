@@ -153,6 +153,15 @@ export default function Season() {
               value={getPercentage(seasonFights.length, koFights.length)}
             />
           </div>
+          <p className="season-pwt-link">
+            <SiteLink
+              to={`/primary-weapon-types?season=${season.id}`}
+              textLink={true}
+              pageTitle="Primary Weapon Types"
+            >
+              Primary Weapon Stats
+            </SiteLink>
+          </p>
         </div>
       </div>
 
