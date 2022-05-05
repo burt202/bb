@@ -3,15 +3,20 @@ import * as React from "react"
 import {useContext, useEffect, useState} from "react"
 import {DbContext} from ".."
 import Page from "../components/page"
+import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {setTitle, primaryWeaponTypeNameMap} from "../utils"
+import {setTitle, primaryWeaponTypeNameMap, stageNameMap} from "../utils"
 
-function updateUrlParams(season?: string) {
+function updateUrlParams(seasonId?: string, primaryWeaponTypeId?: string) {
   const params = {} as Record<string, string>
 
-  if (season) {
-    params.season = season
+  if (seasonId) {
+    params.season = seasonId
+  }
+
+  if (primaryWeaponTypeId) {
+    params.primaryWeaponType = primaryWeaponTypeId
   }
 
   if (Object.keys(params).length === 0) {
@@ -30,16 +35,18 @@ function updateUrlParams(season?: string) {
 export default function PrimaryWeaponTypes() {
   const parsed = querystring.parse(window.location.hash.split("?")[1] || "")
 
-  const [seasonId, setSeasonId] = useState<string | undefined>(
-    parsed.season as string | undefined,
+  const [seasonId, setSeasonId] = useState(
+    (parsed.season as string | undefined) ?? "all",
+  )
+
+  const [primaryWeaponTypeId, setPrimaryWeaponTypeId] = useState(
+    (parsed.primaryWeaponType as string | undefined) ?? "all",
   )
 
   const db = useContext(DbContext) as DbInterface
 
-  const data = db.getPrimaryWeaponTypeWinCountBreakdown(
-    seasonId === "all" ? undefined : seasonId,
-  )
   const seasons = db.getAllSeasons()
+  const primaryWeaponTypes = db.getAllPrimaryWeapons()
 
   useEffect(() => {
     setTitle("Primary Weapon Types")
@@ -47,6 +54,24 @@ export default function PrimaryWeaponTypes() {
 
   const hasAllSeasonsSelected = !seasonId || seasonId === "all"
   const hasSpecificSeasonSelected = seasonId && seasonId !== "all"
+  const hasAllPrimaryWeaponTypeSelected =
+    !primaryWeaponTypeId || primaryWeaponTypeId === "all"
+  const hasSpecificPrimaryWeaponTypeSelected =
+    primaryWeaponTypeId && primaryWeaponTypeId !== "all"
+
+  const seasonData =
+    hasAllSeasonsSelected || hasSpecificSeasonSelected
+      ? db.getPrimaryWeaponTypeWinCountBreakdown(
+          seasonId === "all" ? undefined : seasonId,
+        )
+      : []
+
+  const primaryWeaponTypeFights = hasSpecificPrimaryWeaponTypeSelected
+    ? db.getPrimaryWeaponTypeWins(
+        primaryWeaponTypeId,
+        seasonId === "all" ? undefined : seasonId,
+      )
+    : []
 
   return (
     <Page headerComponent={<h1 style={{margin: 0}}>Primary Weapon Types</h1>}>
@@ -54,7 +79,10 @@ export default function PrimaryWeaponTypes() {
         value={seasonId}
         onChange={(e) => {
           setSeasonId(e.target.value)
-          updateUrlParams(e.target.value === "all" ? undefined : e.target.value)
+          updateUrlParams(
+            e.target.value === "all" ? undefined : e.target.value,
+            primaryWeaponTypeId,
+          )
         }}
         style={{
           marginTop: 16,
@@ -68,15 +96,43 @@ export default function PrimaryWeaponTypes() {
         <option value="all">All seasons</option>
         {seasons.map((s) => {
           return (
-            <option key={s.name} value={s.name}>
+            <option key={s.id} value={s.id}>
               {s.name}
             </option>
           )
         })}
       </select>
-      {hasAllSeasonsSelected && (
+      <select
+        value={primaryWeaponTypeId}
+        onChange={(e) => {
+          setPrimaryWeaponTypeId(e.target.value)
+          updateUrlParams(
+            seasonId,
+            e.target.value === "all" ? undefined : e.target.value,
+          )
+        }}
+        style={{
+          marginTop: 16,
+          marginBottom: 16,
+          marginLeft: 16,
+          padding: 8,
+          backgroundColor: "#f5f5f5",
+          border: "1px solid grey",
+          borderRadius: 5,
+        }}
+      >
+        <option value="all">All weapon types</option>
+        {primaryWeaponTypes.map((pwt) => {
+          return (
+            <option key={pwt.id} value={pwt.id}>
+              {primaryWeaponTypeNameMap[pwt.name]}
+            </option>
+          )
+        })}
+      </select>
+      {hasAllSeasonsSelected && hasAllPrimaryWeaponTypeSelected && (
         <Table
-          data={data}
+          data={seasonData}
           columns={[
             {
               title: "Primary Weapon Type",
@@ -95,9 +151,9 @@ export default function PrimaryWeaponTypes() {
           ]}
         />
       )}
-      {hasSpecificSeasonSelected && (
+      {hasSpecificSeasonSelected && hasAllPrimaryWeaponTypeSelected && (
         <Table
-          data={data}
+          data={seasonData}
           columns={[
             {
               title: "Primary Weapon Type",
@@ -122,6 +178,135 @@ export default function PrimaryWeaponTypes() {
             },
           ]}
         />
+      )}
+      {hasAllSeasonsSelected && hasSpecificPrimaryWeaponTypeSelected && (
+        <>
+          <h3>Wins ({primaryWeaponTypeFights.length})</h3>
+          <Table
+            data={primaryWeaponTypeFights}
+            shouldShowDivider={(data, row, i) => {
+              return data[i + 1] === undefined
+                ? false
+                : row.seasonId !== data[i + 1].seasonId
+            }}
+            columns={[
+              {
+                title: "Bots",
+                getValue: (pwtf) => {
+                  return pwtf.bots.map((c, i) => {
+                    const isLastBot = i + 1 === pwtf.bots.length
+
+                    return (
+                      <React.Fragment key={i}>
+                        <span
+                          style={{
+                            fontWeight:
+                              pwtf.winnerName === c.name ? "bold" : "normal",
+                          }}
+                        >
+                          <SiteLink
+                            to={`/bot/${c.id}`}
+                            textLink={true}
+                            pageTitle={`Bot - ${c.name}`}
+                          >
+                            {c.name}
+                          </SiteLink>
+                        </span>
+                        {isLastBot ? "" : " v "}
+                      </React.Fragment>
+                    )
+                  })
+                },
+                width: 10,
+              },
+              {
+                title: "Season",
+                getValue: (pwtf) => {
+                  return (
+                    <SiteLink
+                      to={`/season/${pwtf.seasonId}`}
+                      pageTitle={`Season - ${pwtf.seasonName}`}
+                      textLink={true}
+                    >
+                      {pwtf.seasonName}
+                    </SiteLink>
+                  )
+                },
+                width: 4,
+              },
+              {
+                title: "KO",
+                getValue: (pwtf) => {
+                  return pwtf.ko ? (
+                    <img src="tick.svg" style={{height: 24}} />
+                  ) : (
+                    <img src="cross.svg" style={{height: 24}} />
+                  )
+                },
+                width: 4,
+                alignCenter: true,
+              },
+            ]}
+          />
+        </>
+      )}
+      {hasSpecificSeasonSelected && hasSpecificPrimaryWeaponTypeSelected && (
+        <>
+          <h3>Wins ({primaryWeaponTypeFights.length})</h3>
+          <Table
+            data={primaryWeaponTypeFights}
+            columns={[
+              {
+                title: "Bots",
+                getValue: (pwtf) => {
+                  return pwtf.bots.map((c, i) => {
+                    const isLastBot = i + 1 === pwtf.bots.length
+
+                    return (
+                      <React.Fragment key={i}>
+                        <span
+                          style={{
+                            fontWeight:
+                              pwtf.winnerName === c.name ? "bold" : "normal",
+                          }}
+                        >
+                          <SiteLink
+                            to={`/bot/${c.id}`}
+                            textLink={true}
+                            pageTitle={`Bot - ${c.name}`}
+                          >
+                            {c.name}
+                          </SiteLink>
+                        </span>
+                        {isLastBot ? "" : " v "}
+                      </React.Fragment>
+                    )
+                  })
+                },
+                width: 10,
+              },
+              {
+                title: "Stage",
+                getValue: (pwtf) => {
+                  return stageNameMap[pwtf.stageName]
+                },
+                width: 4,
+              },
+              {
+                title: "KO",
+                getValue: (pwtf) => {
+                  return pwtf.ko ? (
+                    <img src="tick.svg" style={{height: 24}} />
+                  ) : (
+                    <img src="cross.svg" style={{height: 24}} />
+                  )
+                },
+                width: 4,
+                alignCenter: true,
+              },
+            ]}
+          />
+        </>
       )}
     </Page>
   )

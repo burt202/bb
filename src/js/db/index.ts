@@ -10,9 +10,11 @@ import {
   DbSeason,
   DbSeasonBot,
   DbSeasonFight,
+  DbPrimaryWeaponType,
   DbTop10Result,
   RawSeason,
   SearchResult,
+  DbPrimaryWeaponTypeWin,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -569,6 +571,66 @@ export default async function createDb(
           }
         },
       )
+    },
+    getAllPrimaryWeapons: () => {
+      return getMany<DbPrimaryWeaponType>(
+        db,
+        "SELECT * FROM primary_weapon_types ORDER BY name",
+      )
+    },
+    getPrimaryWeaponTypeWins: (primaryWeaponTypeId, seasonId) => {
+      const seasonWhere = seasonId ? `AND f.season_id = ${seasonId}` : ""
+
+      const sql = `
+        SELECT
+          f.id AS fight_id,
+          f.ko,
+          f.season_id,
+          b.name AS winner_name,
+          s.name AS season_name,
+          st.name AS stage_name
+        FROM fights f
+        INNER JOIN bots b ON f.winner_id = b.id
+        INNER JOIN seasons s ON f.season_id = s.id
+        INNER JOIN stages st ON f.stage_id = st.id
+        INNER JOIN season_bot_primary_weapon_types sbpwt
+          ON f.winner_id = sbpwt.bot_id
+          AND f.season_id = sbpwt.season_id
+        WHERE sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
+          ${seasonWhere}
+        ORDER BY f.season_id DESC
+      `
+
+      const primaryWeaponTypeWins = getMany<DbPrimaryWeaponTypeWin>(db, sql, {
+        ":primaryWeaponTypeId": primaryWeaponTypeId,
+      })
+
+      return primaryWeaponTypeWins.map((f) => {
+        const bots = getMany<DbBot>(
+          db,
+          `
+            SELECT
+              b.id,
+              b.name,
+              b.country
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id = :id
+          `,
+          {
+            ":id": f.fight_id,
+          },
+        )
+
+        return {
+          ko: f.ko === "true",
+          seasonId: f.season_id,
+          seasonName: f.season_name,
+          winnerName: f.winner_name,
+          stageName: f.stage_name,
+          bots,
+        }
+      })
     },
   }
 }

@@ -101,9 +101,19 @@ export interface DbCountryBot {
   total_fights: number
 }
 
+export interface DbPrimaryWeaponTypeWin {
+  fight_id: string
+  ko: string
+  season_id: string
+  season_name: string
+  winner_name: string
+  stage_name: string
+}
+
 export type Season = DbSeason
 export type Bot = DbBot
 export type Member = DbMember
+export type PrimaryWeaponType = DbPrimaryWeaponType
 
 export interface SeasonBot {
   botId: string
@@ -168,6 +178,15 @@ export interface PrimaryWeaponTypeWinCountBreakdown {
   botCount: number
 }
 
+export interface PrimaryWeaponTypeWin {
+  ko: boolean
+  seasonId: string
+  seasonName: string
+  winnerName: string
+  stageName: string
+  bots: Array<Bot>
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
@@ -190,4 +209,9 @@ export interface DbInterface {
   getPrimaryWeaponTypeWinCountBreakdown: (
     seasonId?: string,
   ) => Array<PrimaryWeaponTypeWinCountBreakdown>
+  getAllPrimaryWeapons: () => Array<PrimaryWeaponType>
+  getPrimaryWeaponTypeWins: (
+    primaryWeaponTypeId: string,
+    seasonId?: string,
+  ) => Array<PrimaryWeaponTypeWin>
 }

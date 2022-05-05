@@ -299,7 +299,10 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
   `)
 
   Object.keys(primaryWeaponTypeNameMap).forEach((w) => {
-    db.run(`INSERT INTO primary_weapon_types VALUES ('${uuid.v4()}', '${w}');`)
+    const primaryWeaponTypeId = convertNameToId(w)
+    db.run(
+      `INSERT INTO primary_weapon_types VALUES ('${primaryWeaponTypeId}', '${w}');`,
+    )
   })
 
   data.forEach((season) => {
