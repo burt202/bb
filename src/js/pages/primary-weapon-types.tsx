@@ -137,7 +137,21 @@ export default function PrimaryWeaponTypes() {
             {
               title: "Primary Weapon Type",
               getValue: (pwt) => {
-                return primaryWeaponTypeNameMap[pwt.primaryWeaponType]
+                return (
+                  <a
+                    style={{
+                      color: "#003366",
+                      cursor: "pointer",
+                      textDecoration: "underline",
+                    }}
+                    onClick={() => {
+                      setPrimaryWeaponTypeId(pwt.id)
+                      updateUrlParams(seasonId, pwt.id)
+                    }}
+                  >
+                    {primaryWeaponTypeNameMap[pwt.name]}
+                  </a>
+                )
               },
               width: 5,
             },
@@ -158,7 +172,21 @@ export default function PrimaryWeaponTypes() {
             {
               title: "Primary Weapon Type",
               getValue: (pwt) => {
-                return primaryWeaponTypeNameMap[pwt.primaryWeaponType]
+                return (
+                  <a
+                    style={{
+                      color: "#003366",
+                      cursor: "pointer",
+                      textDecoration: "underline",
+                    }}
+                    onClick={() => {
+                      setPrimaryWeaponTypeId(pwt.id)
+                      updateUrlParams(seasonId, pwt.id)
+                    }}
+                  >
+                    {primaryWeaponTypeNameMap[pwt.name]}
+                  </a>
+                )
               },
               width: 5,
             },

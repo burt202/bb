@@ -526,7 +526,8 @@ export default async function createDb(
 
       const sql = `
         SELECT
-          pwt.name AS primary_weapon_type,
+          pwt.id,
+          pwt.name,
           wins.count
         FROM primary_weapon_types pwt
         LEFT JOIN (
@@ -552,20 +553,21 @@ export default async function createDb(
             FROM season_bot_primary_weapon_types sbpwt
             INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
             WHERE sbpwt.season_id = :seasonId
-            AND pwt.name = :primaryWeaponType
+            AND pwt.id = :primaryWeaponTypeId
           `
 
           if (seasonId) {
             const res = getOne<{count: number}>(db, innerSql, {
               ":seasonId": seasonId,
-              ":primaryWeaponType": pwt.primary_weapon_type,
+              ":primaryWeaponTypeId": pwt.id,
             }) as {count: number}
 
             botCount = res.count
           }
 
           return {
-            primaryWeaponType: pwt.primary_weapon_type,
+            id: pwt.id,
+            name: pwt.name,
             wins: pwt.count ?? 0,
             botCount,
           }
@@ -598,7 +600,7 @@ export default async function createDb(
           AND f.season_id = sbpwt.season_id
         WHERE sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
           ${seasonWhere}
-        ORDER BY f.season_id DESC
+        ORDER BY f.season_id DESC, st.rank
       `
 
       const primaryWeaponTypeWins = getMany<DbPrimaryWeaponTypeWin>(db, sql, {

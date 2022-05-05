@@ -47,7 +47,8 @@ export interface DbPrimaryWeaponType {
 }
 
 export interface DbPrimaryWeaponTypeWinCountBreakdown {
-  primary_weapon_type: string
+  id: string
+  name: string
   count: number
 }
 
@@ -173,7 +174,8 @@ export interface CountryBot {
 }
 
 export interface PrimaryWeaponTypeWinCountBreakdown {
-  primaryWeaponType: string
+  id: string
+  name: string
   wins: number
   botCount: number
 }

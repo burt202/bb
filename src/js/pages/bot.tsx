@@ -117,7 +117,15 @@ export default function Bot() {
           {
             title: "Primary Weapon Type",
             getValue: (bs) => {
-              return primaryWeaponTypeNameMap[bs.primaryWeaponType]
+              return (
+                <SiteLink
+                  to={`/primary-weapon-types?primaryWeaponType=${bs.primaryWeaponType}&season=${bs.seasonId}`}
+                  textLink={true}
+                  pageTitle="Primary Weapon Types"
+                >
+                  {primaryWeaponTypeNameMap[bs.primaryWeaponType]}
+                </SiteLink>
+              )
             },
             width: 4,
           },
