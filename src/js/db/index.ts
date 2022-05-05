@@ -519,28 +519,53 @@ export default async function createDb(
         }
       })
     },
-    getPrimaryWeaponTypeWinCountBreakdown: (season) => {
-      const seasonWhere = season ? `WHERE f.season_id = ${season}` : ""
+    getPrimaryWeaponTypeWinCountBreakdown: (seasonId) => {
+      const seasonWhere = seasonId ? `WHERE f.season_id = ${seasonId}` : ""
 
       const sql = `
         SELECT
           pwt.name AS primary_weapon_type,
-          COUNT(*) AS count
-        FROM fights f
-        INNER JOIN season_bot_primary_weapon_types sbpwt
-          ON f.winner_id = sbpwt.bot_id
-          AND f.season_id = sbpwt.season_id
-        INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
-        ${seasonWhere}
-        GROUP BY pwt.name
-        ORDER BY COUNT(*) DESC
+          wins.count
+        FROM primary_weapon_types pwt
+        LEFT JOIN (
+          SELECT
+            sbpwt.primary_weapon_type_id,
+            COUNT(*) AS count
+          FROM fights f
+          INNER JOIN season_bot_primary_weapon_types sbpwt
+            ON f.winner_id = sbpwt.bot_id
+            AND f.season_id = sbpwt.season_id
+          ${seasonWhere}
+          GROUP BY sbpwt.primary_weapon_type_id
+        ) AS wins ON pwt.id = wins.primary_weapon_type_id
+        ORDER BY wins.count DESC
       `
 
       return getMany<DbPrimaryWeaponTypeWinCountBreakdown>(db, sql).map(
         (pwt) => {
+          let botCount = 0
+
+          const innerSql = `
+            SELECT COUNT(*) AS count
+            FROM season_bot_primary_weapon_types sbpwt
+            INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
+            WHERE sbpwt.season_id = :seasonId
+            AND pwt.name = :primaryWeaponType
+          `
+
+          if (seasonId) {
+            const res = getOne<{count: number}>(db, innerSql, {
+              ":seasonId": seasonId,
+              ":primaryWeaponType": pwt.primary_weapon_type,
+            }) as {count: number}
+
+            botCount = res.count
+          }
+
           return {
             primaryWeaponType: pwt.primary_weapon_type,
-            count: pwt.count,
+            wins: pwt.count ?? 0,
+            botCount,
           }
         },
       )

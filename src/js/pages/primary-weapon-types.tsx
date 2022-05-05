@@ -30,14 +30,14 @@ function updateUrlParams(season?: string) {
 export default function PrimaryWeaponTypes() {
   const parsed = querystring.parse(window.location.hash.split("?")[1] || "")
 
-  const [season, setSeason] = useState<string | undefined>(
+  const [seasonId, setSeasonId] = useState<string | undefined>(
     parsed.season as string | undefined,
   )
 
   const db = useContext(DbContext) as DbInterface
 
   const data = db.getPrimaryWeaponTypeWinCountBreakdown(
-    season === "all" ? undefined : season,
+    seasonId === "all" ? undefined : seasonId,
   )
   const seasons = db.getAllSeasons()
 
@@ -45,12 +45,15 @@ export default function PrimaryWeaponTypes() {
     setTitle("Primary Weapon Types")
   }, [])
 
+  const hasAllSeasonsSelected = !seasonId || seasonId === "all"
+  const hasSpecificSeasonSelected = seasonId && seasonId !== "all"
+
   return (
     <Page headerComponent={<h1 style={{margin: 0}}>Primary Weapon Types</h1>}>
       <select
-        value={season}
+        value={seasonId}
         onChange={(e) => {
-          setSeason(e.target.value)
+          setSeasonId(e.target.value)
           updateUrlParams(e.target.value === "all" ? undefined : e.target.value)
         }}
         style={{
@@ -71,25 +74,55 @@ export default function PrimaryWeaponTypes() {
           )
         })}
       </select>
-      <Table
-        data={data}
-        columns={[
-          {
-            title: "Primary Weapon Type",
-            getValue: (pwt) => {
-              return primaryWeaponTypeNameMap[pwt.primaryWeaponType]
+      {hasAllSeasonsSelected && (
+        <Table
+          data={data}
+          columns={[
+            {
+              title: "Primary Weapon Type",
+              getValue: (pwt) => {
+                return primaryWeaponTypeNameMap[pwt.primaryWeaponType]
+              },
+              width: 5,
             },
-            width: 5,
-          },
-          {
-            title: "Wins",
-            getValue: (pwt) => {
-              return pwt.count
+            {
+              title: "Wins",
+              getValue: (pwt) => {
+                return pwt.wins
+              },
+              width: 4,
             },
-            width: 4,
-          },
-        ]}
-      />
+          ]}
+        />
+      )}
+      {hasSpecificSeasonSelected && (
+        <Table
+          data={data}
+          columns={[
+            {
+              title: "Primary Weapon Type",
+              getValue: (pwt) => {
+                return primaryWeaponTypeNameMap[pwt.primaryWeaponType]
+              },
+              width: 5,
+            },
+            {
+              title: "Wins",
+              getValue: (pwt) => {
+                return pwt.wins
+              },
+              width: 2,
+            },
+            {
+              title: "Bot Count",
+              getValue: (pwt) => {
+                return pwt.botCount
+              },
+              width: 2,
+            },
+          ]}
+        />
+      )}
     </Page>
   )
 }

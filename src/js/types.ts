@@ -164,7 +164,8 @@ export interface CountryBot {
 
 export interface PrimaryWeaponTypeWinCountBreakdown {
   primaryWeaponType: string
-  count: number
+  wins: number
+  botCount: number
 }
 
 export interface DbInterface {
@@ -187,6 +188,6 @@ export interface DbInterface {
   search: (term: string) => Array<SearchResult>
   getBotsForCountry: (id: string) => Array<CountryBot>
   getPrimaryWeaponTypeWinCountBreakdown: (
-    season?: string,
+    seasonId?: string,
   ) => Array<PrimaryWeaponTypeWinCountBreakdown>
 }
