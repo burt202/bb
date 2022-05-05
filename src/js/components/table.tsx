@@ -15,6 +15,7 @@ interface Props<T> {
   data: Array<T>
   columns: Array<Column<T>>
   shouldShowDivider?: (data: Array<T>, row: T, index: number) => boolean
+  emptyStateMessage?: string
 }
 
 function calculateColumnWidth(
@@ -28,7 +29,12 @@ function calculateColumnWidth(
   return `${columnWidth * BASE_UNIT}px`
 }
 
-export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
+export default function Table<T>({
+  data,
+  columns,
+  shouldShowDivider,
+  emptyStateMessage,
+}: Props<T>) {
   const windowWidth = useWindowWidth()
   const tableWidth = columns.reduce((acc, val) => {
     return acc + val.width
@@ -38,28 +44,34 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
     return (
       <table style={{width: "100%", height: "min-content"}}>
         <tbody>
-          {data.map((row, i) => {
-            const isLastRow = i + 1 === data.length
+          {data.length > 0 ? (
+            data.map((row, i) => {
+              const isLastRow = i + 1 === data.length
 
-            return columns.map((col, j) => {
-              const shouldShowDivider = isLastRow
-                ? false
-                : j + 1 === columns.length
+              return columns.map((col, j) => {
+                const shouldShowDivider = isLastRow
+                  ? false
+                  : j + 1 === columns.length
 
-              return (
-                <tr
-                  key={j}
-                  style={{
-                    height: 35,
-                    borderBottom: shouldShowDivider ? "3px solid" : 1,
-                  }}
-                >
-                  <th style={{width: "33%"}}>{col.title}</th>
-                  <td style={{width: "67%"}}>{col.getValue(row)}</td>
-                </tr>
-              )
+                return (
+                  <tr
+                    key={j}
+                    style={{
+                      height: 35,
+                      borderBottom: shouldShowDivider ? "3px solid" : 1,
+                    }}
+                  >
+                    <th style={{width: "33%"}}>{col.title}</th>
+                    <td style={{width: "67%"}}>{col.getValue(row)}</td>
+                  </tr>
+                )
+              })
             })
-          })}
+          ) : (
+            <tr>
+              <td>{emptyStateMessage ?? "No data"}</td>
+            </tr>
+          )}
         </tbody>
       </table>
     )
@@ -94,39 +106,47 @@ export default function Table<T>({data, columns, shouldShowDivider}: Props<T>) {
         </tr>
       </thead>
       <tbody>
-        {data.map((row, i) => {
-          const thickBottomBorder = shouldShowDivider
-            ? shouldShowDivider(data, row, i)
-            : false
+        {data.length > 0 ? (
+          data.map((row, i) => {
+            const thickBottomBorder = shouldShowDivider
+              ? shouldShowDivider(data, row, i)
+              : false
 
-          return (
-            <tr
-              key={i}
-              style={{
-                height: 35,
-                borderBottom: thickBottomBorder ? "3px solid" : 1,
-              }}
-            >
-              {columns.map((col, j) => {
-                return (
-                  <td
-                    key={j}
-                    style={{
-                      width: calculateColumnWidth(
-                        usePercentages,
-                        tableWidth,
-                        col.width,
-                      ),
-                      textAlign: col.alignCenter ? "center" : "left",
-                    }}
-                  >
-                    {col.getValue(row)}
-                  </td>
-                )
-              })}
-            </tr>
-          )
-        })}
+            return (
+              <tr
+                key={i}
+                style={{
+                  height: 35,
+                  borderBottom: thickBottomBorder ? "3px solid" : 1,
+                }}
+              >
+                {columns.map((col, j) => {
+                  return (
+                    <td
+                      key={j}
+                      style={{
+                        width: calculateColumnWidth(
+                          usePercentages,
+                          tableWidth,
+                          col.width,
+                        ),
+                        textAlign: col.alignCenter ? "center" : "left",
+                      }}
+                    >
+                      {col.getValue(row)}
+                    </td>
+                  )
+                })}
+              </tr>
+            )
+          })
+        ) : (
+          <tr>
+            <td colSpan={columns.length} style={{textAlign: "center"}}>
+              {emptyStateMessage ?? "No data"}
+            </td>
+          </tr>
+        )}
       </tbody>
     </table>
   )

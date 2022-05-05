@@ -11,11 +11,11 @@ import {setTitle, primaryWeaponTypeNameMap, stageNameMap} from "../utils"
 function updateUrlParams(seasonId?: string, primaryWeaponTypeId?: string) {
   const params = {} as Record<string, string>
 
-  if (seasonId) {
+  if (seasonId && seasonId !== "all") {
     params.season = seasonId
   }
 
-  if (primaryWeaponTypeId) {
+  if (primaryWeaponTypeId && primaryWeaponTypeId !== "all") {
     params.primaryWeaponType = primaryWeaponTypeId
   }
 
