@@ -57,7 +57,7 @@ export function createTables(db: Database) {
     CREATE TABLE season_bot_primary_weapon_types (
       bot_id text NOT NULL,
       season_id text NOT NULL,
-      primary_weapon_type text NOT NULL,
+      primary_weapon_type_id text NOT NULL,
       primary key (bot_id, season_id)
     );
 
@@ -213,7 +213,7 @@ function addPrimaryWeaponForBotForSeason(
   db.run("INSERT INTO season_bot_primary_weapon_types VALUES (?,?,?)", [
     botId,
     seasonId,
-    primaryWeaponType,
+    found.id,
   ])
 }
 
