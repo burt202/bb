@@ -6,7 +6,12 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface} from "../types"
-import {setTitle, primaryWeaponTypeNameMap, stageNameMap} from "../utils"
+import {
+  setTitle,
+  primaryWeaponTypeNameMap,
+  stageNameMap,
+  getPercentage,
+} from "../utils"
 
 function updateUrlParams(seasonId?: string, primaryWeaponTypeId?: string) {
   const params = {} as Record<string, string>
@@ -72,6 +77,7 @@ export default function PrimaryWeaponTypes() {
         seasonId === "all" ? undefined : seasonId,
       )
     : []
+  const koWins = primaryWeaponTypeFights.filter((pwtf) => pwtf.ko)
 
   return (
     <Page headerComponent={<h1 style={{margin: 0}}>Primary Weapon Types</h1>}>
@@ -209,7 +215,20 @@ export default function PrimaryWeaponTypes() {
       )}
       {hasAllSeasonsSelected && hasSpecificPrimaryWeaponTypeSelected && (
         <>
-          <h3>Wins ({primaryWeaponTypeFights.length})</h3>
+          <div className="bot-stats">
+            <h3>Wins</h3>
+            <div style={{display: "flex", alignItems: "center"}}>
+              <div style={{marginRight: 32}}>
+                Total: <strong>{primaryWeaponTypeFights.length}</strong>
+              </div>
+              <div>
+                KO %:{" "}
+                <strong>
+                  {getPercentage(primaryWeaponTypeFights.length, koWins.length)}
+                </strong>
+              </div>
+            </div>
+          </div>
           <Table
             data={primaryWeaponTypeFights}
             shouldShowDivider={(data, row, i) => {
@@ -280,7 +299,20 @@ export default function PrimaryWeaponTypes() {
       )}
       {hasSpecificSeasonSelected && hasSpecificPrimaryWeaponTypeSelected && (
         <>
-          <h3>Wins ({primaryWeaponTypeFights.length})</h3>
+          <div className="bot-stats">
+            <h3>Wins</h3>
+            <div style={{display: "flex", alignItems: "center"}}>
+              <div style={{marginRight: 32}}>
+                Total: <strong>{primaryWeaponTypeFights.length}</strong>
+              </div>
+              <div>
+                KO %:{" "}
+                <strong>
+                  {getPercentage(primaryWeaponTypeFights.length, koWins.length)}
+                </strong>
+              </div>
+            </div>
+          </div>
           <Table
             data={primaryWeaponTypeFights}
             columns={[
