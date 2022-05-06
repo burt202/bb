@@ -634,5 +634,36 @@ export default async function createDb(
         }
       })
     },
+    getPrimaryWeaponTypeBots: (primaryWeaponTypeId, seasonId) => {
+      const sql = `
+        SELECT
+          b.id AS bot_id,
+          b.name AS bot_name,
+          b.country AS bot_country,
+          s.name AS stage_name
+        FROM season_bots sb
+        INNER JOIN bots b ON sb.bot_id = b.id
+        INNER JOIN stages s ON sb.stage_id = s.id
+        INNER JOIN season_bot_primary_weapon_types sbpwt
+          ON b.id = sbpwt.bot_id AND sb.season_id = sbpwt.season_id
+        WHERE sb.season_id = :seasonId
+          AND sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
+        ORDER BY s.rank, b.name
+      `
+
+      const primaryWeaponTypeBots = getMany<DbSeasonBot>(db, sql, {
+        ":primaryWeaponTypeId": primaryWeaponTypeId,
+        ":seasonId": seasonId,
+      })
+
+      return primaryWeaponTypeBots.map((pwtb) => {
+        return {
+          botId: pwtb.bot_id,
+          botName: pwtb.bot_name,
+          botCountry: pwtb.bot_country,
+          stageName: pwtb.stage_name,
+        }
+      })
+    },
   }
 }

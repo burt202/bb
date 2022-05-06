@@ -11,6 +11,7 @@ import {
   primaryWeaponTypeNameMap,
   stageNameMap,
   getPercentage,
+  countryNameMap,
 } from "../utils"
 
 function updateUrlParams(seasonId?: string, primaryWeaponTypeId?: string) {
@@ -78,6 +79,11 @@ export default function PrimaryWeaponTypes() {
       )
     : []
   const koWins = primaryWeaponTypeFights.filter((pwtf) => pwtf.ko)
+
+  const primaryWeaponTypeBots =
+    hasSpecificSeasonSelected && hasSpecificPrimaryWeaponTypeSelected
+      ? db.getPrimaryWeaponTypeBots(primaryWeaponTypeId, seasonId)
+      : []
 
   return (
     <Page headerComponent={<h1 style={{margin: 0}}>Primary Weapon Types</h1>}>
@@ -299,6 +305,57 @@ export default function PrimaryWeaponTypes() {
       )}
       {hasSpecificSeasonSelected && hasSpecificPrimaryWeaponTypeSelected && (
         <>
+          <div>
+            <h3>Bots ({primaryWeaponTypeBots.length})</h3>
+            <Table
+              data={primaryWeaponTypeBots}
+              columns={[
+                {
+                  title: "",
+                  getValue: (pwtb) => {
+                    return (
+                      <SiteLink
+                        to={`/country/${pwtb.botCountry.toLowerCase()}`}
+                        pageTitle={`Country - ${
+                          countryNameMap[pwtb.botCountry.toLowerCase()]
+                        }`}
+                      >
+                        <img
+                          src={`${pwtb.botCountry.toLowerCase()}.svg`}
+                          title={countryNameMap[pwtb.botCountry.toLowerCase()]}
+                          style={{height: 24}}
+                        />
+                      </SiteLink>
+                    )
+                  },
+                  width: 1,
+                  alignCenter: true,
+                },
+                {
+                  title: "Bot",
+                  getValue: (pwtb) => {
+                    return (
+                      <SiteLink
+                        to={`/bot/${pwtb.botId}`}
+                        textLink={true}
+                        pageTitle={`Bot - ${pwtb.botName}`}
+                      >
+                        {pwtb.botName}
+                      </SiteLink>
+                    )
+                  },
+                  width: 4,
+                },
+                {
+                  title: "Stage",
+                  getValue: (pwtb) => {
+                    return stageNameMap[pwtb.stageName]
+                  },
+                  width: 4,
+                },
+              ]}
+            />
+          </div>
           <div className="bot-stats">
             <h3>Wins</h3>
             <div style={{display: "flex", alignItems: "center"}}>

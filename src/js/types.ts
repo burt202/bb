@@ -216,4 +216,8 @@ export interface DbInterface {
     primaryWeaponTypeId: string,
     seasonId?: string,
   ) => Array<PrimaryWeaponTypeWin>
+  getPrimaryWeaponTypeBots: (
+    primaryWeaponTypeId: string,
+    seasonId: string,
+  ) => Array<SeasonBot>
 }
