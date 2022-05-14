@@ -109,7 +109,7 @@ export default function PrimaryWeaponTypes() {
         {seasons.map((s) => {
           return (
             <option key={s.id} value={s.id}>
-              {s.name}
+              {s.year}
             </option>
           )
         })}
@@ -278,10 +278,10 @@ export default function PrimaryWeaponTypes() {
                   return (
                     <SiteLink
                       to={`/season/${pwtf.seasonId}`}
-                      pageTitle={`Season - ${pwtf.seasonName}`}
+                      pageTitle={`Season - ${pwtf.seasonYear}`}
                       textLink={true}
                     >
-                      {pwtf.seasonName}
+                      {pwtf.seasonYear}
                     </SiteLink>
                   )
                 },

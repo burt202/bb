@@ -39,7 +39,7 @@ export interface DbMember {
 
 export interface DbSeason {
   id: string
-  name: string
+  year: string
 }
 
 export interface DbPrimaryWeaponType {
@@ -69,7 +69,7 @@ export interface DbSeasonFight {
 
 export interface DbBotSeason {
   season_id: string
-  season_name: string
+  season_year: string
   stage_name: string
   primary_weapon_type: string
 }
@@ -78,14 +78,14 @@ export interface DbBotFight {
   id: string
   ko: string
   season_id: string
-  season_name: string
+  season_year: string
   stage_name: string
   winner_id: string
 }
 
 export interface DbMemberSeason {
   season_id: string
-  season_name: string
+  season_year: string
   bot_id: string
   bot_name: string
 }
@@ -107,7 +107,7 @@ export interface DbPrimaryWeaponTypeWin {
   fight_id: string
   ko: string
   season_id: string
-  season_name: string
+  season_year: string
   winner_name: string
   stage_name: string
 }
@@ -133,7 +133,7 @@ export interface SeasonFight {
 
 export interface BotSeason {
   seasonId: string
-  seasonName: string
+  seasonYear: string
   stageName: string
   primaryWeaponType: string
   members: Array<Member>
@@ -141,7 +141,7 @@ export interface BotSeason {
 
 export interface BotFight {
   seasonId: string
-  seasonName: string
+  seasonYear: string
   stageName: string
   winnerId: string
   against: Array<Bot>
@@ -150,7 +150,7 @@ export interface BotFight {
 
 export interface MemberSeason {
   seasonId: string
-  seasonName: string
+  seasonYear: string
   botId: string
   botName: string
 }
@@ -184,7 +184,7 @@ export interface PrimaryWeaponTypeWinCountBreakdown {
 export interface PrimaryWeaponTypeWin {
   ko: boolean
   seasonId: string
-  seasonName: string
+  seasonYear: string
   winnerName: string
   stageName: string
   bots: Array<Bot>

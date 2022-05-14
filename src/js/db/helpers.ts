@@ -14,7 +14,8 @@ export function createTables(db: Database) {
   db.run(`
     CREATE TABLE seasons (
       id text UNIQUE NOT NULL,
-      name text UNIQUE NOT NULL,
+      number int UNIQUE NOT NULL,
+      year text NOT NULL,
       primary key (id)
     );
 
@@ -145,13 +146,13 @@ export function getMany<T>(
 }
 
 function getStageByName(db: Database, name: string) {
-  return getOne<DbStage>(db, "SELECT * FROM stages WHERE name=:name", {
+  return getOne<DbStage>(db, "SELECT * FROM stages WHERE name = :name", {
     ":name": name,
   })
 }
 
 function getBotByName(db: Database, name: string) {
-  return getOne<DbBot>(db, "SELECT * FROM bots WHERE name=:name", {
+  return getOne<DbBot>(db, "SELECT * FROM bots WHERE name = :name", {
     ":name": name,
   })
 }
@@ -159,7 +160,7 @@ function getBotByName(db: Database, name: string) {
 function getPrimaryWeaponTypeByName(db: Database, name: string) {
   return getOne<DbPrimaryWeaponType>(
     db,
-    "SELECT * FROM primary_weapon_types WHERE name=:name",
+    "SELECT * FROM primary_weapon_types WHERE name = :name",
     {
       ":name": name,
     },
@@ -167,7 +168,7 @@ function getPrimaryWeaponTypeByName(db: Database, name: string) {
 }
 
 function getMemberByName(db: Database, name: string) {
-  return getOne<DbMember>(db, "SELECT * FROM members WHERE name=:name", {
+  return getOne<DbMember>(db, "SELECT * FROM members WHERE name = :name", {
     ":name": name,
   })
 }
@@ -306,8 +307,13 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
   })
 
   data.forEach((season) => {
-    const seasonId = convertNameToId(season.year.toString())
-    db.run("INSERT INTO seasons VALUES (?,?)", [seasonId, season.year])
+    const seasonId = convertNameToId(`s${season.season}-${season.year}`)
+
+    db.run("INSERT INTO seasons VALUES (?,?,?)", [
+      seasonId,
+      season.season,
+      season.year,
+    ])
 
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name, bot.country)

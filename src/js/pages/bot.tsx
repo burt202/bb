@@ -77,9 +77,9 @@ export default function Bot() {
                 <SiteLink
                   to={`/season/${bs.seasonId}`}
                   textLink={true}
-                  pageTitle={`Season - ${bs.seasonName}`}
+                  pageTitle={`Season - ${bs.seasonYear}`}
                 >
-                  {bs.seasonName}
+                  {bs.seasonYear}
                 </SiteLink>
               )
             },
@@ -166,10 +166,10 @@ export default function Bot() {
               return (
                 <SiteLink
                   to={`/season/${bf.seasonId}`}
-                  pageTitle={`Season - ${bf.seasonName}`}
+                  pageTitle={`Season - ${bf.seasonYear}`}
                   textLink={true}
                 >
-                  {bf.seasonName}
+                  {bf.seasonYear}
                 </SiteLink>
               )
             },

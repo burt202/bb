@@ -34,7 +34,7 @@ export default function Home() {
           <div style={{background: "#ccc", width: "100%", height: 135}} key={i}>
             <SiteLink
               to={`/season/${s.id}`}
-              pageTitle={`Season - ${s.name}`}
+              pageTitle={`Season - ${s.year}`}
               textLink={true}
             >
               <div
@@ -46,7 +46,7 @@ export default function Home() {
                   fontSize: 48,
                 }}
               >
-                {s.name}
+                {s.year}
               </div>
             </SiteLink>
           </div>

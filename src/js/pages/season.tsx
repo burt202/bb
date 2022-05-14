@@ -19,7 +19,7 @@ export default function Season() {
 
   useEffect(() => {
     if (season) {
-      setTitle(`Season - ${season.name}`)
+      setTitle(`Season - ${season.year}`)
     }
   }, [])
 
@@ -44,7 +44,7 @@ export default function Season() {
   const koFights = seasonFights.filter((f) => f.ko)
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>Season {season.name}</h1>}>
+    <Page headerComponent={<h1 style={{margin: 0}}>Season {season.year}</h1>}>
       <div style={{marginTop: 8}}>
         {previousSeason ? (
           <span style={{marginRight: 16}}>
