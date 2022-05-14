@@ -8,7 +8,12 @@ import {
   RawFight,
   RawSeason,
 } from "../types"
-import {convertNameToId, primaryWeaponTypeNameMap, stages} from "../utils"
+import {
+  convertNameToId,
+  getBotStages,
+  primaryWeaponTypeNameMap,
+  stages,
+} from "../utils"
 
 export function createTables(db: Database) {
   db.run(`
@@ -306,9 +311,11 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
       season.year,
     ])
 
+    const botStages = getBotStages(season.fights)
+
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name, bot.country)
-      addBotToSeason(db, seasonId, insertedBot.id, bot.stage)
+      addBotToSeason(db, seasonId, insertedBot.id, botStages[bot.name])
 
       addPrimaryWeaponForBotForSeason(
         db,

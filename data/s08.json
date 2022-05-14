@@ -5,182 +5,156 @@
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia", "Rob Masek"],
-      "stage": "winner",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Blacksmith",
       "keyMembers": ["Al Kindle"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "hammer"
     },
     {
       "name": "Mecha Rampage",
       "keyMembers": ["Chrisian Carlberg", "Carissa Carlberg"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Free Shipping",
       "keyMembers": ["Gary Gin"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Duck",
       "keyMembers": ["Hal Rucker"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Huge",
       "keyMembers": ["Jonathan Schultz"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Subzero",
       "keyMembers": ["Jerry Clarkin", "Logan Davis"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "flipper"
     },
     {
       "name": "Bombshell",
       "keyMembers": ["Micheal Jeffries", "Dan Hammer", "Matthew Carroll"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "semi",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Kraken",
       "keyMembers": ["Matt Spurk"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "crusher"
     },
     {
       "name": "Sharkoprion",
       "keyMembers": ["Edward Robinson"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Deviled Egg",
       "keyMembers": ["Zach Hassanein"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Minotaur",
       "keyMembers": ["Marco Meggiolaro", "Daniel Freitas", "Carlos Junior"],
-      "stage": "final",
       "country": "BRA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Vanquish",
       "keyMembers": ["Jack Tweedy"],
-      "stage": "season",
       "country": "GBR",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Rotator",
       "keyMembers": ["Victor Soto"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Petunia",
       "keyMembers": ["Mischa de Graaf"],
-      "stage": "season",
       "country": "NLD",
       "primaryWeaponType": "crusher"
     },
     {
       "name": "Brutus",
       "keyMembers": ["Adam Bercu"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Red Devil",
       "keyMembers": ["Ravi Baboolal", "Julia Chernushevich"],
-      "stage": "season",
       "country": "CAN",
       "primaryWeaponType": "saw"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Nick Nave"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "fullbody"
     },
     {
       "name": "End Game",
       "keyMembers": ["Jack Barker", "Nick Mabey"],
-      "stage": "season",
       "country": "NZL",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Yeti",
       "keyMembers": ["Greg Gibson"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go", "Alex Hattori", "Mason Massie"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "saw"
     },
@@ -192,203 +166,174 @@
         "Jeff Vazquez",
         "Debbie Vazquez"
       ],
-      "stage": "semi",
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Hypothermia",
       "keyMembers": ["Michael Mauldin"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "The Four Horsemen",
       "keyMembers": ["Ian Watts", "Sam Watts"],
-      "stage": "season",
       "country": "GBR",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Double Jeopardy",
       "keyMembers": ["Evan Woolley", "Bryce Woolley", "Bill Woolley"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "other"
     },
     {
       "name": "Gamma 9",
       "keyMembers": ["Curtis Nemeth"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "crusher"
     },
     {
       "name": "War Hawk",
       "keyMembers": ["Rob Farrow", "Kevin Milczewski", "Martin Mason"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Axe Backwards",
       "keyMembers": ["Kurt Durjan"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Monsoon",
       "keyMembers": ["Tom Brewster", "Tim Rackley"],
-      "stage": "quarter",
       "country": "GBR",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Lucky",
       "keyMembers": ["Mark Demers", "Kurtis Wanner"],
-      "stage": "season",
       "country": "CAN",
       "primaryWeaponType": "flipper"
     },
     {
       "name": "Skorpios",
       "keyMembers": ["Orion Beach", "Diana Tarlson", "Dan Chatterton"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "saw"
     },
     {
       "name": "Battle Royale With Cheese",
       "keyMembers": ["Miles Pekala", "Jen Herchenroeder"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Tantrum",
       "keyMembers": ["Aren Hill", "Alex Grant"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "flipper"
     },
     {
       "name": "Gemini",
       "keyMembers": ["Ace Shelander"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Gigabyte",
       "keyMembers": ["Brent Rieker", "John Mladenik"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "fullbody"
     },
     {
       "name": "Son Of Whyachi",
       "keyMembers": ["Luke Ewert", "Reece Ewert"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Reality",
       "keyMembers": ["Tim Bouwens"],
-      "stage": "season",
       "country": "NLD",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Predator",
       "keyMembers": ["Craig Danby"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Valkyrie",
       "keyMembers": ["Leanne Cushing", "Frederick Moore"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Bale Spear",
       "keyMembers": ["Earl Pancoast III"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "other"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "hammer"
     },
     {
       "name": "Warrior Dragon",
       "keyMembers": ["Clint Ewert", "Jake Ewert"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "flipper"
     },
     {
       "name": "Ultimo Destructo",
       "keyMembers": ["Sean Irvin"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "multi"
     },
     {
       "name": "Mohawk",
       "keyMembers": ["Tom Bales", "Korey Cline", "Max Bales"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "crusher"
     },
     {
       "name": "Basilisk",
       "keyMembers": ["Lucas Sloan"],
-      "stage": "season",
       "country": "CAN",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis"],
-      "stage": "season",
       "country": "GBR",
       "primaryWeaponType": "multi"
     },
     {
       "name": "Parallax",
       "keyMembers": ["Luke Bittenbinder"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Double Dutch",
       "keyMembers": ["Kevin Lung"],
-      "stage": "season",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     }

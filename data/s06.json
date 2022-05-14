@@ -5,49 +5,42 @@
     {
       "name": "Razorback",
       "keyMembers": ["Zack Bieber"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Icewave",
       "keyMembers": ["Mark DeVidts"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Wrecks",
       "keyMembers": ["Dan Chatterton", "Bunny Sauriol", "Orion Beach"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Plan X",
       "keyMembers": ["Lisa Winter"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
-      "stage": "winner",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Warhead",
       "keyMembers": ["Simon Scott", "Ian Lewis", "James Cooper"],
-      "stage": "roundof16",
       "country": "GBR",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Nightmare",
       "keyMembers": ["Jim Smentowski"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
@@ -60,119 +53,102 @@
         "Luke Ewert",
         "Reece Ewert"
       ],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Bronco",
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
-      "stage": "semi",
       "country": "USA",
       "primaryWeaponType": "flipper"
     },
     {
       "name": "Witch Doctor",
       "keyMembers": ["Andrea Gellatly", "Mike Gellatly"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Counter Revolution",
       "keyMembers": ["Curt Meyers"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Tombstone",
       "keyMembers": ["Ray Billings", "Rick Russ", "Justin Billings"],
-      "stage": "final",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "grappler"
     },
     {
       "name": "Ghost Raptor",
       "keyMembers": ["Chuck Pitzer"],
-      "stage": "semi",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Stinger",
       "keyMembers": ["Matt Maxham", "Wendy Maxham"],
-      "stage": "quarter",
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Captain Shrederator",
       "keyMembers": ["Brian Nave"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "fullbody"
     },
     {
       "name": "Overdrive",
       "keyMembers": ["Chrisian Carlberg", "Carissa Carlberg"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
       "name": "Chomp",
       "keyMembers": ["Zoe Stephenson"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "crusher"
     },
     {
       "name": "Radioactive",
       "keyMembers": ["Kane Aston", "Anthony Pritchard"],
-      "stage": "roundof16",
       "country": "GBR",
       "primaryWeaponType": "hammer"
     },
     {
       "name": "Sweet Revenge",
       "keyMembers": ["Nola Garcia", "Billy Garcia"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
     {
       "name": "Hypershock",
       "keyMembers": ["Will Bales"],
-      "stage": "roundof16",
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
     {
       "name": "Mohawk",
       "keyMembers": ["Tom Bales", "Korey Cline", "Max Bales"],
-      "stage": "qualifier",
       "country": "USA",
       "primaryWeaponType": "crusher"
     }

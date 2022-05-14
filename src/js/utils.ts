@@ -1,3 +1,5 @@
+import {RawFight} from "./types"
+
 export const SITE_NAME = "Battlebots DB"
 
 export function convertNameToId(name: string) {
@@ -49,6 +51,11 @@ export const stageNameMap = stages.reduce((acc, val) => {
   return acc
 }, {} as Record<string, string>)
 
+const stageRankMap = stages.reduce((acc, val) => {
+  acc[val.id] = val.rank
+  return acc
+}, {} as Record<string, number>)
+
 export const countryNameMap = {
   aus: "Australia",
   bra: "Brazil",
@@ -78,3 +85,29 @@ export const primaryWeaponTypeNameMap = {
   multi: "Multi",
   other: "Other",
 } as Record<string, string>
+
+function getStage(bot: string, fight: RawFight, currentStage?: string) {
+  if (fight.stage === "final" && bot === fight.winner) {
+    return "winner"
+  }
+
+  if (currentStage && stageRankMap[fight.stage] > stageRankMap[currentStage]) {
+    return currentStage
+  }
+
+  return fight.stage
+}
+
+export function getBotStages(fights: Array<RawFight>) {
+  return fights.reduce((outer, fight) => {
+    return {
+      ...outer,
+      ...fight.bots.reduce((inner, bot) => {
+        return {
+          ...inner,
+          [bot]: getStage(bot, fight, outer[bot]),
+        }
+      }, {} as Record<string, string>),
+    }
+  }, {} as Record<string, string>)
+}
