@@ -32,7 +32,7 @@ export default async function createDb(
 
   return {
     getAllSeasons: () => {
-      return getMany<DbSeason>(db, "SELECT * FROM seasons ORDER BY year")
+      return getMany<DbSeason>(db, "SELECT * FROM seasons ORDER BY number ASC")
     },
     getSeasonById: (id: string) => {
       return getOne<DbSeason>(db, "SELECT * FROM seasons WHERE id = :id", {
@@ -50,7 +50,7 @@ export default async function createDb(
         INNER JOIN bots b ON sb.bot_id = b.id
         INNER JOIN stages s ON sb.stage_id = s.id
         WHERE sb.season_id = :id
-        ORDER BY s.rank, b.name
+        ORDER BY s.rank ASC, b.name ASC
       `
 
       const dbSeasonBots = getMany<DbSeasonBot>(db, sql, {
@@ -77,7 +77,7 @@ export default async function createDb(
         INNER JOIN stages s ON f.stage_id = s.id
         INNER JOIN bots b ON f.winner_id = b.id
         WHERE f.season_id = :id
-        ORDER BY s.rank
+        ORDER BY s.rank ASC
       `
 
       const dbSeasonFights = getMany<DbSeasonFight>(db, sql, {
@@ -129,7 +129,7 @@ export default async function createDb(
           AND sb.season_id = sbpwt.season_id
         INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
         WHERE sb.bot_id = :id
-        ORDER BY s.id DESC
+        ORDER BY s.number DESC
       `
 
       const dbBotSeasons = getMany<DbBotSeason>(db, sql, {
@@ -147,7 +147,7 @@ export default async function createDb(
             INNER JOIN members m ON bm.member_id = m.id
             WHERE bm.bot_id = :botId
             AND bm.season_id = :seasonId
-            ORDER BY bm.ordinal
+            ORDER BY bm.ordinal ASC
           `,
           {
             ":botId": id,
@@ -178,7 +178,7 @@ export default async function createDb(
         INNER JOIN stages st ON f.stage_id = st.id
         INNER JOIN seasons s ON f.season_id = s.id
         WHERE fb.bot_id = :id
-        ORDER BY f.season_id DESC, st.rank
+        ORDER BY s.number DESC, st.rank ASC
       `
 
       const dbBotFights = getMany<DbBotFight>(db, sql, {
@@ -230,7 +230,7 @@ export default async function createDb(
         INNER JOIN bots b ON bm.bot_id = b.id
         INNER JOIN seasons s ON bm.season_id = s.id
         WHERE bm.member_id = :id
-        ORDER BY s.id DESC
+        ORDER BY s.number DESC
       `
 
       const dbMemberSeasons = getMany<DbMemberSeason>(db, sql, {
@@ -577,7 +577,7 @@ export default async function createDb(
     getAllPrimaryWeapons: () => {
       return getMany<DbPrimaryWeaponType>(
         db,
-        "SELECT * FROM primary_weapon_types ORDER BY name",
+        "SELECT * FROM primary_weapon_types ORDER BY name ASC",
       )
     },
     getPrimaryWeaponTypeWins: (primaryWeaponTypeId, seasonId) => {
@@ -600,7 +600,7 @@ export default async function createDb(
           AND f.season_id = sbpwt.season_id
         WHERE sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
           ${seasonWhere}
-        ORDER BY f.season_id DESC, st.rank
+        ORDER BY f.season_id DESC, st.rank ASC
       `
 
       const primaryWeaponTypeWins = getMany<DbPrimaryWeaponTypeWin>(db, sql, {
@@ -648,7 +648,7 @@ export default async function createDb(
           ON b.id = sbpwt.bot_id AND sb.season_id = sbpwt.season_id
         WHERE sb.season_id = :seasonId
           AND sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
-        ORDER BY s.rank, b.name
+        ORDER BY s.rank ASC, b.name DESC
       `
 
       const primaryWeaponTypeBots = getMany<DbSeasonBot>(db, sql, {
