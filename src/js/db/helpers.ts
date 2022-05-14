@@ -8,7 +8,7 @@ import {
   RawFight,
   RawSeason,
 } from "../types"
-import {convertNameToId, primaryWeaponTypeNameMap} from "../utils"
+import {convertNameToId, primaryWeaponTypeNameMap, stages} from "../utils"
 
 export function createTables(db: Database) {
   db.run(`
@@ -286,18 +286,9 @@ function addBotToFight(db: Database, fightId: string, botName: string) {
 }
 
 export function populateDatabase(db: Database, data: Array<RawSeason>) {
-  db.run(`
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'winner', 1);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'final', 2);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'semi', 3);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'quarter', 4);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof16', 5);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'roundof32', 6);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'playoff', 7);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'qualifier', 8);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'season', 8);
-    INSERT INTO stages VALUES ('${uuid.v4()}', 'prequalifier', 9);
-  `)
+  stages.map((s) => {
+    db.run(`INSERT INTO stages VALUES ('${uuid.v4()}', '${s.id}', ${s.rank});`)
+  })
 
   Object.keys(primaryWeaponTypeNameMap).forEach((w) => {
     const primaryWeaponTypeId = convertNameToId(w)
