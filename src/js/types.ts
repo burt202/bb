@@ -14,7 +14,8 @@ export interface RawFight {
 }
 
 export interface RawSeason {
-  year: number
+  season: string
+  year: string
   bots: Array<RawBot>
   fights: Array<RawFight>
 }

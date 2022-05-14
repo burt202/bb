@@ -9,12 +9,12 @@ import {DbInterface, RawSeason} from "./types"
 import "../style.css"
 
 const data = {
-  2015: require("../../data/2015.json") as RawSeason,
-  2016: require("../../data/2016.json") as RawSeason,
-  2018: require("../../data/2018.json") as RawSeason,
-  2019: require("../../data/2019.json") as RawSeason,
-  2020: require("../../data/2020.json") as RawSeason,
-  2021: require("../../data/2021.json") as RawSeason,
+  s06: require("../../data/s06.json") as RawSeason,
+  s07: require("../../data/s07.json") as RawSeason,
+  s08: require("../../data/s08.json") as RawSeason,
+  s09: require("../../data/s09.json") as RawSeason,
+  s10: require("../../data/s10.json") as RawSeason,
+  s11: require("../../data/s11.json") as RawSeason,
 }
 
 export const DbContext = React.createContext<DbInterface | null>(null)
