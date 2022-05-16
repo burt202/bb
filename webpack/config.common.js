@@ -35,6 +35,7 @@ module.exports = {
       patterns: [
         {from: "src/favicon.ico", to: "favicon.ico"},
         {from: "src/thumb.png", to: "thumb.png"},
+        {from: "src/loading.gif", to: "loading.gif"},
         {from: "./node_modules/sql.js/dist/sql-wasm.wasm", to: "sql-wasm.wasm"},
         {from: "src/images/tick.svg", to: "tick.svg"},
         {from: "src/images/cross.svg", to: "cross.svg"},
