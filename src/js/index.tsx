@@ -19,8 +19,18 @@ const data = {
 
 export const DbContext = React.createContext<DbInterface | null>(null)
 
+const startTime = performance.now()
+
 createDb(Object.values(data))
   .then((db) => {
+    const endTime = performance.now()
+
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "page_load", {
+        db_load_time: endTime - startTime,
+      })
+    }
+
     ReactDom.render(
       <DbContext.Provider value={db}>
         <App />
