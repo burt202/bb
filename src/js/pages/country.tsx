@@ -31,23 +31,14 @@ export default function Country() {
     <Page
       headerComponent={
         <>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <img
-              src={`${countryId}.svg`}
-              style={{height: 48, marginRight: 16}}
-            />
-            <h1 style={{margin: 0}}>{countryNameMap[countryId]}</h1>
+          <div className="flex items-center justify-between">
+            <img src={`${countryId}.svg`} className="h-[48px] mr-m" />
+            <h1 className="m-0">{countryNameMap[countryId]}</h1>
           </div>
         </>
       }
     >
-      <div className="side-by-side">
+      <div className="flex gap-x-m flex-col-reverse l:flex-row">
         <div>
           <h3>Bots</h3>
           <Table
@@ -78,7 +69,7 @@ export default function Country() {
             ]}
           />
         </div>
-        <div className="right-side-title-margin">
+        <div className="mt-m l:mt-[51px]">
           <StatBox title="Total Bots" value={countryBots.length.toString()} />
         </div>
       </div>

@@ -55,6 +55,15 @@
         text-align: center;
         height: 300px;
       }
+
+      @media screen and (max-width: 900px) {
+        #container {
+          width: 100%;
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+      }
+
     </style>
     <% if (production) { %>
     <link rel="stylesheet" href="bundle.css" />

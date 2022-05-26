@@ -34,7 +34,7 @@ export default function Member() {
   })
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>{member.name}</h1>}>
+    <Page headerComponent={<h1 className="m-0">{member.name}</h1>}>
       <h3>Seasons</h3>
       <Table
         data={data}

@@ -44,10 +44,10 @@ export default function Season() {
   const koFights = seasonFights.filter((f) => f.ko)
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>Season {season.year}</h1>}>
-      <div style={{marginTop: 8}}>
+    <Page headerComponent={<h1 className="m-0">Season {season.year}</h1>}>
+      <div className="mt-s">
         {previousSeason ? (
-          <span style={{marginRight: 16}}>
+          <span className="mr-m">
             <SiteLink
               to={`/season/${previousSeason}`}
               textLink={true}
@@ -57,15 +57,7 @@ export default function Season() {
             </SiteLink>
           </span>
         ) : (
-          <a
-            style={{
-              cursor: "not-allowed",
-              marginRight: 16,
-              color: "#ccc",
-            }}
-          >
-            Previous
-          </a>
+          <a className="cursor-not-allowed mr-m text-grey">Previous</a>
         )}
         {nextSeason ? (
           <SiteLink
@@ -76,18 +68,10 @@ export default function Season() {
             Next
           </SiteLink>
         ) : (
-          <a
-            style={{
-              cursor: "not-allowed",
-              marginRight: 16,
-              color: "#ccc",
-            }}
-          >
-            Next
-          </a>
+          <a className="cursor-not-allowed mr-m text-grey">Next</a>
         )}
       </div>
-      <div className="side-by-side">
+      <div className="flex gap-x-m flex-col-reverse l:flex-row">
         <div>
           <h3>Bots</h3>
           <Table
@@ -106,7 +90,7 @@ export default function Season() {
                       <img
                         src={`${sb.botCountry.toLowerCase()}.svg`}
                         title={countryNameMap[sb.botCountry.toLowerCase()]}
-                        style={{height: 24}}
+                        className="h-[24px]"
                       />
                     </SiteLink>
                   )
@@ -139,21 +123,21 @@ export default function Season() {
             ]}
           />
         </div>
-        <div className="right-side-title-margin">
+        <div className="mt-m l:mt-[51px]">
           <StatBox title="Total Bots" value={seasonBots.length.toString()} />
-          <div style={{marginTop: 16}}>
+          <div className="mt-m">
             <StatBox
               title="Total Fights"
               value={seasonFights.length.toString()}
             />
           </div>
-          <div style={{marginTop: 16}}>
+          <div className="mt-m">
             <StatBox
               title="KO Percentage"
               value={getPercentage(seasonFights.length, koFights.length)}
             />
           </div>
-          <p className="season-pwt-link">
+          <p className="text-left l:text-right">
             <SiteLink
               to={`/primary-weapon-types?season=${season.id}`}
               textLink={true}
@@ -178,10 +162,9 @@ export default function Season() {
                 return (
                   <React.Fragment key={i}>
                     <span
-                      style={{
-                        fontWeight:
-                          sf.winnerName === c.name ? "bold" : "normal",
-                      }}
+                      className={
+                        sf.winnerName === c.name ? "font-bold" : "font-normal"
+                      }
                     >
                       <SiteLink
                         to={`/bot/${c.id}`}
@@ -209,9 +192,9 @@ export default function Season() {
             title: "KO",
             getValue: (sf) => {
               return sf.ko ? (
-                <img src="tick.svg" style={{height: 24}} />
+                <img src="tick.svg" className="h-[24px]" />
               ) : (
-                <img src="cross.svg" style={{height: 24}} />
+                <img src="cross.svg" className="h-[24px]" />
               )
             },
             width: 4,

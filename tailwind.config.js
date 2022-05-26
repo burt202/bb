@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         link: "#003366",
         grey: "#CCC",
+        input: "#F5F5F5",
       },
       spacing: {
         0: "0px",

@@ -13,17 +13,9 @@ export default function NotFound({title}: Props) {
   }, [])
 
   return (
-    <div style={{display: "flex", justifyContent: "center"}}>
-      <div
-        style={{
-          textAlign: "center",
-          border: "1px solid #000",
-          marginTop: 32,
-          width: 400,
-          padding: 32,
-        }}
-      >
-        <h1 style={{marginTop: 0}}>{title}</h1>
+    <div className="flex justify-center">
+      <div className="text-center border border-black border-solid mt-l p-l w-[400px]">
+        <h1 className="mt-0">{title}</h1>
         <SiteLink textLink={true} to="/" pageTitle="Home">
           Back to home
         </SiteLink>

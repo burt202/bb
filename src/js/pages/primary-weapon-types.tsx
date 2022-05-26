@@ -86,7 +86,7 @@ export default function PrimaryWeaponTypes() {
       : []
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>Primary Weapon Types</h1>}>
+    <Page headerComponent={<h1 className="m-0">Primary Weapon Types</h1>}>
       <select
         value={seasonId}
         onChange={(e) => {
@@ -96,14 +96,7 @@ export default function PrimaryWeaponTypes() {
             primaryWeaponTypeId,
           )
         }}
-        style={{
-          marginTop: 16,
-          marginBottom: 16,
-          padding: 8,
-          backgroundColor: "#f5f5f5",
-          border: "1px solid grey",
-          borderRadius: 5,
-        }}
+        className="mt-m mb-m p-s bg-input border-grey rounded"
       >
         <option value="all">All seasons</option>
         {seasons.map((s) => {
@@ -123,15 +116,7 @@ export default function PrimaryWeaponTypes() {
             e.target.value === "all" ? undefined : e.target.value,
           )
         }}
-        style={{
-          marginTop: 16,
-          marginBottom: 16,
-          marginLeft: 16,
-          padding: 8,
-          backgroundColor: "#f5f5f5",
-          border: "1px solid grey",
-          borderRadius: 5,
-        }}
+        className="mt-m mb-m ml-m p-s bg-input border-grey rounded"
       >
         <option value="all">All weapon types</option>
         {primaryWeaponTypes.map((pwt) => {
@@ -151,11 +136,7 @@ export default function PrimaryWeaponTypes() {
               getValue: (pwt) => {
                 return (
                   <a
-                    style={{
-                      color: "#003366",
-                      cursor: "pointer",
-                      textDecoration: "underline",
-                    }}
+                    className="text-link cursor-pointer underline"
                     onClick={() => {
                       setPrimaryWeaponTypeId(pwt.id)
                       updateUrlParams(seasonId, pwt.id)
@@ -186,11 +167,7 @@ export default function PrimaryWeaponTypes() {
               getValue: (pwt) => {
                 return (
                   <a
-                    style={{
-                      color: "#003366",
-                      cursor: "pointer",
-                      textDecoration: "underline",
-                    }}
+                    className="text-link cursor-pointer underline"
                     onClick={() => {
                       setPrimaryWeaponTypeId(pwt.id)
                       updateUrlParams(seasonId, pwt.id)
@@ -221,10 +198,10 @@ export default function PrimaryWeaponTypes() {
       )}
       {hasAllSeasonsSelected && hasSpecificPrimaryWeaponTypeSelected && (
         <>
-          <div className="bot-stats">
+          <div className="flex flex-col mb-m m:justify-between m:flex-row m:mb-0">
             <h3>Wins</h3>
-            <div style={{display: "flex", alignItems: "center"}}>
-              <div style={{marginRight: 32}}>
+            <div className="flex items-center">
+              <div className="mr-l">
                 Total: <strong>{primaryWeaponTypeFights.length}</strong>
               </div>
               <div>
@@ -252,10 +229,11 @@ export default function PrimaryWeaponTypes() {
                     return (
                       <React.Fragment key={i}>
                         <span
-                          style={{
-                            fontWeight:
-                              pwtf.winnerName === c.name ? "bold" : "normal",
-                          }}
+                          className={
+                            pwtf.winnerName === c.name
+                              ? "font-bold"
+                              : "font-normal"
+                          }
                         >
                           <SiteLink
                             to={`/bot/${c.id}`}
@@ -291,9 +269,9 @@ export default function PrimaryWeaponTypes() {
                 title: "KO",
                 getValue: (pwtf) => {
                   return pwtf.ko ? (
-                    <img src="tick.svg" style={{height: 24}} />
+                    <img src="tick.svg" className="h-[24px]" />
                   ) : (
-                    <img src="cross.svg" style={{height: 24}} />
+                    <img src="cross.svg" className="h-[24px]" />
                   )
                 },
                 width: 4,
@@ -323,7 +301,7 @@ export default function PrimaryWeaponTypes() {
                         <img
                           src={`${pwtb.botCountry.toLowerCase()}.svg`}
                           title={countryNameMap[pwtb.botCountry.toLowerCase()]}
-                          style={{height: 24}}
+                          className="h-[24px]"
                         />
                       </SiteLink>
                     )
@@ -356,10 +334,10 @@ export default function PrimaryWeaponTypes() {
               ]}
             />
           </div>
-          <div className="bot-stats">
+          <div className="flex flex-col mb-m m:justify-between m:flex-row m:mb-0">
             <h3>Wins</h3>
-            <div style={{display: "flex", alignItems: "center"}}>
-              <div style={{marginRight: 32}}>
+            <div className="flex items-center">
+              <div className="mr-l">
                 Total: <strong>{primaryWeaponTypeFights.length}</strong>
               </div>
               <div>
@@ -382,10 +360,11 @@ export default function PrimaryWeaponTypes() {
                     return (
                       <React.Fragment key={i}>
                         <span
-                          style={{
-                            fontWeight:
-                              pwtf.winnerName === c.name ? "bold" : "normal",
-                          }}
+                          className={
+                            pwtf.winnerName === c.name
+                              ? "font-bold"
+                              : "font-normal"
+                          }
                         >
                           <SiteLink
                             to={`/bot/${c.id}`}
@@ -413,9 +392,9 @@ export default function PrimaryWeaponTypes() {
                 title: "KO",
                 getValue: (pwtf) => {
                   return pwtf.ko ? (
-                    <img src="tick.svg" style={{height: 24}} />
+                    <img src="tick.svg" className="h-[24px]" />
                   ) : (
-                    <img src="cross.svg" style={{height: 24}} />
+                    <img src="cross.svg" className="h-[24px]" />
                   )
                 },
                 width: 4,

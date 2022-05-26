@@ -27,25 +27,17 @@ export default function Home() {
   const totalFights = db.getTotalFights()
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>{SITE_NAME}</h1>}>
+    <Page headerComponent={<h1 className="m-0">{SITE_NAME}</h1>}>
       <h3>Seasons</h3>
-      <div className="seasons-grid">
+      <div className="grid gap-m grid-cols-1 m:grid-cols-2 l:grid-cols-3">
         {seasons.map((s, i) => (
-          <div style={{background: "#ccc", width: "100%", height: 135}} key={i}>
+          <div className="bg-grey w-[100%] h-[135px]" key={i}>
             <SiteLink
               to={`/season/${s.id}`}
               pageTitle={`Season - ${s.year}`}
               textLink={true}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: 135,
-                  fontSize: 48,
-                }}
-              >
+              <div className="flex items-center justify-center h-[135px] text-5xl">
                 {s.year}
               </div>
             </SiteLink>
@@ -58,18 +50,12 @@ export default function Home() {
           setStatsTimeSpan(e.target.value)
           localStorage.setItem(STORAGE_KEY, e.target.value)
         }}
-        style={{
-          marginTop: 16,
-          padding: 8,
-          backgroundColor: "#f5f5f5",
-          border: "1px solid grey",
-          borderRadius: 5,
-        }}
+        className="mt-m p-s bg-input border-grey rounded"
       >
         <option value="allTime">All time</option>
         <option value="last3Seasons">Last 3 seasons</option>
       </select>
-      <div className="stats-grid">
+      <div className="grid gap-m grid-cols-1 l:grid-cols-2">
         <div>
           <h3>Top 10 Most Wins</h3>
           <Table
@@ -191,7 +177,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="bottom-stats">
+      <div className="flex flex-col-reverse m:justify-between m:flex-row">
         <div>
           <p>
             Most matches played:{" "}

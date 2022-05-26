@@ -125,7 +125,7 @@ export default function Bot() {
           },
         ]}
       />
-      <div className="flex justify-between">
+      <div className="flex flex-col mb-m m:justify-between m:flex-row m:mb-0">
         <h3>Fights</h3>
         <div className="flex items-center">
           <div className="mr-l">

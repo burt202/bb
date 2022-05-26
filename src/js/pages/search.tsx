@@ -20,39 +20,31 @@ export default function Search() {
   const grouped = groupBy<SearchResult>((sr) => sr.type, searchResults)
 
   return (
-    <Page headerComponent={<h1 style={{margin: 0}}>Search</h1>}>
-      <div style={{margin: "16px 0"}}>
+    <Page headerComponent={<h1 className="m-0">Search</h1>}>
+      <div className="my-m">
         <input
           type="search"
           placeholder="Search bots/members"
           onChange={(e) => setSearchTerm(e.target.value)}
           value={searchTerm}
-          style={{
-            padding: 8,
-            width: "100%",
-            backgroundColor: "#f5f5f5",
-            border: "1px solid grey",
-            borderRadius: 5,
-          }}
+          className="p-s w-[100%] bg-input border-grey border border-solid rounded"
           autoFocus
         />
       </div>
 
       {searchResults.length === 0 ? (
-        <div style={{display: "flex"}}>
-          <p style={{margin: 0}}>No results</p>
+        <div className="flex">
+          <p className="m-0">No results</p>
         </div>
       ) : (
-        <div
-          style={{display: "grid", gridTemplateColumns: "1fr 1fr", gridGap: 16}}
-        >
+        <div className="grid gap-m grid-cols-2">
           <div>
             {(grouped.bot || []).length === 0 ? (
-              <p style={{margin: 0}}>No bot results</p>
+              <p className="m-0">No bot results</p>
             ) : (
               (grouped.bot || []).map((sr, i) => {
                 return (
-                  <p key={i} style={{marginTop: 0}}>
+                  <p key={i} className="mt-0">
                     <SiteLink
                       to={`/bot/${sr.id}`}
                       pageTitle={`Bot - ${sr.name}`}
@@ -74,11 +66,11 @@ export default function Search() {
           </div>
           <div>
             {(grouped.member || []).length === 0 ? (
-              <p style={{margin: 0}}>No member results</p>
+              <p className="m-0">No member results</p>
             ) : (
               (grouped.member || []).map((sr, i) => {
                 return (
-                  <p key={i} style={{marginTop: 0}}>
+                  <p key={i} className="mt-0">
                     <SiteLink
                       to={`/member/${sr.id}`}
                       pageTitle={`Member - ${sr.name}`}
