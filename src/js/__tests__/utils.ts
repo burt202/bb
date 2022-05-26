@@ -1,4 +1,5 @@
 import {expect} from "chai"
+
 import {convertNameToId, getBotStages, getPercentage} from "../utils"
 
 context("utils", () => {

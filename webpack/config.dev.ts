@@ -1,5 +1,6 @@
 import * as HtmlWebpackPlugin from "html-webpack-plugin"
 import {merge} from "webpack-merge"
+
 import common from "./config.common"
 
 export default merge(common, {

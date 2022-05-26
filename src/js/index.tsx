@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as ReactDom from "react-dom"
+
 import App from "./app"
 import createDb from "./db"
 import {DbInterface, RawSeason} from "./types"

@@ -1,4 +1,5 @@
 import initSqlJs from "sql.js"
+
 import {
   DbBot,
   DbBotFight,

@@ -3,6 +3,7 @@ import * as HtmlWebpackPlugin from "html-webpack-plugin"
 import * as MiniCssExtractPlugin from "mini-css-extract-plugin"
 import * as webpack from "webpack"
 import {merge} from "webpack-merge"
+
 import common from "./config.common"
 
 export default merge(common, {

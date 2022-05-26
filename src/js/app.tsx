@@ -1,6 +1,7 @@
 import * as React from "react"
 import {useLayoutEffect} from "react"
 import {HashRouter, Routes, Route, useLocation} from "react-router-dom"
+
 import Bot from "./pages/bot"
 import Country from "./pages/country"
 import Home from "./pages/home"
