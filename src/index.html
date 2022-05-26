@@ -34,21 +34,35 @@
       content="https://burt202.github.io/bb/thumb.png"
     />
     <link rel="icon" href="favicon.ico" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        background-color: #fff;
+      }
+
+      #container {
+        width: 900px;
+        margin: 0 auto 32px auto;
+      }
+
+      .loading {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 300px;
+      }
+    </style>
     <% if (production) { %>
     <link rel="stylesheet" href="bundle.css" />
     <% } %>
   </head>
   <body>
     <div id="container">
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          text-align: center;
-          height: 300px;
-        "
-      >
+      <div class="loading">
         <div>
           <h3>Loading Data</h3>
           <img src="loading.gif" height="64" width="64" />

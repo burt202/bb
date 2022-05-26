@@ -10,11 +10,11 @@ interface Props {
 }
 
 export default function SiteLink({to, children, textLink, pageTitle}: Props) {
-  const style = textLink ? {color: "#003366"} : {}
+  const className = textLink ? "text-link" : ""
 
   return (
     <Link
-      style={style}
+      className={className}
       to={to}
       onClick={() => {
         setTitle(pageTitle)

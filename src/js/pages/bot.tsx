@@ -42,13 +42,7 @@ export default function Bot() {
     <Page
       headerComponent={
         <>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="flex justify-between items-center">
             <SiteLink
               to={`/country/${bot.country.toLowerCase()}`}
               pageTitle={`Country - ${
@@ -57,11 +51,11 @@ export default function Bot() {
             >
               <img
                 src={`${bot.country.toLowerCase()}.svg`}
-                style={{height: 48, marginRight: 16}}
+                className="h-[48px] mr-s"
                 title={countryNameMap[bot.country.toLowerCase()]}
               />
             </SiteLink>
-            <h1 style={{margin: 0}}>{bot.name}</h1>
+            <h1 className="m-0">{bot.name}</h1>
           </div>
         </>
       }
@@ -131,13 +125,13 @@ export default function Bot() {
           },
         ]}
       />
-      <div className="bot-stats">
+      <div className="flex justify-between">
         <h3>Fights</h3>
-        <div style={{display: "flex", alignItems: "center"}}>
-          <div style={{marginRight: 32}}>
+        <div className="flex items-center">
+          <div className="mr-l">
             Total: <strong>{botFights.length}</strong>
           </div>
-          <div style={{marginRight: 32}}>
+          <div className="mr-l">
             Wins:{" "}
             <strong>
               {botFightWins.length} (
@@ -202,20 +196,14 @@ export default function Bot() {
             alignCenter: true,
             getValue: (bf) => {
               return (
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
+                <div className="flex justify-center items-center">
                   {bf.winnerId === botId ? (
                     <>
-                      <img src="tick.svg" style={{height: 24}} />
+                      <img src="tick.svg" className="h-[24px]" />
                       {bf.ko && <span>KO</span>}
                     </>
                   ) : (
-                    <img src="cross.svg" style={{height: 24}} />
+                    <img src="cross.svg" className="h-[24px]" />
                   )}
                 </div>
               )

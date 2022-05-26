@@ -8,22 +8,22 @@ interface Props {
 
 export default function Page({children, headerComponent}: Props) {
   return (
-    <div style={{marginTop: 16}}>
-      <div style={{display: "flex", justifyContent: "space-between"}}>
+    <div className="mt-m">
+      <div className="flex justify-between">
         <div>{headerComponent}</div>
-        <div style={{display: "flex"}}>
+        <div className="flex">
           <SiteLink to="/search" pageTitle="Search">
             <img
               src="search.svg"
-              style={{height: 24, cursor: "pointer"}}
+              className="h-[24px] cursor-pointer"
               title="Search"
             />
           </SiteLink>
-          <div style={{marginLeft: 16}}>
+          <div className="ml-m">
             <SiteLink to="/" pageTitle="Home">
               <img
                 src="home.svg"
-                style={{height: 24, cursor: "pointer"}}
+                className="h-[24px] cursor-pointer"
                 title="Home"
               />
             </SiteLink>

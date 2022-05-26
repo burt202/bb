@@ -7,9 +7,9 @@ interface Props {
 
 export default function StatBox({title, value}: Props) {
   return (
-    <div className="stats-box">
-      <p style={{margin: 0, fontSize: 30, fontWeight: 400}}>{title}</p>
-      <p style={{margin: 0, fontSize: 60, fontWeight: 400}}>{value}</p>
+    <div className="bg-grey p-m w-[100%] text-right l:w-[400px]">
+      <p className="m-0 text-3xl font-normal">{title}</p>
+      <p className="m-0 text-6xl font-normal">{value}</p>
     </div>
   )
 }

@@ -1,22 +1,13 @@
+/*@import "tailwindcss/base";
+@import "tailwindcss/components";*/
+@import "tailwindcss/utilities";
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-family: sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #333;
-  background-color: #fff;
-}
-
-#container {
-  width: 900px;
-  margin: 0 auto 32px auto;
 }
 
 table {
@@ -56,13 +47,6 @@ th {
   margin-top: 51px;
 }
 
-.stats-box {
-  background: #ccc;
-  padding: 16px;
-  width: 400px;
-  text-align: right;
-}
-
 .bot-stats {
   display: flex;
   justify-content: space-between;
@@ -93,10 +77,6 @@ th {
 
   .side-by-side .right-side-title-margin {
     margin-top: 16px;
-  }
-
-  .stats-box {
-    width: 100%;
   }
 
   .season-pwt-link {
