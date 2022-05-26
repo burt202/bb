@@ -40,8 +40,8 @@ export const stages = [
   {id: "quarter", text: "Quarter-Final", rank: 4},
   {id: "roundof16", text: "Round Of 16", rank: 5},
   {id: "roundof32", text: "Round Of 32", rank: 6},
-  {id: "qualifier", text: "Qualifier", rank: 7},
-  {id: "playoff", text: "Playoff", rank: 8},
+  {id: "playoff", text: "Playoff", rank: 7},
+  {id: "qualifier", text: "Qualifier", rank: 8},
   {id: "season", text: "Season", rank: 8},
   {id: "prequalifier", text: "Pre-Qualifier", rank: 9},
 ]

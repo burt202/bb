@@ -42,7 +42,13 @@ export default function Table<T>({
 
   if (tableWidth * BASE_UNIT > PAGE_WIDTH / 2 && windowWidth <= PAGE_WIDTH) {
     return (
-      <table style={{width: "100%", height: "min-content"}}>
+      <table
+        style={{
+          borderCollapse: "collapse",
+          width: "100%",
+          height: "min-content",
+        }}
+      >
         <tbody>
           {data.length > 0 ? (
             data.map((row, i) => {
@@ -61,8 +67,26 @@ export default function Table<T>({
                       borderBottom: shouldShowDivider ? "3px solid" : 1,
                     }}
                   >
-                    <th style={{width: "33%"}}>{col.title}</th>
-                    <td style={{width: "67%"}}>{col.getValue(row)}</td>
+                    <th
+                      style={{
+                        width: "33%",
+                        border: "1px solid #999",
+                        padding: 8,
+                        textAlign: "left",
+                      }}
+                    >
+                      {col.title}
+                    </th>
+                    <td
+                      style={{
+                        width: "67%",
+                        border: "1px solid #999",
+                        padding: 8,
+                        textAlign: "left",
+                      }}
+                    >
+                      {col.getValue(row)}
+                    </td>
                   </tr>
                 )
               })
@@ -82,7 +106,11 @@ export default function Table<T>({
 
   return (
     <table
-      style={{width: usePercentages ? "100%" : "auto", height: "min-content"}}
+      style={{
+        width: usePercentages ? "100%" : "auto",
+        height: "min-content",
+        borderCollapse: "collapse",
+      }}
     >
       <thead>
         <tr>
@@ -97,6 +125,8 @@ export default function Table<T>({
                     col.width,
                   ),
                   textAlign: col.alignCenter ? "center" : "left",
+                  border: "1px solid #999",
+                  padding: 8,
                 }}
               >
                 {col.title}
@@ -131,6 +161,8 @@ export default function Table<T>({
                           col.width,
                         ),
                         textAlign: col.alignCenter ? "center" : "left",
+                        border: "1px solid #999",
+                        padding: 8,
                       }}
                     >
                       {col.getValue(row)}
