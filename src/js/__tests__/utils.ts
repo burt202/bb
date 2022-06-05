@@ -1,6 +1,6 @@
 import {expect} from "chai"
 
-import {convertNameToId, getBotStages, getPercentage} from "../utils"
+import {convertNameToId, getPercentage} from "../utils"
 
 context("utils", () => {
   context("convertNameToId", () => {
@@ -18,76 +18,6 @@ context("utils", () => {
     it("should return correctly", () => {
       expect(getPercentage(4, 3)).to.eql("75%")
       expect(getPercentage(0, 0)).to.eql("0%")
-    })
-  })
-
-  context("getBotStages", () => {
-    context("data in correct order", () => {
-      it("should return correctly", () => {
-        const fights = [
-          {
-            bots: ["Tombstone", "Bronco"],
-            winner: "Tombstone",
-            stage: "semi",
-            ko: true,
-          },
-          {
-            bots: ["Ghost Raptor", "Biteforce"],
-            winner: "Biteforce",
-            stage: "semi",
-            ko: true,
-          },
-          {
-            bots: ["Tombstone", "Biteforce"],
-            winner: "Biteforce",
-            stage: "final",
-            ko: false,
-          },
-        ]
-
-        const res = getBotStages(fights)
-
-        expect(res).to.eql({
-          Biteforce: "winner",
-          Bronco: "semi",
-          "Ghost Raptor": "semi",
-          Tombstone: "final",
-        })
-      })
-    })
-
-    context("data in incorrect order", () => {
-      it("should return correctly", () => {
-        const fights = [
-          {
-            bots: ["Tombstone", "Biteforce"],
-            winner: "Biteforce",
-            stage: "final",
-            ko: false,
-          },
-          {
-            bots: ["Tombstone", "Bronco"],
-            winner: "Tombstone",
-            stage: "semi",
-            ko: true,
-          },
-          {
-            bots: ["Ghost Raptor", "Biteforce"],
-            winner: "Biteforce",
-            stage: "semi",
-            ko: true,
-          },
-        ]
-
-        const res = getBotStages(fights)
-
-        expect(res).to.eql({
-          Biteforce: "winner",
-          Bronco: "semi",
-          "Ghost Raptor": "semi",
-          Tombstone: "final",
-        })
-      })
     })
   })
 })

@@ -39,6 +39,7 @@ createDb(Object.values(data))
       document.body.querySelector("#container"),
     )
   })
-  .catch(() => {
+  .catch((e) => {
+    console.log("e", e)
     throw new Error("Failed to create db")
   })

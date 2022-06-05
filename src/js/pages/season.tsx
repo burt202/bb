@@ -39,8 +39,11 @@ export default function Season() {
     ? seasons[currentSeasonIndex - 1].id
     : undefined
 
-  const seasonBots = db.getSeasonBots(seasonId)
-  const seasonFights = db.getSeasonFights(seasonId)
+  const competitions = db.getCompetitionsForSeason(seasonId)
+  const competitionId = competitions[0].id // TODO
+
+  const seasonBots = db.getCompetitionBots(competitionId)
+  const seasonFights = db.getCompetitionFights(competitionId)
 
   const koFights = seasonFights.filter((f) => f.ko)
 

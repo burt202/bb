@@ -367,666 +367,671 @@
       "primaryWeaponType": "vertical"
     }
   ],
-  "fights": [
-    {
-      "bots": ["Sawblaze", "Whiplash"],
-      "winner": "Sawblaze",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Fusion", "Mad Catter"],
-      "winner": "Mad Catter",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Malice", "Axe Backwards"],
-      "winner": "Malice",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Bloodsport", "Skorpios"],
-      "winner": "Bloodsport",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Lock-Jaw", "Captain Shrederator"],
-      "winner": "Lock-Jaw",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Rusty", "Sporkinok"],
-      "winner": "Rusty",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEE"],
-      "winner": "SMEEEEEEEEEEEEEEEE",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Tombstone", "End Game"],
-      "winner": "End Game",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Ghost Raptor", "Shatter"],
-      "winner": "Shatter",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Tracer", "Ribbot"],
-      "winner": "Ribbot",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Black Dragon", "Kraken"],
-      "winner": "Black Dragon",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Huge", "Mammoth"],
-      "winner": "Mammoth",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Claw Viper", "HiJinx"],
-      "winner": "Claw Viper",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Perfect Phoenix", "Extinguisher"],
-      "winner": "Perfect Phoenix",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Hydra", "Witch Doctor"],
-      "winner": "Hydra",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Gigabyte", "Copperhead"],
-      "winner": "Copperhead",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Jackpot", "Subzero"],
-      "winner": "Jackpot",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Uppercut", "Gemini"],
-      "winner": "Uppercut",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Beta", "Rotator"],
-      "winner": "Beta",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Valkyrie", "Tantrum"],
-      "winner": "Valkyrie",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Atom 94", "Big Dill"],
-      "winner": "Big Dill",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Hypershock", "Gruff"],
-      "winner": "Gruff",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Tombstone", "Slap Box"],
-      "winner": "Tombstone",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Slammow", "Pain Train"],
-      "winner": "Slammow",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Perfect Phoenix", "Skorpios"],
-      "winner": "Skorpios",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Ribbot", "Mad Catter"],
-      "winner": "Mad Catter",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Chomp", "Gamma 9"],
-      "winner": "Chomp",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Malice", "Shatter"],
-      "winner": "Malice",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["End Game", "Bloodsport"],
-      "winner": "Bloodsport",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Claw Viper", "Black Dragon"],
-      "winner": "Black Dragon",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Jackpot", "Ghost Raptor"],
-      "winner": "Jackpot",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Subzero", "Grabot"],
-      "winner": "Subzero",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Huge", "Hydra"],
-      "winner": "Hydra",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Fusion", "Aegis"],
-      "winner": "Fusion",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Lock-Jaw", "Big Dill"],
-      "winner": "Lock-Jaw",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Kraken", "Witch Doctor"],
-      "winner": "Kraken",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Valkyrie", "Rotator"],
-      "winner": "Valkyrie",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Gigabyte", "Extinguisher"],
-      "winner": "Gigabyte",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Sharkoprion", "Slap Box"],
-      "winner": "Slap Box",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Malice", "Mad Catter"],
-      "winner": "Mad Catter",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Atom 94", "Tantrum"],
-      "winner": "Tantrum",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["SMEEEEEEEEEEEEEEEE", "Pain Train"],
-      "winner": "Pain Train",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Sawblaze", "Uppercut"],
-      "winner": "Uppercut",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Axe Backwards", "Captain Shrederator"],
-      "winner": "Captain Shrederator",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Chronos", "P1"],
-      "winner": "P1",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Copperhead", "P1"],
-      "winner": "Copperhead",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Rusty", "Beta"],
-      "winner": "Beta",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Mammoth", "Hypershock"],
-      "winner": "Hypershock",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Subzero", "Sporkinok"],
-      "winner": "Subzero",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Bale Spear", "Deadlift"],
-      "winner": "Deadlift",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Bale Spear", "Tracer"],
-      "winner": "Tracer",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Gruff", "Whiplash"],
-      "winner": "Whiplash",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Huge", "Kraken"],
-      "winner": "Huge",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Axolotl", "War EZ"],
-      "winner": "War EZ",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Ribbot", "Axolotl"],
-      "winner": "Ribbot",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Big Dill", "Rotator"],
-      "winner": "Rotator",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Lock-Jaw", "Jackpot"],
-      "winner": "Jackpot",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Chronos", "Bloodsport"],
-      "winner": "Bloodsport",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Fusion", "War EZ"],
-      "winner": "Fusion",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Skorpios", "Tombstone"],
-      "winner": "Skorpios",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Captain Shrederator", "Shatter"],
-      "winner": "Shatter",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Gigabyte", "Claw Viper"],
-      "winner": "Gigabyte",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Chomp", "HiJinx"],
-      "winner": "HiJinx",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Witch Doctor", "Slammow"],
-      "winner": "Witch Doctor",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Gruff", "Extinguisher"],
-      "winner": "Extinguisher",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Perfect Phoenix", "Atom 94"],
-      "winner": "Perfect Phoenix",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Copperhead", "Black Dragon"],
-      "winner": "Copperhead",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Hydra", "Uppercut"],
-      "winner": "Hydra",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Rusty", "Sawblaze"],
-      "winner": "Sawblaze",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Gamma 9", "Tantrum"],
-      "winner": "Tantrum",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["End Game", "Hypershock"],
-      "winner": "End Game",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["SMEEEEEEEEEEEEEEEE", "P1"],
-      "winner": "P1",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Beta", "Grabot"],
-      "winner": "Beta",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Whiplash", "Valkyrie"],
-      "winner": "Whiplash",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Black Widow", "Rampage"],
-      "winner": "Black Widow",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Chomp", "Ghost Raptor"],
-      "winner": "Ghost Raptor",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["Deadlift", "Mammoth"],
-      "winner": "Mammoth",
-      "stage": "season",
-      "ko": false
-    },
-    {
-      "bots": ["HiJinx", "Tracer"],
-      "winner": "HiJinx",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Slammow", "War EZ"],
-      "winner": "Slammow",
-      "stage": "season",
-      "ko": true
-    },
-    {
-      "bots": ["Mad Catter", "Tombstone"],
-      "winner": "Tombstone",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Uppercut", "HiJinx"],
-      "winner": "Uppercut",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Slammow", "Black Dragon"],
-      "winner": "Black Dragon",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Beta", "Ribbot"],
-      "winner": "Ribbot",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Whiplash", "Huge"],
-      "winner": "Whiplash",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Valkyrie", "Subzero"],
-      "winner": "Valkyrie",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Malice", "Gigabyte"],
-      "winner": "Gigabyte",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Hydra", "Hypershock"],
-      "winner": "Hydra",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Lock-Jaw", "Shatter"],
-      "winner": "Shatter",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Jackpot", "Rotator"],
-      "winner": "Rotator",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Perfect Phoenix", "End Game"],
-      "winner": "End Game",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Copperhead", "Mammoth"],
-      "winner": "Mammoth",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Kraken", "Sawblaze"],
-      "winner": "Sawblaze",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Gruff", "Bloodsport"],
-      "winner": "Bloodsport",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Fusion", "Tantrum"],
-      "winner": "Tantrum",
-      "stage": "roundof32",
-      "ko": true
-    },
-    {
-      "bots": ["Witch Doctor", "Skorpios"],
-      "winner": "Witch Doctor",
-      "stage": "roundof32",
-      "ko": false
-    },
-    {
-      "bots": ["Sawblaze", "Witch Doctor"],
-      "winner": "Sawblaze",
-      "stage": "roundof16",
-      "ko": true
-    },
-    {
-      "bots": ["Uppercut", "Ribbot"],
-      "winner": "Ribbot",
-      "stage": "roundof16",
-      "ko": true
-    },
-    {
-      "bots": ["Tantrum", "Bloodsport"],
-      "winner": "Tantrum",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Hydra", "Gigabyte"],
-      "winner": "Hydra",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Tombstone", "Black Dragon"],
-      "winner": "Black Dragon",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Whiplash", "Valkyrie"],
-      "winner": "Whiplash",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Mammoth", "Shatter"],
-      "winner": "Shatter",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Rotator", "End Game"],
-      "winner": "End Game",
-      "stage": "roundof16",
-      "ko": false
-    },
-    {
-      "bots": ["Ribbot", "Black Dragon"],
-      "winner": "Black Dragon",
-      "stage": "quarter",
-      "ko": false
-    },
-    {
-      "bots": ["Shatter", "End Game"],
-      "winner": "End Game",
-      "stage": "quarter",
-      "ko": true
-    },
-    {
-      "bots": ["Sawblaze", "Tantrum"],
-      "winner": "Tantrum",
-      "stage": "quarter",
-      "ko": false
-    },
-    {
-      "bots": ["Hydra", "Whiplash"],
-      "winner": "Whiplash",
-      "stage": "quarter",
-      "ko": false
-    },
-    {
-      "bots": ["Tantrum", "End Game"],
-      "winner": "End Game",
-      "stage": "semi",
-      "ko": true
-    },
-    {
-      "bots": ["Whiplash", "Black Dragon"],
-      "winner": "Whiplash",
-      "stage": "semi",
-      "ko": false
-    },
-    {
-      "bots": ["Whiplash", "End Game"],
-      "winner": "End Game",
-      "stage": "final",
-      "ko": true
+  "competitions": [
+    {
+      "name": "Main",
+      "fights": [
+        {
+          "bots": ["Sawblaze", "Whiplash"],
+          "winner": "Sawblaze",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Fusion", "Mad Catter"],
+          "winner": "Mad Catter",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Malice", "Axe Backwards"],
+          "winner": "Malice",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Bloodsport", "Skorpios"],
+          "winner": "Bloodsport",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Captain Shrederator"],
+          "winner": "Lock-Jaw",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Rusty", "Sporkinok"],
+          "winner": "Rusty",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEE"],
+          "winner": "SMEEEEEEEEEEEEEEEE",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Tombstone", "End Game"],
+          "winner": "End Game",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Ghost Raptor", "Shatter"],
+          "winner": "Shatter",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Tracer", "Ribbot"],
+          "winner": "Ribbot",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Black Dragon", "Kraken"],
+          "winner": "Black Dragon",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Huge", "Mammoth"],
+          "winner": "Mammoth",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Claw Viper", "HiJinx"],
+          "winner": "Claw Viper",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Perfect Phoenix", "Extinguisher"],
+          "winner": "Perfect Phoenix",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Hydra", "Witch Doctor"],
+          "winner": "Hydra",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Gigabyte", "Copperhead"],
+          "winner": "Copperhead",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Jackpot", "Subzero"],
+          "winner": "Jackpot",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Uppercut", "Gemini"],
+          "winner": "Uppercut",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Beta", "Rotator"],
+          "winner": "Beta",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Valkyrie", "Tantrum"],
+          "winner": "Valkyrie",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Atom 94", "Big Dill"],
+          "winner": "Big Dill",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Hypershock", "Gruff"],
+          "winner": "Gruff",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Tombstone", "Slap Box"],
+          "winner": "Tombstone",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Slammow", "Pain Train"],
+          "winner": "Slammow",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Perfect Phoenix", "Skorpios"],
+          "winner": "Skorpios",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Ribbot", "Mad Catter"],
+          "winner": "Mad Catter",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Chomp", "Gamma 9"],
+          "winner": "Chomp",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Malice", "Shatter"],
+          "winner": "Malice",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["End Game", "Bloodsport"],
+          "winner": "Bloodsport",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Claw Viper", "Black Dragon"],
+          "winner": "Black Dragon",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Jackpot", "Ghost Raptor"],
+          "winner": "Jackpot",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Subzero", "Grabot"],
+          "winner": "Subzero",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Huge", "Hydra"],
+          "winner": "Hydra",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Fusion", "Aegis"],
+          "winner": "Fusion",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Big Dill"],
+          "winner": "Lock-Jaw",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Kraken", "Witch Doctor"],
+          "winner": "Kraken",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Valkyrie", "Rotator"],
+          "winner": "Valkyrie",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Gigabyte", "Extinguisher"],
+          "winner": "Gigabyte",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Sharkoprion", "Slap Box"],
+          "winner": "Slap Box",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Malice", "Mad Catter"],
+          "winner": "Mad Catter",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Atom 94", "Tantrum"],
+          "winner": "Tantrum",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["SMEEEEEEEEEEEEEEEE", "Pain Train"],
+          "winner": "Pain Train",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Sawblaze", "Uppercut"],
+          "winner": "Uppercut",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Axe Backwards", "Captain Shrederator"],
+          "winner": "Captain Shrederator",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Chronos", "P1"],
+          "winner": "P1",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Copperhead", "P1"],
+          "winner": "Copperhead",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Rusty", "Beta"],
+          "winner": "Beta",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Mammoth", "Hypershock"],
+          "winner": "Hypershock",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Subzero", "Sporkinok"],
+          "winner": "Subzero",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Bale Spear", "Deadlift"],
+          "winner": "Deadlift",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Bale Spear", "Tracer"],
+          "winner": "Tracer",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Gruff", "Whiplash"],
+          "winner": "Whiplash",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Huge", "Kraken"],
+          "winner": "Huge",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Axolotl", "War EZ"],
+          "winner": "War EZ",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Ribbot", "Axolotl"],
+          "winner": "Ribbot",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Big Dill", "Rotator"],
+          "winner": "Rotator",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Jackpot"],
+          "winner": "Jackpot",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Chronos", "Bloodsport"],
+          "winner": "Bloodsport",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Fusion", "War EZ"],
+          "winner": "Fusion",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Skorpios", "Tombstone"],
+          "winner": "Skorpios",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Captain Shrederator", "Shatter"],
+          "winner": "Shatter",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Gigabyte", "Claw Viper"],
+          "winner": "Gigabyte",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Chomp", "HiJinx"],
+          "winner": "HiJinx",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Witch Doctor", "Slammow"],
+          "winner": "Witch Doctor",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Gruff", "Extinguisher"],
+          "winner": "Extinguisher",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Perfect Phoenix", "Atom 94"],
+          "winner": "Perfect Phoenix",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Copperhead", "Black Dragon"],
+          "winner": "Copperhead",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Hydra", "Uppercut"],
+          "winner": "Hydra",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Rusty", "Sawblaze"],
+          "winner": "Sawblaze",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Gamma 9", "Tantrum"],
+          "winner": "Tantrum",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["End Game", "Hypershock"],
+          "winner": "End Game",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["SMEEEEEEEEEEEEEEEE", "P1"],
+          "winner": "P1",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Beta", "Grabot"],
+          "winner": "Beta",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Whiplash", "Valkyrie"],
+          "winner": "Whiplash",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Black Widow", "Rampage"],
+          "winner": "Black Widow",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Chomp", "Ghost Raptor"],
+          "winner": "Ghost Raptor",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["Deadlift", "Mammoth"],
+          "winner": "Mammoth",
+          "stage": "season",
+          "ko": false
+        },
+        {
+          "bots": ["HiJinx", "Tracer"],
+          "winner": "HiJinx",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Slammow", "War EZ"],
+          "winner": "Slammow",
+          "stage": "season",
+          "ko": true
+        },
+        {
+          "bots": ["Mad Catter", "Tombstone"],
+          "winner": "Tombstone",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Uppercut", "HiJinx"],
+          "winner": "Uppercut",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Slammow", "Black Dragon"],
+          "winner": "Black Dragon",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Beta", "Ribbot"],
+          "winner": "Ribbot",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Whiplash", "Huge"],
+          "winner": "Whiplash",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Valkyrie", "Subzero"],
+          "winner": "Valkyrie",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Malice", "Gigabyte"],
+          "winner": "Gigabyte",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Hydra", "Hypershock"],
+          "winner": "Hydra",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Shatter"],
+          "winner": "Shatter",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Jackpot", "Rotator"],
+          "winner": "Rotator",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Perfect Phoenix", "End Game"],
+          "winner": "End Game",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Copperhead", "Mammoth"],
+          "winner": "Mammoth",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Kraken", "Sawblaze"],
+          "winner": "Sawblaze",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Gruff", "Bloodsport"],
+          "winner": "Bloodsport",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Fusion", "Tantrum"],
+          "winner": "Tantrum",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Witch Doctor", "Skorpios"],
+          "winner": "Witch Doctor",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Sawblaze", "Witch Doctor"],
+          "winner": "Sawblaze",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Uppercut", "Ribbot"],
+          "winner": "Ribbot",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Tantrum", "Bloodsport"],
+          "winner": "Tantrum",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Hydra", "Gigabyte"],
+          "winner": "Hydra",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Tombstone", "Black Dragon"],
+          "winner": "Black Dragon",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Whiplash", "Valkyrie"],
+          "winner": "Whiplash",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Mammoth", "Shatter"],
+          "winner": "Shatter",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Rotator", "End Game"],
+          "winner": "End Game",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Ribbot", "Black Dragon"],
+          "winner": "Black Dragon",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Shatter", "End Game"],
+          "winner": "End Game",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Sawblaze", "Tantrum"],
+          "winner": "Tantrum",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Hydra", "Whiplash"],
+          "winner": "Whiplash",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Tantrum", "End Game"],
+          "winner": "End Game",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Whiplash", "Black Dragon"],
+          "winner": "Whiplash",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Whiplash", "End Game"],
+          "winner": "End Game",
+          "stage": "final",
+          "ko": true
+        }
+      ]
     }
   ]
 }

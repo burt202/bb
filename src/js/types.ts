@@ -12,11 +12,16 @@ export interface RawFight {
   ko: boolean
 }
 
+export interface RawCompetition {
+  name: string
+  fights: Array<RawFight>
+}
+
 export interface RawSeason {
   season: string
   year: string
   bots: Array<RawBot>
-  fights: Array<RawFight>
+  competitions: Array<RawCompetition>
 }
 
 export interface DbBot {
@@ -41,6 +46,11 @@ export interface DbSeason {
   year: string
 }
 
+export interface DbCompetition {
+  id: string
+  name: string
+}
+
 export interface DbPrimaryWeaponType {
   id: string
   name: string
@@ -52,14 +62,14 @@ export interface DbPrimaryWeaponTypeWinCountBreakdown {
   count: number
 }
 
-export interface DbSeasonBot {
+export interface DbCompetitionBot {
   bot_id: string
   bot_name: string
   bot_country: string
   stage_name: string
 }
 
-export interface DbSeasonFight {
+export interface DbCompetitionFight {
   id: string
   ko: string
   stage_name: string
@@ -112,18 +122,19 @@ export interface DbPrimaryWeaponTypeWin {
 }
 
 export type Season = DbSeason
+export type Competition = DbCompetition
 export type Bot = DbBot
 export type Member = DbMember
 export type PrimaryWeaponType = DbPrimaryWeaponType
 
-export interface SeasonBot {
+export interface CompetitionBot {
   botId: string
   botName: string
   botCountry: string
   stageName: string
 }
 
-export interface SeasonFight {
+export interface CompetitionFight {
   bots: Array<Bot>
   ko: boolean
   stageName: string
@@ -192,8 +203,9 @@ export interface PrimaryWeaponTypeWin {
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
-  getSeasonBots: (id: string) => Array<SeasonBot>
-  getSeasonFights: (id: string) => Array<SeasonFight>
+  getCompetitionsForSeason: (id: string) => Array<Competition>
+  getCompetitionBots: (id: string) => Array<CompetitionBot>
+  getCompetitionFights: (id: string) => Array<CompetitionFight>
   getBotById: (id: string) => Bot | undefined
   getBotSeasons: (id: string) => Array<BotSeason>
   getBotFights: (id: string) => Array<BotFight>
@@ -219,5 +231,5 @@ export interface DbInterface {
   getPrimaryWeaponTypeBots: (
     primaryWeaponTypeId: string,
     seasonId: string,
-  ) => Array<SeasonBot>
+  ) => Array<CompetitionBot>
 }
