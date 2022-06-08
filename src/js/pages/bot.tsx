@@ -34,6 +34,7 @@ export default function Bot() {
   }
 
   const botSeasons = db.getBotSeasons(botId)
+  const botCompetitions = db.getBotCompetitions(botId)
   const botFights = db.getBotFights(botId)
 
   const botFightWins = botFights.filter((bf) => bf.winnerId === botId)
@@ -81,13 +82,6 @@ export default function Bot() {
             width: 3,
           },
           {
-            title: "Stage",
-            getValue: (bs) => {
-              return stageNameMap[bs.stageName]
-            },
-            width: 3,
-          },
-          {
             title: "Key Members",
             getValue: (bs) => {
               return bs.members.map((m, i) => {
@@ -107,7 +101,7 @@ export default function Bot() {
                 )
               })
             },
-            width: 8,
+            width: 11,
           },
           {
             title: "Primary Weapon Type",
@@ -123,6 +117,49 @@ export default function Bot() {
               )
             },
             width: 4,
+          },
+        ]}
+      />
+      <h3>Competitions Entered</h3>
+      <Table
+        data={botCompetitions}
+        columns={[
+          {
+            title: "Name",
+            getValue: (bc) => {
+              return (
+                <SiteLink
+                  to={`/season/${bc.seasonId}?competition=${bc.competitionId}`}
+                  pageTitle={`Season - ${bc.seasonYear} (S${bc.seasonNumber}) - ${bc.competitionName}`}
+                  textLink={true}
+                >
+                  {bc.competitionName}
+                </SiteLink>
+              )
+            },
+            width: 6,
+          },
+          {
+            title: "Season",
+            getValue: (bc) => {
+              return (
+                <SiteLink
+                  to={`/season/${bc.seasonId}`}
+                  textLink={true}
+                  pageTitle={`Season - ${bc.seasonYear}`}
+                >
+                  {bc.seasonYear}
+                </SiteLink>
+              )
+            },
+            width: 6,
+          },
+          {
+            title: "Stage",
+            getValue: (bc) => {
+              return stageNameMap[bc.stageName]
+            },
+            width: 6,
           },
         ]}
       />
@@ -156,19 +193,29 @@ export default function Bot() {
         }}
         columns={[
           {
-            title: "Season",
+            title: "Competition / Season",
             getValue: (bf) => {
               return (
-                <SiteLink
-                  to={`/season/${bf.seasonId}`}
-                  pageTitle={`Season - ${bf.seasonYear}`}
-                  textLink={true}
-                >
-                  {bf.seasonYear}
-                </SiteLink>
+                <>
+                  <SiteLink
+                    to={`/season/${bf.seasonId}?competition=${bf.competitionId}`}
+                    pageTitle={`Season - ${bf.seasonYear} (S${bf.seasonNumber}) - ${bf.competitionName}`}
+                    textLink={true}
+                  >
+                    {bf.competitionName}
+                  </SiteLink>
+                  {" / "}
+                  <SiteLink
+                    to={`/season/${bf.seasonId}`}
+                    pageTitle={`Season - ${bf.seasonYear} (S${bf.seasonNumber})`}
+                    textLink={true}
+                  >
+                    {bf.seasonYear} (S{bf.seasonNumber})
+                  </SiteLink>
+                </>
               )
             },
-            width: 3,
+            width: 4,
           },
           {
             title: "Against",
@@ -190,7 +237,7 @@ export default function Bot() {
                 )
               })
             },
-            width: 9,
+            width: 8,
           },
           {
             title: "Win",

@@ -9,12 +9,7 @@ import {
   RawFight,
   RawSeason,
 } from "../types"
-import {
-  convertNameToId,
-  getBotStages,
-  primaryWeaponTypeNameMap,
-  stages,
-} from "../utils"
+import {convertNameToId, primaryWeaponTypeNameMap, stages} from "../utils"
 
 export function createTables(db: Database) {
   db.run(`
@@ -23,6 +18,14 @@ export function createTables(db: Database) {
       number int UNIQUE NOT NULL,
       year text NOT NULL,
       primary key (id)
+    );
+
+    CREATE TABLE competitions (
+      id text UNIQUE NOT NULL,
+      name text NOT NULL,
+      season_id text NOT NULL,
+      primary key (id),
+      foreign key (season_id) references seasons(id)
     );
 
     CREATE TABLE stages (
@@ -54,11 +57,9 @@ export function createTables(db: Database) {
     CREATE TABLE season_bots (
       season_id text NOT NULL,
       bot_id text NOT NULL,
-      stage_id text NOT NULL,
       primary key (season_id, bot_id),
       foreign key (season_id) references seasons(id),
-      foreign key (bot_id) references bots(id),
-      foreign key (stage_id) references stages(id)
+      foreign key (bot_id) references bots(id)
     );
 
     CREATE TABLE season_bot_primary_weapon_types (
@@ -84,10 +85,10 @@ export function createTables(db: Database) {
       ko text NOT NULL,
       stage_id text NOT NULL,
       winner_id text NOT NULL,
-      season_id text NOT NULL,
+      competition_id text NOT NULL,
       primary key (id),
       foreign key (winner_id) references bots(id),
-      foreign key (season_id) references seasons(id),
+      foreign key (competition_id) references competitions(id),
       foreign key (stage_id) references stages(id)
     );
 
@@ -191,19 +192,8 @@ function insertBot(db: Database, name: string, country: string) {
   return result
 }
 
-function addBotToSeason(
-  db: Database,
-  seasonId: string,
-  botId: string,
-  stageName: string,
-) {
-  const stage = getStageByName(db, stageName)
-
-  if (stage === undefined) {
-    throw new Error(`Cannot find stage: ${stageName}`)
-  }
-
-  db.run("INSERT INTO season_bots VALUES (?,?,?)", [seasonId, botId, stage.id])
+function addBotToSeason(db: Database, seasonId: string, botId: string) {
+  db.run("INSERT INTO season_bots VALUES (?,?)", [seasonId, botId])
 }
 
 function addPrimaryWeaponForBotForSeason(
@@ -217,6 +207,7 @@ function addPrimaryWeaponForBotForSeason(
   if (found === undefined) {
     throw new Error(`Cannot find primary weapon type: ${primaryWeaponType}`)
   }
+
   db.run("INSERT INTO season_bot_primary_weapon_types VALUES (?,?,?)", [
     botId,
     seasonId,
@@ -234,6 +225,15 @@ function insertMember(db: Database, name: string) {
   }
 
   return result
+}
+
+function insertCompetition(
+  db: Database,
+  id: string,
+  name: string,
+  seasonId: string,
+) {
+  db.run("INSERT INTO competitions VALUES (?,?,?)", [id, name, seasonId])
 }
 
 function addMemberToBotForSeason(
@@ -312,11 +312,9 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
       season.year,
     ])
 
-    const botStages = getBotStages(season.fights)
-
     season.bots.forEach((bot) => {
       const insertedBot = insertBot(db, bot.name, bot.country)
-      addBotToSeason(db, seasonId, insertedBot.id, botStages[bot.name])
+      addBotToSeason(db, seasonId, insertedBot.id)
 
       addPrimaryWeaponForBotForSeason(
         db,
@@ -327,6 +325,7 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
 
       bot.keyMembers.forEach((member, i) => {
         const insertedMember = insertMember(db, member)
+
         addMemberToBotForSeason(
           db,
           insertedBot.id,
@@ -337,11 +336,17 @@ export function populateDatabase(db: Database, data: Array<RawSeason>) {
       })
     })
 
-    season.fights.forEach((fight) => {
-      const insertedFight = insertFight(db, seasonId, fight)
+    season.competitions.forEach((competition) => {
+      const competitionId = uuid.v4()
 
-      fight.bots.forEach((bot) => {
-        addBotToFight(db, insertedFight.id, bot)
+      insertCompetition(db, competitionId, competition.name, seasonId)
+
+      competition.fights.forEach((fight) => {
+        const insertedFight = insertFight(db, competitionId, fight)
+
+        fight.bots.forEach((bot) => {
+          addBotToFight(db, insertedFight.id, bot)
+        })
       })
     })
   })

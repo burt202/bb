@@ -10,9 +10,9 @@ import {DbInterface} from "../types"
 import {
   setTitle,
   primaryWeaponTypeNameMap,
-  stageNameMap,
   getPercentage,
   countryNameMap,
+  stageNameMap,
 } from "../utils"
 
 function updateUrlParams(seasonId?: string, primaryWeaponTypeId?: string) {
@@ -73,13 +73,13 @@ export default function PrimaryWeaponTypes() {
         )
       : []
 
-  const primaryWeaponTypeFights = hasSpecificPrimaryWeaponTypeSelected
+  const primaryWeaponTypeWins = hasSpecificPrimaryWeaponTypeSelected
     ? db.getPrimaryWeaponTypeWins(
         primaryWeaponTypeId,
         seasonId === "all" ? undefined : seasonId,
       )
     : []
-  const koWins = primaryWeaponTypeFights.filter((pwtf) => pwtf.ko)
+  const koWins = primaryWeaponTypeWins.filter((pwtf) => pwtf.ko)
 
   const primaryWeaponTypeBots =
     hasSpecificSeasonSelected && hasSpecificPrimaryWeaponTypeSelected
@@ -203,18 +203,18 @@ export default function PrimaryWeaponTypes() {
             <h3>Wins</h3>
             <div className="flex items-center">
               <div className="mr-l">
-                Total: <strong>{primaryWeaponTypeFights.length}</strong>
+                Total: <strong>{primaryWeaponTypeWins.length}</strong>
               </div>
               <div>
                 KO %:{" "}
                 <strong>
-                  {getPercentage(primaryWeaponTypeFights.length, koWins.length)}
+                  {getPercentage(primaryWeaponTypeWins.length, koWins.length)}
                 </strong>
               </div>
             </div>
           </div>
           <Table
-            data={primaryWeaponTypeFights}
+            data={primaryWeaponTypeWins}
             shouldShowDivider={(data, row, i) => {
               return data[i + 1] === undefined
                 ? false
@@ -252,16 +252,26 @@ export default function PrimaryWeaponTypes() {
                 width: 10,
               },
               {
-                title: "Season",
+                title: "Competition / Season",
                 getValue: (pwtf) => {
                   return (
-                    <SiteLink
-                      to={`/season/${pwtf.seasonId}`}
-                      pageTitle={`Season - ${pwtf.seasonYear}`}
-                      textLink={true}
-                    >
-                      {pwtf.seasonYear}
-                    </SiteLink>
+                    <>
+                      <SiteLink
+                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionId}`}
+                        pageTitle={`Season - ${pwtf.seasonYear} (S${pwtf.seasonNumber}) - ${pwtf.competitionName}`}
+                        textLink={true}
+                      >
+                        {pwtf.competitionName}
+                      </SiteLink>
+                      {" / "}
+                      <SiteLink
+                        to={`/season/${pwtf.seasonId}`}
+                        pageTitle={`Season - ${pwtf.seasonYear} (S${pwtf.seasonNumber})`}
+                        textLink={true}
+                      >
+                        {pwtf.seasonYear} (S{pwtf.seasonNumber})
+                      </SiteLink>
+                    </>
                   )
                 },
                 width: 4,
@@ -326,9 +336,25 @@ export default function PrimaryWeaponTypes() {
                   width: 4,
                 },
                 {
-                  title: "Stage",
+                  title: "Competitions Entered",
                   getValue: (pwtb) => {
-                    return stageNameMap[pwtb.stageName]
+                    return pwtb.competitions.map((c, i) => {
+                      const isLastCompetition =
+                        i + 1 === pwtb.competitions.length
+
+                      return (
+                        <React.Fragment key={i}>
+                          <SiteLink
+                            to={`/season/${c.seasonId}?competition=${c.competitionId}`}
+                            pageTitle={`Season - ${c.seasonYear} (S${c.seasonNumber}) - ${c.competitionName}`}
+                            textLink={true}
+                          >
+                            {c.competitionName}
+                          </SiteLink>
+                          {isLastCompetition ? "" : ", "}
+                        </React.Fragment>
+                      )
+                    })
                   },
                   width: 4,
                 },
@@ -339,18 +365,18 @@ export default function PrimaryWeaponTypes() {
             <h3>Wins</h3>
             <div className="flex items-center">
               <div className="mr-l">
-                Total: <strong>{primaryWeaponTypeFights.length}</strong>
+                Total: <strong>{primaryWeaponTypeWins.length}</strong>
               </div>
               <div>
                 KO %:{" "}
                 <strong>
-                  {getPercentage(primaryWeaponTypeFights.length, koWins.length)}
+                  {getPercentage(primaryWeaponTypeWins.length, koWins.length)}
                 </strong>
               </div>
             </div>
           </div>
           <Table
-            data={primaryWeaponTypeFights}
+            data={primaryWeaponTypeWins}
             columns={[
               {
                 title: "Bots",
@@ -383,11 +409,23 @@ export default function PrimaryWeaponTypes() {
                 width: 10,
               },
               {
-                title: "Stage",
+                title: "Stage / Competition",
                 getValue: (pwtf) => {
-                  return stageNameMap[pwtf.stageName]
+                  return (
+                    <>
+                      {stageNameMap[pwtf.stageName]}
+                      {" / "}
+                      <SiteLink
+                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionId}`}
+                        pageTitle={`Season - ${pwtf.seasonYear} (S${pwtf.seasonNumber}) - ${pwtf.competitionName}`}
+                        textLink={true}
+                      >
+                        {pwtf.competitionName}
+                      </SiteLink>
+                    </>
+                  )
                 },
-                width: 4,
+                width: 5,
               },
               {
                 title: "KO",
@@ -398,7 +436,7 @@ export default function PrimaryWeaponTypes() {
                     <img src="cross.svg" className="h-[24px]" />
                   )
                 },
-                width: 4,
+                width: 3,
                 alignCenter: true,
               },
             ]}

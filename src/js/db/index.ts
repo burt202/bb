@@ -9,13 +9,15 @@ import {
   DbMemberSeason,
   DbPrimaryWeaponTypeWinCountBreakdown,
   DbSeason,
-  DbSeasonBot,
-  DbSeasonFight,
   DbPrimaryWeaponType,
   DbTop10Result,
   RawSeason,
   SearchResult,
   DbPrimaryWeaponTypeWin,
+  DbCompetition,
+  DbCompetitionFight,
+  DbCompetitionBot,
+  DbSeasonCompetition,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -40,34 +42,61 @@ export default async function createDb(
         ":id": id,
       })
     },
-    getSeasonBots(id: string) {
+    getCompetitionsForSeason: (id: string) => {
+      return getMany<DbCompetition>(
+        db,
+        "SELECT * FROM competitions WHERE season_id = :id",
+        {
+          ":id": id,
+        },
+      )
+    },
+    getCompetitionBots(id: string) {
       const sql = `
         SELECT
           b.id AS bot_id,
           b.name AS bot_name,
           b.country AS bot_country,
-          s.name AS stage_name
-        FROM season_bots sb
-        INNER JOIN bots b ON sb.bot_id = b.id
-        INNER JOIN stages s ON sb.stage_id = s.id
-        WHERE sb.season_id = :id
-        ORDER BY s.rank ASC, b.name ASC
+          (
+            SELECT
+              CASE
+                WHEN s.name = 'final' AND f.winner_id = b.id
+                THEN 'winner'
+                ELSE s.name
+              END
+            FROM fights f
+            INNER JOIN fight_bots fb ON f.id = fb.fight_id
+            INNER JOIN stages s ON f.stage_id = s.id
+            WHERE f.competition_id = :id AND fb.bot_id = b.id
+            ORDER BY s.rank ASC LIMIT 1
+          ) AS stage_name
+        FROM bots b
+        INNER JOIN stages s ON stage_name = s.name
+        WHERE b.id IN (
+          SELECT
+            DISTINCT fb.bot_id
+          FROM fight_bots fb
+          INNER JOIN fights f ON fb.fight_id = f.id
+          INNER JOIN bots b ON fb.bot_id = b.id
+          WHERE f.competition_id = :id
+        )
+        ORDER BY s.rank ASC
       `
 
-      const dbSeasonBots = getMany<DbSeasonBot>(db, sql, {
+      const dbCompetitionBots = getMany<DbCompetitionBot>(db, sql, {
         ":id": id,
       })
 
-      return dbSeasonBots.map((sb) => {
+      return dbCompetitionBots.map((cb) => {
         return {
-          botId: sb.bot_id,
-          botName: sb.bot_name,
-          botCountry: sb.bot_country,
-          stageName: sb.stage_name,
+          botId: cb.bot_id,
+          botName: cb.bot_name,
+          botCountry: cb.bot_country,
+          stageName: cb.stage_name,
         }
       })
     },
-    getSeasonFights(id: string) {
+    getCompetitionFights(id: string) {
       const sql = `
         SELECT
           f.id,
@@ -77,15 +106,15 @@ export default async function createDb(
         FROM fights f
         INNER JOIN stages s ON f.stage_id = s.id
         INNER JOIN bots b ON f.winner_id = b.id
-        WHERE f.season_id = :id
+        WHERE f.competition_id = :id
         ORDER BY s.rank ASC
       `
 
-      const dbSeasonFights = getMany<DbSeasonFight>(db, sql, {
+      const dbCompetitionFights = getMany<DbCompetitionFight>(db, sql, {
         ":id": id,
       })
 
-      return dbSeasonFights.map((f) => {
+      return dbCompetitionFights.map((f) => {
         const bots = getMany<DbBot>(
           db,
           `
@@ -120,11 +149,9 @@ export default async function createDb(
         SELECT
           s.id AS season_id,
           s.year AS season_year,
-          st.name AS stage_name,
           pwt.name AS primary_weapon_type
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
-        INNER JOIN stages st ON sb.stage_id = st.id
         INNER JOIN season_bot_primary_weapon_types sbpwt
           ON sb.bot_id = sbpwt.bot_id
           AND sb.season_id = sbpwt.season_id
@@ -160,8 +187,59 @@ export default async function createDb(
           members,
           seasonId: bs.season_id,
           seasonYear: bs.season_year,
-          stageName: bs.stage_name,
           primaryWeaponType: bs.primary_weapon_type,
+        }
+      })
+    },
+    getBotCompetitions(id: string) {
+      const competitions = getMany<DbSeasonCompetition>(
+        db,
+        `
+          SELECT
+            DISTINCT
+              s.id AS season_id,
+              s.year AS season_year,
+              s.number AS season_number,
+              c.id AS competition_id,
+              c.name AS competition_name
+          FROM fight_bots fb
+          INNER JOIN fights f ON fb.fight_id = f.id
+          INNER JOIN competitions c ON f.competition_id = c.id
+          INNER JOIN seasons s ON c.season_id = s.id
+          WHERE fb.bot_id = :id
+          ORDER BY s.number DESC
+        `,
+        {
+          ":id": id,
+        },
+      )
+
+      return competitions.map((c) => {
+        const res = getOne<{stage_name: string}>(
+          db,
+          `
+            SELECT
+              CASE
+                WHEN s.name = 'final' AND f.winner_id = :botId
+                THEN 'winner'
+                ELSE s.name
+              END AS stage_name
+            FROM fights f
+            INNER JOIN fight_bots fb ON f.id = fb.fight_id
+            INNER JOIN stages s ON f.stage_id = s.id
+            WHERE f.competition_id = :competitionId AND fb.bot_id = :botId
+            ORDER BY s.rank ASC LIMIT 1
+          `,
+          {":competitionId": c.competition_id, ":botId": id},
+        ) as {stage_name: string}
+
+        return {
+          seasonId: c.season_id,
+          seasonYear: c.season_year,
+          seasonNumber: c.season_number,
+          competitionId: c.competition_id,
+          competitionName: c.competition_name,
+          stageName: res.stage_name,
         }
       })
     },
@@ -173,11 +251,15 @@ export default async function createDb(
           f.winner_id,
           st.name AS stage_name,
           s.id AS season_id,
-          s.year AS season_year
+          s.year AS season_year,
+          s.number AS season_number,
+          c.id AS competition_id,
+          c.name AS competition_name
         FROM fight_bots fb
         INNER JOIN fights f ON fb.fight_id = f.id
         INNER JOIN stages st ON f.stage_id = st.id
-        INNER JOIN seasons s ON f.season_id = s.id
+        INNER JOIN competitions c ON f.competition_id = c.id
+        INNER JOIN seasons s ON c.season_id = s.id
         WHERE fb.bot_id = :id
         ORDER BY s.number DESC, st.rank ASC
       `
@@ -210,6 +292,9 @@ export default async function createDb(
           winnerId: f.winner_id,
           stageName: f.stage_name,
           seasonId: f.season_id,
+          seasonNumber: f.season_number,
+          competitionId: f.competition_id,
+          competitionName: f.competition_name,
           seasonYear: f.season_year,
           against,
         }
@@ -250,9 +335,11 @@ export default async function createDb(
     getTop10MostWins: (allTime) => {
       const lastThreeSeasonsWhere = allTime
         ? ""
-        : `WHERE f.season_id IN (
-        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
-      )`
+        : `WHERE f.competition_id IN (
+            SELECT id FROM competitions WHERE season_id IN (
+              SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+            )
+          )`
 
       const sql = `
         SELECT
@@ -285,9 +372,11 @@ export default async function createDb(
     getTop10MostKOs: (allTime) => {
       const lastThreeSeasonsWhere = allTime
         ? ""
-        : `AND f.season_id IN (
-        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
-      )`
+        : `AND f.competition_id IN (
+            SELECT id FROM competitions WHERE season_id IN (
+              SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+            )
+          )`
 
       const sql = `
         SELECT
@@ -321,9 +410,11 @@ export default async function createDb(
     getTop10BestWinPercentages: (allTime) => {
       const lastThreeSeasonsWhere = allTime
         ? ""
-        : `WHERE f.season_id IN (
-        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
-      )`
+        : `WHERE f.competition_id IN (
+            SELECT id FROM competitions WHERE season_id IN (
+              SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+            )
+          )`
 
       const sql = `
         SELECT
@@ -367,9 +458,11 @@ export default async function createDb(
     getTop10BestKOPercentages: (allTime) => {
       const lastThreeSeasonsWhere = allTime
         ? ""
-        : `f.season_id IN (
-        SELECT id FROM seasons ORDER BY id DESC LIMIT 3
-      )`
+        : `f.competition_id IN (
+            SELECT id FROM competitions WHERE season_id IN (
+              SELECT id FROM seasons ORDER BY id DESC LIMIT 3
+            )
+          )`
 
       const sql = `
         SELECT
@@ -523,7 +616,7 @@ export default async function createDb(
       })
     },
     getPrimaryWeaponTypeWinCountBreakdown: (seasonId) => {
-      const seasonWhere = seasonId ? `WHERE f.season_id = '${seasonId}'` : ""
+      const seasonWhere = seasonId ? `WHERE c.season_id = '${seasonId}'` : ""
 
       const sql = `
         SELECT
@@ -536,9 +629,10 @@ export default async function createDb(
             sbpwt.primary_weapon_type_id,
             COUNT(*) AS count
           FROM fights f
+          INNER JOIN competitions c ON f.competition_id = c.id
           INNER JOIN season_bot_primary_weapon_types sbpwt
             ON f.winner_id = sbpwt.bot_id
-            AND f.season_id = sbpwt.season_id
+            AND c.season_id = sbpwt.season_id
           ${seasonWhere}
           GROUP BY sbpwt.primary_weapon_type_id
         ) AS wins ON pwt.id = wins.primary_weapon_type_id
@@ -582,26 +676,30 @@ export default async function createDb(
       )
     },
     getPrimaryWeaponTypeWins: (primaryWeaponTypeId, seasonId) => {
-      const seasonWhere = seasonId ? `AND f.season_id = '${seasonId}'` : ""
+      const seasonWhere = seasonId ? `AND c.season_id = '${seasonId}'` : ""
 
       const sql = `
         SELECT
           f.id AS fight_id,
           f.ko,
-          f.season_id,
+          c.season_id,
           b.name AS winner_name,
           s.year AS season_year,
+          s.number AS season_number,
+          c.id AS competition_id,
+          c.name AS competition_name,
           st.name AS stage_name
         FROM fights f
         INNER JOIN bots b ON f.winner_id = b.id
-        INNER JOIN seasons s ON f.season_id = s.id
+        INNER JOIN competitions c ON f.competition_id = c.id
+        INNER JOIN seasons s ON c.season_id = s.id
         INNER JOIN stages st ON f.stage_id = st.id
         INNER JOIN season_bot_primary_weapon_types sbpwt
           ON f.winner_id = sbpwt.bot_id
-          AND f.season_id = sbpwt.season_id
+          AND c.season_id = sbpwt.season_id
         WHERE sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
           ${seasonWhere}
-        ORDER BY f.season_id DESC, st.rank ASC
+        ORDER BY c.season_id DESC, st.rank ASC
       `
 
       const primaryWeaponTypeWins = getMany<DbPrimaryWeaponTypeWin>(db, sql, {
@@ -629,6 +727,9 @@ export default async function createDb(
           ko: f.ko === "true",
           seasonId: f.season_id,
           seasonYear: f.season_year,
+          seasonNumber: f.season_number,
+          competitionId: f.competition_id,
+          competitionName: f.competition_name,
           winnerName: f.winner_name,
           stageName: f.stage_name,
           bots,
@@ -640,29 +741,58 @@ export default async function createDb(
         SELECT
           b.id AS bot_id,
           b.name AS bot_name,
-          b.country AS bot_country,
-          s.name AS stage_name
+          b.country AS bot_country
         FROM season_bots sb
         INNER JOIN bots b ON sb.bot_id = b.id
-        INNER JOIN stages s ON sb.stage_id = s.id
         INNER JOIN season_bot_primary_weapon_types sbpwt
           ON b.id = sbpwt.bot_id AND sb.season_id = sbpwt.season_id
         WHERE sb.season_id = :seasonId
           AND sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
-        ORDER BY s.rank ASC, b.name DESC
+        ORDER BY b.name ASC
       `
 
-      const primaryWeaponTypeBots = getMany<DbSeasonBot>(db, sql, {
+      const primaryWeaponTypeBots = getMany<DbCompetitionBot>(db, sql, {
         ":primaryWeaponTypeId": primaryWeaponTypeId,
         ":seasonId": seasonId,
       })
 
       return primaryWeaponTypeBots.map((pwtb) => {
+        const competitions = getMany<DbSeasonCompetition>(
+          db,
+          `
+            SELECT
+              DISTINCT
+                s.id AS season_id,
+                s.year AS season_year,
+                s.number AS season_number,
+                c.id AS competition_id,
+                c.name AS competition_name
+            FROM fight_bots fb
+            INNER JOIN fights f ON fb.fight_id = f.id
+            INNER JOIN competitions c ON f.competition_id = c.id
+            INNER JOIN seasons s ON c.season_id = s.id
+            WHERE fb.bot_id = :botId
+            AND c.season_id = :seasonId
+          `,
+          {
+            ":botId": pwtb.bot_id,
+            ":seasonId": seasonId,
+          },
+        )
+
         return {
           botId: pwtb.bot_id,
           botName: pwtb.bot_name,
           botCountry: pwtb.bot_country,
-          stageName: pwtb.stage_name,
+          competitions: competitions.map((c) => {
+            return {
+              seasonId: c.season_id,
+              seasonYear: c.season_year,
+              seasonNumber: c.season_number,
+              competitionId: c.competition_id,
+              competitionName: c.competition_name,
+            }
+          }),
         }
       })
     },

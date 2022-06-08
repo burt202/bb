@@ -175,7 +175,15 @@ export default function Table<T>({
           })
         ) : (
           <tr>
-            <td colSpan={columns.length} style={{textAlign: "center"}}>
+            <td
+              colSpan={columns.length}
+              style={{
+                textAlign: "center",
+                width: "67%",
+                border: "1px solid #999",
+                padding: 8,
+              }}
+            >
               {emptyStateMessage ?? "No data"}
             </td>
           </tr>
