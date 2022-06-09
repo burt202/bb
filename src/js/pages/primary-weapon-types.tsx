@@ -218,7 +218,8 @@ export default function PrimaryWeaponTypes() {
             shouldShowDivider={(data, row, i) => {
               return data[i + 1] === undefined
                 ? false
-                : row.seasonId !== data[i + 1].seasonId
+                : row.seasonId !== data[i + 1].seasonId ||
+                    row.competitionId !== data[i + 1].competitionId
             }}
             columns={[
               {

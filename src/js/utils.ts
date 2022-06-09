@@ -33,15 +33,16 @@ export function setTitle(title: string) {
 
 export const stages = [
   {id: "winner", text: "Winner", rank: 1},
-  {id: "final", text: "Final", rank: 2},
-  {id: "semi", text: "Semi-Final", rank: 3},
-  {id: "quarter", text: "Quarter-Final", rank: 4},
-  {id: "roundof16", text: "Round Of 16", rank: 5},
-  {id: "roundof32", text: "Round Of 32", rank: 6},
-  {id: "playoff", text: "Playoff", rank: 7},
-  {id: "qualifier", text: "Qualifier", rank: 8},
-  {id: "season", text: "Season", rank: 8},
-  {id: "prequalifier", text: "Pre-Qualifier", rank: 9},
+  {id: "bounty", text: "Bounty Match", rank: 2},
+  {id: "final", text: "Final", rank: 3},
+  {id: "semi", text: "Semi-Final", rank: 4},
+  {id: "quarter", text: "Quarter-Final", rank: 5},
+  {id: "roundof16", text: "Round Of 16", rank: 6},
+  {id: "roundof32", text: "Round Of 32", rank: 7},
+  {id: "playoff", text: "Playoff", rank: 8},
+  {id: "qualifier", text: "Qualifier", rank: 9},
+  {id: "season", text: "Season", rank: 9},
+  {id: "prequalifier", text: "Pre-Qualifier", rank: 10},
 ]
 
 export const stageNameMap = stages.reduce((acc, val) => {

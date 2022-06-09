@@ -365,6 +365,12 @@
       "keyMembers": ["Melaina Knox", "Daniel Knox"],
       "country": "USA",
       "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Bronco",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
     }
   ],
   "competitions": [
@@ -1030,6 +1036,59 @@
           "winner": "End Game",
           "stage": "final",
           "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Bronco Bounty",
+      "fights": [
+        {
+          "bots": ["Rotator", "Axolotl"],
+          "winner": "Rotator",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Captain Shrederator", "Sharkoprion"],
+          "winner": "Captain Shrederator",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Mad Catter", "Atom 94"],
+          "winner": "Mad Catter",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Bale Spear", "Chomp"],
+          "winner": "Bale Spear",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Rotator", "Captain Shrederator"],
+          "winner": "Rotator",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Mad Catter", "Bale Spear"],
+          "winner": "Mad Catter",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Rotator", "Mad Catter"],
+          "winner": "Rotator",
+          "stage": "final",
+          "ko": true
+        },
+        {
+          "bots": ["Rotator", "Bronco"],
+          "winner": "Rotator",
+          "stage": "bounty",
+          "ko": false
         }
       ]
     }

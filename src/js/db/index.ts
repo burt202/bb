@@ -60,7 +60,7 @@ export default async function createDb(
           (
             SELECT
               CASE
-                WHEN s.name = 'final' AND f.winner_id = b.id
+                WHEN (s.name = 'final' OR s.name = 'bounty') AND f.winner_id = b.id
                 THEN 'winner'
                 ELSE s.name
               END
@@ -220,7 +220,7 @@ export default async function createDb(
           `
             SELECT
               CASE
-                WHEN s.name = 'final' AND f.winner_id = :botId
+                WHEN (s.name = 'final' OR s.name = 'bounty') AND f.winner_id = :botId
                 THEN 'winner'
                 ELSE s.name
               END AS stage_name
@@ -261,7 +261,7 @@ export default async function createDb(
         INNER JOIN competitions c ON f.competition_id = c.id
         INNER JOIN seasons s ON c.season_id = s.id
         WHERE fb.bot_id = :id
-        ORDER BY s.number DESC, st.rank ASC
+        ORDER BY s.number DESC, c.name ASC, st.rank ASC
       `
 
       const dbBotFights = getMany<DbBotFight>(db, sql, {
@@ -699,7 +699,7 @@ export default async function createDb(
           AND c.season_id = sbpwt.season_id
         WHERE sbpwt.primary_weapon_type_id = :primaryWeaponTypeId
           ${seasonWhere}
-        ORDER BY c.season_id DESC, st.rank ASC
+        ORDER BY s.number DESC, c.name ASC, st.rank ASC
       `
 
       const primaryWeaponTypeWins = getMany<DbPrimaryWeaponTypeWin>(db, sql, {
