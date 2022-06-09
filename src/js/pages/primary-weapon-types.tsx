@@ -258,7 +258,7 @@ export default function PrimaryWeaponTypes() {
                   return (
                     <>
                       <SiteLink
-                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionId}`}
+                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionName}`}
                         pageTitle={`Season - ${pwtf.seasonYear} (S${pwtf.seasonNumber}) - ${pwtf.competitionName}`}
                         textLink={true}
                       >
@@ -346,7 +346,7 @@ export default function PrimaryWeaponTypes() {
                       return (
                         <React.Fragment key={i}>
                           <SiteLink
-                            to={`/season/${c.seasonId}?competition=${c.competitionId}`}
+                            to={`/season/${c.seasonId}?competition=${c.competitionName}`}
                             pageTitle={`Season - ${c.seasonYear} (S${c.seasonNumber}) - ${c.competitionName}`}
                             textLink={true}
                           >
@@ -417,7 +417,7 @@ export default function PrimaryWeaponTypes() {
                       {stageNameMap[pwtf.stageName]}
                       {" / "}
                       <SiteLink
-                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionId}`}
+                        to={`/season/${pwtf.seasonId}?competition=${pwtf.competitionName}`}
                         pageTitle={`Season - ${pwtf.seasonYear} (S${pwtf.seasonNumber}) - ${pwtf.competitionName}`}
                         textLink={true}
                       >

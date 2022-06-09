@@ -129,7 +129,7 @@ export default function Bot() {
             getValue: (bc) => {
               return (
                 <SiteLink
-                  to={`/season/${bc.seasonId}?competition=${bc.competitionId}`}
+                  to={`/season/${bc.seasonId}?competition=${bc.competitionName}`}
                   pageTitle={`Season - ${bc.seasonYear} (S${bc.seasonNumber}) - ${bc.competitionName}`}
                   textLink={true}
                 >
@@ -199,7 +199,7 @@ export default function Bot() {
               return (
                 <>
                   <SiteLink
-                    to={`/season/${bf.seasonId}?competition=${bf.competitionId}`}
+                    to={`/season/${bf.seasonId}?competition=${bf.competitionName}`}
                     pageTitle={`Season - ${bf.seasonYear} (S${bf.seasonNumber}) - ${bf.competitionName}`}
                     textLink={true}
                   >

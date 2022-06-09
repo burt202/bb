@@ -1,5 +1,6 @@
+import * as querystring from "query-string"
 import * as React from "react"
-import {useContext, useEffect} from "react"
+import {useContext, useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
 
 import {DbContext} from ".."
@@ -11,9 +12,32 @@ import {DbInterface} from "../types"
 import {countryNameMap, getPercentage, setTitle, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 
+function updateUrlParams(competition: string) {
+  const params = {} as Record<string, string>
+
+  params.competition = competition
+
+  if (Object.keys(params).length === 0) {
+    history.replaceState(null, "", window.location.hash.split("?")[0])
+  }
+
+  const queryParams = querystring.stringify(params)
+
+  history.replaceState(
+    null,
+    "",
+    window.location.hash.split("?")[0] + "?" + queryParams.toString(),
+  )
+}
+
 export default function Season() {
+  const parsed = querystring.parse(window.location.hash.split("?")[1] || "")
+  const [selectedCompetition, setSelectedCompetition] = useState(
+    parsed.competition as string | undefined,
+  )
   const params = useParams()
   const seasonId = params.seasonId as string
+
   const db = useContext(DbContext) as DbInterface
 
   const season = db.getSeasonById(seasonId)
@@ -28,6 +52,15 @@ export default function Season() {
     return <NotFound title="Season Not Found" />
   }
 
+  const competitions = db.getCompetitionsForSeason(seasonId)
+  const match = competitions.find((c) => c.name === selectedCompetition)
+
+  if (selectedCompetition && !match) {
+    return <NotFound title="Competition Not Found" />
+  }
+
+  const competitionId = match?.id ?? competitions[0].id
+
   const seasons = db.getAllSeasons()
   const isFirstSeason = seasons[0].id === season.id
   const isLastSeason = seasons[seasons.length - 1].id === season.id
@@ -38,9 +71,6 @@ export default function Season() {
   const previousSeason = !isFirstSeason
     ? seasons[currentSeasonIndex - 1].id
     : undefined
-
-  const competitions = db.getCompetitionsForSeason(seasonId)
-  const competitionId = competitions[0].id // TODO
 
   const seasonBots = db.getCompetitionBots(competitionId)
   const seasonFights = db.getCompetitionFights(competitionId)
@@ -75,6 +105,27 @@ export default function Season() {
           <a className="cursor-not-allowed mr-m text-grey">Next</a>
         )}
       </div>
+      {competitions.length > 1 && (
+        <div>
+          Competitions:{" "}
+          <select
+            value={match?.name ?? competitions[0].name}
+            onChange={(e) => {
+              setSelectedCompetition(e.target.value)
+              updateUrlParams(e.target.value)
+            }}
+            className="mt-m mb-m p-s bg-input border-grey rounded"
+          >
+            {competitions.map((c) => {
+              return (
+                <option key={c.id} value={c.name}>
+                  {c.name}
+                </option>
+              )
+            })}
+          </select>
+        </div>
+      )}
       <div className="flex gap-x-m flex-col-reverse l:flex-row">
         <div>
           <h3>Bots</h3>
