@@ -18,6 +18,8 @@ import {
   DbCompetitionFight,
   DbCompetitionBot,
   DbSeasonCompetition,
+  Bot,
+  Member,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -102,7 +104,20 @@ export default async function createDb(
           f.id,
           f.ko,
           s.name AS stage_name,
-          b.name AS winner_name
+          b.name AS winner_name,
+          (
+            SELECT
+              json_group_array(
+                json_object(
+                  'id', b.id,
+                  'name', b.name,
+                  'country', b.country
+                )
+              )
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id = f.id
+          ) AS bots
         FROM fights f
         INNER JOIN stages s ON f.stage_id = s.id
         INNER JOIN bots b ON f.winner_id = b.id
@@ -115,27 +130,11 @@ export default async function createDb(
       })
 
       return dbCompetitionFights.map((f) => {
-        const bots = getMany<DbBot>(
-          db,
-          `
-            SELECT
-              b.id,
-              b.name,
-              b.country
-            FROM fight_bots fb
-            INNER JOIN bots b ON fb.bot_id = b.id
-            WHERE fb.fight_id = :id
-          `,
-          {
-            ":id": f.id,
-          },
-        )
-
         return {
           ko: f.ko === "true",
           stageName: f.stage_name,
           winnerName: f.winner_name,
-          bots,
+          bots: JSON.parse(f.bots) as Array<Bot>,
         }
       })
     },
@@ -149,7 +148,21 @@ export default async function createDb(
         SELECT
           s.id AS season_id,
           s.year AS season_year,
-          pwt.name AS primary_weapon_type
+          pwt.name AS primary_weapon_type,
+          (
+            SELECT
+              json_group_array(
+                json_object(
+                  'id', m.id,
+                  'name', m.name
+                )
+              )
+            FROM bot_members bm
+            INNER JOIN members m ON bm.member_id = m.id
+            WHERE bm.bot_id = :id
+            AND bm.season_id = s.id
+            ORDER BY bm.ordinal ASC
+          ) AS members
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
         INNER JOIN season_bot_primary_weapon_types sbpwt
@@ -165,26 +178,8 @@ export default async function createDb(
       })
 
       return dbBotSeasons.map((bs) => {
-        const members = getMany<{id: string; name: string}>(
-          db,
-          `
-            SELECT
-              m.id,
-              m.name
-            FROM bot_members bm
-            INNER JOIN members m ON bm.member_id = m.id
-            WHERE bm.bot_id = :botId
-            AND bm.season_id = :seasonId
-            ORDER BY bm.ordinal ASC
-          `,
-          {
-            ":botId": id,
-            ":seasonId": bs.season_id,
-          },
-        )
-
         return {
-          members,
+          members: JSON.parse(bs.members) as Array<Member>,
           seasonId: bs.season_id,
           seasonYear: bs.season_year,
           primaryWeaponType: bs.primary_weapon_type,
@@ -201,7 +196,20 @@ export default async function createDb(
               s.year AS season_year,
               s.number AS season_number,
               c.id AS competition_id,
-              c.name AS competition_name
+              c.name AS competition_name,
+              (
+                SELECT
+                  CASE
+                    WHEN (s.name = 'final' OR s.name = 'bounty') AND f.winner_id = :id
+                    THEN 'winner'
+                    ELSE s.name
+                  END AS stage_name
+                FROM fights f
+                INNER JOIN fight_bots fb ON f.id = fb.fight_id
+                INNER JOIN stages s ON f.stage_id = s.id
+                WHERE f.competition_id = c.id AND fb.bot_id = :id
+                ORDER BY s.rank ASC LIMIT 1
+              ) AS stage_name
           FROM fight_bots fb
           INNER JOIN fights f ON fb.fight_id = f.id
           INNER JOIN competitions c ON f.competition_id = c.id
@@ -215,31 +223,13 @@ export default async function createDb(
       )
 
       return competitions.map((c) => {
-        const res = getOne<{stage_name: string}>(
-          db,
-          `
-            SELECT
-              CASE
-                WHEN (s.name = 'final' OR s.name = 'bounty') AND f.winner_id = :botId
-                THEN 'winner'
-                ELSE s.name
-              END AS stage_name
-            FROM fights f
-            INNER JOIN fight_bots fb ON f.id = fb.fight_id
-            INNER JOIN stages s ON f.stage_id = s.id
-            WHERE f.competition_id = :competitionId AND fb.bot_id = :botId
-            ORDER BY s.rank ASC LIMIT 1
-          `,
-          {":competitionId": c.competition_id, ":botId": id},
-        ) as {stage_name: string}
-
         return {
           seasonId: c.season_id,
           seasonYear: c.season_year,
           seasonNumber: c.season_number,
           competitionId: c.competition_id,
           competitionName: c.competition_name,
-          stageName: res.stage_name,
+          stageName: c.stage_name,
         }
       })
     },
@@ -254,7 +244,21 @@ export default async function createDb(
           s.year AS season_year,
           s.number AS season_number,
           c.id AS competition_id,
-          c.name AS competition_name
+          c.name AS competition_name,
+          (
+            SELECT
+              json_group_array(
+                json_object(
+                  'id', b.id,
+                  'name', b.name,
+                  'country', b.country
+                )
+              )
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id = f.id
+            AND b.id != :id
+          ) AS against
         FROM fight_bots fb
         INNER JOIN fights f ON fb.fight_id = f.id
         INNER JOIN stages st ON f.stage_id = st.id
@@ -269,24 +273,6 @@ export default async function createDb(
       })
 
       return dbBotFights.map((f) => {
-        const against = getMany<DbBot>(
-          db,
-          `
-            SELECT
-              b.id,
-              b.name,
-              b.country
-            FROM fight_bots fb
-            INNER JOIN bots b ON fb.bot_id = b.id
-            WHERE fb.fight_id = :fightId
-            AND b.id != :botId
-          `,
-          {
-            ":fightId": f.id,
-            ":botId": id,
-          },
-        )
-
         return {
           ko: f.ko === "true",
           winnerId: f.winner_id,
@@ -296,7 +282,7 @@ export default async function createDb(
           competitionId: f.competition_id,
           competitionName: f.competition_name,
           seasonYear: f.season_year,
-          against,
+          against: JSON.parse(f.against) as Array<Bot>,
         }
       })
     },
@@ -643,15 +629,15 @@ export default async function createDb(
         (pwt) => {
           let botCount = 0
 
-          const innerSql = `
-            SELECT COUNT(*) AS count
-            FROM season_bot_primary_weapon_types sbpwt
-            INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
-            WHERE sbpwt.season_id = :seasonId
-            AND pwt.id = :primaryWeaponTypeId
-          `
-
           if (seasonId) {
+            const innerSql = `
+              SELECT COUNT(*) AS count
+              FROM season_bot_primary_weapon_types sbpwt
+              INNER JOIN primary_weapon_types pwt ON sbpwt.primary_weapon_type_id = pwt.id
+              WHERE sbpwt.season_id = :seasonId
+              AND pwt.id = :primaryWeaponTypeId
+            `
+
             const res = getOne<{count: number}>(db, innerSql, {
               ":seasonId": seasonId,
               ":primaryWeaponTypeId": pwt.id,
@@ -688,7 +674,20 @@ export default async function createDb(
           s.number AS season_number,
           c.id AS competition_id,
           c.name AS competition_name,
-          st.name AS stage_name
+          st.name AS stage_name,
+          (
+            SELECT
+              json_group_array(
+                json_object(
+                  'id', b.id,
+                  'name', b.name,
+                  'country', b.country
+                )
+              )
+            FROM fight_bots fb
+            INNER JOIN bots b ON fb.bot_id = b.id
+            WHERE fb.fight_id = f.id
+          ) AS bots
         FROM fights f
         INNER JOIN bots b ON f.winner_id = b.id
         INNER JOIN competitions c ON f.competition_id = c.id
@@ -707,22 +706,6 @@ export default async function createDb(
       })
 
       return primaryWeaponTypeWins.map((f) => {
-        const bots = getMany<DbBot>(
-          db,
-          `
-            SELECT
-              b.id,
-              b.name,
-              b.country
-            FROM fight_bots fb
-            INNER JOIN bots b ON fb.bot_id = b.id
-            WHERE fb.fight_id = :id
-          `,
-          {
-            ":id": f.fight_id,
-          },
-        )
-
         return {
           ko: f.ko === "true",
           seasonId: f.season_id,
@@ -732,7 +715,7 @@ export default async function createDb(
           competitionName: f.competition_name,
           winnerName: f.winner_name,
           stageName: f.stage_name,
-          bots,
+          bots: JSON.parse(f.bots) as Array<DbBot>,
         }
       })
     },

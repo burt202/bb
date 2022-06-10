@@ -57,6 +57,7 @@ export interface DbSeasonCompetition {
   season_number: number
   competition_id: string
   competition_name: string
+  stage_name: string
 }
 
 export interface DbPrimaryWeaponType {
@@ -82,12 +83,14 @@ export interface DbCompetitionFight {
   ko: string
   stage_name: string
   winner_name: string
+  bots: string
 }
 
 export interface DbBotSeason {
   season_id: string
   season_year: string
   primary_weapon_type: string
+  members: string
 }
 
 export interface DbBotFight {
@@ -100,6 +103,7 @@ export interface DbBotFight {
   season_number: number
   competition_id: string
   competition_name: string
+  against: string
 }
 
 export interface DbMemberSeason {
@@ -132,6 +136,7 @@ export interface DbPrimaryWeaponTypeWin {
   competition_id: string
   competition_name: string
   stage_name: string
+  bots: string
 }
 
 export type Season = DbSeason

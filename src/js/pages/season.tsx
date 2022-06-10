@@ -8,7 +8,7 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
-import {DbCompetition, DbInterface, DbSeason} from "../types"
+import {Competition, DbInterface, Season} from "../types"
 import {countryNameMap, getPercentage, setTitle, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 
@@ -67,9 +67,9 @@ export default function SeasonOuter() {
 }
 
 interface Props {
-  season: DbSeason
-  competitions: Array<DbCompetition>
-  competition: DbCompetition
+  season: Season
+  competitions: Array<Competition>
+  competition: Competition
 }
 
 function Season({season, competitions, competition}: Props) {
