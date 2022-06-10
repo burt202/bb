@@ -1,14 +1,14 @@
 import * as querystring from "query-string"
 import * as React from "react"
 import {useContext, useEffect, useState} from "react"
-import {useParams} from "react-router-dom"
+import {useLocation, useParams} from "react-router-dom"
 
 import {DbContext} from ".."
 import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import StatBox from "../components/stat-box"
 import Table from "../components/table"
-import {DbInterface} from "../types"
+import {DbCompetition, DbInterface, DbSeason} from "../types"
 import {countryNameMap, getPercentage, setTitle, stageNameMap} from "../utils"
 import NotFound from "./not-found"
 
@@ -30,12 +30,9 @@ function updateUrlParams(competition: string) {
   )
 }
 
-export default function Season() {
-  const parsed = querystring.parse(window.location.hash.split("?")[1] || "")
-  const [selectedCompetition, setSelectedCompetition] = useState(
-    parsed.competition as string | undefined,
-  )
+export default function SeasonOuter() {
   const params = useParams()
+  const location = useLocation()
   const seasonId = params.seasonId as string
 
   const db = useContext(DbContext) as DbInterface
@@ -52,14 +49,37 @@ export default function Season() {
     return <NotFound title="Season Not Found" />
   }
 
-  const competitions = db.getCompetitionsForSeason(seasonId)
-  const match = competitions.find((c) => c.name === selectedCompetition)
+  const competitions = db.getCompetitionsForSeason(season.id)
 
-  if (selectedCompetition && !match) {
+  const parsed = querystring.parse(location.search.split("?")[1] || "")
+
+  const match = competitions.find(
+    (c) => c.name === (parsed.competition ?? competitions[0].name),
+  )
+
+  if (!match) {
     return <NotFound title="Competition Not Found" />
   }
 
-  const competitionId = match?.id ?? competitions[0].id
+  return (
+    <Season season={season} competition={match} competitions={competitions} />
+  )
+}
+
+interface Props {
+  season: DbSeason
+  competitions: Array<DbCompetition>
+  competition: DbCompetition
+}
+
+function Season({season, competitions, competition}: Props) {
+  const [selectedCompetition, setSelectedCompetition] = useState(competition)
+
+  useEffect(() => {
+    setSelectedCompetition(competition)
+  }, [competition])
+
+  const db = useContext(DbContext) as DbInterface
 
   const seasons = db.getAllSeasons()
   const isFirstSeason = seasons[0].id === season.id
@@ -72,8 +92,8 @@ export default function Season() {
     ? seasons[currentSeasonIndex - 1].id
     : undefined
 
-  const seasonBots = db.getCompetitionBots(competitionId)
-  const seasonFights = db.getCompetitionFights(competitionId)
+  const seasonBots = db.getCompetitionBots(selectedCompetition.id)
+  const seasonFights = db.getCompetitionFights(selectedCompetition.id)
 
   const koFights = seasonFights.filter((f) => f.ko)
 
@@ -109,10 +129,14 @@ export default function Season() {
         <div>
           Competitions:{" "}
           <select
-            value={match?.name ?? competitions[0].name}
+            value={selectedCompetition.name}
             onChange={(e) => {
-              setSelectedCompetition(e.target.value)
-              updateUrlParams(e.target.value)
+              const match = competitions.find((c) => c.name === e.target.value)
+
+              if (match) {
+                setSelectedCompetition(match)
+                updateUrlParams(match.name)
+              }
             }}
             className="mt-m mb-m p-s bg-input border-grey rounded"
           >
@@ -198,7 +222,7 @@ export default function Season() {
               textLink={true}
               pageTitle="Primary Weapon Types"
             >
-              Primary Weapon Stats
+              {season.year} Primary Weapon Stats
             </SiteLink>
           </p>
         </div>
