@@ -371,6 +371,18 @@
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
       "country": "USA",
       "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Icewave",
+      "keyMembers": ["Mark DeVidts"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Luke Ewert", "Reece Ewert"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
     }
   ],
   "competitions": [
@@ -1089,6 +1101,271 @@
           "winner": "Rotator",
           "stage": "bounty",
           "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Icewave Bounty",
+      "fights": [
+        {
+          "bots": ["Skorpios", "Black Widow"],
+          "winner": "Skorpios",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["P1", "Tracer"],
+          "winner": "P1",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Hypershock", "Sporkinok"],
+          "winner": "Hypershock",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Ghost Raptor", "Deadlift"],
+          "winner": "Ghost Raptor",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Skorpios", "P1"],
+          "winner": "Skorpios",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Hypershock", "Ghost Raptor"],
+          "winner": "Hypershock",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Skorpios", "Hypershock"],
+          "winner": "Skorpios",
+          "stage": "final",
+          "ko": false
+        },
+        {
+          "bots": ["Skorpios", "Icewave"],
+          "winner": "Skorpios",
+          "stage": "bounty",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Tombstone Bounty",
+      "fights": [
+        {
+          "bots": ["Gruff", "Gemini"],
+          "winner": "Gruff",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Deadlift", "Jackpot"],
+          "winner": "Deadlift",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Kraken", "Claw Viper"],
+          "winner": "Kraken",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["SMEEEEEEEEEEEEEEEE", "Mammoth"],
+          "winner": "SMEEEEEEEEEEEEEEEE",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Gruff", "Deadlift"],
+          "winner": "Gruff",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Kraken", "SMEEEEEEEEEEEEEEEE"],
+          "winner": "Kraken",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Gruff", "Kraken"],
+          "winner": "Gruff",
+          "stage": "final",
+          "ko": false
+        },
+        {
+          "bots": ["Tombstone", "Gruff"],
+          "winner": "Tombstone",
+          "stage": "bounty",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Beta Bounty",
+      "fights": [
+        {
+          "bots": ["Lock-Jaw", "Axe Backwards"],
+          "winner": "Lock-Jaw",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Fusion", "Rampage"],
+          "winner": "Fusion",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Bloodsport", "Aegis"],
+          "winner": "Bloodsport",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["HiJinx", "Slammow"],
+          "winner": "HiJinx",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Fusion"],
+          "winner": "Lock-Jaw",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Bloodsport", "HiJinx"],
+          "winner": "Bloodsport",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Lock-Jaw", "Bloodsport"],
+          "winner": "Lock-Jaw",
+          "stage": "final",
+          "ko": false
+        },
+        {
+          "bots": ["Lock-Jaw", "Beta"],
+          "winner": "Lock-Jaw",
+          "stage": "bounty",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Witch Doctor Bounty",
+      "fights": [
+        {
+          "bots": ["Subzero", "Pain Train"],
+          "winner": "Subzero",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Valkyrie", "Extinguisher"],
+          "winner": "Valkyrie",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Malice", "Tracer"],
+          "winner": "Malice",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Huge", "Slap Box"],
+          "winner": "Huge",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Subzero", "Valkyrie"],
+          "winner": "Subzero",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Malice", "Huge"],
+          "winner": "Malice",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Subzero", "Malice"],
+          "winner": "Subzero",
+          "stage": "final",
+          "ko": true
+        },
+        {
+          "bots": ["Witch Doctor", "Subzero"],
+          "winner": "Witch Doctor",
+          "stage": "bounty",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Son Of Whyachi Bounty",
+      "fights": [
+        {
+          "bots": ["Gigabyte", "Grabot"],
+          "winner": "Gigabyte",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Big Dill", "Perfect Phoenix"],
+          "winner": "Big Dill",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Copperhead", "Chronos"],
+          "winner": "Copperhead",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Rusty", "Kraken"],
+          "winner": "Rusty",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Gigabyte", "Big Dill"],
+          "winner": "Gigabyte",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Copperhead", "Rusty"],
+          "winner": "Copperhead",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Gigabyte", "Copperhead"],
+          "winner": "Gigabyte",
+          "stage": "final",
+          "ko": true
+        },
+        {
+          "bots": ["Gigabyte", "Son Of Whyachi"],
+          "winner": "Gigabyte",
+          "stage": "bounty",
+          "ko": true
         }
       ]
     }

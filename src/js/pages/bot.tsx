@@ -216,7 +216,7 @@ export default function Bot() {
                 </>
               )
             },
-            width: 4,
+            width: 5,
           },
           {
             title: "Against",
@@ -238,7 +238,7 @@ export default function Bot() {
                 )
               })
             },
-            width: 8,
+            width: 7,
           },
           {
             title: "Win",
