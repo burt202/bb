@@ -1,0 +1,610 @@
+{
+  "season": "01",
+  "year": "2000",
+  "bots": [
+    {
+      "name": "Backlash",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Disposable Hero",
+      "keyMembers": ["Phil Putman"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Tentomushi",
+      "keyMembers": ["Mike Winter", "Lisa Winter"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "Sallad",
+      "keyMembers": ["Dallas Goecker"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Afterthought",
+      "keyMembers": ["Jim Sellers"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Black Widow",
+      "keyMembers": ["Timothy Montagne"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "The Missing Link",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "Chiabot",
+      "keyMembers": ["Will Wright"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Das Bot",
+      "keyMembers": ["Paul Mathus"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Rott-Bott 2000",
+      "keyMembers": ["Brian Scearce"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "The Aggressive Polygon",
+      "keyMembers": ["Will Wright"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Alpha Raptor",
+      "keyMembers": ["Chuck Pitzer"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Cereal Box Killer",
+      "keyMembers": ["???"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Pestilence",
+      "keyMembers": ["Todd Mendenhall"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Thorn",
+      "keyMembers": ["Korey Kline"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Shaft",
+      "keyMembers": ["Rik Winter"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Gremlin II",
+      "keyMembers": ["Jerome Miles"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "Endotherm",
+      "keyMembers": ["John Patrick"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Shrike",
+      "keyMembers": ["Steven Levin"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Dr. Inferno Jr",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "No Tolerance II",
+      "keyMembers": ["Stefan Nock"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Ziggo",
+      "keyMembers": ["Jonathan Ridder"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Mauler",
+      "keyMembers": ["Charles Tilford"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Nightmare",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Overkill",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "FrenZy",
+      "keyMembers": ["Patrick Campbell"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Voltarc",
+      "keyMembers": ["Stephen Felk"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Bender",
+      "keyMembers": ["Eric Stolken"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "KillerHurtz",
+      "keyMembers": ["John Reid"],
+      "country": "GBR",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Knome II",
+      "keyMembers": ["Jerome Miles"],
+      "country": "GBR",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Gray Matter",
+      "keyMembers": ["Israel Mathewson"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Minion",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "STC Without Reason",
+      "keyMembers": ["Randy Eubanks"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Pressure Drop",
+      "keyMembers": ["Derek Young"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Mouser Mecha-Catbot",
+      "keyMembers": ["Fon Davis"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Vlad The Impaler",
+      "keyMembers": ["Gage Cachouis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Tazbot",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "The Crusher",
+      "keyMembers": ["Gus Steyer"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Bad Attitude",
+      "keyMembers": ["Thomas Petruccelli"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Blade Runner",
+      "keyMembers": ["Ilya Polyakov"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Grendel",
+      "keyMembers": ["Daniel Rupert"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Diesector",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Hazard",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Pegleg",
+      "keyMembers": ["Grayson DuRaine"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "DoAll",
+      "keyMembers": ["Scott LaValley"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "S.L.A.M.",
+      "keyMembers": ["Lowell Nelson", "Steve Nelson"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Mjollnir",
+      "keyMembers": ["Do Lariviere"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Bio-Hazard",
+      "keyMembers": ["Carlo Bertocchini"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Punjar",
+      "keyMembers": ["Ramiro Mallari"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Kill-O-Amp",
+      "keyMembers": ["Curt Meyers"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Gammatron",
+      "keyMembers": ["Mike Okerman"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "Suicidal Tendencies",
+      "keyMembers": ["Charles Binns"],
+      "country": "GBR",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Blendo",
+      "keyMembers": ["Jamie Hyneman"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Monster",
+      "keyMembers": ["Kevin Knoedler"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Mechadon",
+      "keyMembers": ["Mark Setrakian"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Prompt Critical",
+      "keyMembers": ["Ken Russell", "Chuck Russell"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Rammstein",
+      "keyMembers": ["Kori Kline"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Abbatoir",
+      "keyMembers": ["Ray Scully"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Ronin",
+      "keyMembers": ["Pete Abrahamson"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Odin",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Super Rhino",
+      "keyMembers": ["Alexander Rose", "Reason Bradley"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "Lightweight",
+      "fights": [
+        {
+          "bots": ["Afterthought", "Black Widow"],
+          "winner": "Afterthought",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["The Missing Link", "Chiabot"],
+          "winner": "The Missing Link",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Das Bot", "Rott-Bott 2000"],
+          "winner": "Das Bot",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Sallad", "The Aggressive Polygon"],
+          "winner": "Sallad",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Alpha Raptor", "Cereal Box Killer"],
+          "winner": "Alpha Raptor",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Pestilence", "Thorn"],
+          "winner": "Pestilence",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Shaft", "Gremlin II"],
+          "winner": "Shaft",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Disposable Hero"],
+          "winner": "Backlash",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Endotherm", "Afterthought"],
+          "winner": "Endotherm",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Das Bot", "Shrike"],
+          "winner": "Das Bot",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Alpha Raptor", "Dr. Inferno Jr"],
+          "winner": "Alpha Raptor",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["No Tolerance II", "Pestilence"],
+          "winner": "No Tolerance II",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Tentomushi", "Sallad"],
+          "winner": "Tentomushi",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Ziggo", "The Missing Link"],
+          "winner": "Ziggo",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Mouser Mecha-Catbot", "Shaft"],
+          "winner": "Mouser Mecha-Catbot",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Backlash", "The Crusher"],
+          "winner": "Backlash",
+          "stage": "roundof16",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Middleweight",
+      "fights": [
+        {
+          "bots": ["Hazard", "Pegleg"],
+          "winner": "Hazard",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["STC Without Reason", "Pressure Drop"],
+          "winner": "Pressure Drop",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Blade Runner", "Bad Attitude"],
+          "winner": "Blade Runner",
+          "stage": "qualifier",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Heavyweight",
+      "fights": [
+        {
+          "bots": ["KillerHurtz", "Knome II"],
+          "winner": "KillerHurtz",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Bio-Hazard", "Mjollnir"],
+          "winner": "Bio-Hazard",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Punjar", "Kill-O-Amp"],
+          "winner": "Punjar",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Gammatron", "Suicidal Tendencies"],
+          "winner": "Gammatron",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Bio-Hazard", "Blendo"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["KillerHurtz", "Monster"],
+          "winner": "KillerHurtz",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Mauler", "Nightmare"],
+          "winner": "Mauler",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Overkill", "FrenZy"],
+          "winner": "Overkill",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Voltarc", "Bender"],
+          "winner": "Voltarc",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Vlad The Impaler", "Tazbot"],
+          "winner": "Vlad The Impaler",
+          "stage": "roundof16",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Super Heavyweight",
+      "fights": [
+        {
+          "bots": ["Mechadon", "Prompt Critical"],
+          "winner": "Mechadon",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Rammstein", "Abbatoir"],
+          "winner": "Rammstein",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Ronin", "Odin"],
+          "winner": "Ronin",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Gray Matter", "Minion"],
+          "winner": "Minion",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Grendel", "Diesector"],
+          "winner": "Grendel",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["DoAll", "S.L.A.M."],
+          "winner": "DoAll",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["DoAll", "Super Rhino"],
+          "winner": "DoAll",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    }
+  ]
+}
