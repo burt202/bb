@@ -101,7 +101,14 @@ export default function Bot() {
                 )
               })
             },
-            width: 11,
+            width: 9,
+          },
+          {
+            title: "Wins",
+            getValue: (bs) => {
+              return bs.wins
+            },
+            width: 2,
           },
           {
             title: "Primary Weapon Type",

@@ -163,7 +163,16 @@ export default async function createDb(
             WHERE bm.bot_id = :id
             AND bm.season_id = s.id
             ORDER BY bm.ordinal ASC
-          ) AS members
+          ) AS members,
+          (
+            SELECT
+              COUNT(f.winner_id) AS count
+            FROM fights f
+            INNER JOIN competitions c ON f.competition_id = c.id
+            INNER JOIN seasons ON c.season_id = s.id
+            WHERE f.winner_id = :id
+            AND seasons.year = s.year
+          ) AS wins
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
         INNER JOIN season_bot_primary_weapon_types sbpwt
@@ -185,6 +194,7 @@ export default async function createDb(
           seasonYear: bs.season_year,
           seasonNumber: bs.season_number,
           primaryWeaponType: bs.primary_weapon_type,
+          wins: bs.wins,
         }
       })
     },

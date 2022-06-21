@@ -93,6 +93,7 @@ export interface DbBotSeason {
   season_number: number
   primary_weapon_type: string
   members: string
+  wins: number
 }
 
 export interface DbBotFight {
@@ -168,6 +169,7 @@ export interface BotSeason {
   seasonNumber: number
   primaryWeaponType: string
   members: Array<Member>
+  wins: number
 }
 
 export interface BotCompetition {
