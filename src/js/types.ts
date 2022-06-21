@@ -115,6 +115,7 @@ export interface DbMemberSeason {
   season_number: number
   bot_id: string
   bot_name: string
+  wins: number
 }
 
 export interface DbTop10Result {
@@ -199,6 +200,7 @@ export interface MemberSeason {
   seasonNumber: number
   botId: string
   botName: string
+  wins: number
 }
 
 export interface Top10Result {

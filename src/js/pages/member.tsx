@@ -54,7 +54,7 @@ export default function Member() {
                 </SiteLink>
               )
             },
-            width: 4,
+            width: 3,
           },
           {
             title: "Bot",
@@ -76,7 +76,18 @@ export default function Member() {
                 )
               })
             },
-            width: 5,
+            width: 13,
+          },
+          {
+            title: "Wins",
+            getValue: (pair) => {
+              const total = pair[1].reduce((acc, val) => {
+                return acc + val.wins
+              }, 0)
+
+              return total
+            },
+            width: 2,
           },
         ]}
       />

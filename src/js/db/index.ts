@@ -310,7 +310,16 @@ export default async function createDb(
           s.year AS season_year,
           s.number AS season_number,
           b.name AS bot_name,
-          b.id AS bot_id
+          b.id AS bot_id,
+          (
+            SELECT
+              COUNT(f.winner_id) AS count
+            FROM fights f
+            INNER JOIN competitions c ON f.competition_id = c.id
+            INNER JOIN seasons ON c.season_id = s.id
+            WHERE f.winner_id = b.id
+            AND seasons.year = s.year
+          ) AS wins
         FROM bot_members bm
         INNER JOIN bots b ON bm.bot_id = b.id
         INNER JOIN seasons s ON bm.season_id = s.id
@@ -329,6 +338,7 @@ export default async function createDb(
           seasonNumber: ms.season_number,
           botId: ms.bot_id,
           botName: ms.bot_name,
+          wins: ms.wins,
         }
       })
     },
