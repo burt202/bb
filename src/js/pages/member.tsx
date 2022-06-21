@@ -1,3 +1,4 @@
+import {groupBy, pipe, sortBy} from "ramda"
 import * as React from "react"
 import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
@@ -7,7 +8,7 @@ import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import Table from "../components/table"
 import {DbInterface, MemberSeason} from "../types"
-import {groupBy, setTitle} from "../utils"
+import {setTitle} from "../utils"
 import NotFound from "./not-found"
 
 export default function Member() {
@@ -27,18 +28,17 @@ export default function Member() {
     return <NotFound title="Member Not Found" />
   }
 
-  const memberSeasons = db.getMemberSeasons(memberId)
-  const grouped = groupBy<MemberSeason>((ms) => ms.seasonId, memberSeasons)
-
-  const data = Object.entries(grouped).sort((a, b) => {
-    return a[0] < b[0] ? 1 : a[0] > b[0] ? -1 : 0
-  })
+  const memberSeasons = pipe(
+    groupBy((ms: MemberSeason) => ms.seasonId),
+    Object.entries,
+    sortBy((pair: [string, Array<MemberSeason>]) => pair[0]),
+  )(db.getMemberSeasons(memberId))
 
   return (
     <Page headerComponent={<h1 className="m-0">{member.name}</h1>}>
       <h3>Seasons</h3>
       <Table
-        data={data}
+        data={memberSeasons}
         columns={[
           {
             title: "Season",

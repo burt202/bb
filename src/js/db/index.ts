@@ -20,6 +20,7 @@ import {
   DbSeasonCompetition,
   Bot,
   Member,
+  DbMember,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -155,14 +156,14 @@ export default async function createDb(
               json_group_array(
                 json_object(
                   'id', m.id,
-                  'name', m.name
+                  'name', m.name,
+                  'ordinal', bm.ordinal
                 )
               )
             FROM bot_members bm
             INNER JOIN members m ON bm.member_id = m.id
             WHERE bm.bot_id = :id
             AND bm.season_id = s.id
-            ORDER BY bm.ordinal ASC
           ) AS members,
           (
             SELECT
@@ -299,7 +300,7 @@ export default async function createDb(
       })
     },
     getMemberById: (id: string) => {
-      return getOne<DbBot>(db, "SELECT * FROM members WHERE id = :id", {
+      return getOne<DbMember>(db, "SELECT * FROM members WHERE id = :id", {
         ":id": id,
       })
     },

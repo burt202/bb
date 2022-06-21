@@ -1,3 +1,4 @@
+import {prop, sortBy} from "ramda"
 import * as React from "react"
 import {useContext, useEffect} from "react"
 import {useParams} from "react-router-dom"
@@ -84,7 +85,7 @@ export default function Bot() {
           {
             title: "Key Members",
             getValue: (bs) => {
-              return bs.members.map((m, i) => {
+              return sortBy(prop("ordinal"), bs.members).map((m, i) => {
                 const isLastMember = i + 1 === bs.members.length
 
                 return (

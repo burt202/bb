@@ -1,3 +1,4 @@
+import {groupBy} from "ramda"
 import * as React from "react"
 import {useContext, useState, useEffect} from "react"
 
@@ -5,7 +6,7 @@ import {DbContext} from ".."
 import Page from "../components/page"
 import SiteLink from "../components/site-link"
 import {DbInterface, SearchResult} from "../types"
-import {groupBy, setTitle} from "../utils"
+import {setTitle} from "../utils"
 
 export default function Search() {
   const [searchTerm, setSearchTerm] = useState("")

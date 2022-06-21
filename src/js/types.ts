@@ -39,6 +39,7 @@ export interface DbStage {
 export interface DbMember {
   id: string
   name: string
+  ordinal: number
 }
 
 export interface DbSeason {
