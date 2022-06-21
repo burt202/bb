@@ -2,7 +2,7 @@
   "name": "bb",
   "version": "2.0.0",
   "scripts": {
-    "lint": "eslint --ext js,ts,tsx src/ webpack/",
+    "lint": "eslint --ext js,ts,tsx scripts/ src/ webpack/",
     "test": "mocha --config .mocharc.json",
     "start": "webpack serve --config ./webpack/config.dev.ts",
     "build": "rm -rf build; webpack --progress --config ./webpack/config.prod.ts",
