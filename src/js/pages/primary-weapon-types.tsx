@@ -103,7 +103,7 @@ export default function PrimaryWeaponTypes() {
         {seasons.map((s) => {
           return (
             <option key={s.id} value={s.id}>
-              {s.year}
+              {s.year} (S{s.number})
             </option>
           )
         })}

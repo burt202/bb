@@ -98,7 +98,13 @@ function Season({season, competitions, competition}: Props) {
   const koFights = seasonFights.filter((f) => f.ko)
 
   return (
-    <Page headerComponent={<h1 className="m-0">Season {season.year}</h1>}>
+    <Page
+      headerComponent={
+        <h1 className="m-0">
+          Season {season.year} (S{season.number})
+        </h1>
+      }
+    >
       <div className="mt-s">
         {previousSeason ? (
           <span className="mr-m">
@@ -222,7 +228,7 @@ function Season({season, competitions, competition}: Props) {
               textLink={true}
               pageTitle="Primary Weapon Types"
             >
-              {season.year} Primary Weapon Stats
+              Season Primary Weapon Stats
             </SiteLink>
           </p>
         </div>

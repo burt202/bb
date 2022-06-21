@@ -148,6 +148,7 @@ export default async function createDb(
         SELECT
           s.id AS season_id,
           s.year AS season_year,
+          s.number AS season_number,
           pwt.name AS primary_weapon_type,
           (
             SELECT
@@ -182,6 +183,7 @@ export default async function createDb(
           members: JSON.parse(bs.members) as Array<Member>,
           seasonId: bs.season_id,
           seasonYear: bs.season_year,
+          seasonNumber: bs.season_number,
           primaryWeaponType: bs.primary_weapon_type,
         }
       })
@@ -296,6 +298,7 @@ export default async function createDb(
         SELECT
           s.id AS season_id,
           s.year AS season_year,
+          s.number AS season_number,
           b.name AS bot_name,
           b.id AS bot_id
         FROM bot_members bm
@@ -313,6 +316,7 @@ export default async function createDb(
         return {
           seasonId: ms.season_id,
           seasonYear: ms.season_year,
+          seasonNumber: ms.season_number,
           botId: ms.bot_id,
           botName: ms.bot_name,
         }

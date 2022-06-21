@@ -43,14 +43,14 @@ export default function Member() {
           {
             title: "Season",
             getValue: (pair) => {
-              const {seasonId, seasonYear} = pair[1][0]
+              const {seasonId, seasonYear, seasonNumber} = pair[1][0]
               return (
                 <SiteLink
                   to={`/season/${seasonId}`}
                   textLink={true}
                   pageTitle={`Season - ${seasonId}`}
                 >
-                  {seasonYear}
+                  {seasonYear} (S{seasonNumber})
                 </SiteLink>
               )
             },

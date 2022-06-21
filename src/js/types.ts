@@ -44,6 +44,7 @@ export interface DbMember {
 export interface DbSeason {
   id: string
   year: string
+  number: number
 }
 
 export interface DbCompetition {
@@ -89,6 +90,7 @@ export interface DbCompetitionFight {
 export interface DbBotSeason {
   season_id: string
   season_year: string
+  season_number: number
   primary_weapon_type: string
   members: string
 }
@@ -109,6 +111,7 @@ export interface DbBotFight {
 export interface DbMemberSeason {
   season_id: string
   season_year: string
+  season_number: number
   bot_id: string
   bot_name: string
 }
@@ -162,6 +165,7 @@ export interface CompetitionFight {
 export interface BotSeason {
   seasonId: string
   seasonYear: string
+  seasonNumber: number
   primaryWeaponType: string
   members: Array<Member>
 }
@@ -190,6 +194,7 @@ export interface BotFight {
 export interface MemberSeason {
   seasonId: string
   seasonYear: string
+  seasonNumber: number
   botId: string
   botName: string
 }

@@ -30,16 +30,16 @@ export default function Home() {
   return (
     <Page headerComponent={<h1 className="m-0">{SITE_NAME}</h1>}>
       <h3>Seasons</h3>
-      <div className="grid gap-m grid-cols-1 m:grid-cols-2 l:grid-cols-3">
+      <div className="grid gap-m grid-cols-1 m:grid-cols-2 l:grid-cols-4">
         {seasons.map((s, i) => (
-          <div className="bg-grey w-[100%] h-[135px]" key={i}>
+          <div className="bg-grey w-[100%] h-[100px]" key={i}>
             <SiteLink
               to={`/season/${s.id}`}
               pageTitle={`Season - ${s.year}`}
               textLink={true}
             >
-              <div className="flex items-center justify-center h-[135px] text-5xl">
-                {s.year}
+              <div className="flex items-center justify-center h-[100px] text-3xl">
+                {s.year} (S{s.number})
               </div>
             </SiteLink>
           </div>

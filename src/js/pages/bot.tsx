@@ -75,7 +75,7 @@ export default function Bot() {
                   textLink={true}
                   pageTitle={`Season - ${bs.seasonYear}`}
                 >
-                  {bs.seasonYear}
+                  {bs.seasonYear} (S{bs.seasonNumber})
                 </SiteLink>
               )
             },
@@ -148,7 +148,7 @@ export default function Bot() {
                   textLink={true}
                   pageTitle={`Season - ${bc.seasonYear}`}
                 >
-                  {bc.seasonYear}
+                  {bc.seasonYear} (S{bc.seasonNumber})
                 </SiteLink>
               )
             },
