@@ -179,7 +179,7 @@
     {
       "name": "Knome II",
       "keyMembers": ["Jerome Miles"],
-      "country": "GBR",
+      "country": "USA",
       "primaryWeaponType": "other"
     },
     {
@@ -340,7 +340,7 @@
     },
     {
       "name": "Rammstein",
-      "keyMembers": ["Kori Kline"],
+      "keyMembers": ["Korey Kline"],
       "country": "USA",
       "primaryWeaponType": "rammer"
     },
@@ -367,6 +367,42 @@
       "keyMembers": ["Alexander Rose", "Reason Bradley"],
       "country": "USA",
       "primaryWeaponType": "other"
+    },
+    {
+      "name": "Deadblow",
+      "keyMembers": ["Grant Imahara"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Alien Gladiator",
+      "keyMembers": ["Daniel Rupert"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Ankle Biter",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "Turtle Road Kill",
+      "keyMembers": ["Sam Steyer"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Spin Orbiting Force",
+      "keyMembers": ["Mike Winter"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "Ginsu",
+      "keyMembers": ["Greg Munson", "Trey Roski"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
     }
   ],
   "competitions": [
@@ -468,6 +504,48 @@
           "winner": "Backlash",
           "stage": "roundof16",
           "ko": true
+        },
+        {
+          "bots": ["Backlash", "Endotherm"],
+          "winner": "Backlash",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Das Bot", "Ziggo"],
+          "winner": "Das Bot",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Mouser Mecha-Catbot", "No Tolerance II"],
+          "winner": "Mouser Mecha-Catbot",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Alpha Raptor", "Tentomushi"],
+          "winner": "Alpha Raptor",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Mouser Mecha-Catbot", "Alpha Raptor"],
+          "winner": "Alpha Raptor",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Backlash", "Das Bot"],
+          "winner": "Backlash",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Alpha Raptor"],
+          "winner": "Backlash",
+          "stage": "final",
+          "ko": true
         }
       ]
     },
@@ -490,6 +568,48 @@
           "bots": ["Blade Runner", "Bad Attitude"],
           "winner": "Blade Runner",
           "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Deadblow", "Alien Gladiator"],
+          "winner": "Deadblow",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Pressure Drop", "Ankle Biter"],
+          "winner": "Pressure Drop",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Hazard", "Turtle Road Kill"],
+          "winner": "Hazard",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Spin Orbiting Force", "Blade Runner"],
+          "winner": "Spin Orbiting Force",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Pressure Drop", "Deadblow"],
+          "winner": "Deadblow",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Spin Orbiting Force", "Hazard"],
+          "winner": "Hazard",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Deadblow", "Hazard"],
+          "winner": "Hazard",
+          "stage": "final",
           "ko": true
         }
       ]
@@ -556,6 +676,48 @@
           "winner": "Vlad The Impaler",
           "stage": "roundof16",
           "ko": false
+        },
+        {
+          "bots": ["Voltarc", "Bio-Hazard"],
+          "winner": "Voltarc",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Vlad The Impaler", "Overkill"],
+          "winner": "Vlad The Impaler",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Punjar", "Gammatron"],
+          "winner": "Punjar",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["KillerHurtz", "Mauler"],
+          "winner": "KillerHurtz",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Vlad The Impaler", "Punjar"],
+          "winner": "Vlad The Impaler",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["KillerHurtz", "Voltarc"],
+          "winner": "Voltarc",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Vlad The Impaler", "Voltarc"],
+          "winner": "Vlad The Impaler",
+          "stage": "final",
+          "ko": true
         }
       ]
     },
@@ -602,6 +764,42 @@
           "bots": ["DoAll", "Super Rhino"],
           "winner": "DoAll",
           "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Rammstein", "Mechadon"],
+          "winner": "Rammstein",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Minion", "Grendel"],
+          "winner": "Minion",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Ronin", "Ginsu"],
+          "winner": "Ronin",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Minion", "Rammstein"],
+          "winner": "Minion",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Ronin", "DoAll"],
+          "winner": "DoAll",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Minion", "DoAll"],
+          "winner": "Minion",
+          "stage": "final",
           "ko": false
         }
       ]

@@ -38,7 +38,7 @@ export default function Member() {
     <Page headerComponent={<h1 className="m-0">{member.name}</h1>}>
       <h3>Seasons</h3>
       <Table
-        data={memberSeasons}
+        data={memberSeasons.reverse()}
         columns={[
           {
             title: "Season",
