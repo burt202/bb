@@ -216,7 +216,7 @@
       "name": "The Master",
       "keyMembers": ["Mark Setrakian"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "multi"
     },
     {
       "name": "Backlash",
@@ -438,6 +438,48 @@
           "winner": "Afterthought",
           "stage": "roundof16",
           "ko": false
+        },
+        {
+          "bots": ["Ziggo", "Afterthought"],
+          "winner": "Ziggo",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Toe Crusher", "Evil Fish Tank"],
+          "winner": "Toe Crusher",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Backlash", "Sallad"],
+          "winner": "Backlash",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["The Crusher", "Beta Raptor"],
+          "winner": "Beta Raptor",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Ziggo", "Beta Raptor"],
+          "winner": "Ziggo",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Toe Crusher"],
+          "winner": "Backlash",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Ziggo"],
+          "winner": "Ziggo",
+          "stage": "final",
+          "ko": true
         }
       ]
     },
@@ -490,6 +532,30 @@
           "bots": ["El Diablo", "Ankle Biter"],
           "winner": "El Diablo",
           "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Spaz", "Buddy Lee D.P.I.T.S."],
+          "winner": "Spaz",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Blade Runner", "The Master"],
+          "winner": "The Master",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Deadblow", "Bad Attitude"],
+          "winner": "Bad Attitude",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["El Diablo", "Complete Control"],
+          "winner": "El Diablo",
+          "stage": "quarter",
           "ko": true
         }
       ]
@@ -544,6 +610,48 @@
           "winner": "Nightmare",
           "stage": "roundof16",
           "ko": true
+        },
+        {
+          "bots": ["Vlad The Impaler", "Tazbot"],
+          "winner": "Vlad The Impaler",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Nightmare", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["FrenZy", "GoldDigger"],
+          "winner": "FrenZy",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["FrostBite", "Voltronic"],
+          "winner": "Voltronic",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Vlad The Impaler", "Voltronic"],
+          "winner": "Vlad The Impaler",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["FrenZy", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Vlad The Impaler", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
@@ -596,6 +704,48 @@
           "bots": ["Doom Of Babylon", "DoAll"],
           "winner": "DoAll",
           "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Revision Z", "Ronin"],
+          "winner": "Revision Z",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Diesector", "Rammstein"],
+          "winner": "Diesector",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Atomic Wedgie", "Toro"],
+          "winner": "Atomic Wedgie",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["War Machine", "DoAll"],
+          "winner": "War Machine",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Revision Z", "Atomic Wedgie"],
+          "winner": "Atomic Wedgie",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["War Machine", "Diesector"],
+          "winner": "Diesector",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Atomic Wedgie", "Diesector"],
+          "winner": "Diesector",
+          "stage": "final",
           "ko": false
         }
       ]
