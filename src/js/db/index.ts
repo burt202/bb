@@ -172,7 +172,7 @@ export default async function createDb(
             INNER JOIN competitions c ON f.competition_id = c.id
             INNER JOIN seasons ON c.season_id = s.id
             WHERE f.winner_id = :id
-            AND seasons.year = s.year
+            AND seasons.id = s.id
           ) AS wins
         FROM season_bots sb
         INNER JOIN seasons s ON sb.season_id = s.id
@@ -319,7 +319,7 @@ export default async function createDb(
             INNER JOIN competitions c ON f.competition_id = c.id
             INNER JOIN seasons ON c.season_id = s.id
             WHERE f.winner_id = b.id
-            AND seasons.year = s.year
+            AND seasons.id = s.id
           ) AS wins
         FROM bot_members bm
         INNER JOIN bots b ON bm.bot_id = b.id

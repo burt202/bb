@@ -75,12 +75,6 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Cereal Box Killer",
-      "keyMembers": ["???"],
-      "country": "USA",
-      "primaryWeaponType": "rammer"
-    },
-    {
       "name": "Pestilence",
       "keyMembers": ["Todd Mendenhall"],
       "country": "USA",
@@ -210,7 +204,7 @@
       "name": "Mouser Mecha-Catbot",
       "keyMembers": ["Fon Davis"],
       "country": "USA",
-      "primaryWeaponType": "vertical"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Vlad The Impaler",
@@ -280,7 +274,7 @@
     },
     {
       "name": "Mjollnir",
-      "keyMembers": ["Do Lariviere"],
+      "keyMembers": ["Don Lariviere"],
       "country": "USA",
       "primaryWeaponType": "hammer"
     },
@@ -432,12 +426,6 @@
           "winner": "Sallad",
           "stage": "qualifier",
           "ko": false
-        },
-        {
-          "bots": ["Alpha Raptor", "Cereal Box Killer"],
-          "winner": "Alpha Raptor",
-          "stage": "qualifier",
-          "ko": true
         },
         {
           "bots": ["Pestilence", "Thorn"],
