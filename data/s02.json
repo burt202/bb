@@ -557,6 +557,24 @@
           "winner": "El Diablo",
           "stage": "quarter",
           "ko": true
+        },
+        {
+          "bots": ["Spaz", "Bad Attitude"],
+          "winner": "Spaz",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["El Diablo", "The Master"],
+          "winner": "El Diablo",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["El Diablo", "Spaz"],
+          "winner": "Spaz",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
