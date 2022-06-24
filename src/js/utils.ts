@@ -69,4 +69,5 @@ export const primaryWeaponTypeNameMap = {
   other: "Other",
   wedge: "Wedge",
   rammer: "Rammer/Pusher",
+  thwackbot: "Thwackbot",
 } as Record<string, string>

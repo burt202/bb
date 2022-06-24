@@ -48,7 +48,7 @@
       "name": "Chiabot",
       "keyMembers": ["Will Wright"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Das Bot",
@@ -234,7 +234,7 @@
       "name": "Blade Runner",
       "keyMembers": ["Ilya Polyakov"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Grendel",
@@ -372,7 +372,7 @@
       "name": "Alien Gladiator",
       "keyMembers": ["Daniel Rupert"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Ankle Biter",

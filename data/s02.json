@@ -102,7 +102,7 @@
       "name": "GoldDigger",
       "keyMembers": ["Randy Eubanks"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Scrap Daddy LW55",
@@ -198,7 +198,7 @@
       "name": "Blade Runner",
       "keyMembers": ["Ilya Polyakov"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Scrap Daddy MW110",
@@ -228,7 +228,7 @@
       "name": "Scrub",
       "keyMembers": ["Mike Regan"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Beta Raptor",
@@ -282,7 +282,7 @@
       "name": "Spaz",
       "keyMembers": ["Mike Regan"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "thwackbot"
     },
     {
       "name": "Blue Streak",
