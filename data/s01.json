@@ -246,7 +246,7 @@
       "name": "Diesector",
       "keyMembers": ["Donald Hutson"],
       "country": "USA",
-      "primaryWeaponType": "hammer"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Hazard",
@@ -348,7 +348,7 @@
       "name": "Ronin",
       "keyMembers": ["Pete Abrahamson"],
       "country": "USA",
-      "primaryWeaponType": "horizontal"
+      "primaryWeaponType": "saw"
     },
     {
       "name": "Odin",

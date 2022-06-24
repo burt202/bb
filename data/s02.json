@@ -204,7 +204,7 @@
       "name": "Scrap Daddy MW110",
       "keyMembers": ["Mark Bradford"],
       "country": "USA",
-      "primaryWeaponType": "vertical"
+      "primaryWeaponType": "saw"
     },
     {
       "name": "STC Without Reason",
@@ -342,7 +342,7 @@
       "name": "Ronin",
       "keyMembers": ["Pete Abrahamson"],
       "country": "USA",
-      "primaryWeaponType": "horizontal"
+      "primaryWeaponType": "saw"
     },
     {
       "name": "S.L.A.M.",
@@ -366,7 +366,7 @@
       "name": "Diesector",
       "keyMembers": ["Donald Hutson"],
       "country": "USA",
-      "primaryWeaponType": "hammer"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "World Peace",
