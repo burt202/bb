@@ -1,0 +1,586 @@
+{
+  "season": "03",
+  "year": "2001",
+  "bots": [
+    {
+      "name": "Nightmare",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Slam Job",
+      "keyMembers": ["Scott Kincaid"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Shish-ka-bot",
+      "keyMembers": ["Richard Wood"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Trilobot",
+      "keyMembers": ["Phil Putman"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Minion",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Ogre",
+      "keyMembers": ["Tom Griffin"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Double Agent",
+      "keyMembers": ["Robert Sica"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Turbo",
+      "keyMembers": ["Eddy Ampuero", "Alex Espinoza"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Toro",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "World Peace",
+      "keyMembers": ["Dave Campbell"],
+      "country": "USA",
+      "primaryWeaponType": "crusher"
+    },
+    {
+      "name": "Rim Tin Tin",
+      "keyMembers": ["Dan Watts"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Hammerhead",
+      "keyMembers": ["Charles Steinkuehler"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Terry Ewert"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Omega-13",
+      "keyMembers": ["Brent Regan"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "KillerHurtz",
+      "keyMembers": ["John Reid"],
+      "country": "GBR",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Sallad",
+      "keyMembers": ["Dallas Goecker"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Carnage Raptor",
+      "keyMembers": ["Chris Harriman"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Ankle Biter",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "F5",
+      "keyMembers": ["Dan Bovinich"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Blood Moon",
+      "keyMembers": ["Jordan Hackney"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Shaft",
+      "keyMembers": ["Rik Winter"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Mouser Super Mecha-Catbot",
+      "keyMembers": ["Fon Davis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Zion",
+      "keyMembers": ["Jered Singleton"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Hazard",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "SABotage",
+      "keyMembers": ["Matt Sabatino"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "T-Minus",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Sunshine Lollibot",
+      "keyMembers": ["Andy Miller"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Dawn Of Destruction",
+      "keyMembers": ["Jim Klein"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Diesector",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Wedge Of Doom",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "The Wacky Compass",
+      "keyMembers": ["Daniel Baron"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Ziggo",
+      "keyMembers": ["Jonathan Ridder"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Shrike",
+      "keyMembers": ["Steven Levin"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Tazbot",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Bio-Hazard",
+      "keyMembers": ["Carlo Bertocchini"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "GoldDigger",
+      "keyMembers": ["Randy Eubanks"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Incoming",
+      "keyMembers": ["Brian Moore"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Atomic Wedgie",
+      "keyMembers": ["Robert Everhart"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Techno Destructo",
+      "keyMembers": ["Sean Irvin"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Revision Z",
+      "keyMembers": ["Daniel Rupert"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Vladiator",
+      "keyMembers": ["Gage Cachouis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Rammstein",
+      "keyMembers": ["Korey Kline"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "The Judge",
+      "keyMembers": ["Jascha Little"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Odin II",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Electric Lunch",
+      "keyMembers": ["Steven Nelson", "Lowell Nelson"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Phere",
+      "keyMembers": ["Gaylan Douglas"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Anubis",
+      "keyMembers": ["Glen Sears"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Sublime",
+      "keyMembers": ["Jerome Miles"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Dr. Inferno Jr",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "Bad Habit",
+      "keyMembers": ["Ray Alderman"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Herr Gepounden",
+      "keyMembers": ["David Otto"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Death By Monkeys",
+      "keyMembers": ["Rob Farrow"],
+      "country": "USA",
+      "primaryWeaponType": "rammer"
+    },
+    {
+      "name": "Mecha Tentomushi",
+      "keyMembers": ["Mike Winter", "Lisa Winter"],
+      "country": "USA",
+      "primaryWeaponType": "saw"
+    },
+    {
+      "name": "Backlash",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Skid Mark",
+      "keyMembers": ["Robert Everhart"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Gamma Raptor",
+      "keyMembers": ["Robert Pitzer", "Chuck Pitzer"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Serial Box Killer",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "Lightweight",
+      "fights": [
+        {
+          "bots": ["Shish-ka-bot", "Trilobot"],
+          "winner": "Trilobot",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Rim Tin Tin", "Hammerhead"],
+          "winner": "Hammerhead",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Blood Moon", "Shaft"],
+          "winner": "Blood Moon",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Wedge Of Doom", "The Wacky Compass"],
+          "winner": "Wedge Of Doom",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Sallad", "Carnage Raptor"],
+          "winner": "Sallad",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Blood Moon", "Mouser Super Mecha-Catbot"],
+          "winner": "Mouser Super Mecha-Catbot",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Shrike"],
+          "winner": "Ziggo",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Sallad", "Sublime"],
+          "winner": "Sallad",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Dr. Inferno Jr", "Bad Habit"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Herr Gepounden", "Death By Monkeys"],
+          "winner": "Herr Gepounden",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Wedge Of Doom", "Mecha Tentomushi"],
+          "winner": "Wedge Of Doom",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Backlash", "Skid Mark"],
+          "winner": "Backlash",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Gamma Raptor", "Serial Box Killer"],
+          "winner": "Gamma Raptor",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Mouser Super Mecha-Catbot", "Trilobot"],
+          "winner": "Mouser Super Mecha-Catbot",
+          "stage": "roundof16",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Middleweight",
+      "fights": [
+        {
+          "bots": ["Double Agent", "Turbo"],
+          "winner": "Double Agent",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ankle Biter", "F5"],
+          "winner": "F5",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Hazard", "Zion"],
+          "winner": "Hazard",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Double Agent", "SABotage"],
+          "winner": "SABotage",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["T-Minus", "Sunshine Lollibot"],
+          "winner": "T-Minus",
+          "stage": "roundof16",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Heavyweight",
+      "fights": [
+        {
+          "bots": ["Nightmare", "Slam Job"],
+          "winner": "Nightmare",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Nightmare", "Son Of Whyachi"],
+          "winner": "Son Of Whyachi",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Omega-13", "KillerHurtz"],
+          "winner": "KillerHurtz",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Tazbot", "GoldDigger"],
+          "winner": "Tazbot",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Bio-Hazard", "Incoming"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Tazbot", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Super Heavyweight",
+      "fights": [
+        {
+          "bots": ["Minion", "Ogre"],
+          "winner": "Minion",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Toro", "World Peace"],
+          "winner": "Toro",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Dawn Of Destruction", "Diesector"],
+          "winner": "Diesector",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Techno Destructo", "Atomic Wedgie"],
+          "winner": "Techno Destructo",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Vladiator", "Revision Z"],
+          "winner": "Vladiator",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Rammstein", "The Judge"],
+          "winner": "Rammstein",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Electric Lunch", "Odin II"],
+          "winner": "Electric Lunch",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Phere", "Anubis"],
+          "winner": "Phere",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Phere", "Toro"],
+          "winner": "Toro",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Diesector", "Rammstein"],
+          "winner": "Diesector",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Techno Destructo", "Vladiator"],
+          "winner": "Vladiator",
+          "stage": "quarter",
+          "ko": true
+        }
+      ]
+    }
+  ]
+}
