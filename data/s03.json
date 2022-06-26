@@ -343,6 +343,108 @@
       "keyMembers": ["Unknown"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Hexadecimator",
+      "keyMembers": ["Tim Paterson"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Sharkbyte",
+      "keyMembers": ["Arndt Anderson"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "MechaVore",
+      "keyMembers": ["Robert Marzinske"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Surgeon General",
+      "keyMembers": ["Julio Roqueta", "Nola Garcia"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Overkill",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Voltronic",
+      "keyMembers": ["Stephen Felk"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "FrenZy",
+      "keyMembers": ["Patrick Campbell"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Bacchus",
+      "keyMembers": ["James Fish"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Little Drummer Boy",
+      "keyMembers": ["Steve Buescher"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Blade Runner",
+      "keyMembers": ["Ilya Polyakov"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Eraser",
+      "keyMembers": ["Kenneth Fuiks"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Village Idiot",
+      "keyMembers": ["Jon Autry"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Deadblow",
+      "keyMembers": ["Grant Imahara"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Twin Paradox",
+      "keyMembers": ["Micheal Neese"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Complete Control",
+      "keyMembers": ["Derek Young"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Bad Attitude",
+      "keyMembers": ["Thomas Petruccelli"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "T-Wrex",
+      "keyMembers": ["Brent Regan"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
     }
   ],
   "competitions": [
@@ -432,6 +534,48 @@
           "winner": "Mouser Super Mecha-Catbot",
           "stage": "roundof16",
           "ko": true
+        },
+        {
+          "bots": ["Dr. Inferno Jr", "Herr Gepounden"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Gamma Raptor", "Mouser Super Mecha-Catbot"],
+          "winner": "Gamma Raptor",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Sallad", "Ziggo"],
+          "winner": "Sallad",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Wedge Of Doom", "Backlash"],
+          "winner": "Wedge Of Doom",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Sallad", "Dr. Inferno Jr"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Wedge Of Doom", "Gamma Raptor"],
+          "winner": "Gamma Raptor",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Dr. Inferno Jr", "Gamma Raptor"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
@@ -451,6 +595,12 @@
           "ko": true
         },
         {
+          "bots": ["Complete Control", "F5"],
+          "winner": "F5",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
           "bots": ["Hazard", "Zion"],
           "winner": "Hazard",
           "stage": "roundof16",
@@ -466,6 +616,72 @@
           "bots": ["T-Minus", "Sunshine Lollibot"],
           "winner": "T-Minus",
           "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Little Drummer Boy", "Blade Runner"],
+          "winner": "Little Drummer Boy",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Eraser", "Village Idiot"],
+          "winner": "Eraser",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Twin Paradox", "Deadblow"],
+          "winner": "Twin Paradox",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["T-Wrex", "Bad Attitude"],
+          "winner": "T-Wrex",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["T-Wrex", "T-Minus"],
+          "winner": "T-Wrex",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Little Drummer Boy", "Eraser"],
+          "winner": "Little Drummer Boy",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Twin Paradox", "SABotage"],
+          "winner": "SABotage",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Hazard", "F5"],
+          "winner": "Hazard",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["T-Wrex", "Hazard"],
+          "winner": "Hazard",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["SABotage", "Little Drummer Boy"],
+          "winner": "Little Drummer Boy",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Hazard", "Little Drummer Boy"],
+          "winner": "Hazard",
+          "stage": "final",
           "ko": true
         }
       ]
@@ -504,9 +720,69 @@
           "ko": false
         },
         {
+          "bots": ["Sharkbyte", "Hexadecimator"],
+          "winner": "Hexadecimator",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["MechaVore", "Surgeon General"],
+          "winner": "MechaVore",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Overkill", "FrenZy"],
+          "winner": "Overkill",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Bacchus", "Voltronic"],
+          "winner": "Voltronic",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
           "bots": ["Tazbot", "Bio-Hazard"],
           "winner": "Bio-Hazard",
           "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["KillerHurtz", "Hexadecimator"],
+          "winner": "Hexadecimator",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["MechaVore", "Son Of Whyachi"],
+          "winner": "Son Of Whyachi",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Overkill", "Voltronic"],
+          "winner": "Overkill",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Son Of Whyachi", "Hexadecimator"],
+          "winner": "Son Of Whyachi",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Overkill", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Son Of Whyachi", "Bio-Hazard"],
+          "winner": "Son Of Whyachi",
+          "stage": "final",
           "ko": false
         }
       ]
@@ -579,6 +855,30 @@
           "winner": "Vladiator",
           "stage": "quarter",
           "ko": true
+        },
+        {
+          "bots": ["Electric Lunch", "Minion"],
+          "winner": "Minion",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Vladiator", "Diesector"],
+          "winner": "Vladiator",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Minion", "Toro"],
+          "winner": "Minion",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Minion", "Vladiator"],
+          "winner": "Vladiator",
+          "stage": "final",
+          "ko": false
         }
       ]
     }
