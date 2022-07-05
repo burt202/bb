@@ -150,7 +150,7 @@
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
       "country": "USA",
-      "primaryWeaponType": "lifter"
+      "primaryWeaponType": "grappler"
     },
     {
       "name": "Super Chiabot",
@@ -250,7 +250,7 @@
     },
     {
       "name": "The Crusher",
-      "keyMembers": ["Gus Steyer"],
+      "keyMembers": ["Tom Petruccelli"],
       "country": "USA",
       "primaryWeaponType": "wedge"
     },
