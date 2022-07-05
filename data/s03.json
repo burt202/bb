@@ -88,7 +88,7 @@
     },
     {
       "name": "Carnage Raptor",
-      "keyMembers": ["Chris Harriman"],
+      "keyMembers": ["Chris Harriman", "Robert Pitzer", "Chuck Pitzer"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
     },
@@ -688,7 +688,7 @@
     },
     {
       "name": "Whirligig",
-      "keyMembers": ["Jeremy Franklin"],
+      "keyMembers": ["Jeremy Franklin", "Jim Smentowski"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
     },

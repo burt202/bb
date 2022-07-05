@@ -1,0 +1,400 @@
+{
+  "season": "04",
+  "year": "2002",
+  "bots": [
+    {
+      "name": "Ziggo",
+      "keyMembers": ["Jonathan Ridder"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Serial Box Killer",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Swirlee",
+      "keyMembers": ["Kevin McEnery"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Eradicator",
+      "keyMembers": ["Ken Gentry"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Maximus",
+      "keyMembers": ["Patrick Lindstrom"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Pharmapac",
+      "keyMembers": ["Brian Glasz"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Toe Crusher",
+      "keyMembers": ["Chrisian Carlberg", "Jessica Lehrbaum"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Low Blow",
+      "keyMembers": ["Patrick Fischer"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Malvolio",
+      "keyMembers": ["Ray Ebert"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Bad Attitude",
+      "keyMembers": ["Thomas Petruccelli"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Little Sister",
+      "keyMembers": ["Ian Watts", "Joe Watts"],
+      "country": "GBR",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Bender",
+      "keyMembers": ["Eric Stoliker"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Tentomushi 7.0",
+      "keyMembers": ["Lisa Winter"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Wedge Of Doom",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Terry Ewert"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Towering Inferno",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "MechaVore",
+      "keyMembers": ["Robert Marzinske"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Afterthought",
+      "keyMembers": ["Jim Sellers"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Slap Em Silly",
+      "keyMembers": ["Andy Sauro"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Carnage Raptor",
+      "keyMembers": ["Chris Harriman", "Robert Pitzer", "Chuck Pitzer"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Whirligig",
+      "keyMembers": ["Jeremy Franklin", "Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Atomic Wedgie",
+      "keyMembers": ["Brad Bowan"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Ogre",
+      "keyMembers": ["Jim Griffin"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Phrizbee",
+      "keyMembers": ["Brian Nave"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Hexadecimator",
+      "keyMembers": ["Tim Paterson"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Omega-13",
+      "keyMembers": ["Brent Regan"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "The Matador",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Heavy Metal Noise",
+      "keyMembers": ["Jay Johnson"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "T-Minus",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Hexy Jr",
+      "keyMembers": ["Scott Ferguson"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "The Big B",
+      "keyMembers": ["Gary Gin"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Death By Monkeys",
+      "keyMembers": ["Rob Farrow"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Sallad",
+      "keyMembers": ["Dallas Goecker"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Backlash",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Das Bot",
+      "keyMembers": ["Paul Mathus"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Pursuer",
+      "keyMembers": ["Darren Mackenzie"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Rambite",
+      "keyMembers": ["John Mladenik"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "Lightweight",
+      "fights": [
+        {
+          "bots": ["Low Blow", "Toe Crusher"],
+          "winner": "Low Blow",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Carnage Raptor", "Whirligig"],
+          "winner": "Carnage Raptor",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Serial Box Killer"],
+          "winner": "Ziggo",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Tentomushi 7.0", "Wedge Of Doom"],
+          "winner": "Wedge Of Doom",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Rambite", "Sallad"],
+          "winner": "Sallad",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Death By Monkeys", "Pursuer"],
+          "winner": "Death By Monkeys",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Afterthought", "Slap Em Silly"],
+          "winner": "Slap Em Silly",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["The Big B", "Das Bot"],
+          "winner": "The Big B",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Carnage Raptor", "Low Blow"],
+          "winner": "Carnage Raptor",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Hexy Jr", "Backlash"],
+          "winner": "Hexy Jr",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Carnage Raptor", "Hexy Jr"],
+          "winner": "Carnage Raptor",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Slap Em Silly", "The Big B"],
+          "winner": "The Big B",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Death By Monkeys", "Sallad"],
+          "winner": "Death By Monkeys",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Wedge Of Doom"],
+          "winner": "Ziggo",
+          "stage": "quarter",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Middleweight",
+      "fights": [
+        {
+          "bots": ["Malvolio", "Bad Attitude"],
+          "winner": "Bad Attitude",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Towering Inferno", "MechaVore"],
+          "winner": "MechaVore",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Serial Box Killer"],
+          "winner": "Ziggo",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["T-Minus", "Heavy Metal Noise"],
+          "winner": "Heavy Metal Noise",
+          "stage": "roundof16",
+          "ko": true
+        }
+      ]
+    },
+    {
+      "name": "Heavyweight",
+      "fights": [
+        {
+          "bots": ["Bender", "Little Sister"],
+          "winner": "Little Sister",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Phrizbee", "Hexadecimator"],
+          "winner": "Hexadecimator",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Omega-13", "The Matador"],
+          "winner": "The Matador",
+          "stage": "roundof32",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Super Heavyweight",
+      "fights": [
+        {
+          "bots": ["Maximus", "Pharmapac"],
+          "winner": "Maximus",
+          "stage": "qualifier",
+          "ko": false
+        },
+        {
+          "bots": ["Swirlee", "Eradicator"],
+          "winner": "Swirlee",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
+          "bots": ["Swirlee", "Son Of Whyachi"],
+          "winner": "Swirlee",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ogre", "Atomic Wedgie"],
+          "winner": "Ogre",
+          "stage": "roundof32",
+          "ko": false
+        }
+      ]
+    }
+  ]
+}
