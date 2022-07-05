@@ -397,12 +397,24 @@
       "keyMembers": ["Greg Munson", "Trey Roski"],
       "country": "USA",
       "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Serial Box Killer",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
     }
   ],
   "competitions": [
     {
       "name": "Lightweight",
       "fights": [
+        {
+          "bots": ["Alpha Raptor", "Serial Box Killer"],
+          "winner": "Alpha Raptor",
+          "stage": "qualifier",
+          "ko": true
+        },
         {
           "bots": ["Afterthought", "Black Widow"],
           "winner": "Afterthought",
