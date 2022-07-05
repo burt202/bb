@@ -6,7 +6,7 @@
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Minotaur",
@@ -60,7 +60,7 @@
       "name": "Blacksmith",
       "keyMembers": ["Al Kindle"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Pain Train",
@@ -107,7 +107,7 @@
         "Rob Masek"
       ],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Ribbot",
@@ -185,7 +185,7 @@
       "name": "Slammow",
       "keyMembers": ["Craig Danby"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Valkyrie",
@@ -215,7 +215,7 @@
       "name": "Fusion",
       "keyMembers": ["Reece Ewert"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "multi"
     },
     {
       "name": "Cobalt",
@@ -269,19 +269,19 @@
       "name": "Deadlift",
       "keyMembers": ["Ryan Shulski"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Skorpios",
       "keyMembers": ["Zach Lytle", "Diana Tarlson", "Dan Chatterton"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Blade",
@@ -329,7 +329,7 @@
       "name": "Claw Viper",
       "keyMembers": ["Kevin Milczewski", "Rob Farrow"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "SMEEEEEEEEEEEEEEEE",
@@ -347,7 +347,7 @@
       "name": "Triple Crown",
       "keyMembers": ["Todd Mendenhall"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "multi"
     },
     {
       "name": "Rampage",

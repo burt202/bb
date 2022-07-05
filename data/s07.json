@@ -6,7 +6,7 @@
       "name": "Creepy Crawlies",
       "keyMembers": ["Kelly Smith", "Ian Watts"],
       "country": "GBR",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Ultraviolet",
@@ -42,7 +42,7 @@
       "name": "Lycan",
       "keyMembers": ["Ravi Baboolal"],
       "country": "CAN",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Invader",
@@ -72,7 +72,7 @@
       "name": "Skorpios",
       "keyMembers": ["Orion Beach", "Zach Lytle"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Death Roll",
@@ -180,7 +180,7 @@
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Bombshell",
@@ -275,7 +275,7 @@
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Mega Tento",
@@ -293,7 +293,7 @@
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Cobalt",
@@ -305,7 +305,7 @@
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Razorback",
@@ -317,7 +317,7 @@
       "name": "Red Devil",
       "keyMembers": ["Jerome Miles"],
       "country": "CAN",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Wrecks",

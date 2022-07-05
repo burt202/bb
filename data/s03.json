@@ -18,7 +18,7 @@
       "name": "Trilobot",
       "keyMembers": ["Phil Putman"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Minion",
@@ -30,7 +30,7 @@
       "name": "Ogre",
       "keyMembers": ["Tom Griffin"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Double Agent",
@@ -60,7 +60,7 @@
       "name": "Hammerhead",
       "keyMembers": ["Charles Steinkuehler"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Son Of Whyachi",
@@ -72,7 +72,7 @@
       "name": "Omega-13",
       "keyMembers": ["Brent Regan"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "KillerHurtz",
@@ -96,7 +96,7 @@
       "name": "Ankle Biter",
       "keyMembers": ["John McKenzie"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "F5",
@@ -228,7 +228,7 @@
       "name": "Rammstein",
       "keyMembers": ["Korey Kline"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "The Judge",
@@ -276,7 +276,7 @@
       "name": "Bad Habit",
       "keyMembers": ["Ray Alderman"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Herr Gepounden",
@@ -288,13 +288,13 @@
       "name": "Death By Monkeys",
       "keyMembers": ["Rob Farrow"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Mecha Tentomushi",
       "keyMembers": ["Mike Winter", "Lisa Winter"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Backlash",
@@ -408,7 +408,7 @@
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Bad Attitude",
@@ -444,7 +444,7 @@
       "name": "Ronin",
       "keyMembers": ["Pete Abrahamson"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "The Junkyard Cog",
@@ -480,13 +480,13 @@
       "name": "Gray Matter",
       "keyMembers": ["Israel Mathewson"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Half Gassed",
       "keyMembers": ["Steven Nelson", "Lowell Nelson"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "No Apologies",
@@ -522,7 +522,7 @@
       "name": "Kill-O-Amp",
       "keyMembers": ["Curt Meyers"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Punjar",
@@ -534,13 +534,13 @@
       "name": "FrostBite",
       "keyMembers": ["Michael Mauldin"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Center Punch",
       "keyMembers": ["Tom Beaver"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "B.O.B.",
@@ -726,13 +726,13 @@
       "name": "SnowFlake",
       "keyMembers": ["Michael Mauldin"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Manic Aggressive",
       "keyMembers": ["Unknown"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "No Tolerance III",

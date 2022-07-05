@@ -6,7 +6,7 @@
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Whiplash",
@@ -23,7 +23,7 @@
       "name": "Fusion",
       "keyMembers": ["Reece Ewert"],
       "country": "USA",
-      "primaryWeaponType": "other"
+      "primaryWeaponType": "multi"
     },
     {
       "name": "Mad Catter",
@@ -53,7 +53,7 @@
       "name": "Skorpios",
       "keyMembers": ["Zach Lytle", "Diana Tarlson"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Lock-Jaw",
@@ -83,7 +83,7 @@
       "name": "Sharkoprion",
       "keyMembers": ["Edward Robinson", "Zach Hassanein"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "SMEEEEEEEEEEEEEEEE",
@@ -155,7 +155,7 @@
       "name": "Claw Viper",
       "keyMembers": ["Kevin Milczewski"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "HiJinx",
@@ -292,7 +292,7 @@
       "name": "Slammow",
       "keyMembers": ["Craig Danby"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Chomp",
@@ -310,7 +310,7 @@
       "name": "Grabot",
       "keyMembers": ["Ben Davidson"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Aegis",

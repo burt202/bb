@@ -12,7 +12,7 @@
       "name": "Mecha Tentomushi",
       "keyMembers": ["Mike Winter", "Lisa Winter"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Bigger Brother",
@@ -42,7 +42,7 @@
       "name": "No Tolerance III",
       "keyMembers": ["Stefan Nock"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Vlad The Impaler",
@@ -108,7 +108,7 @@
       "name": "Scrap Daddy LW55",
       "keyMembers": ["Mark Bradford"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Ziggo",
@@ -126,7 +126,7 @@
       "name": "FrostBite",
       "keyMembers": ["Michael Mauldin"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Sallad",
@@ -150,7 +150,7 @@
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Super Chiabot",
@@ -168,7 +168,7 @@
       "name": "Minion",
       "keyMembers": ["Chrisian Carlberg"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Toro",
@@ -204,7 +204,7 @@
       "name": "Scrap Daddy MW110",
       "keyMembers": ["Mark Bradford"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "STC Without Reason",
@@ -240,7 +240,7 @@
       "name": "Hammerhead",
       "keyMembers": ["Charles Steinkuehler"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Dr. Inferno Jr",
@@ -294,7 +294,7 @@
       "name": "Ankle Biter",
       "keyMembers": ["John McKenzie"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "El Diablo",
@@ -312,7 +312,7 @@
       "name": "Kill-O-Amp",
       "keyMembers": ["Curt Meyers"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Nightmare",
@@ -336,13 +336,13 @@
       "name": "Gray Matter",
       "keyMembers": ["Israel Mathewson"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Ronin",
       "keyMembers": ["Pete Abrahamson"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "S.L.A.M.",
@@ -354,13 +354,13 @@
       "name": "Rammstein",
       "keyMembers": ["Korey Kline"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Kennys Revenge",
       "keyMembers": ["Thomas Kohlert"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Diesector",
@@ -384,7 +384,7 @@
       "name": "Doom Of Babylon",
       "keyMembers": ["Todd Mendenhall"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     }
   ],
   "competitions": [

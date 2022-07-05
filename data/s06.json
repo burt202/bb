@@ -6,7 +6,7 @@
       "name": "Razorback",
       "keyMembers": ["Zack Bieber"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Icewave",
@@ -30,7 +30,7 @@
       "name": "Biteforce",
       "keyMembers": ["Paul Ventimiglia"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Warhead",
@@ -60,13 +60,13 @@
       "name": "Overhaul",
       "keyMembers": ["Charles Guan", "Jamison Go", "Adam Bercu"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Lock-Jaw",
       "keyMembers": ["Donald Hutson"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Bronco",
@@ -96,7 +96,7 @@
       "name": "Complete Control",
       "keyMembers": ["Derek Young"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Ghost Raptor",

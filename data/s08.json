@@ -120,7 +120,7 @@
       "name": "Red Devil",
       "keyMembers": ["Ravi Baboolal", "Julia Chernushevich"],
       "country": "CAN",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Captain Shrederator",
@@ -150,13 +150,13 @@
       "name": "Overhaul",
       "keyMembers": ["Charles Guan"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go", "Alex Hattori", "Mason Massie"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Whiplash",
@@ -173,7 +173,7 @@
       "name": "Hypothermia",
       "keyMembers": ["Michael Mauldin"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "The Four Horsemen",
@@ -227,7 +227,7 @@
       "name": "Skorpios",
       "keyMembers": ["Orion Beach", "Diana Tarlson", "Dan Chatterton"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Battle Royale With Cheese",
@@ -269,7 +269,7 @@
       "name": "Predator",
       "keyMembers": ["Craig Danby"],
       "country": "USA",
-      "primaryWeaponType": "grappler"
+      "primaryWeaponType": "lifter"
     },
     {
       "name": "Valkyrie",

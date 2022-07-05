@@ -18,7 +18,7 @@
       "name": "Tentomushi",
       "keyMembers": ["Mike Winter", "Lisa Winter"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Sallad",
@@ -60,7 +60,7 @@
       "name": "Rott-Bott 2000",
       "keyMembers": ["Brian Scearce"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "The Aggressive Polygon",
@@ -90,19 +90,19 @@
       "name": "Shaft",
       "keyMembers": ["Rik Winter"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Gremlin II",
       "keyMembers": ["Jerome Miles"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Endotherm",
       "keyMembers": ["John Patrick"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Shrike",
@@ -186,7 +186,7 @@
       "name": "Minion",
       "keyMembers": ["Chrisian Carlberg"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "STC Without Reason",
@@ -294,7 +294,7 @@
       "name": "Kill-O-Amp",
       "keyMembers": ["Curt Meyers"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Gammatron",
@@ -318,7 +318,7 @@
       "name": "Monster",
       "keyMembers": ["Kevin Knoedler"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Mechadon",
@@ -336,7 +336,7 @@
       "name": "Rammstein",
       "keyMembers": ["Korey Kline"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Abbatoir",
@@ -348,7 +348,7 @@
       "name": "Ronin",
       "keyMembers": ["Pete Abrahamson"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Odin",
@@ -378,25 +378,25 @@
       "name": "Ankle Biter",
       "keyMembers": ["John McKenzie"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Turtle Road Kill",
       "keyMembers": ["Sam Steyer"],
       "country": "USA",
-      "primaryWeaponType": "rammer"
+      "primaryWeaponType": "wedge"
     },
     {
       "name": "Spin Orbiting Force",
       "keyMembers": ["Mike Winter"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Ginsu",
       "keyMembers": ["Greg Munson", "Trey Roski"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     }
   ],
   "competitions": [

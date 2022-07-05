@@ -6,7 +6,7 @@
       "name": "Sawblaze",
       "keyMembers": ["Jamison Go"],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Rotator",
@@ -185,7 +185,7 @@
         "Jen Herchenroeder"
       ],
       "country": "USA",
-      "primaryWeaponType": "saw"
+      "primaryWeaponType": "vertical"
     },
     {
       "name": "Copperhead",
