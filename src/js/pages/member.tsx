@@ -57,9 +57,11 @@ export default function Member() {
             width: 3,
           },
           {
-            title: "Bot",
+            title: "Bot(s)",
             getValue: (pair) => {
-              return pair[1].map((b, i) => {
+              const bots = sortBy((pair) => pair.botName, pair[1])
+
+              return bots.map((b, i) => {
                 const isLastBot = i + 1 === pair[1].length
 
                 return (

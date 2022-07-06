@@ -237,6 +237,11 @@ function Season({season, competitions, competition}: Props) {
       <h3>Fights</h3>
       <Table
         data={seasonFights}
+        shouldShowDivider={(data, row, i) => {
+          return data[i + 1] === undefined
+            ? false
+            : row.stageName !== data[i + 1].stageName
+        }}
         columns={[
           {
             title: "Bots",

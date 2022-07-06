@@ -8,7 +8,8 @@
     "build": "rm -rf build; webpack --progress --config ./webpack/config.prod.ts",
     "prepare": "husky install",
     "deploy": "gh-pages -d build",
-    "prepush": "npm run test; npm run build; npm run deploy"
+    "prepush": "npm run test; npm run build; npm run deploy",
+    "validate": "ts-node ./scripts/validate.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.3.1",
