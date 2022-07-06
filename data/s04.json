@@ -223,12 +223,294 @@
       "keyMembers": ["John Mladenik"],
       "country": "USA",
       "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "SnowFlake",
+      "keyMembers": ["Michael Mauldin"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Locomotion",
+      "keyMembers": ["David Hall"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "General Gau",
+      "keyMembers": ["William Garcia"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "Scrap Daddy Surplus",
+      "keyMembers": ["Mark Bradford"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "UGV Scorpion",
+      "keyMembers": ["Brett Dawson"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Herr Gepounden",
+      "keyMembers": ["David Otto"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Skid Mark",
+      "keyMembers": ["Robert Everhart"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Dr. Inferno Jr",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Mouser Classic Mecha-Catbot",
+      "keyMembers": ["Fon Davis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "The Crusher",
+      "keyMembers": ["Tom Petruccelli"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Gamma Raptor",
+      "keyMembers": ["Robert Pitzer", "Chuck Pitzer"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Bulldog",
+      "keyMembers": ["John Keyes"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Trilobot",
+      "keyMembers": ["Phil Putman"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Junkyard Dog 2.0",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Toro",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Minion",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "No Apologies",
+      "keyMembers": ["John Torkelson"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "The Judge",
+      "keyMembers": ["Jascha Little"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Hammertime",
+      "keyMembers": ["Jerry Clarkin"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Techno Destructo",
+      "keyMembers": ["Sean Irvin"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Junkyard Offspring",
+      "keyMembers": ["Anthony Elder"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Nightmare",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Ronin",
+      "keyMembers": ["Pete Abrahamson"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Diesector",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "New Cruelty",
+      "keyMembers": ["Richard Stuplich"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Odin II",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Vladiator",
+      "keyMembers": ["Gage Cachouis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Little Blue Engine",
+      "keyMembers": ["Josh O'Briant"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "IceBerg",
+      "keyMembers": ["Michael Mauldin"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Stealth Terminator",
+      "keyMembers": ["Roger Farr"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Center Punch",
+      "keyMembers": ["Ann Beaver"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Dreadnought",
+      "keyMembers": ["Chrisian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Gammacide",
+      "keyMembers": ["Mike Okerman"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Electric Lunch",
+      "keyMembers": ["Steven Nelson", "Lowell Nelson"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Rammstein",
+      "keyMembers": ["Korey Kline"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
     }
   ],
   "competitions": [
     {
       "name": "Lightweight",
       "fights": [
+        {
+          "bots": ["Ziggo", "SnowFlake"],
+          "winner": "Ziggo",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Serial Box Killer", "Locomotion"],
+          "winner": "Serial Box Killer",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Tentomushi 7.0", "General Gau"],
+          "winner": "Tentomushi 7.0",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Wedge Of Doom", "Scrap Daddy Surplus"],
+          "winner": "Wedge Of Doom",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Sallad", "UGV Scorpion"],
+          "winner": "Sallad",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Rambite", "Herr Gepounden"],
+          "winner": "Rambite",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Death By Monkeys", "Skid Mark"],
+          "winner": "Death By Monkeys",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Pursuer", "Dr. Inferno Jr"],
+          "winner": "Pursuer",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Slap Em Silly", "Mouser Classic Mecha-Catbot"],
+          "winner": "Slap Em Silly",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Afterthought", "The Crusher"],
+          "winner": "Afterthought",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["The Big B", "Gamma Raptor"],
+          "winner": "The Big B",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Das Bot", "Bulldog"],
+          "winner": "Das Bot",
+          "stage": "roundof32",
+          "ko": true
+        },
         {
           "bots": ["Low Blow", "Toe Crusher"],
           "winner": "Low Blow",
@@ -238,6 +520,18 @@
         {
           "bots": ["Carnage Raptor", "Whirligig"],
           "winner": "Carnage Raptor",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Hexy Jr", "Trilobot"],
+          "winner": "Hexy Jr",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Junkyard Dog 2.0"],
+          "winner": "Backlash",
           "stage": "roundof32",
           "ko": true
         },
@@ -312,6 +606,24 @@
           "winner": "Ziggo",
           "stage": "quarter",
           "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Death By Monkeys"],
+          "winner": "Ziggo",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["The Big B", "Carnage Raptor"],
+          "winner": "The Big B",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["The Big B", "Ziggo"],
+          "winner": "Ziggo",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
@@ -328,12 +640,6 @@
           "bots": ["Towering Inferno", "MechaVore"],
           "winner": "MechaVore",
           "stage": "roundof32",
-          "ko": true
-        },
-        {
-          "bots": ["Ziggo", "Serial Box Killer"],
-          "winner": "Ziggo",
-          "stage": "roundof16",
           "ko": true
         },
         {
@@ -354,6 +660,12 @@
           "ko": true
         },
         {
+          "bots": ["Center Punch", "Stealth Terminator"],
+          "winner": "Stealth Terminator",
+          "stage": "qualifier",
+          "ko": true
+        },
+        {
           "bots": ["Phrizbee", "Hexadecimator"],
           "winner": "Hexadecimator",
           "stage": "roundof32",
@@ -364,6 +676,12 @@
           "winner": "The Matador",
           "stage": "roundof32",
           "ko": false
+        },
+        {
+          "bots": ["Junkyard Offspring", "Nightmare"],
+          "winner": "Nightmare",
+          "stage": "roundof32",
+          "ko": true
         }
       ]
     },
@@ -392,6 +710,114 @@
           "bots": ["Ogre", "Atomic Wedgie"],
           "winner": "Ogre",
           "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Maximus", "Toro"],
+          "winner": "Toro",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Minion", "No Apologies"],
+          "winner": "No Apologies",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["The Judge", "Hammertime"],
+          "winner": "The Judge",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Odin II", "New Cruelty"],
+          "winner": "New Cruelty",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["IceBerg", "No Apologies"],
+          "winner": "IceBerg",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Little Blue Engine", "Dreadnought"],
+          "winner": "Little Blue Engine",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Vladiator", "Electric Lunch"],
+          "winner": "Vladiator",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["The Judge", "Toro"],
+          "winner": "Toro",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Ronin", "Diesector"],
+          "winner": "Diesector",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Ogre", "Techno Destructo"],
+          "winner": "Techno Destructo",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Swirlee", "Gammacide"],
+          "winner": "Swirlee",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["New Cruelty", "Rammstein"],
+          "winner": "New Cruelty",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Toro", "Vladiator"],
+          "winner": "Toro",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Diesector", "Techno Destructo"],
+          "winner": "Diesector",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Little Blue Engine", "IceBerg"],
+          "winner": "Little Blue Engine",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["New Cruelty", "Swirlee"],
+          "winner": "New Cruelty",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Little Blue Engine", "Toro"],
+          "winner": "Toro",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["New Cruelty", "Diesector"],
+          "winner": "New Cruelty",
+          "stage": "semi",
           "ko": false
         }
       ]
