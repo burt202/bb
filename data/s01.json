@@ -142,7 +142,7 @@
     },
     {
       "name": "Overkill",
-      "keyMembers": ["Chrisian Carlberg"],
+      "keyMembers": ["Christian Carlberg"],
       "country": "USA",
       "primaryWeaponType": "hammer"
     },
@@ -184,7 +184,7 @@
     },
     {
       "name": "Minion",
-      "keyMembers": ["Chrisian Carlberg"],
+      "keyMembers": ["Christian Carlberg"],
       "country": "USA",
       "primaryWeaponType": "vertical"
     },
@@ -382,7 +382,7 @@
     },
     {
       "name": "Turtle Road Kill",
-      "keyMembers": ["Sam Steyer"],
+      "keyMembers": ["Sam Steyer", "Thomas Petruccelli"],
       "country": "USA",
       "primaryWeaponType": "wedge"
     },
