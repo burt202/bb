@@ -48,6 +48,7 @@ export const countryNameMap = {
   fra: "France",
   gbr: "Great Britain",
   ind: "India",
+  jpn: "Japan",
   kor: "South Korea",
   nld: "Holland",
   nzl: "New Zealand",

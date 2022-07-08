@@ -105,7 +105,7 @@
       "primaryWeaponType": "thwackbot"
     },
     {
-      "name": "Scrap Daddy LW55",
+      "name": "Scrap Daddy Surplus",
       "keyMembers": ["Mark Bradford"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -201,7 +201,7 @@
       "primaryWeaponType": "thwackbot"
     },
     {
-      "name": "Scrap Daddy MW110",
+      "name": "Scrap Daddy Flipskanker",
       "keyMembers": ["Mark Bradford"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -475,6 +475,156 @@
       "keyMembers": ["Unknown"],
       "country": "USA",
       "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Bumper Bawt",
+      "keyMembers": ["Erik Hagman"],
+      "country": "CAN",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Red Scorpion",
+      "keyMembers": ["Ray Washburn"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "M.I.A.",
+      "keyMembers": ["Aaron Horrocks"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Tobor Rabies",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Spin Orbiting Force",
+      "keyMembers": ["Mike Winter"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Fusion MW",
+      "keyMembers": ["John Patrick"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Trig Terror",
+      "keyMembers": ["Daniel Rupert"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Doorstop",
+      "keyMembers": ["David Pabian"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Instigator",
+      "keyMembers": ["Dennis Millard"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Spinster",
+      "keyMembers": ["Grayson DuRaine", "Anthony DuRaine"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Mr Roboto",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "RA",
+      "keyMembers": ["Solomon Spector"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Circuit Breaker",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Decimator",
+      "keyMembers": ["Kyle Vogt"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Dreadbot",
+      "keyMembers": ["David Hall"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Iron Eagle",
+      "keyMembers": ["Terukazu Nishimura"],
+      "country": "JPN",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "MOE",
+      "keyMembers": ["Neal Muzzy"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Blunt Force Trauma",
+      "keyMembers": ["Kevin Walsh"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Surgeon General",
+      "keyMembers": ["Julio Roqueta"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Scrap Daddy Persistor",
+      "keyMembers": ["Mark Bradford"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Bender",
+      "keyMembers": ["Eric Stoliker"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Mauler",
+      "keyMembers": ["Charles Tilford", "Morgan Tilford"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Punjar",
+      "keyMembers": ["Ramiro Mallari"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Gammatron",
+      "keyMembers": ["Mike Okerman"],
+      "country": "USA",
+      "primaryWeaponType": "multi"
+    },
+    {
+      "name": "Blendo",
+      "keyMembers": ["Jamie Hyneman"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
     }
   ],
   "competitions": [
@@ -560,8 +710,8 @@
           "ko": true
         },
         {
-          "bots": ["Scrap Daddy LW55", "Green Dragon"],
-          "winner": "Scrap Daddy LW55",
+          "bots": ["Scrap Daddy Surplus", "Green Dragon"],
+          "winner": "Scrap Daddy Surplus",
           "stage": "roundof32",
           "ko": true
         },
@@ -584,7 +734,7 @@
           "ko": false
         },
         {
-          "bots": ["Scrap Daddy LW55", "Ziggo"],
+          "bots": ["Scrap Daddy Surplus", "Ziggo"],
           "winner": "Ziggo",
           "stage": "roundof16",
           "ko": true
@@ -667,6 +817,78 @@
       "name": "Middleweight",
       "fights": [
         {
+          "bots": ["Kegger", "Bumper Bawt"],
+          "winner": "Kegger",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["SABotage", "Red Scorpion"],
+          "winner": "SABotage",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Bad Attitude", "M.I.A."],
+          "winner": "Bad Attitude",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Spaz", "Tobor Rabies"],
+          "winner": "Spaz",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Turbo", "Spin Orbiting Force"],
+          "winner": "Turbo",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Fusion MW", "Buddy Lee D.P.I.T.S."],
+          "winner": "Buddy Lee D.P.I.T.S.",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Blade Runner", "Trig Terror"],
+          "winner": "Blade Runner",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Scrap Daddy Flipskanker", "Doorstop"],
+          "winner": "Scrap Daddy Flipskanker",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["STC Without Reason", "Instigator"],
+          "winner": "STC Without Reason",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Complete Control", "Spinster"],
+          "winner": "Complete Control",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Super Chiabot", "Mr Roboto"],
+          "winner": "Super Chiabot",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["El Diablo", "RA"],
+          "winner": "El Diablo",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
           "bots": ["Turbo", "Buddy Lee D.P.I.T.S."],
           "winner": "Buddy Lee D.P.I.T.S.",
           "stage": "roundof16",
@@ -685,7 +907,7 @@
           "ko": true
         },
         {
-          "bots": ["Blade Runner", "Scrap Daddy MW110"],
+          "bots": ["Blade Runner", "Scrap Daddy Flipskanker"],
           "winner": "Blade Runner",
           "stage": "roundof16",
           "ko": false
@@ -761,6 +983,84 @@
     {
       "name": "Heavyweight",
       "fights": [
+        {
+          "bots": ["Bender", "Mjollnir"],
+          "winner": "Mjollnir",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Kill-O-Amp", "Circuit Breaker"],
+          "winner": "Kill-O-Amp",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Tazbot", "Decimator"],
+          "winner": "Tazbot",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Voltronic", "Dreadbot"],
+          "winner": "Voltronic",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Bigger Brother", "Mauler"],
+          "winner": "Bigger Brother",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["FrostBite", "Punjar"],
+          "winner": "FrostBite",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Overkill", "Iron Eagle"],
+          "winner": "Overkill",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Bio-Hazard", "MOE"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Suicidal Tendencies", "Blunt Force Trauma"],
+          "winner": "Suicidal Tendencies",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Nightmare", "Surgeon General"],
+          "winner": "Nightmare",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["FrenZy", "Scrap Daddy Persistor"],
+          "winner": "FrenZy",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Panic Attack 3", "Gammatron"],
+          "winner": "Panic Attack 3",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["GoldDigger", "Blendo"],
+          "winner": "GoldDigger",
+          "stage": "roundof32",
+          "ko": true
+        },
         {
           "bots": ["Vlad The Impaler", "Mjollnir"],
           "winner": "Vlad The Impaler",
