@@ -130,7 +130,7 @@
     },
     {
       "name": "Mauler",
-      "keyMembers": ["Charles Tilford"],
+      "keyMembers": ["Charles Tilford", "Morgan Tilford"],
       "country": "USA",
       "primaryWeaponType": "horizontal"
     },
@@ -166,7 +166,7 @@
     },
     {
       "name": "KillerHurtz",
-      "keyMembers": ["John Reid"],
+      "keyMembers": ["John Reid", "Dominic Parkinson"],
       "country": "GBR",
       "primaryWeaponType": "hammer"
     },

@@ -94,7 +94,7 @@
     },
     {
       "name": "KillerHurtz",
-      "keyMembers": ["John Reid"],
+      "keyMembers": ["John Reid", "Dominic Parkinson"],
       "country": "GBR",
       "primaryWeaponType": "hammer"
     },
@@ -385,12 +385,192 @@
       "keyMembers": ["Todd Mendenhall"],
       "country": "USA",
       "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Rampage LW",
+      "keyMembers": ["Troy Racey"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Lambo",
+      "keyMembers": ["Scott Gary"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Whirling Willy",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Widowmaker",
+      "keyMembers": ["Kevin Lillie"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Flatbot",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Alien 2",
+      "keyMembers": ["Daniel Rupert"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Shish-Ka-Bot",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Grunion",
+      "keyMembers": ["K Brian ONeal"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Sublime",
+      "keyMembers": ["Jerome Miles"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Bad Habit",
+      "keyMembers": ["Ray Alderman"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Stewbot",
+      "keyMembers": ["John Hargrave"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Enforcer",
+      "keyMembers": ["Al Kindle"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Delta II",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Green Dragon",
+      "keyMembers": ["John Pagano"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Scrap Metal",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
     }
   ],
   "competitions": [
     {
       "name": "Lightweight",
       "fights": [
+        {
+          "bots": ["Backlash", "Rampage LW"],
+          "winner": "Backlash",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Scrub", "Lambo"],
+          "winner": "Scrub",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Sallad", "Whirling Willy"],
+          "winner": "Sallad",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Mouser Mecha-Catbot", "Widowmaker"],
+          "winner": "Mouser Mecha-Catbot",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Toe Crusher", "Flatbot"],
+          "winner": "Toe Crusher",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["No Tolerance III", "Alien 2"],
+          "winner": "No Tolerance III",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Mecha Tentomushi", "Shish-Ka-Bot"],
+          "winner": "Mecha Tentomushi",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Beta Raptor", "Grunion"],
+          "winner": "Beta Raptor",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Hammerhead", "Sublime"],
+          "winner": "Hammerhead",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Dr. Inferno Jr", "Bad Habit"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["The Crusher", "Stewbot"],
+          "winner": "The Crusher",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Das Bot", "Enforcer"],
+          "winner": "Das Bot",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Afterthought", "Delta II"],
+          "winner": "Afterthought",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Scrap Daddy LW55", "Green Dragon"],
+          "winner": "Scrap Daddy LW55",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ziggo", "Scrap Metal"],
+          "winner": "Ziggo",
+          "stage": "roundof32",
+          "ko": true
+        },
         {
           "bots": ["Evil Fish Tank", "Mecha Tentomushi"],
           "winner": "Evil Fish Tank",

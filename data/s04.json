@@ -57,12 +57,6 @@
       "primaryWeaponType": "flipper"
     },
     {
-      "name": "Bender",
-      "keyMembers": ["Eric Stoliker"],
-      "country": "USA",
-      "primaryWeaponType": "horizontal"
-    },
-    {
       "name": "Tentomushi 7.0",
       "keyMembers": ["Lisa Winter"],
       "country": "USA",
@@ -393,12 +387,6 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Center Punch",
-      "keyMembers": ["Ann Beaver"],
-      "country": "USA",
-      "primaryWeaponType": "wedge"
-    },
-    {
       "name": "Dreadnought",
       "keyMembers": ["Christian Carlberg"],
       "country": "USA",
@@ -465,12 +453,6 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Agitator",
-      "keyMembers": ["Mike Konshak"],
-      "country": "USA",
-      "primaryWeaponType": "horizontal"
-    },
-    {
       "name": "SABotage",
       "keyMembers": ["Matt Sabatino"],
       "country": "USA",
@@ -501,7 +483,7 @@
       "primaryWeaponType": "wedge"
     },
     {
-      "name": "Mauler 51-50",
+      "name": "Mauler",
       "keyMembers": ["Morgan Tilford"],
       "country": "USA",
       "primaryWeaponType": "horizontal"
@@ -562,7 +544,7 @@
     },
     {
       "name": "2925 Jack Rabbit",
-      "keyMembers": ["TJ Brown"],
+      "keyMembers": ["TJ Brown", "Steven Brown"],
       "country": "USA",
       "primaryWeaponType": "wedge"
     },
@@ -691,6 +673,102 @@
       "keyMembers": ["Grant Imahara"],
       "country": "USA",
       "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Overkill",
+      "keyMembers": ["Christian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Bio-Hazard",
+      "keyMembers": ["Carlo Bertocchini"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "KillerHurtz",
+      "keyMembers": ["John Reid", "Dominic Parkinson", "Ian Lewis"],
+      "country": "GBR",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Sharkbyte",
+      "keyMembers": ["Arndt Anderson", "Cody Rose"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "FrenZy",
+      "keyMembers": ["Patrick Campbell"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Slam Job",
+      "keyMembers": ["Scott Kincaid"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Surgeon General",
+      "keyMembers": ["Julio Roqueta"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Incoming",
+      "keyMembers": ["Brian Moore"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Botulizer",
+      "keyMembers": ["Alan Martinson"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "GoldDigger",
+      "keyMembers": ["Randy Eubanks"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "I-Beam",
+      "keyMembers": ["Dean Dubois"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "RoboVore",
+      "keyMembers": ["Sean Irvin"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Voltronic",
+      "keyMembers": ["Stephen Felk"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Greenspan",
+      "keyMembers": ["Steven Brown"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "KillerB",
+      "keyMembers": ["Chuck McManis"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "FrostBite",
+      "keyMembers": ["Michael Mauldin"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
     }
   ],
   "competitions": [
@@ -1055,6 +1133,24 @@
           "winner": "Hazard",
           "stage": "quarter",
           "ko": true
+        },
+        {
+          "bots": ["Hazard", "Heavy Metal Noise"],
+          "winner": "Hazard",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Zion", "Complete Control"],
+          "winner": "Complete Control",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Hazard", "Complete Control"],
+          "winner": "Hazard",
+          "stage": "final",
+          "ko": true
         }
       ]
     },
@@ -1062,21 +1158,63 @@
       "name": "Heavyweight",
       "fights": [
         {
-          "bots": ["Bender", "Little Sister"],
-          "winner": "Little Sister",
-          "stage": "qualifier",
+          "bots": ["Bio-Hazard", "Stealth Terminator"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof32",
           "ko": true
         },
         {
-          "bots": ["Center Punch", "Stealth Terminator"],
-          "winner": "Stealth Terminator",
-          "stage": "qualifier",
+          "bots": ["Jabberwock", "Mauler"],
+          "winner": "Jabberwock",
+          "stage": "roundof32",
           "ko": true
         },
         {
-          "bots": ["Agitator", "Silverback"],
-          "winner": "Silverback",
-          "stage": "qualifier",
+          "bots": ["Junkyard Offspring", "Nightmare"],
+          "winner": "Nightmare",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Battlerat", "GoldDigger"],
+          "winner": "Battlerat",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Tazbot", "Silverback"],
+          "winner": "Tazbot",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Botulizer", "I-Beam"],
+          "winner": "Botulizer",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Slam Job", "FrenZy"],
+          "winner": "Slam Job",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Incoming", "RoboVore"],
+          "winner": "Incoming",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["MOE", "Voltronic"],
+          "winner": "MOE",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Omega-13", "The Matador"],
+          "winner": "The Matador",
+          "stage": "roundof32",
           "ko": false
         },
         {
@@ -1086,10 +1224,10 @@
           "ko": true
         },
         {
-          "bots": ["Tazbot", "Silverback"],
-          "winner": "Tazbot",
+          "bots": ["Overkill", "Greenspan"],
+          "winner": "Overkill",
           "stage": "roundof32",
-          "ko": false
+          "ko": true
         },
         {
           "bots": ["Phrizbee", "Hexadecimator"],
@@ -1098,22 +1236,28 @@
           "ko": true
         },
         {
-          "bots": ["Omega-13", "The Matador"],
-          "winner": "The Matador",
+          "bots": ["Sharkbyte", "KillerB"],
+          "winner": "Sharkbyte",
           "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["KillerHurtz", "Little Sister"],
+          "winner": "KillerHurtz",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Surgeon General", "FrostBite"],
+          "winner": "Surgeon General",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Bio-Hazard", "Jabberwock"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof16",
           "ko": false
-        },
-        {
-          "bots": ["Junkyard Offspring", "Nightmare"],
-          "winner": "Nightmare",
-          "stage": "roundof32",
-          "ko": true
-        },
-        {
-          "bots": ["Jabberwock", "Mauler 51-50"],
-          "winner": "Jabberwock",
-          "stage": "roundof32",
-          "ko": true
         },
         {
           "bots": ["Nightmare", "Battlerat"],
@@ -1122,10 +1266,82 @@
           "ko": false
         },
         {
+          "bots": ["Tazbot", "Botulizer"],
+          "winner": "Tazbot",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Slam Job", "Incoming"],
+          "winner": "Slam Job",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
           "bots": ["MOE", "The Matador"],
           "winner": "MOE",
           "stage": "roundof16",
           "ko": true
+        },
+        {
+          "bots": ["Overkill", "MechaVore"],
+          "winner": "Overkill",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Sharkbyte", "Hexadecimator"],
+          "winner": "Hexadecimator",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["KillerHurtz", "Surgeon General"],
+          "winner": "Surgeon General",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Nightmare", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Tazbot", "Slam Job"],
+          "winner": "Tazbot",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Overkill", "MOE"],
+          "winner": "Overkill",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Hexadecimator", "Surgeon General"],
+          "winner": "Surgeon General",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Overkill", "Surgeon General"],
+          "winner": "Overkill",
+          "stage": "semi",
+          "ko": true
+        },
+        {
+          "bots": ["Bio-Hazard", "Tazbot"],
+          "winner": "Bio-Hazard",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Bio-Hazard", "Overkill"],
+          "winner": "Bio-Hazard",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
