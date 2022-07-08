@@ -625,6 +625,54 @@
       "keyMembers": ["Jamie Hyneman"],
       "country": "USA",
       "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Ripoff",
+      "keyMembers": ["Christopher Hannold"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Tortoise",
+      "keyMembers": ["Jeron Stiffler", "Ian Burt"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Drill-O-Dillo",
+      "keyMembers": ["Andrew Gardner"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Hamunaptra",
+      "keyMembers": ["Nathan Poort"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Anubis",
+      "keyMembers": ["Glen Sears"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "One Tin Soldier",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Scrap Daddy Turbulence",
+      "keyMembers": ["Mark Bradford"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Abbatoir",
+      "keyMembers": ["Ray Scully"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
     }
   ],
   "competitions": [
@@ -1156,6 +1204,54 @@
     {
       "name": "Super Heavyweight",
       "fights": [
+        {
+          "bots": ["Atomic Wedgie", "Ripoff"],
+          "winner": "Atomic Wedgie",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Toro", "Tortoise"],
+          "winner": "Toro",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Gray Matter", "Drill-O-Dillo"],
+          "winner": "Gray Matter",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Kennys Revenge", "Abbatoir"],
+          "winner": "Kennys Revenge",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Diesector", "Hamunaptra"],
+          "winner": "Diesector",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Snake", "Anubis"],
+          "winner": "Snake",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["War Machine", "One Tin Soldier"],
+          "winner": "War Machine",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Doom Of Babylon", "Scrap Daddy Turbulence"],
+          "winner": "Doom Of Babylon",
+          "stage": "roundof32",
+          "ko": true
+        },
         {
           "bots": ["Snake", "War Machine"],
           "winner": "War Machine",
