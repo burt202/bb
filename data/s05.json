@@ -1,0 +1,568 @@
+{
+  "season": "05",
+  "year": "2002",
+  "bots": [
+    {
+      "name": "Ziggo",
+      "keyMembers": ["Jonathan Ridder"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Code Black",
+      "keyMembers": ["Adam Baxter", "Brian Nave"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Son Of Whyachi",
+      "keyMembers": ["Terry Ewert"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Steel Reign",
+      "keyMembers": ["Logan Davis"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Backlash",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Burning Metal",
+      "keyMembers": ["Jacob Rede"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Wee Willy Wedgie",
+      "keyMembers": ["Jeff McLay"],
+      "country": "CAN",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Little Drummer Boy",
+      "keyMembers": ["Steve Buescher"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "MOE",
+      "keyMembers": ["Neal Muzzy"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Stealth Terminator",
+      "keyMembers": ["Roger Farr"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Rambite",
+      "keyMembers": ["John Mladenik"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Slap Em Silly",
+      "keyMembers": ["Andy Sauro"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Complete Control",
+      "keyMembers": ["Derek Young"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Wrath Jr",
+      "keyMembers": ["Todd Mendenhall"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Toro",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Phrizbee Ultimate",
+      "keyMembers": ["Brian Nave"],
+      "country": "USA",
+      "primaryWeaponType": "fullbody"
+    },
+    {
+      "name": "Pro-AM",
+      "keyMembers": ["Mike Konshak"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Vladiator",
+      "keyMembers": ["Gage Cachouis"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Trident",
+      "keyMembers": ["Luke Khanlian"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "T-Minus",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Tazbot",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Ringmaster",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "IceBerg",
+      "keyMembers": ["Michael Mauldin"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Diesector",
+      "keyMembers": ["Donald Hutson"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Final Destiny",
+      "keyMembers": ["Ron Warren"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "El Diablo",
+      "keyMembers": ["Zack Bieber"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Ankle Biter",
+      "keyMembers": ["John McKenzie"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Codebreaker",
+      "keyMembers": ["Robert Sica"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Minion",
+      "keyMembers": ["Brian Roe", "Christian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "The Master",
+      "keyMembers": ["Mark Setrakian", "Pete Abrahamson"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Hazard",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Blade Runner",
+      "keyMembers": ["Ilya Polyakov"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Hexy Jr",
+      "keyMembers": ["Scott Ferguson"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Sallad",
+      "keyMembers": ["Dallas Goecker"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Atomic Wedgie",
+      "keyMembers": ["Robert Everhart"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Maximus",
+      "keyMembers": ["Patrick Lindstrom"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Bio-Hazard",
+      "keyMembers": ["Carlo Bertocchini"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Greenspan",
+      "keyMembers": ["Steven Brown"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "T-Wrex",
+      "keyMembers": ["Brent Regan"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "S.O.B.",
+      "keyMembers": ["Rich Sjoberg"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Double Agent",
+      "keyMembers": ["Robert Sica"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Overkill",
+      "keyMembers": ["Christian Carlberg"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Battlerat",
+      "keyMembers": ["Eric Moses"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Zion",
+      "keyMembers": ["Jered Singleton"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "SABotage",
+      "keyMembers": ["Matt Sabatino"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Wedge Of Doom",
+      "keyMembers": ["Tony Buchignani"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Dr. Inferno Jr",
+      "keyMembers": ["Jason Bardis"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Death By Monkeys",
+      "keyMembers": ["Rob Farrow"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Gamma Raptor",
+      "keyMembers": ["Robert Pitzer", "Chuck Pitzer"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Herr Gepounden",
+      "keyMembers": ["David Otto"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "Omega-13",
+      "keyMembers": ["Brent Regan"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Voltronic",
+      "keyMembers": ["Stephen Felk"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "New Cruelty",
+      "keyMembers": ["Richard Stuplich"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "No Apologies",
+      "keyMembers": ["John Torkelson"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Turtle Road Kill",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Huggy Bear",
+      "keyMembers": ["Dave Schultz"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "Lightweight",
+      "fights": [
+        {
+          "bots": ["Ziggo", "Code Black"],
+          "winner": "Code Black",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Backlash", "Burning Metal"],
+          "winner": "Backlash",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Rambite", "Slap Em Silly"],
+          "winner": "Slap Em Silly",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Hexy Jr", "Sallad"],
+          "winner": "Hexy Jr",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Slap Em Silly", "Wedge Of Doom"],
+          "winner": "Wedge Of Doom",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Death By Monkeys", "Dr. Inferno Jr"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Hexy Jr", "Gamma Raptor"],
+          "winner": "Gamma Raptor",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Herr Gepounden", "Code Black"],
+          "winner": "Code Black",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Middleweight",
+      "fights": [
+        {
+          "bots": ["Little Drummer Boy", "Wee Willy Wedgie"],
+          "winner": "Little Drummer Boy",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Complete Control", "Wrath Jr"],
+          "winner": "Wrath Jr",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["T-Minus", "Trident"],
+          "winner": "T-Minus",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Ankle Biter", "El Diablo"],
+          "winner": "Ankle Biter",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Ankle Biter", "The Master"],
+          "winner": "Ankle Biter",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Hazard", "Blade Runner"],
+          "winner": "Hazard",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["T-Wrex", "S.O.B."],
+          "winner": "S.O.B.",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["T-Minus", "Double Agent"],
+          "winner": "T-Minus",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["SABotage", "Zion"],
+          "winner": "Zion",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["S.O.B.", "Wrath Jr"],
+          "winner": "S.O.B.",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Turtle Road Kill", "Ankle Biter"],
+          "winner": "Turtle Road Kill",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["T-Minus", "Huggy Bear"],
+          "winner": "T-Minus",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Hazard", "Zion"],
+          "winner": "Hazard",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Heavyweight",
+      "fights": [
+        {
+          "bots": ["Son Of Whyachi", "Steel Reign"],
+          "winner": "Son Of Whyachi",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["MOE", "Stealth Terminator"],
+          "winner": "Stealth Terminator",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Tazbot", "Ringmaster"],
+          "winner": "Ringmaster",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Greenspan", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Battlerat", "Overkill"],
+          "winner": "Overkill",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Omega-13", "Voltronic"],
+          "winner": "Voltronic",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    },
+    {
+      "name": "Super Heavyweight",
+      "fights": [
+        {
+          "bots": ["Toro", "Phrizbee Ultimate"],
+          "winner": "Phrizbee Ultimate",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Pro-AM", "Vladiator"],
+          "winner": "Vladiator",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Diesector", "Final Destiny"],
+          "winner": "Diesector",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["IceBerg", "Phrizbee Ultimate"],
+          "winner": "IceBerg",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Minion", "Codebreaker"],
+          "winner": "Codebreaker",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Atomic Wedgie", "Maximus"],
+          "winner": "Maximus",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["New Cruelty", "No Apologies"],
+          "winner": "New Cruelty",
+          "stage": "quarter",
+          "ko": false
+        }
+      ]
+    }
+  ]
+}
