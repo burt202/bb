@@ -1316,7 +1316,7 @@
         {
           "bots": ["Voltronic", "Bio-Hazard"],
           "winner": "Bio-Hazard",
-          "stage": "semi",
+          "stage": "final",
           "ko": true
         }
       ]

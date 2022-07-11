@@ -205,6 +205,33 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className="mt-l">
+        <p>
+          Sources:{" "}
+          <a className="text-link" href="https://battlebots.fandom.com">
+            https://battlebots.fandom.com
+          </a>
+          {" | "}
+          <a className="text-link" href="http://www.robotcombat.com">
+            http://www.robotcombat.com
+          </a>
+          {" | "}
+          <a className="text-link" href="https://battlebots.com">
+            https://battlebots.com
+          </a>
+          {" | "}
+          <a className="text-link" href="https://www.youtube.com">
+            https://www.youtube.com
+          </a>
+        </p>
+        <p>
+          All data has been added to be accurate as possible but 100% accuracy
+          cannot be guarenteed. Suggest any improvements to{" "}
+          <a className="text-link" href="mailto:aaron@burtdev.ne">
+            aaron@burtdev.net
+          </a>
+        </p>
+      </div>
     </Page>
   )
 }
