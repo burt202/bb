@@ -1404,7 +1404,7 @@
         },
         {
           "bots": ["IceBerg", "Ronin"],
-          "winner": "Ronin",
+          "winner": "IceBerg",
           "stage": "roundof32",
           "ko": false
         },
