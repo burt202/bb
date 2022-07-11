@@ -568,7 +568,7 @@
     },
     {
       "name": "RoboMisDirection",
-      "keyMembers": ["Unknown"],
+      "keyMembers": ["Suni Murata"],
       "country": "USA",
       "primaryWeaponType": "hammer"
     },
@@ -625,6 +625,54 @@
       "keyMembers": ["Patrick Fischer"],
       "country": "USA",
       "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Botulizer",
+      "keyMembers": ["Alan Martinson"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Warhead",
+      "keyMembers": ["Simon Scott", "Ian Lewis"],
+      "country": "GBR",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "MechaVore",
+      "keyMembers": ["Robert Marzinske"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Mauler",
+      "keyMembers": ["Morgan Tilford"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Surgeon General",
+      "keyMembers": ["Julio Roqueta"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Hexadecimator",
+      "keyMembers": ["Tim Paterson"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Jabberwock",
+      "keyMembers": ["Clyde Ward"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "The Matador",
+      "keyMembers": ["Reason Bradley", "Alexander Rose"],
+      "country": "USA",
+      "primaryWeaponType": "flipper"
     }
   ],
   "competitions": [
@@ -810,6 +858,12 @@
           "winner": "Dr. Inferno Jr",
           "stage": "semi",
           "ko": true
+        },
+        {
+          "bots": ["Dr. Inferno Jr", "Wedge Of Doom"],
+          "winner": "Dr. Inferno Jr",
+          "stage": "final",
+          "ko": false
         }
       ]
     },
@@ -1014,9 +1068,57 @@
           "ko": true
         },
         {
+          "bots": ["MechaVore", "Mauler"],
+          "winner": "MechaVore",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Botulizer", "Surgeon General"],
+          "winner": "Botulizer",
+          "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Hexadecimator", "Jabberwock"],
+          "winner": "Hexadecimator",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Voltronic", "Stealth Terminator"],
+          "winner": "Voltronic",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Omega-13", "Ringmaster"],
+          "winner": "Omega-13",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
           "bots": ["Battlerat", "Overkill"],
           "winner": "Overkill",
           "stage": "roundof16",
+          "ko": false
+        },
+        {
+          "bots": ["Warhead", "The Matador"],
+          "winner": "Warhead",
+          "stage": "roundof16",
+          "ko": true
+        },
+        {
+          "bots": ["Bio-Hazard", "MechaVore"],
+          "winner": "Bio-Hazard",
+          "stage": "quarter",
+          "ko": true
+        },
+        {
+          "bots": ["Botulizer", "Hexadecimator"],
+          "winner": "Botulizer",
+          "stage": "quarter",
           "ko": false
         },
         {
@@ -1024,6 +1126,30 @@
           "winner": "Voltronic",
           "stage": "quarter",
           "ko": false
+        },
+        {
+          "bots": ["Overkill", "Warhead"],
+          "winner": "Overkill",
+          "stage": "quarter",
+          "ko": false
+        },
+        {
+          "bots": ["Bio-Hazard", "Botulizer"],
+          "winner": "Bio-Hazard",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Voltronic", "Overkill"],
+          "winner": "Voltronic",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Voltronic", "Bio-Hazard"],
+          "winner": "Bio-Hazard",
+          "stage": "semi",
+          "ko": true
         }
       ]
     },
@@ -1197,6 +1323,24 @@
           "winner": "Maximus",
           "stage": "quarter",
           "ko": true
+        },
+        {
+          "bots": ["Vladiator", "Maximus"],
+          "winner": "Vladiator",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["New Cruelty", "Diesector"],
+          "winner": "Diesector",
+          "stage": "semi",
+          "ko": false
+        },
+        {
+          "bots": ["Vladiator", "Diesector"],
+          "winner": "Diesector",
+          "stage": "final",
+          "ko": false
         }
       ]
     }

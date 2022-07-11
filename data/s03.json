@@ -430,7 +430,7 @@
     },
     {
       "name": "Hoobot",
-      "keyMembers": ["Unknown"],
+      "keyMembers": ["Rocky Mohacsi"],
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
@@ -730,7 +730,7 @@
     },
     {
       "name": "Manic Aggressive",
-      "keyMembers": ["Unknown"],
+      "keyMembers": ["Eric Sporer"],
       "country": "USA",
       "primaryWeaponType": "wedge"
     },
@@ -754,7 +754,7 @@
     },
     {
       "name": "Crashius Clay",
-      "keyMembers": ["Unknown"],
+      "keyMembers": ["Steven DeZwart"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
     }
