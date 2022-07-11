@@ -673,6 +673,90 @@
       "keyMembers": ["Reason Bradley", "Alexander Rose"],
       "country": "USA",
       "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "El Diablo Grande",
+      "keyMembers": ["Zach Bieber"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Spitfire",
+      "keyMembers": ["Michael Lambert"],
+      "country": "GBR",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Diskontent",
+      "keyMembers": ["Unknown"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Wrath",
+      "keyMembers": ["Todd Mendenhall"],
+      "country": "USA",
+      "primaryWeaponType": "lifter"
+    },
+    {
+      "name": "Center Punch",
+      "keyMembers": ["Tom Beaver"],
+      "country": "USA",
+      "primaryWeaponType": "wedge"
+    },
+    {
+      "name": "Little Sister",
+      "keyMembers": ["Ian Watts", "Joe Watts"],
+      "country": "GBR",
+      "primaryWeaponType": "flipper"
+    },
+    {
+      "name": "Slam Job",
+      "keyMembers": ["Scott Kincaid"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
+    },
+    {
+      "name": "Sharkbyte",
+      "keyMembers": ["Arndt Anderson", "Cody Rose"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "Spinster",
+      "keyMembers": ["Grayson DuRaine", "Anthony DuRaine"],
+      "country": "USA",
+      "primaryWeaponType": "horizontal"
+    },
+    {
+      "name": "GoldDigger",
+      "keyMembers": ["Randy Eubanks"],
+      "country": "USA",
+      "primaryWeaponType": "thwackbot"
+    },
+    {
+      "name": "FrostBite",
+      "keyMembers": ["Michael Mauldin"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "Junkyard Offspring",
+      "keyMembers": ["Anthony Elder"],
+      "country": "USA",
+      "primaryWeaponType": "other"
+    },
+    {
+      "name": "Nightmare",
+      "keyMembers": ["Jim Smentowski"],
+      "country": "USA",
+      "primaryWeaponType": "vertical"
+    },
+    {
+      "name": "FrenZy",
+      "keyMembers": ["Patrick Campbell"],
+      "country": "USA",
+      "primaryWeaponType": "hammer"
     }
   ],
   "competitions": [
@@ -1050,14 +1134,98 @@
       "name": "Heavyweight",
       "fights": [
         {
+          "bots": ["Bio-Hazard", "Center Punch"],
+          "winner": "Bio-Hazard",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
+          "bots": ["Greenspan", "Little Sister"],
+          "winner": "Greenspan",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Mauler", "Slam Job"],
+          "winner": "Mauler",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["MechaVore", "El Diablo Grande"],
+          "winner": "MechaVore",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Surgeon General", "Spitfire"],
+          "winner": "Surgeon General",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Botulizer", "Sharkbyte"],
+          "winner": "Botulizer",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Hexadecimator", "Spinster"],
+          "winner": "Hexadecimator",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Jabberwock", "GoldDigger"],
+          "winner": "Jabberwock",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Voltronic", "Diskontent"],
+          "winner": "Voltronic",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
           "bots": ["MOE", "Stealth Terminator"],
           "winner": "Stealth Terminator",
           "stage": "roundof32",
           "ko": false
         },
         {
+          "bots": ["Omega-13", "FrostBite"],
+          "winner": "Omega-13",
+          "stage": "roundof32",
+          "ko": false
+        },
+        {
           "bots": ["Tazbot", "Ringmaster"],
           "winner": "Ringmaster",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Overkill", "Wrath"],
+          "winner": "Overkill",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Battlerat", "Junkyard Offspring"],
+          "winner": "Battlerat",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["Warhead", "Nightmare"],
+          "winner": "Warhead",
+          "stage": "roundof32",
+          "ko": true
+        },
+        {
+          "bots": ["The Matador", "FrenZy"],
+          "winner": "The Matador",
           "stage": "roundof32",
           "ko": true
         },
