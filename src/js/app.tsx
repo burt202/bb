@@ -10,6 +10,7 @@ import NotFound from "./pages/not-found"
 import PrimaryWeaponTypes from "./pages/primary-weapon-types"
 import Search from "./pages/search"
 import Season from "./pages/season"
+import Winners from "./pages/winners"
 
 interface Props {
   children: JSX.Element
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="/bot/:botId" element={<Bot />} />
           <Route path="/member/:memberId" element={<Member />} />
           <Route path="/country/:countryId" element={<Country />} />
+          <Route path="/winners" element={<Winners />} />
           <Route
             path="/primary-weapon-types"
             element={<PrimaryWeaponTypes />}

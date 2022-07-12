@@ -21,6 +21,7 @@ import {
   Bot,
   Member,
   DbMember,
+  DbWinner,
 } from "../types"
 import {createTables, populateDatabase, getMany, getOne} from "./helpers"
 
@@ -43,6 +44,61 @@ export default async function createDb(
     getSeasonById: (id: string) => {
       return getOne<DbSeason>(db, "SELECT * FROM seasons WHERE id = :id", {
         ":id": id,
+      })
+    },
+    getAllWinners: () => {
+      const sql = `
+        SELECT
+          b.id AS bot_id,
+          b.name AS bot_name,
+          s.id AS season_id,
+          s.year AS season_year,
+          s.number AS season_number,
+          c.id AS competition_id,
+          c.name AS competition_name,
+          (
+            SELECT
+              json_group_array(
+                json_object(
+                  'id', m.id,
+                  'name', m.name,
+                  'ordinal', bm.ordinal
+                )
+              )
+            FROM bot_members bm
+            INNER JOIN members m ON bm.member_id = m.id
+            WHERE bm.bot_id = b.id
+            AND bm.season_id = s.id
+          ) AS members
+        FROM fights f
+        INNER JOIN bots b ON f.winner_id = b.id
+        INNER JOIN competitions c ON f.competition_id = c.id
+        INNER JOIN seasons s ON c.season_id = s.id
+        WHERE f.id IN (
+          SELECT (
+            SELECT f.id FROM fights f
+            INNER JOIN stages s ON f.stage_id = s.id
+            WHERE f.competition_id = c.id
+            ORDER BY s.rank ASC
+            LIMIT 1
+          ) AS fight_id FROM competitions c
+        )
+        ORDER BY s.number DESC
+      `
+
+      const dbWinners = getMany<DbWinner>(db, sql)
+
+      return dbWinners.map((w) => {
+        return {
+          botId: w.bot_id,
+          botName: w.bot_name,
+          seasonId: w.season_id,
+          seasonYear: w.season_year,
+          seasonNumber: w.season_number,
+          competitionId: w.competition_id,
+          competitionName: w.competition_name,
+          members: JSON.parse(w.members) as Array<Member>,
+        }
       })
     },
     getCompetitionsForSeason: (id: string) => {

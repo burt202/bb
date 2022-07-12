@@ -195,6 +195,11 @@ export default function Home() {
         </div>
         <div>
           <p>
+            <SiteLink to="/winners" textLink={true} pageTitle="Winners">
+              Winners List
+            </SiteLink>
+          </p>
+          <p>
             <SiteLink
               to="/primary-weapon-types"
               textLink={true}

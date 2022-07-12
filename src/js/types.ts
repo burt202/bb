@@ -145,6 +145,17 @@ export interface DbPrimaryWeaponTypeWin {
   bots: string
 }
 
+export interface DbWinner {
+  bot_id: string
+  bot_name: string
+  season_id: string
+  season_year: string
+  season_number: number
+  competition_id: string
+  competition_name: string
+  members: string
+}
+
 export type Season = DbSeason
 export type Competition = DbCompetition
 export type Bot = DbBot
@@ -255,9 +266,21 @@ export interface PrimaryWeaponTypeBot {
   }>
 }
 
+export interface Winner {
+  botId: string
+  botName: string
+  seasonId: string
+  seasonYear: string
+  seasonNumber: number
+  competitionId: string
+  competitionName: string
+  members: Array<Member>
+}
+
 export interface DbInterface {
   getAllSeasons: () => Array<Season>
   getSeasonById: (id: string) => Season | undefined
+  getAllWinners: () => Array<Winner>
   getCompetitionsForSeason: (id: string) => Array<Competition>
   getCompetitionBots: (id: string) => Array<CompetitionBot>
   getCompetitionFights: (id: string) => Array<CompetitionFight>
