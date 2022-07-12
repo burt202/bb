@@ -83,7 +83,7 @@ export default async function createDb(
             LIMIT 1
           ) AS fight_id FROM competitions c
         )
-        ORDER BY s.number DESC
+        ORDER BY s.number DESC, c.ordinal ASC
       `
 
       const dbWinners = getMany<DbWinner>(db, sql)
