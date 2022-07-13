@@ -279,7 +279,7 @@
       "primaryWeaponType": "wedge"
     },
     {
-      "name": "Herr Gepounden",
+      "name": "Herr Gepoünden",
       "keyMembers": ["David Otto"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
@@ -788,8 +788,8 @@
           "ko": true
         },
         {
-          "bots": ["Herr Gepounden", "The Crusher"],
-          "winner": "Herr Gepounden",
+          "bots": ["Herr Gepoünden", "The Crusher"],
+          "winner": "Herr Gepoünden",
           "stage": "roundof32",
           "ko": true
         },
@@ -878,8 +878,8 @@
           "ko": true
         },
         {
-          "bots": ["Herr Gepounden", "Death By Monkeys"],
-          "winner": "Herr Gepounden",
+          "bots": ["Herr Gepoünden", "Death By Monkeys"],
+          "winner": "Herr Gepoünden",
           "stage": "roundof16",
           "ko": true
         },
@@ -908,7 +908,7 @@
           "ko": true
         },
         {
-          "bots": ["Dr. Inferno Jr", "Herr Gepounden"],
+          "bots": ["Dr. Inferno Jr", "Herr Gepoünden"],
           "winner": "Dr. Inferno Jr",
           "stage": "quarter",
           "ko": false

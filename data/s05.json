@@ -9,7 +9,7 @@
       "primaryWeaponType": "fullbody"
     },
     {
-      "name": "Code Black",
+      "name": "Code!BLACK",
       "keyMembers": ["Adam Baxter", "Brian Nave"],
       "country": "USA",
       "primaryWeaponType": "horizontal"
@@ -69,7 +69,7 @@
       "primaryWeaponType": "fullbody"
     },
     {
-      "name": "Slap Em Silly",
+      "name": "Slap 'Em Silly",
       "keyMembers": ["Andy Sauro"],
       "country": "USA",
       "primaryWeaponType": "wedge"
@@ -297,7 +297,7 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Herr Gepounden",
+      "name": "Herr Gepoünden",
       "keyMembers": ["David Otto"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
@@ -818,8 +818,8 @@
           "ko": false
         },
         {
-          "bots": ["Slap Em Silly", "Rambite"],
-          "winner": "Slap Em Silly",
+          "bots": ["Slap 'Em Silly", "Rambite"],
+          "winner": "Slap 'Em Silly",
           "stage": "roundof32",
           "ko": false
         },
@@ -830,8 +830,8 @@
           "ko": false
         },
         {
-          "bots": ["Ziggo", "Code Black"],
-          "winner": "Code Black",
+          "bots": ["Ziggo", "Code!BLACK"],
+          "winner": "Code!BLACK",
           "stage": "roundof32",
           "ko": true
         },
@@ -848,8 +848,8 @@
           "ko": false
         },
         {
-          "bots": ["Herr Gepounden", "Low Blow"],
-          "winner": "Herr Gepounden",
+          "bots": ["Herr Gepoünden", "Low Blow"],
+          "winner": "Herr Gepoünden",
           "stage": "roundof32",
           "ko": false
         },
@@ -884,7 +884,7 @@
           "ko": false
         },
         {
-          "bots": ["Slap Em Silly", "Wedge Of Doom"],
+          "bots": ["Slap 'Em Silly", "Wedge Of Doom"],
           "winner": "Wedge Of Doom",
           "stage": "roundof16",
           "ko": false
@@ -896,14 +896,14 @@
           "ko": false
         },
         {
-          "bots": ["Code Black", "Whirligig"],
-          "winner": "Code Black",
+          "bots": ["Code!BLACK", "Whirligig"],
+          "winner": "Code!BLACK",
           "stage": "roundof16",
           "ko": true
         },
         {
-          "bots": ["Herr Gepounden", "The Big B"],
-          "winner": "Herr Gepounden",
+          "bots": ["Herr Gepoünden", "The Big B"],
+          "winner": "Herr Gepoünden",
           "stage": "roundof16",
           "ko": true
         },
@@ -920,8 +920,8 @@
           "ko": false
         },
         {
-          "bots": ["Herr Gepounden", "Code Black"],
-          "winner": "Code Black",
+          "bots": ["Herr Gepoünden", "Code!BLACK"],
+          "winner": "Code!BLACK",
           "stage": "quarter",
           "ko": false
         },
@@ -932,7 +932,7 @@
           "ko": false
         },
         {
-          "bots": ["Code Black", "Wedge Of Doom"],
+          "bots": ["Code!BLACK", "Wedge Of Doom"],
           "winner": "Wedge Of Doom",
           "stage": "semi",
           "ko": true

@@ -93,7 +93,7 @@
       "primaryWeaponType": "horizontal"
     },
     {
-      "name": "Huge",
+      "name": "HUGE",
       "keyMembers": ["Jonathan Schultz"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -111,7 +111,7 @@
       "primaryWeaponType": "horizontal"
     },
     {
-      "name": "Duck",
+      "name": "DUCK!",
       "keyMembers": ["Hal Rucker", "Gabriel Stroud"],
       "country": "USA",
       "primaryWeaponType": "lifter"
@@ -123,7 +123,7 @@
       "primaryWeaponType": "multi"
     },
     {
-      "name": "Shatter",
+      "name": "Shatter!",
       "keyMembers": ["Adam Wrigley", "Mary Chimenti", "Bunny Sauriol"],
       "country": "USA",
       "primaryWeaponType": "hammer"
@@ -457,7 +457,7 @@
           "ko": true
         },
         {
-          "bots": ["Son Of Whyachi", "Huge"],
+          "bots": ["Son Of Whyachi", "HUGE"],
           "winner": "Son Of Whyachi",
           "stage": "season",
           "ko": true
@@ -469,13 +469,13 @@
           "ko": false
         },
         {
-          "bots": ["Duck", "Bombshell"],
-          "winner": "Duck",
+          "bots": ["DUCK!", "Bombshell"],
+          "winner": "DUCK!",
           "stage": "season",
           "ko": true
         },
         {
-          "bots": ["Witch Doctor", "Shatter"],
+          "bots": ["Witch Doctor", "Shatter!"],
           "winner": "Witch Doctor",
           "stage": "season",
           "ko": false
@@ -541,8 +541,8 @@
           "ko": false
         },
         {
-          "bots": ["Duck", "Cobalt"],
-          "winner": "Duck",
+          "bots": ["DUCK!", "Cobalt"],
+          "winner": "DUCK!",
           "stage": "season",
           "ko": true
         },
@@ -595,8 +595,8 @@
           "ko": true
         },
         {
-          "bots": ["Huge", "Jasper"],
-          "winner": "Huge",
+          "bots": ["HUGE", "Jasper"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": true
         },
@@ -613,8 +613,8 @@
           "ko": true
         },
         {
-          "bots": ["Wan Hoo", "Shatter"],
-          "winner": "Shatter",
+          "bots": ["Wan Hoo", "Shatter!"],
+          "winner": "Shatter!",
           "stage": "season",
           "ko": false
         },
@@ -685,7 +685,7 @@
           "ko": false
         },
         {
-          "bots": ["Duck", "Lock-Jaw"],
+          "bots": ["DUCK!", "Lock-Jaw"],
           "winner": "Lock-Jaw",
           "stage": "season",
           "ko": false
@@ -757,8 +757,8 @@
           "ko": false
         },
         {
-          "bots": ["Huge", "Gigabyte"],
-          "winner": "Huge",
+          "bots": ["HUGE", "Gigabyte"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -841,7 +841,7 @@
           "ko": false
         },
         {
-          "bots": ["Duck", "Quantum"],
+          "bots": ["DUCK!", "Quantum"],
           "winner": "Quantum",
           "stage": "season",
           "ko": false
@@ -883,7 +883,7 @@
           "ko": false
         },
         {
-          "bots": ["Minotaur", "Shatter"],
+          "bots": ["Minotaur", "Shatter!"],
           "winner": "Minotaur",
           "stage": "season",
           "ko": true
@@ -979,8 +979,8 @@
           "ko": true
         },
         {
-          "bots": ["Bronco", "Huge"],
-          "winner": "Huge",
+          "bots": ["Bronco", "HUGE"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -1087,8 +1087,8 @@
           "ko": false
         },
         {
-          "bots": ["Shatter", "Kingpin"],
-          "winner": "Shatter",
+          "bots": ["Shatter!", "Kingpin"],
+          "winner": "Shatter!",
           "stage": "season",
           "ko": true
         },
@@ -1129,7 +1129,7 @@
           "ko": true
         },
         {
-          "bots": ["Yeti", "Duck"],
+          "bots": ["Yeti", "DUCK!"],
           "winner": "Yeti",
           "stage": "playoff",
           "ko": false
@@ -1141,8 +1141,8 @@
           "ko": true
         },
         {
-          "bots": ["Hypershock", "Huge"],
-          "winner": "Huge",
+          "bots": ["Hypershock", "HUGE"],
+          "winner": "HUGE",
           "stage": "playoff",
           "ko": true
         },
@@ -1195,7 +1195,7 @@
           "ko": true
         },
         {
-          "bots": ["Huge", "Whiplash"],
+          "bots": ["HUGE", "Whiplash"],
           "winner": "Whiplash",
           "stage": "roundof16",
           "ko": false

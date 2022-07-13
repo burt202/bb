@@ -27,13 +27,13 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Duck",
+      "name": "DUCK!",
       "keyMembers": ["Hal Rucker"],
       "country": "USA",
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Huge",
+      "name": "HUGE",
       "keyMembers": ["Jonathan Schultz"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -349,14 +349,14 @@
           "ko": false
         },
         {
-          "bots": ["Mecha Rampage", "Free Shipping", "Duck"],
-          "winner": "Duck",
+          "bots": ["Mecha Rampage", "Free Shipping", "DUCK!"],
+          "winner": "DUCK!",
           "stage": "season",
           "ko": false
         },
         {
-          "bots": ["Subzero", "Huge"],
-          "winner": "Huge",
+          "bots": ["Subzero", "HUGE"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -475,8 +475,8 @@
           "ko": true
         },
         {
-          "bots": ["Huge", "Free Shipping"],
-          "winner": "Huge",
+          "bots": ["HUGE", "Free Shipping"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -595,8 +595,8 @@
           "ko": false
         },
         {
-          "bots": ["Reality", "Duck"],
-          "winner": "Duck",
+          "bots": ["Reality", "DUCK!"],
+          "winner": "DUCK!",
           "stage": "season",
           "ko": true
         },
@@ -619,8 +619,8 @@
           "ko": false
         },
         {
-          "bots": ["Chomp", "Huge"],
-          "winner": "Huge",
+          "bots": ["Chomp", "HUGE"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -691,7 +691,7 @@
           "ko": true
         },
         {
-          "bots": ["Bronco", "Duck"],
+          "bots": ["Bronco", "DUCK!"],
           "winner": "Bronco",
           "stage": "season",
           "ko": true
@@ -811,7 +811,7 @@
           "ko": false
         },
         {
-          "bots": ["Tombstone", "Duck"],
+          "bots": ["Tombstone", "DUCK!"],
           "winner": "Tombstone",
           "stage": "season",
           "ko": true
@@ -877,7 +877,7 @@
           "ko": true
         },
         {
-          "bots": ["Icewave", "Huge"],
+          "bots": ["Icewave", "HUGE"],
           "winner": "Icewave",
           "stage": "season",
           "ko": true
@@ -905,7 +905,7 @@
             "Lucky",
             "Bombshell",
             "Valkyrie",
-            "Duck",
+            "DUCK!",
             "Red Devil",
             "Gigabyte"
           ],
@@ -956,7 +956,7 @@
           "ko": true
         },
         {
-          "bots": ["Biteforce", "Huge"],
+          "bots": ["Biteforce", "HUGE"],
           "winner": "Biteforce",
           "stage": "roundof16",
           "ko": true

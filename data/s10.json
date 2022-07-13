@@ -86,7 +86,7 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "SMEEEEEEEEEEEEEEEE",
+      "name": "SMEEEEEEEEEEEEE",
       "keyMembers": ["Joseph Fabiani"],
       "country": "USA",
       "primaryWeaponType": "horizontal"
@@ -110,7 +110,7 @@
       "primaryWeaponType": "horizontal"
     },
     {
-      "name": "Shatter",
+      "name": "Shatter!",
       "keyMembers": ["Adam Wrigley", "Mary Chimenti"],
       "country": "USA",
       "primaryWeaponType": "hammer"
@@ -140,7 +140,7 @@
       "primaryWeaponType": "crusher"
     },
     {
-      "name": "Huge",
+      "name": "HUGE",
       "keyMembers": ["Jonathan Schultz"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -289,7 +289,7 @@
       "primaryWeaponType": "vertical"
     },
     {
-      "name": "Slammow",
+      "name": "Slammow!",
       "keyMembers": ["Craig Danby"],
       "country": "USA",
       "primaryWeaponType": "lifter"
@@ -426,8 +426,8 @@
           "ko": true
         },
         {
-          "bots": ["Sharkoprion", "SMEEEEEEEEEEEEEEEE"],
-          "winner": "SMEEEEEEEEEEEEEEEE",
+          "bots": ["Sharkoprion", "SMEEEEEEEEEEEEE"],
+          "winner": "SMEEEEEEEEEEEEE",
           "stage": "season",
           "ko": false
         },
@@ -438,8 +438,8 @@
           "ko": true
         },
         {
-          "bots": ["Ghost Raptor", "Shatter"],
-          "winner": "Shatter",
+          "bots": ["Ghost Raptor", "Shatter!"],
+          "winner": "Shatter!",
           "stage": "season",
           "ko": true
         },
@@ -456,7 +456,7 @@
           "ko": false
         },
         {
-          "bots": ["Huge", "Mammoth"],
+          "bots": ["HUGE", "Mammoth"],
           "winner": "Mammoth",
           "stage": "season",
           "ko": true
@@ -528,8 +528,8 @@
           "ko": true
         },
         {
-          "bots": ["Slammow", "Pain Train"],
-          "winner": "Slammow",
+          "bots": ["Slammow!", "Pain Train"],
+          "winner": "Slammow!",
           "stage": "season",
           "ko": true
         },
@@ -552,7 +552,7 @@
           "ko": false
         },
         {
-          "bots": ["Malice", "Shatter"],
+          "bots": ["Malice", "Shatter!"],
           "winner": "Malice",
           "stage": "season",
           "ko": false
@@ -582,7 +582,7 @@
           "ko": true
         },
         {
-          "bots": ["Huge", "Hydra"],
+          "bots": ["HUGE", "Hydra"],
           "winner": "Hydra",
           "stage": "season",
           "ko": false
@@ -636,7 +636,7 @@
           "ko": true
         },
         {
-          "bots": ["SMEEEEEEEEEEEEEEEE", "Pain Train"],
+          "bots": ["SMEEEEEEEEEEEEE", "Pain Train"],
           "winner": "Pain Train",
           "stage": "season",
           "ko": false
@@ -702,8 +702,8 @@
           "ko": false
         },
         {
-          "bots": ["Huge", "Kraken"],
-          "winner": "Huge",
+          "bots": ["HUGE", "Kraken"],
+          "winner": "HUGE",
           "stage": "season",
           "ko": false
         },
@@ -750,8 +750,8 @@
           "ko": true
         },
         {
-          "bots": ["Captain Shrederator", "Shatter"],
-          "winner": "Shatter",
+          "bots": ["Captain Shrederator", "Shatter!"],
+          "winner": "Shatter!",
           "stage": "season",
           "ko": false
         },
@@ -768,7 +768,7 @@
           "ko": true
         },
         {
-          "bots": ["Witch Doctor", "Slammow"],
+          "bots": ["Witch Doctor", "Slammow!"],
           "winner": "Witch Doctor",
           "stage": "season",
           "ko": true
@@ -816,7 +816,7 @@
           "ko": true
         },
         {
-          "bots": ["SMEEEEEEEEEEEEEEEE", "P1"],
+          "bots": ["SMEEEEEEEEEEEEE", "P1"],
           "winner": "P1",
           "stage": "season",
           "ko": true
@@ -858,8 +858,8 @@
           "ko": true
         },
         {
-          "bots": ["Slammow", "War EZ"],
-          "winner": "Slammow",
+          "bots": ["Slammow!", "War EZ"],
+          "winner": "Slammow!",
           "stage": "season",
           "ko": true
         },
@@ -876,7 +876,7 @@
           "ko": true
         },
         {
-          "bots": ["Slammow", "Black Dragon"],
+          "bots": ["Slammow!", "Black Dragon"],
           "winner": "Black Dragon",
           "stage": "roundof32",
           "ko": true
@@ -888,7 +888,7 @@
           "ko": true
         },
         {
-          "bots": ["Whiplash", "Huge"],
+          "bots": ["Whiplash", "HUGE"],
           "winner": "Whiplash",
           "stage": "roundof32",
           "ko": false
@@ -912,8 +912,8 @@
           "ko": true
         },
         {
-          "bots": ["Lock-Jaw", "Shatter"],
-          "winner": "Shatter",
+          "bots": ["Lock-Jaw", "Shatter!"],
+          "winner": "Shatter!",
           "stage": "roundof32",
           "ko": true
         },
@@ -996,8 +996,8 @@
           "ko": false
         },
         {
-          "bots": ["Mammoth", "Shatter"],
-          "winner": "Shatter",
+          "bots": ["Mammoth", "Shatter!"],
+          "winner": "Shatter!",
           "stage": "roundof16",
           "ko": false
         },
@@ -1014,7 +1014,7 @@
           "ko": false
         },
         {
-          "bots": ["Shatter", "End Game"],
+          "bots": ["Shatter!", "End Game"],
           "winner": "End Game",
           "stage": "quarter",
           "ko": true
@@ -1179,8 +1179,8 @@
           "ko": false
         },
         {
-          "bots": ["SMEEEEEEEEEEEEEEEE", "Mammoth"],
-          "winner": "SMEEEEEEEEEEEEEEEE",
+          "bots": ["SMEEEEEEEEEEEEE", "Mammoth"],
+          "winner": "SMEEEEEEEEEEEEE",
           "stage": "quarter",
           "ko": true
         },
@@ -1191,7 +1191,7 @@
           "ko": true
         },
         {
-          "bots": ["Kraken", "SMEEEEEEEEEEEEEEEE"],
+          "bots": ["Kraken", "SMEEEEEEEEEEEEE"],
           "winner": "Kraken",
           "stage": "semi",
           "ko": false
@@ -1232,7 +1232,7 @@
           "ko": true
         },
         {
-          "bots": ["HiJinx", "Slammow"],
+          "bots": ["HiJinx", "Slammow!"],
           "winner": "HiJinx",
           "stage": "quarter",
           "ko": true
@@ -1285,8 +1285,8 @@
           "ko": true
         },
         {
-          "bots": ["Huge", "Slap Box"],
-          "winner": "Huge",
+          "bots": ["HUGE", "Slap Box"],
+          "winner": "HUGE",
           "stage": "quarter",
           "ko": false
         },
@@ -1297,7 +1297,7 @@
           "ko": true
         },
         {
-          "bots": ["Malice", "Huge"],
+          "bots": ["Malice", "HUGE"],
           "winner": "Malice",
           "stage": "semi",
           "ko": false

@@ -93,7 +93,7 @@
       "primaryWeaponType": "horizontal"
     },
     {
-      "name": "Slap Em Silly",
+      "name": "Slap 'Em Silly",
       "keyMembers": ["Andy Sauro"],
       "country": "USA",
       "primaryWeaponType": "wedge"
@@ -237,7 +237,7 @@
       "primaryWeaponType": "wedge"
     },
     {
-      "name": "Herr Gepounden",
+      "name": "Herr Gepoünden",
       "keyMembers": ["David Otto"],
       "country": "USA",
       "primaryWeaponType": "thwackbot"
@@ -806,7 +806,7 @@
           "ko": false
         },
         {
-          "bots": ["Rambite", "Herr Gepounden"],
+          "bots": ["Rambite", "Herr Gepoünden"],
           "winner": "Rambite",
           "stage": "roundof32",
           "ko": false
@@ -824,8 +824,8 @@
           "ko": true
         },
         {
-          "bots": ["Slap Em Silly", "Mouser Classic Mecha-Catbot"],
-          "winner": "Slap Em Silly",
+          "bots": ["Slap 'Em Silly", "Mouser Classic Mecha-Catbot"],
+          "winner": "Slap 'Em Silly",
           "stage": "roundof32",
           "ko": false
         },
@@ -896,8 +896,8 @@
           "ko": false
         },
         {
-          "bots": ["Afterthought", "Slap Em Silly"],
-          "winner": "Slap Em Silly",
+          "bots": ["Afterthought", "Slap 'Em Silly"],
+          "winner": "Slap 'Em Silly",
           "stage": "roundof16",
           "ko": false
         },
@@ -926,7 +926,7 @@
           "ko": true
         },
         {
-          "bots": ["Slap Em Silly", "The Big B"],
+          "bots": ["Slap 'Em Silly", "The Big B"],
           "winner": "The Big B",
           "stage": "quarter",
           "ko": false
