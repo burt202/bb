@@ -253,7 +253,7 @@
       "primaryWeaponType": "vertical"
     },
     {
-      "name": "Atom 94",
+      "name": "Atom#94",
       "keyMembers": ["Yash Deshmukh"],
       "country": "IND",
       "primaryWeaponType": "vertical"
@@ -349,7 +349,7 @@
       "primaryWeaponType": "vertical"
     },
     {
-      "name": "War EZ",
+      "name": "WAR? EZ!",
       "keyMembers": ["Jonathan Juarez"],
       "country": "USA",
       "primaryWeaponType": "vertical"
@@ -510,7 +510,7 @@
           "ko": true
         },
         {
-          "bots": ["Atom 94", "Big Dill"],
+          "bots": ["Atom#94", "Big Dill"],
           "winner": "Big Dill",
           "stage": "season",
           "ko": false
@@ -630,7 +630,7 @@
           "ko": true
         },
         {
-          "bots": ["Atom 94", "Tantrum"],
+          "bots": ["Atom#94", "Tantrum"],
           "winner": "Tantrum",
           "stage": "season",
           "ko": true
@@ -708,8 +708,8 @@
           "ko": false
         },
         {
-          "bots": ["Axolotl", "War EZ"],
-          "winner": "War EZ",
+          "bots": ["Axolotl", "WAR? EZ!"],
+          "winner": "WAR? EZ!",
           "stage": "season",
           "ko": true
         },
@@ -738,7 +738,7 @@
           "ko": false
         },
         {
-          "bots": ["Fusion", "War EZ"],
+          "bots": ["Fusion", "WAR? EZ!"],
           "winner": "Fusion",
           "stage": "season",
           "ko": true
@@ -780,7 +780,7 @@
           "ko": true
         },
         {
-          "bots": ["Perfect Phoenix", "Atom 94"],
+          "bots": ["Perfect Phoenix", "Atom#94"],
           "winner": "Perfect Phoenix",
           "stage": "season",
           "ko": false
@@ -858,7 +858,7 @@
           "ko": true
         },
         {
-          "bots": ["Slammow!", "War EZ"],
+          "bots": ["Slammow!", "WAR? EZ!"],
           "winner": "Slammow!",
           "stage": "season",
           "ko": true
@@ -1067,7 +1067,7 @@
           "ko": true
         },
         {
-          "bots": ["Mad Catter", "Atom 94"],
+          "bots": ["Mad Catter", "Atom#94"],
           "winner": "Mad Catter",
           "stage": "quarter",
           "ko": true

@@ -50,7 +50,7 @@ export default function Country() {
                 getValue: (cb) => {
                   return (
                     <SiteLink
-                      to={`/bot/${cb.id}`}
+                      to={`/bot/${encodeURIComponent(cb.id)}`}
                       pageTitle={`Bot - ${cb.name}`}
                       textLink={true}
                     >

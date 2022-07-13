@@ -188,7 +188,7 @@ function Season({season, competitions, competition}: Props) {
                 getValue: (sb) => {
                   return (
                     <SiteLink
-                      to={`/bot/${sb.botId}`}
+                      to={`/bot/${encodeURIComponent(sb.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${sb.botName}`}
                     >
@@ -257,7 +257,7 @@ function Season({season, competitions, competition}: Props) {
                       }
                     >
                       <SiteLink
-                        to={`/bot/${c.id}`}
+                        to={`/bot/${encodeURIComponent(c.id)}`}
                         textLink={true}
                         pageTitle={`Bot - ${c.name}`}
                       >

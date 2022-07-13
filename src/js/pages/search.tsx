@@ -48,7 +48,7 @@ export default function Search() {
                 return (
                   <p key={i} className="mt-0">
                     <SiteLink
-                      to={`/bot/${sr.id}`}
+                      to={`/bot/${encodeURIComponent(sr.id)}`}
                       pageTitle={`Bot - ${sr.name}`}
                       textLink={true}
                     >

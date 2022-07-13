@@ -238,7 +238,7 @@ export default function PrimaryWeaponTypes() {
                           }
                         >
                           <SiteLink
-                            to={`/bot/${c.id}`}
+                            to={`/bot/${encodeURIComponent(c.id)}`}
                             textLink={true}
                             pageTitle={`Bot - ${c.name}`}
                           >
@@ -326,7 +326,7 @@ export default function PrimaryWeaponTypes() {
                   getValue: (pwtb) => {
                     return (
                       <SiteLink
-                        to={`/bot/${pwtb.botId}`}
+                        to={`/bot/${encodeURIComponent(pwtb.botId)}`}
                         textLink={true}
                         pageTitle={`Bot - ${pwtb.botName}`}
                       >
@@ -395,7 +395,7 @@ export default function PrimaryWeaponTypes() {
                           }
                         >
                           <SiteLink
-                            to={`/bot/${c.id}`}
+                            to={`/bot/${encodeURIComponent(c.id)}`}
                             textLink={true}
                             pageTitle={`Bot - ${c.name}`}
                           >

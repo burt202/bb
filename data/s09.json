@@ -218,7 +218,7 @@
       "primaryWeaponType": "lifter"
     },
     {
-      "name": "Ragnarok",
+      "name": "Ragnarök",
       "keyMembers": ["Jack Tweedy", "Tim Rackley"],
       "country": "GBR",
       "primaryWeaponType": "hammer"
@@ -517,7 +517,7 @@
           "ko": true
         },
         {
-          "bots": ["Monsoon", "Ragnarok"],
+          "bots": ["Monsoon", "Ragnarök"],
           "winner": "Monsoon",
           "stage": "season",
           "ko": true
@@ -637,7 +637,7 @@
           "ko": true
         },
         {
-          "bots": ["Valkyrie", "Ragnarok"],
+          "bots": ["Valkyrie", "Ragnarök"],
           "winner": "Valkyrie",
           "stage": "season",
           "ko": true
@@ -727,7 +727,7 @@
           "ko": true
         },
         {
-          "bots": ["War Hawk", "Ragnarok"],
+          "bots": ["War Hawk", "Ragnarök"],
           "winner": "War Hawk",
           "stage": "season",
           "ko": true
@@ -1093,7 +1093,7 @@
           "ko": true
         },
         {
-          "bots": ["Mad Catter", "Ragnarok"],
+          "bots": ["Mad Catter", "Ragnarök"],
           "winner": "Mad Catter",
           "stage": "season",
           "ko": true

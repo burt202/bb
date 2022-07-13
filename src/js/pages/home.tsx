@@ -67,7 +67,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return (
                     <SiteLink
-                      to={`/bot/${tt.botId}`}
+                      to={`/bot/${encodeURIComponent(tt.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${tt.botName}`}
                     >
@@ -97,7 +97,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return (
                     <SiteLink
-                      to={`/bot/${tt.botId}`}
+                      to={`/bot/${encodeURIComponent(tt.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${tt.botName}`}
                     >
@@ -127,7 +127,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return (
                     <SiteLink
-                      to={`/bot/${tt.botId}`}
+                      to={`/bot/${encodeURIComponent(tt.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${tt.botName}`}
                     >
@@ -157,7 +157,7 @@ export default function Home() {
                 getValue: (tt) => {
                   return (
                     <SiteLink
-                      to={`/bot/${tt.botId}`}
+                      to={`/bot/${encodeURIComponent(tt.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${tt.botName}`}
                     >
@@ -183,7 +183,7 @@ export default function Home() {
           <p>
             Most matches played:{" "}
             <SiteLink
-              to={`/bot/${mostMatchesPlayed.id}`}
+              to={`/bot/${encodeURIComponent(mostMatchesPlayed.id)}`}
               textLink={true}
               pageTitle={`Bot - ${mostMatchesPlayed.name}`}
             >

@@ -19,7 +19,7 @@ import NotFound from "./not-found"
 
 export default function Bot() {
   const params = useParams()
-  const botId = params.botId as string
+  const botId = decodeURIComponent(params.botId as string)
   const db = useContext(DbContext) as DbInterface
 
   const bot = db.getBotById(botId)
@@ -235,7 +235,7 @@ export default function Bot() {
                 return (
                   <React.Fragment key={i}>
                     <SiteLink
-                      to={`/bot/${c.id}`}
+                      to={`/bot/${encodeURIComponent(c.id)}`}
                       textLink={true}
                       pageTitle={`Bot - ${c.name}`}
                     >

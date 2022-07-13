@@ -59,7 +59,7 @@ export default function Winners() {
               getValue: (w) => {
                 return (
                   <SiteLink
-                    to={`/bot/${w.botId}`}
+                    to={`/bot/${encodeURIComponent(w.botId)}`}
                     pageTitle={`Bot - ${w.botName}`}
                     textLink={true}
                   >

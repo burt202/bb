@@ -67,7 +67,7 @@ export default function Member() {
                 return (
                   <React.Fragment key={i}>
                     <SiteLink
-                      to={`/bot/${b.botId}`}
+                      to={`/bot/${encodeURIComponent(b.botId)}`}
                       textLink={true}
                       pageTitle={`Bot - ${b.botName}`}
                     >
